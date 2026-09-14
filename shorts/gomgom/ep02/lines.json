@@ -1,0 +1,19 @@
+{
+  "episode": "02 칭찬은 금방 잊고, 한마디 지적은 오래 남는 이유",
+  "shots": [
+    {"id": "01", "type": "V", "model": "wan2_7:5", "narrator": "칭찬 열 번보다, 지적 한 번이 더 오래 남지 않나요?"},
+    {"id": "02", "type": "V", "model": "seedance1_5", "narrator": "곰곰이도 좋은 말을 잔뜩 들은 날이 있었어요."},
+    {"id": "03", "type": "V", "model": "seedance1_5", "narrator": "그런데 딱 한마디가,"},
+    {"id": "04", "type": "V", "model": "seedance1_5", "narrator": "밤새 머릿속을 맴돌았죠."},
+    {"id": "05", "type": "V", "model": "seedance1_5", "narrator": "우리 뇌는 나쁜 신호에 더 크게 반응하도록 만들어졌대요."},
+    {"id": "06", "type": "V", "model": "seedance1_5", "narrator": "옛날엔 위험을 먼저 알아채야"},
+    {"id": "07", "type": "V", "model": "seedance1_5", "narrator": "살아남을 수 있었으니까요."},
+    {"id": "08", "type": "V", "model": "seedance1_5", "narrator": "그러니까 그 한마디가 오래 남는 건,"},
+    {"id": "09", "type": "V", "model": "seedance1_5", "narrator": "내가 약해서가 아니라"},
+    {"id": "10", "type": "V", "model": "wan2_7:6", "narrator": "뇌가 나를 지키려는 거예요."},
+    {"id": "11", "type": "V", "model": "seedance1_5", "narrator": "오늘 들은 좋은 말 세 개를 적어보세요."},
+    {"id": "12", "type": "V", "model": "seedance1_5", "narrator": "뇌에게도 공평한 기회를 주는 거예요."},
+    {"id": "13", "type": "V", "model": "wan2_7:5", "narrator": "오늘 들은 좋은 말, 하나만 댓글로 나눠줄래요?"}
+  ],
+  "note": "근거: 부정성 편향(negativity bias). 화면 글자 금지 → 칭찬=분홍 펠트 하트, 지적=작은 회색 펠트 먹구름, 좋은 말 적기=유리병에 별 담기"
+}
