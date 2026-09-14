@@ -1,0 +1,22 @@
+{
+  "episode": "01 쉬어도 쉬어도 피곤한 이유",
+  "shots": [
+    {"id": "01", "type": "V", "src": "clips/v01.mp4", "narrator": "쉬는 날 하루 종일 누워 있었는데, 왜 더 피곤할까요?", "bear": "쉬는 날 하루 종일 누워 있었는데, 왜 더 피곤할까?"},
+    {"id": "02", "type": "S", "src": "img/s02.png", "narrator": "곰곰이도 그랬어요.", "bear": "나도 그랬어."},
+    {"id": "03", "type": "S", "src": "img/s03.png", "narrator": "소파에서 폰만 봤는데,", "bear": "소파에서 폰만 봤는데,"},
+    {"id": "04", "type": "V", "src": "clips/v04.mp4", "narrator": "저녁엔 머리가 더 무거웠죠.", "bear": "저녁엔 머리가 더 무거웠지."},
+    {"id": "05", "type": "S", "src": "img/s05.png", "narrator": "심리학자들은 진짜 회복에 네 가지가 필요하다고 해요.", "bear": "심리학자들이 그러는데, 진짜 회복엔 네 가지가 필요하대."},
+    {"id": "06", "type": "S", "src": "img/s06.png", "narrator": "일에서 마음 떼어놓기,", "bear": "일에서 마음 떼어놓기,"},
+    {"id": "07", "type": "S", "src": "img/s07.png", "narrator": "몸의 긴장 풀기,", "bear": "몸의 긴장 풀기,"},
+    {"id": "08", "type": "S", "src": "img/s08.png", "narrator": "작은 것에 푹 빠지기,", "bear": "작은 것에 푹 빠지기,"},
+    {"id": "09", "type": "S", "src": "img/s09.png", "narrator": "그리고 내가 고른 시간 보내기.", "bear": "그리고 내가 고른 시간 보내기."},
+    {"id": "10", "type": "V", "src": "clips/v10.mp4", "narrator": "누워서 화면을 넘기는 동안, 머리는 계속 일하고 있었던 거예요.", "bear": "누워서 화면을 넘기는 동안, 머리는 계속 일하고 있었던 거야."},
+    {"id": "11", "type": "S", "src": "img/s11.png", "narrator": "오늘은 딱 십 분만,", "bear": "오늘은 딱 십 분만,"},
+    {"id": "12", "type": "V", "src": "clips/v12.mp4", "narrator": "좋아하는 걸 골라서 해보세요.", "bear": "좋아하는 걸 골라서 해봐."},
+    {"id": "13", "type": "V", "src": "clips/v13.mp4", "narrator": "여러분은 쉴 때 뭘 하면 제일 개운해지나요?", "bear": "너는 쉴 때 뭘 하면 제일 개운해져?"}
+  ],
+  "voices": {
+    "luna": {"engine": "higgsfield text2speech_v2 elevenlabs", "voice_id": "375a3398-e3b4-4f91-845d-42181e352899", "script": "narrator"},
+    "bear_p4": {"engine": "ttapp supertonic F1 speed 1.0 steps 16, ffmpeg pitch +4 semitones", "script": "bear"}
+  }
+}

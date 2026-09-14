@@ -15,3 +15,9 @@ shorts/**/*.jpg
 shorts/**/*.mp4
 shorts/**/*.log
 shorts/**/index.html
+
+# shorts audio & render outputs
+shorts/**/*.wav
+shorts/**/*.mp3
+shorts/**/out/
+shorts/**/check/
