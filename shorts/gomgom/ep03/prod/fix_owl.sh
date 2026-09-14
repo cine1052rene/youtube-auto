@@ -25,4 +25,4 @@ except Exception: print('')")
   url=$(higgsfield generate wait "$id" --json </dev/null 2>/dev/null | python -c "import sys,json;print(json.load(sys.stdin).get('result_url',''))")
   curl -s -o "$f" "$url" && [ -s "$f" ] && log "완료 보정 $f" || log "다운로드 실패 보정 $k"
 done
-bash ./generate.sh
+log "보정 그림 끝 — 점검 후 generate.sh로 영상 생성"
