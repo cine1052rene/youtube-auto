@@ -8,3 +8,10 @@ episodes/**/*.mp4
 episodes/**/style_board.html
 episodes/**/presets/*.json
 episodes/**/*.txt
+
+# shorts generated media & logs
+shorts/**/*.png
+shorts/**/*.jpg
+shorts/**/*.mp4
+shorts/**/*.log
+shorts/**/index.html

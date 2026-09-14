@@ -1,0 +1,10 @@
+===== 1) Veo 3.1 Lite 무료플랜 게이트 테스트 =====
+veo job: 9808a727-6098-4fb9-bbce-8d05bfe3e3a4
+veo status: completed https://d8j0ntlcm91z4.cloudfront.net/user_3Gc3JAohXv6SGt2Sgao6RYfXSAH/hf_20260914_123101_9808a727-6098-4fb9-bbce-8d05bfe3e3a4.mp4
+✅ ref/veo_gate_test.mp4
+잔액: cine1052rene@gmail.com — free plan, 289.48 credits
+===== 2) 캐릭터 일관성 3장 (1화 실제 컷) =====
+✅ ep01/img/v01_start.png
+✅ ep01/img/s08.png
+✅ ep01/img/v12_start.png
+최종 잔액: cine1052rene@gmail.com — free plan, 286.48 credits
