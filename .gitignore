@@ -21,3 +21,4 @@ shorts/**/*.wav
 shorts/**/*.mp3
 shorts/**/out/
 shorts/**/check/
+shorts/**/fonts/*.ttf
