@@ -1,1 +1,10 @@
 node_modules/\n.next/\ndist/\n.env\n.env.local\n*.log\n.DS_Store
+
+# generated media (AI test outputs, too large for git)
+episodes/**/*.png
+episodes/**/*.jpg
+episodes/**/*.webp
+episodes/**/*.mp4
+episodes/**/style_board.html
+episodes/**/presets/*.json
+episodes/**/*.txt
