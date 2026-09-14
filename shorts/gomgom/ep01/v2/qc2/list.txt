@@ -1,0 +1,8 @@
+file 't01_push_0.png'
+duration 1
+file 't01_push_1.3.png'
+duration 1
+file 't01_push_2.6.png'
+duration 1
+file 't01_push_3.85.png'
+duration 1

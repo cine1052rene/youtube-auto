@@ -1,0 +1,16 @@
+file 'p_0.3.png'
+duration 1
+file 'p_0.6.png'
+duration 1
+file 'p_0.9.png'
+duration 1
+file 'p_1.2.png'
+duration 1
+file 'p_1.5.png'
+duration 1
+file 'p_1.8.png'
+duration 1
+file 'p_2.1.png'
+duration 1
+file 'p_2.4.png'
+duration 1

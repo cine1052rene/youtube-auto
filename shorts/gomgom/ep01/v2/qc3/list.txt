@@ -1,0 +1,12 @@
+file 'o_0.png'
+duration 1
+file 'o_1.6.png'
+duration 1
+file 'o_3.2.png'
+duration 1
+file 'o_4.8.png'
+duration 1
+file 'o_6.4.png'
+duration 1
+file 'o_7.85.png'
+duration 1
