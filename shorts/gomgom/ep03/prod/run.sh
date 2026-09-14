@@ -8,7 +8,7 @@ LOG="$HERE/gen.log"
 log() { echo "[$(date +%H:%M:%S)] $*" | tee -a "$LOG"; }
 
 VTAIL="Kong is lively and expressive, Gomgom keeps its mouth closed with a gentle closed-mouth smile, both characters keep exactly the same appearance and colors and stay cute with bright open eyes, smooth cinematic camera motion, warm cozy mood, soft warm light, no text"
-P13="Gomgom stays seated on the grassy hilltop the whole time and gently opens the jar, the glowing stars float up into the sunset sky, Kong flies up among the stars, Gomgom turns its head to look back with a gentle closed-mouth smile, Gomgom never leaves the ground and keeps its cream color, the camera slowly rises and pulls back to reveal the whole glowing town"
+P13="Gomgom and Kong both stay seated on the grassy hilltop the whole time, Gomgom gently opens the jar and the glowing stars float up into the sunset sky, Kong stays a tiny yellow baby chick on the ground and hops and flaps its little wings happily beside Gomgom, Gomgom turns its head to look back with a gentle closed-mouth smile, only the stars rise into the sky, no bear or character flies, the camera slowly rises and pulls back to reveal the whole glowing town"
 
 if [ -f "$EP2/clips/13_old.mp4" ] && [ -s "$EP2/clips/13.mp4" ]; then
   log "2화 13 이미 수정됨 — 건너뜀"
