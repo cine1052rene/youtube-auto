@@ -13,9 +13,10 @@ declare -A IMG
 IMG[03]="medium side view of a simple rustic wooden table under a shady olive tree, a round crusty bread loaf and a clay water jug on the table, $OWL breaking the bread and sharing a piece with Gomgom, Kong hopping across the table toward the crumbs"
 IMG[04]="macro close up on a rustic wooden table of a tiny round clay pot with a lid, a chestnut-brown feathered owl wing lifting the lid to reveal soft white cheese inside, Kong leaning over the rim peeking in with wide curious eyes, Gomgom softly blurred in the background under an olive tree"
 IMG[05]="medium wide shot of a small joyful feast under an olive tree with only a little clay cheese pot, a bread loaf and a water jug on the wooden table, $OWL and Gomgom gently clinking small clay cups, Kong dancing happily on the table, warm dappled sunlight and a few round paper lanterns hanging from the branches"
-for k in 03 04 05; do
+IMG[10]="close up of Gomgom sitting at a cozy kitchen table holding a small piece of warm bread in both paws near its chest, its mouth firmly closed in a gentle closed-mouth smile with slightly puffed cheeks as if slowly chewing, eyes happily closed, nothing in its mouth, Kong beside Gomgom nibbling a tiny crumb held in its beak, soft morning light and cozy kitchen shelves blurred behind"
+for k in 03 04 05 10; do
   f="img/$k.png"; [ -s "$f" ] && continue
-  log "부엉이 보정 그림 $k"
+  log "보정 그림 $k"
   id=$(higgsfield generate create seedream_v5_lite --prompt "${IMG[$k]}, $CHAR, $STYLE" --image-references "$REF" --aspect_ratio 9:16 --quality high --json </dev/null 2>&1 | python -c "import sys,json
 try:
   d=json.loads(sys.stdin.read()); print(d[0] if isinstance(d,list) else '')
