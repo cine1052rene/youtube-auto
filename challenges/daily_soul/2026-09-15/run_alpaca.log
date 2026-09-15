@@ -1,0 +1,21 @@
+[08:02:48] done alp_A_soul2.png id=ad60e49e-77f7-4bc9-8136-5fb951085a97
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\cine1\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\cine1\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cine1\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cine1\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+curl: option : blank argument where content is expected
+curl: try 'curl --help' or 'curl --manual' for more information
+[08:07:54] FAIL download B
+[08:08:25] done alp_C_soul2.png id=d9225066-b721-46c1-b919-db7d3ff589f9
+[08:08:55] done alp_D_soul2.png id=cea5702e-f18a-412a-b2c5-7c59a19431b8
+[08:08:57] ALL DONE balance=36.98
