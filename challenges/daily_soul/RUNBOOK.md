@@ -9,6 +9,12 @@ Higgsfield 디스코드 #daily-soul 채널의 일일 챌린지. 매일 5명 선�
 - 이미지 + Higgsfield **웹 생성물 공유 링크**를 함께 게시해야 유효
 - 게시는 사용자가 직접 한다 (개인 계정 자동 게시는 디스코드 약관 위반)
 
+## 0. 어제 결과 먼저 확인 (9/16 추가)
+- 당선 발표는 **다음 날 새벽 3시대 KST**에 `#🏆|hall-of-fame`에 올라온다 (Vinca | Community Team이 "Daily Soul Challenge · Hall of Fame / <주제> · <날짜>" + "Today's champions: 🏆@5명" 형식으로 게시)
+- 아침 작업 시작 시 hall-of-fame을 먼저 열어 어제 주제 글의 champions 5명에 사용자(T100roxy)가 있는지 확인하고 보고한다
+- Ctrl+K로 `hall-of-fame` 검색하면 **OpenAI 서버 채널이 먼저 잡힌다** → 목록에서 "Higgsfield AI" 줄을 골라야 함(↓ 한 번 + Enter)
+- 당선 시 1인당 1000크레딧. 링크 없는 게시물은 실격이므로 사용자에게 안내할 때 항상 링크를 강조한다
+
 ## 1. 오늘 주제 읽기 (디스코드 데스크톱 앱 화면 캡처)
 - 클릭·캡처 스크립트: `challenges/daily_soul/tools/dc.ps1` — PowerShell에서 `& C:/project/youtube/challenges/daily_soul/tools/dc.ps1 -x X -y Y [-scroll -720] -out 캡처경로.png -wait 1500` (좌표 없이 -out만 주면 창만 앞으로 가져와 캡처). 캡처 파일은 세션 scratchpad에 저장
 - 키 입력은 SendKeys 대신 user32 keybd_event 사용(Ctrl+K=0x11+0x4B, Ctrl+V=0x11+0x56, Enter=0x0D, Esc=0x1B)
