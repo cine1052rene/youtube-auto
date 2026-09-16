@@ -1,0 +1,10 @@
+[12:25:15] FAIL create cand_01.png: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":null,"concurrent_jobs_limit":1,"error_type":"rate_limit_reached","job_set_type":"text2image_soul_v2","plan_type":"free","use_unlim":false,"
+[12:25:22] FAIL create cand_02.png: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":null,"concurrent_jobs_limit":1,"error_type":"rate_limit_reached","job_set_type":"text2image_soul_v2","plan_type":"free","use_unlim":false,"
+[12:25:30] FAIL create cand_03.png: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":null,"concurrent_jobs_limit":1,"error_type":"rate_limit_reached","job_set_type":"text2image_soul_v2","plan_type":"free","use_unlim":false,"
+[12:26:05] done cand_04.png id=c7803934-ca19-49e3-bf58-eb9f642eb350
+[12:26:06] ALL DONE balance=34.1
+[12:27:11] done cand_01.png id=97d3884c-df76-4aed-9108-73855fb6e669
+[12:27:41] done cand_02.png id=e1ae8b7e-e52e-4a49-bdf1-c2f482d136ec
+[12:28:09] done cand_03.png id=6b1e7173-ab7b-4631-9a6d-7d50058fb145
+[12:28:09] skip cand_04.png
+[12:28:11] ALL DONE balance=33.74

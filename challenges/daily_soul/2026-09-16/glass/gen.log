@@ -1,0 +1,5 @@
+[12:24:21] done cand_01.png id=29e0a643-7d06-4457-9000-ed8be58ced49
+[12:24:49] done cand_02.png id=edc742a9-30db-4fa6-b003-7ec26c3e89ea
+[12:25:39] done cand_03.png id=097f7a71-afff-443b-9a67-386dd5c78c9e
+[12:25:41] FAIL create cand_04.png: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":null,"concurrent_jobs_limit":1,"error_type":"rate_limit_reached","job_set_type":"text2image_soul_v2","plan_type":"free","use_unlim":false,"
+[12:25:47] ALL DONE balance=34.1
