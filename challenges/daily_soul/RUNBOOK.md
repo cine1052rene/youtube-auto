@@ -15,6 +15,27 @@ Higgsfield 디스코드 #daily-soul 채널의 일일 챌린지. 매일 5명 선�
 - Ctrl+K로 `hall-of-fame` 검색하면 **OpenAI 서버 채널이 먼저 잡힌다** → 목록에서 "Higgsfield AI" 줄을 골라야 함(↓ 한 번 + Enter)
 - 당선 시 1인당 1000크레딧. 링크 없는 게시물은 실격이므로 사용자에게 안내할 때 항상 링크를 강조한다
 
+## 심사 기준 (9/16부터 당선작 카드에 점수표가 공개됨) ⭐
+당선작 이미지 하단에 채점표가 박혀 나온다. **5개 항목 × 10점 = 50점 만점.**
+
+| 항목 | 의미 | 9/16 5인 평균 |
+|---|---|---|
+| Theme | 주제 부합 | 9.0 |
+| Quality | 이미지 완성도 | 8.4 |
+| Originality | 독창성 | 8.2 |
+| Emotion | 감정 전달 | 8.2 |
+| Prompt | **프롬프트 자체의 완성도** | 8.4 |
+
+9/16(My Usual Route) 실측: deelsewerld 44 / mr.yousaf 43 / brilz 43 / sofiatitova 42 / ramadangonim 39
+
+읽어낸 것:
+- **당선 커트라인이 39점**이었다. 만점권이 아니라 **다섯 항목 모두 8점 이상**이면 든다 — 한 항목만 튀는 것보다 고른 점수가 유리
+- Quality는 누구도 9를 넘지 못했다. 그림만 예쁘게 뽑아선 못 이긴다
+- Theme이 가장 높게 나온다(최저 8). 주제에서 벗어나면 그 시점에 탈락
+- **Prompt가 채점 대상** → 심사자가 생성 링크로 프롬프트 원문을 읽는다. 키워드 나열이 아니라 **의도가 읽히는 문장**으로 쓸 것. `no watermark, no signs` 같은 기술적 꼬리표는 최소화
+- Originality에 7~8점이 몰린다 → **여기가 승부처**. 주제문에 예시로 나온 소재(final boss in uniform 등)를 그대로 쓰면 이 점수가 깎인다
+- ramadangonim은 9/14·9/15·9/16 3일 연속 당선했고 9/16엔 최저점(39)으로 들었다 → 꾸준한 참가자가 유리하거나, 하루에 여러 장 올려 확률을 높이는 것으로 보인다
+
 ## 1. 오늘 주제 읽기 (디스코드 데스크톱 앱 화면 캡처)
 - 클릭·캡처 스크립트: `challenges/daily_soul/tools/dc.ps1` — PowerShell에서 `& C:/project/youtube/challenges/daily_soul/tools/dc.ps1 -x X -y Y [-scroll -720] -out 캡처경로.png -wait 1500` (좌표 없이 -out만 주면 창만 앞으로 가져와 캡처). 캡처 파일은 세션 scratchpad에 저장
 - 키 입력은 SendKeys 대신 user32 keybd_event 사용(Ctrl+K=0x11+0x4B, Ctrl+V=0x11+0x56, Enter=0x0D, Esc=0x1B)
