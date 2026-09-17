@@ -1,0 +1,15 @@
+[10:07:07] done cand_01.png id=1b44334a-6b2f-40a0-8f1e-804a00318ebb
+[10:07:40] done cand_02.png id=f3fbd70c-5e11-4112-98f9-7bb833bc7e07
+[10:08:10] FAIL cand_03.png id=b9441113-9272-4127-b689-3f16bda3905d (서버 실패 시 크레딧 미차감)
+[10:08:42] done cand_04.png id=baf0d45e-36e0-4007-a55e-6ca84fb0078b
+[10:08:44] ALL DONE balance=32.9
+[10:09:10] skip cand_01.png
+[10:09:11] skip cand_02.png
+[10:09:39] FAIL cand_03.png id=a1fe070e-81dd-4396-8e53-f9845e85925a (서버 실패 시 크레딧 미차감)
+[10:09:40] skip cand_04.png
+[10:09:42] ALL DONE balance=32.9
+[10:11:03] skip cand_01.png
+[10:11:03] skip cand_02.png
+[10:11:37] done cand_03.png id=d9023923-a15e-490c-9902-6c062cbb9ede
+[10:11:37] skip cand_04.png
+[10:11:39] ALL DONE balance=32.78
