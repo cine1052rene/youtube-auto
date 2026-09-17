@@ -46,7 +46,10 @@ Higgsfield 디스코드 #daily-soul 채널의 일일 챌린지. 매일 5명 선�
 
 ## 2. 후보 생성
 - 폴더: `challenges/daily_soul/YYYY-MM-DD/` (KST 날짜)
-- 장면 4개 기획 → `prompts.txt`에 한 줄에 하나씩 작성 → `bash challenges/daily_soul/gen_daily.sh YYYY-MM-DD` (장당 0.12cr, 4장 약 0.5cr)
+- 장면 **5~6개** 기획 → `prompts.txt`에 한 줄에 하나씩 작성 → `bash challenges/daily_soul/gen_daily.sh YYYY-MM-DD` (장당 0.12cr)
+- **투고는 3장 이상**(9/17 확정). 규정에 장수 제한이 없고 "Drop your image(s)"라 복수 투고가 허용되며, 당선자 5명은 매일 서로 다른 사람이라 **여러 장을 올려도 그중 최고점 한 장으로 평가**된다 → 티켓만 늘어남
+  - 단 **서로 다른 콘셉트**여야 한다. 같은 발상의 변주 3장은 Originality가 같이 깎여 티켓 1장과 다름없다
+  - 게시 전 #daily-soul을 훑어 남이 이미 올린 소재·장소와 겹치는지 확인한다(9/17 빨래방·편의점이 겹쳤음)
 - 프롬프트 요령 (9/15 결과에서 얻은 교훈):
   - 주제 예시 문구의 핵심을 그대로 살리고, 한눈에 읽히는 상황 하나에 집중
   - 인물 사진 주제면 "realistic candid photograph, on-camera flash, wide 24mm, dynamic tilted angle, every face distinct, natural anatomy with correct hands and legs"
