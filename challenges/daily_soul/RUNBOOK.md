@@ -45,6 +45,7 @@ Higgsfield 디스코드 #daily-soul 채널의 일일 챌린지. 매일 5명 선�
 
 ## 1. 오늘 주제 읽기 (디스코드 데스크톱 앱 화면 캡처)
 - 클릭·캡처 스크립트: `challenges/daily_soul/tools/dc.ps1` — PowerShell에서 `& C:/project/youtube/challenges/daily_soul/tools/dc.ps1 -x X -y Y [-scroll -720] -out 캡처경로.png -wait 1500` (좌표 없이 -out만 주면 창만 앞으로 가져와 캡처). 캡처 파일은 세션 scratchpad에 저장
+- ⚠️ **키 입력 전 디스코드 창 제목에 "Higgsfield AI"가 들어있는지 확인**한다. 다른 서버가 열려 있으면 Ctrl+K 입력이 그 서버의 메시지 입력창에 타이핑될 수 있다(9/19 사용자 개인 서버에 "hall-of-fame"이 입력됨 — 전송 전 삭제). 제목이 다르면 먼저 좌측 서버 아이콘에서 Higgsfield를 클릭
 - 키 입력은 SendKeys 대신 user32 keybd_event 사용(Ctrl+K=0x11+0x4B, Ctrl+V=0x11+0x56, Enter=0x0D, Esc=0x1B)
 - Discord 창이 트레이에 있으면 `%LOCALAPPDATA%\Discord\Update.exe --processStart Discord.exe`로 띄운다
 - Ctrl+K → `daily-soul` 붙여넣기 → Enter (다른 서버 채널이 먼저 잡히면 창 제목이 "Higgsfield AI"인지 확인)
