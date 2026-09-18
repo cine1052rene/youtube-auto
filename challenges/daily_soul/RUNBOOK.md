@@ -11,6 +11,11 @@ Higgsfield 디스코드 #daily-soul 채널의 일일 챌린지. 매일 5명 선�
 - 이미지 + Higgsfield **웹 생성물 공유 링크**를 함께 게시해야 유효
 - 게시는 사용자가 직접 한다 (개인 계정 자동 게시는 디스코드 약관 위반)
 
+## -1. PC 잠금 확인 (9/19 추가) ⚠️ 가장 먼저
+- PowerShell `[bool](Get-Process LogonUI -ErrorAction SilentlyContinue)` 가 True면 **Windows 잠금 화면(PIN)** 상태 → 디스코드 창을 띄울 수 없고 키 입력도 전부 무시된다. PIN은 절대 입력하지 않는다
+- 잠금이면 생성하지 말고: 사용자에게 "PC 잠금이 풀려야 진행 가능"이라고 알리고, `date`로 현재 시각 확인 후 **1시간 뒤 같은 작업을 재예약**(tbot_project_schedule_add). 13시가 지나도 잠겨 있으면 재예약을 멈추고 보고
+- 9/18 아침 예약이 결과 없이 끝난 것, 9/19 08:10 실패 모두 이 원인(전원 설정은 AC 기준 화면·절전 '안 함'이라 절전 때문은 아님)
+
 ## 0. 어제 결과 먼저 확인 (9/16 추가)
 - 당선 발표는 **다음 날 새벽 3~6시 KST**에 `#🏆|hall-of-fame`에 올라온다(9/16 발표 03:13, 9/17 발표 05:39 — 시각이 일정하지 않으니 아침에 확인하면 항상 떠 있다) (Vinca | Community Team이 "Daily Soul Challenge · Hall of Fame / <주제> · <날짜>" + "Today's champions: 🏆@5명" 형식으로 게시)
 - 아침 작업 시작 시 hall-of-fame을 먼저 열어 어제 주제 글의 champions 5명에 사용자(T100roxy)가 있는지 확인하고 보고한다
