@@ -19,15 +19,20 @@
 
 ## 캐릭터
 
-**곰곰이** — 주인공. 말수 적고 다정한 크림색 펠트 곰
-**콩이** — 곰곰이 어깨에 자주 앉는 노란 아기새. 곰곰이 대신 표정으로 반응함
+**곰곰이** — 주인공. 말수 적고 다정한 크림색 펠트 곰. **작은 갈색 펠트 가방**을 늘 메고, 가슴에 **시즌 배지**를 단다(시즌1 코랄 하트 / 시즌2 노란 별 / 시즌3 단풍잎 / 시즌4 데이지). 여름·나들이 편에서는 **세이지 리본 보터햇**을 쓴다.
+**콩이** — 곰곰이 어깨에 자주 앉는 노란 아기 병아리. 머리에 **콩나물 새싹 두 잎**. 곰곰이 대신 표정으로 반응함
+
+> 기준 이미지: `ref/gomgom_master_s1.png`(시즌1 기본) · `ref/gomgom_master_s1_hat.png`(보터햇). 1~3화는 소품 없이 완성돼 있으며, 4화 첫 장면에서 콩이가 가방과 하트 배지를 선물하는 것으로 이어붙인다.
 
 ### 매 프롬프트에 그대로 붙이는 캐릭터 문장 (수정 금지)
 ```
-Gomgom, a small round cream-colored needle-felted wool bear with soft fuzzy texture, small round ears with pale pink inner ears, bright round black bead eyes, a small dark brown nose, soft pink blush on the cheeks and a gentle warm smile; Kong, a tiny round yellow felt bird with a small orange beak
+Gomgom, a small round cream-colored needle-felted wool bear with soft fuzzy texture, small round ears with pale pink inner ears, bright round black bead eyes, a small dark brown nose, soft pink blush on the cheeks and a gentle warm smile with no teeth ever visible, wearing a small coral pink felt heart badge on its chest and a tiny brown felt satchel bag across its body; Kong, a tiny round yellow needle-felted baby chick with a small orange beak and one small green bean sprout with two round leaves on top of its head
 ```
 - 테스트 이미지에서 곰 눈이 반쯤 감겨 졸리거나 새침해 보였음 → `bright round eyes`, `gentle warm smile`로 고정
 - 콩이가 안 나오는 컷은 `Kong` 부분만 뺌
+- 시즌이 바뀌면 배지 부분만 교체: 시즌2 `a small soft yellow felt star badge`, 시즌3 `a small honey-yellow felt maple-leaf badge`, 시즌4 `a small white and yellow daisy felt badge`
+- 여름·나들이 컷은 뒤에 `wearing a small straw boater hat with a flat top and flat brim and a sage green ribbon, both round ears fully visible` 추가
+- **이빨이 보이면 안 됨**(입은 벌려도 됨), 만화풍으로 바뀌면 안 됨
 
 ### 매 프롬프트 끝에 붙이는 그림체 문장 (수정 금지)
 ```
