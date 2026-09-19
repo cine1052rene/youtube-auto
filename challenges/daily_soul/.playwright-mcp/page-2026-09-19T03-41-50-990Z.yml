@@ -1,0 +1,89 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: /ko
+        - img "Higgsfield" [ref=e5]
+      - navigation "Main" [ref=e9]:
+        - list [ref=e12]:
+          - listitem [ref=e13]:
+            - link "둘러보기" [ref=e14] [cursor=pointer]:
+              - /url: /ko
+          - listitem [ref=e15]:
+            - link "이미지" [ref=e16] [cursor=pointer]:
+              - /url: /ko/ai/image?model=gpt_image_2
+          - listitem [ref=e17]:
+            - link "비디오" [ref=e18] [cursor=pointer]:
+              - /url: /ko/ai/video
+          - listitem [ref=e19]:
+            - link "오디오" [ref=e20] [cursor=pointer]:
+              - /url: /ko/audio
+          - listitem [ref=e21]:
+            - link "MCP" [ref=e22] [cursor=pointer]:
+              - /url: /ko/mcp
+          - listitem [ref=e23]:
+            - link "API 신규" [ref=e24] [cursor=pointer]:
+              - /url: https://console.higgsfield.ai
+              - text: API
+              - generic [ref=e25]: 신규
+          - separator [ref=e26]
+          - listitem [ref=e27]:
+            - link "ChatGPT 플러그인 신규" [ref=e28] [cursor=pointer]:
+              - /url: /ko/gpt-astra
+              - text: ChatGPT 플러그인
+              - generic [ref=e29]: 신규
+          - listitem [ref=e30]:
+            - link "Genjutsu" [ref=e31] [cursor=pointer]:
+              - /url: /ko/ai/video?model=genjutsu
+          - listitem [ref=e32]:
+            - link "이펙트 신규" [ref=e33] [cursor=pointer]:
+              - /url: /ko/effects/use
+              - text: 이펙트
+              - generic [ref=e34]: 신규
+          - listitem [ref=e35]:
+            - link "Cinema Studio" [ref=e36] [cursor=pointer]:
+              - /url: /ko/generate
+          - listitem [ref=e37]:
+            - link "Marketing Studio" [ref=e38] [cursor=pointer]:
+              - /url: /ko/marketing-studio
+          - listitem [ref=e39]:
+            - link "Supercomputer" [ref=e40] [cursor=pointer]:
+              - /url: /ko/supercomputer
+          - listitem [ref=e42]:
+            - link "3D Jutsu 신규" [ref=e43] [cursor=pointer]:
+              - /url: /ko/3d-jutsu
+              - text: 3D Jutsu
+              - generic [ref=e44]: 신규
+          - listitem [ref=e45]:
+            - link "편집" [ref=e46] [cursor=pointer]:
+              - /url: /ko/layers
+          - listitem [ref=e47]:
+            - link "Academy" [ref=e48] [cursor=pointer]:
+              - /url: /ko/academy
+          - listitem [ref=e49]:
+            - link "커뮤니티" [ref=e50] [cursor=pointer]:
+              - /url: /ko/community
+          - listitem [ref=e51]:
+            - link "콘테스트" [ref=e52] [cursor=pointer]:
+              - /url: /ko/contests/higgsfield-global-film-festival
+          - listitem [ref=e53]:
+            - link "플러그인" [ref=e54] [cursor=pointer]:
+              - /url: /ko/plugins/after-effects
+          - listitem [ref=e55]:
+            - link "Canvas" [ref=e56] [cursor=pointer]:
+              - /url: /ko/canvas
+          - listitem [ref=e57]:
+            - link "Originals" [ref=e58] [cursor=pointer]:
+              - /url: /ko/original-series
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - generic [aria-hidden] [ref=e61] [cursor=pointer]
+          - link "요금제" [ref=e62] [cursor=pointer]:
+            - /url: /ko/pricing
+          - link "Enterprise" [ref=e65] [cursor=pointer]:
+            - /url: https://higgsfield.ai/enterprise
+          - generic [aria-hidden] [ref=e69] [cursor=pointer]
+        - generic [ref=e71]:
+          - button "로그인" [ref=e72] [cursor=pointer]
+          - button "가입하기" [ref=e73] [cursor=pointer]
+  - main [ref=e74]

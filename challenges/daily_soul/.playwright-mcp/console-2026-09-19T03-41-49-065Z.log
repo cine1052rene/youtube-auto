@@ -1,0 +1,7 @@
+[   11126ms] [LOG] [Compliance transition] {transitionType: NEW_USER, newComplianceType: hybrid, isImplicitConsentEnabled: false, isGpcActive: false, shouldShowBannerAgain: true} @ https://assets.higgsfield.ai/tanstack/assets/bef355d3-bVvTX_zSjaHRqimM.js:18
+[   11591ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://fnf-api-gw.higgsfield.ai/fnf/assets?size=48&category=all:0
+[   12572ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://fnf-api-gw.higgsfield.ai/fnf/assets?size=48&category=all:0
+[   13537ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://fnf-api-gw.higgsfield.ai/fnf/assets?size=48&category=all:0
+[   15230ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://assets.higgsfield.ai/tanstack/assets/bef355d3-bVvTX_zSjaHRqimM.js:18
+[   15234ms] [ERROR] Not signed in with the identity provider. @ https://higgsfield.ai/asset/all:0
+[   44939ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://assets.higgsfield.ai/tanstack/assets/bef355d3-bVvTX_zSjaHRqimM.js:18
