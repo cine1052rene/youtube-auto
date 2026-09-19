@@ -1,0 +1,4 @@
+[09:29:59] done cand_01.png id=73f694b5-3a23-4655-a2f0-373fd89a627d
+[09:30:29] done cand_02.png id=97e73068-dc39-4230-be41-f46c7a98b2c7
+[09:30:57] FAIL cand_03.png id=4af11e16-51ad-4854-834e-438de685fe74 (서버 실패 시 크레딧 미차감)
+[09:30:58] ALL DONE balance=1010.18
