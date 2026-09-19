@@ -10,12 +10,16 @@ def img64(name, w=560):
     b = io.BytesIO(); im.save(b, "JPEG", quality=86)
     return base64.b64encode(b.getvalue()).decode()
 OPTS = [
- ("A", "opt_a.png", "세이지 목도리", "연한 초록 손뜨개 목도리. 가장 단순해서 어느 장면에서든 안정적으로 유지되고, 움직일 때 끝자락이 흔들려 생동감이 납니다.", "추천"),
- ("B", "opt_b.png", "단풍잎 배지 + 가방", "가슴의 꿀색 단풍잎 배지와 작은 갈색 가방. 여행·외출 장면에 잘 어울리지만 소품이 두 개라 영상에서 빠지거나 바뀔 확률이 높습니다.", ""),
- ("C", "opt_c.png", "겨자색 목도리 + 수첩 주머니", "'곰곰 생각하는' 이름과 가장 잘 맞는 안. 배 주머니의 수첩이 캐릭터 설정이 됩니다. 다만 수첩은 작아서 먼 장면에선 안 보일 수 있습니다.", ""),
- ("D", "opt_d.png", "도토리 베레모", "갈색 펠트 베레모. 귀엽지만 산리오의 폼폼푸린이 갈색 베레모가 상징이라 닮았다는 말을 들을 수 있습니다.", "주의"),
+ ("S1", "v2_honey.png", "꿀방울 배지", "시즌 1 제안. 곰이라서 꿀. 다만 배지가 작아 먼 장면에선 잘 안 보여서, 확정하면 조금 크게 키우겠습니다.", "시즌 1"),
+ ("S2", "v2_star.png", "별 배지", "시즌 2 제안. 모양이 단순해서 가장 또렷하게 보이고, 2화의 별 병과도 이어집니다.", "시즌 2"),
+ ("S3", "opt_b.png", "단풍잎 배지", "시즌 3 제안. 동양의 지혜 시즌의 가을 정취와 어울립니다.", "시즌 3"),
+ ("S4", "v2_daisy.png", "데이지 배지", "시즌 4 제안. 다정함·관계 시즌에 어울리는 꽃.", "시즌 4"),
+ ("H1", "v2_rain.png", "노란 비 모자", "콩이와 색이 맞아 둘이 한 세트처럼 보입니다. 비 오는 날 에피소드에.", "추천"),
+ ("H2", "v2_straw.png", "밀짚모자", "귀가 챙 아래로 나와 곰 실루엣이 유지됩니다. 여름·소풍 에피소드에.", "추천"),
+ ("H3", "v2_bucket.png", "세이지 버킷햇", "산책·외출 장면에. 귀가 옆으로 살짝 가려집니다.", ""),
+ ("H4", "v2_bobble.png", "털방울 니트 모자", "모자 구멍 두 개가 눈처럼 보여 얼굴이 두 개인 듯합니다. 빼는 걸 권합니다.", "주의"),
 ]
-cards = "".join(f'''<figure class="opt{" rec" if tag=="추천" else ""}">
+cards = "".join(f'''<figure class="opt{" rec" if tag in ("추천",) else ""}">
   <img src="data:image/jpeg;base64,{img64(f)}" alt="시안 {k}: {name}">
   <figcaption><span class="k">{k}</span><b>{name}</b>{f'<em class="tag {"warn" if tag=="주의" else ""}">{tag}</em>' if tag else ""}<p>{desc}</p></figcaption>
 </figure>''' for k, f, name, desc, tag in OPTS)
@@ -71,12 +75,12 @@ h3{{font-family:var(--round);font-weight:400;font-size:19px;margin:2px 0 8px}}
 <div class="wrap">
 <section>
   <p class="eye">곰곰한 마음 · 캐릭터 정리</p>
-  <h1>곰곰이와 콩이에게 우리만의 표시를</h1>
-  <p class="lead">1~3화의 곰곰이 얼굴과 비율은 그대로 두고, 한눈에 우리 캐릭터로 알아볼 수 있는 소품만 더했습니다. 소품이 있으면 다른 곰 캐릭터와 헷갈릴 일도 줄어듭니다.</p>
+  <h1>가방은 늘, 배지는 시즌마다</h1>
+  <p class="lead">말씀하신 대로 배지와 가방으로 갑니다. <b>작은 갈색 가방은 곰곰이의 고정 시그니처</b>로 늘 메고, <b>배지는 시즌마다 바꿔</b> 어느 시즌 영상인지 한눈에 알아보게 했습니다. 모자는 늘 쓰는 대신 비 오는 날·소풍처럼 <b>에피소드 상황에 맞춰</b> 씁니다. 베레모는 뺐습니다.</p>
 </section>
 <div class="kong"><b>콩이 · 공통</b><span>머리에 콩나물 새싹 두 잎. 이름이 '콩'이라서 붙였습니다. 네 시안 모두 같습니다.</span></div>
 <section>
-  <h2>곰곰이 소품 시안</h2>
+  <h2>시즌 배지(위 넷) · 상황 모자(아래 넷)</h2>
   <div class="opts">{cards}</div>
 </section>
 <section>
@@ -94,9 +98,9 @@ h3{{font-family:var(--round);font-weight:400;font-size:19px;margin:2px 0 8px}}
   <div class="seasons">{seasons}</div>
 </section>
 <section class="ask">
-  <p><b>어느 시안으로 할까요?</b> 정해주시면 그 모습으로 기준 이미지를 새로 만들고, 4화부터 적용합니다.</p>
-  <p class="soft">1~3화는 소품 없이 이미 완성돼 있습니다. "4화부터 소품이 생겼다"로 자연스럽게 넘어가거나, 4화 첫 장면에서 콩이가 목도리를 선물하는 식으로 이야기에 넣을 수도 있습니다.</p>
-  <p class="soft">기획서: shorts/gomgom/seasons_plan.md · 시안 원본: shorts/gomgom/ref/v2/opt_a~d.png</p>
+  <p><b>이 조합으로 확정할까요?</b> 배지 순서를 바꾸거나 빼고 싶은 게 있으면 번호(S1~S4, H1~H4)로 알려주세요. 확정하면 시즌 1 기준 이미지(꿀방울 배지 + 가방)를 새로 만들고 4화부터 적용합니다.</p>
+  <p class="soft">1~3화는 소품 없이 완성돼 있으니, 4화 첫 장면에서 콩이가 가방과 꿀방울 배지를 선물하는 식으로 이야기에 넣으면 자연스럽습니다. "꼴배지"는 꿀배지로 이해했습니다 — 꽃배지를 말씀하신 거라면 S4 데이지가 그 안입니다.</p>
+  <p class="soft">기획서: shorts/gomgom/seasons_plan.md · 시안 원본: shorts/gomgom/ref/v2/v2_*.png</p>
 </section>
 </div>'''
 (H / "index.html").write_text(html, encoding="utf-8")
