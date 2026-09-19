@@ -19,7 +19,12 @@ tr -d '\r' < prompts.txt | while IFS= read -r line; do
   [ -z "$line" ] && continue
   n=$((n+1)); f=$(printf "cand_%02d.png" $n)
   [ -s "$f" ] && { log "skip $f"; continue; }
-  out=$(higgsfield generate create text2image_soul_v2 --prompt "$line" --aspect_ratio 3:2 --quality 2k --json </dev/null 2>&1)
+  # 무료 플랜은 동시 생성 1개 → 영상 제작(곰곰한 마음)과 겹치면 rate_limit/concurrent 에러. 1분 간격으로 최대 15회 재시도(실패 호출은 크레딧 미차감)
+  for try in $(seq 1 15); do
+    out=$(higgsfield generate create text2image_soul_v2 --prompt "$line" --aspect_ratio 3:2 --quality 2k --json </dev/null 2>&1)
+    echo "$out" | grep -qiE "rate_limit_reached|concurrent" || break
+    log "busy($f) 다른 생성 진행 중 — 60초 대기 후 재시도 $try/15"; sleep 60
+  done
   id=$(echo "$out" | python -c "import sys,json
 try:
   d=json.loads(sys.stdin.read()); print(d[0] if isinstance(d,list) else '')
