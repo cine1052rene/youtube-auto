@@ -22,3 +22,7 @@ shorts/**/*.mp3
 shorts/**/out/
 shorts/**/check/
 shorts/**/fonts/*.ttf
+shorts/gomgom/ep04/audio/
+shorts/gomgom/ep04/prod/img/
+shorts/gomgom/ep04/prod/clips/
+shorts/gomgom/ep04/prod/out/
