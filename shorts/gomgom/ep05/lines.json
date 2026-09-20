@@ -1,0 +1,21 @@
+{
+  "episode": "05 걱정을 내려놓고 싶을 때",
+  "shots": [
+    {"id": "01", "type": "V", "model": "seedance1_5", "narrator": "걱정이 꼬리에 꼬리를 물어서,"},
+    {"id": "02", "type": "V", "model": "seedance1_5", "narrator": "잠이 안 올 때 있죠?"},
+    {"id": "03", "type": "V", "model": "seedance1_5", "narrator": "옛 철학자 에픽테토스는"},
+    {"id": "04", "type": "V", "model": "seedance1_5", "narrator": "세상일을 두 바구니에 나눠 담으라고 했어요."},
+    {"id": "05", "type": "V", "model": "seedance1_5", "narrator": "내가 어쩔 수 있는 것,"},
+    {"id": "06", "type": "V", "model": "seedance1_5", "narrator": "그리고 어쩔 수 없는 것."},
+    {"id": "07", "type": "V", "model": "seedance1_5", "narrator": "곰곰이는 내일 비가 올지 걱정하다가,"},
+    {"id": "08", "type": "V", "model": "seedance1_5", "narrator": "우산을 챙기는 것만"},
+    {"id": "09", "type": "V", "model": "seedance1_5", "narrator": "자기 바구니에 넣었어요."},
+    {"id": "10", "type": "V", "model": "seedance1_5", "narrator": "어쩔 수 없는 건"},
+    {"id": "11", "type": "V", "model": "seedance1_5", "narrator": "바구니째 살며시 내려놓아도 괜찮아요."},
+    {"id": "12", "type": "V", "model": "seedance1_5:8", "narrator": "지금 내려놓고 싶은 걱정, 하나 있나요?"}
+  ],
+  "voices": {
+    "luna": {"engine": "higgsfield text2speech_v2 elevenlabs", "voice_id": "375a3398-e3b4-4f91-845d-42181e352899", "voice_type": "preset", "script": "narrator"}
+  },
+  "note": "근거: 스토아 철학 통제의 이분법(에픽테토스, 엥케이리디온 1장). 첫 컷은 훅(밤에 걱정이 꼬리를 무는 장면)으로 시작. 부엉이 할아버지는 곰곰이와 같은 키, 콩이는 곰곰이 키의 절반. 소품·설정 설명 없음."
+}
