@@ -34,6 +34,14 @@ Gomgom, a small round cream-colored needle-felted wool bear with soft fuzzy text
 - 여름·나들이 컷은 뒤에 `wearing a small straw boater hat with a flat top and flat brim and a sage green ribbon, both round ears fully visible` 추가
 - **이빨이 보이면 안 됨**(입은 벌려도 됨), 만화풍으로 바뀌면 안 됨
 
+### 매 프롬프트에 그대로 붙이는 크기 문장 (수정 금지)
+```
+scale rule: Gomgom is the size reference, a palm-sized needle-felted doll about three heads tall; every other animal character such as Bori the rabbit or Grandpa Owl stands exactly as tall as Gomgom and is never taller, never shorter and never bulkier; Kong is always the smallest character, its round body only as big as Gomgom's head and about half of Gomgom's total height, and Kong never changes size from shot to shot
+```
+- 근거: 기준 이미지 `ref/gomgom_master_s1.png`에서 **콩이 몸통 = 곰곰이 머리 크기 ≒ 곰곰이 키의 절반**
+- 4화에서 부엉이가 곰곰이의 2배(04)였다가 더 작아지고(05), 보리가 1.5배(09·10), 콩이가 2/3(13)로 나와 전부 재생성함
+- 조연이 새로 나오면 그 캐릭터도 **"exactly as tall as Gomgom"** 문구를 반드시 붙일 것
+
 ### 매 프롬프트 끝에 붙이는 그림체 문장 (수정 금지)
 ```
 soft warm golden light, dreamy bokeh with gentle floating sparkles, cozy warm pastel palette, handmade felt and knit textures, high quality 3D render, vertical composition, no text, no letters
