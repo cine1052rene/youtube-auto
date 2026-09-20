@@ -1,22 +1,86 @@
 {
   "episode": "04 남과 비교하면 마음이 작아지는 이유",
   "shots": [
-    {"id": "01", "type": "V", "model": "seedance1_5", "narrator": "곰곰이에게 오늘, 작은 선물이 생겼어요."},
-    {"id": "02", "type": "V", "model": "seedance1_5", "narrator": "친구 소식을 보고 나면,"},
-    {"id": "03", "type": "V", "model": "seedance1_5", "narrator": "괜히 내가 작아 보일 때 있죠?"},
-    {"id": "04", "type": "V", "model": "seedance1_5", "narrator": "심리학자 페스팅어는"},
-    {"id": "05", "type": "V", "model": "seedance1_5", "narrator": "사람은 늘 남과 견주어 자신을 가늠한다고 했어요."},
-    {"id": "06", "type": "V", "model": "seedance1_5", "narrator": "문제는, 남의 가장 빛나는 순간과"},
-    {"id": "07", "type": "V", "model": "seedance1_5", "narrator": "나의 평범한 하루를 나란히 놓는다는 거예요."},
-    {"id": "08", "type": "V", "model": "seedance1_5", "narrator": "곰곰이가 부러워한 친구도,"},
-    {"id": "09", "type": "V", "model": "seedance1_5", "narrator": "사진 밖에서는"},
-    {"id": "10", "type": "V", "model": "seedance1_5", "narrator": "곰곰이처럼 하품하고 있었을지 몰라요."},
-    {"id": "11", "type": "V", "model": "seedance1_5", "narrator": "그러니 오늘은, 비교할 상대를"},
-    {"id": "12", "type": "V", "model": "seedance1_5", "narrator": "어제의 나로 바꿔보세요."},
-    {"id": "13", "type": "V", "model": "seedance1_5:8", "narrator": "어제보다 조금 나아진 것, 하나 있나요?"}
+    {
+      "id": "02",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "친구 소식을 보고 나면,"
+    },
+    {
+      "id": "03",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "괜히 내가 작아 보일 때 있죠?"
+    },
+    {
+      "id": "04",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "심리학자 페스팅어는"
+    },
+    {
+      "id": "05",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "사람은 늘 남과 견주어 자신을 가늠한다고 했어요."
+    },
+    {
+      "id": "06",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "문제는, 남의 가장 빛나는 순간과"
+    },
+    {
+      "id": "07",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "나의 평범한 하루를 나란히 놓는다는 거예요."
+    },
+    {
+      "id": "08",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "곰곰이가 부러워한 친구도,"
+    },
+    {
+      "id": "09",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "사진 밖에서는"
+    },
+    {
+      "id": "10",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "곰곰이처럼 하품하고 있었을지 몰라요."
+    },
+    {
+      "id": "11",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "그러니 오늘은, 비교할 상대를"
+    },
+    {
+      "id": "12",
+      "type": "V",
+      "model": "seedance1_5",
+      "narrator": "어제의 나로 바꿔보세요."
+    },
+    {
+      "id": "13",
+      "type": "V",
+      "model": "seedance1_5:8",
+      "narrator": "어제보다 조금 나아진 것, 하나 있나요?"
+    }
   ],
   "voices": {
-    "luna": {"engine": "higgsfield text2speech_v2 elevenlabs", "voice_id": "375a3398-e3b4-4f91-845d-42181e352899", "voice_type": "preset", "script": "narrator"}
+    "luna": {
+      "engine": "higgsfield text2speech_v2 elevenlabs",
+      "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+      "voice_type": "preset",
+      "script": "narrator"
+    }
   },
-  "note": "근거: 사회비교 이론(Festinger, 1954). 시즌1 소품 첫 등장 — 01컷에서 콩이가 갈색 가방과 코랄 하트 배지를 선물하고, 02컷부터 곰곰이가 착용. 친구 캐릭터 보리(흰 토끼, 민트 목도리) 고정. 곰곰이는 입을 벌려도 이빨이 보이면 안 되고, 만화풍으로 변하면 안 됨. 모든 컷에 움직임(카메라 또는 캐릭터)."
+  "note": "근거: 사회비교 이론(Festinger, 1954). 01번(콩이가 가방·하트 배지를 선물하는 소품 소개 컷)은 주제와 연결되지 않고 훅을 잡아먹어 제외함 — 소재는 clips/01.mp4·img/01.png에 남아 있고, 대본은 lines_with_intro.json에 보관. 친구 캐릭터 보리(흰 토끼, 민트 목도리) 고정. 곰곰이는 입을 벌려도 이빨이 보이면 안 되고, 만화풍으로 변하면 안 됨. 조연은 곰곰이와 같은 키, 콩이는 곰곰이 키의 절반. 모든 컷에 움직임(카메라 또는 캐릭터)."
 }
