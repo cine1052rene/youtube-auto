@@ -22,6 +22,13 @@ Higgsfield 디스코드 #daily-soul 채널의 일일 챌린지. 매일 5명 선�
 - Ctrl+K로 `hall-of-fame` 검색하면 **OpenAI 서버 채널이 먼저 잡힌다** → 목록에서 "Higgsfield AI" 줄을 골라야 함(↓ 한 번 + Enter)
 - 당선 시 1인당 1000크레딧. 링크 없는 게시물은 실격이므로 사용자에게 안내할 때 항상 링크를 강조한다
 
+## 공식 룰 요약 (docs-storage 스레드 전문, 9/20 확인)
+- Soul / Soul 2 / Soul Cinema만. 이미지 + 생성 링크를 **한 메시지**에 올려야 채점됨. SFW·PG-13
+- 하루 투고 무제한이지만 **1인 1승**. 다음 주제가 올라올 때까지 접수. 이전 당선자도 재당선 가능
+- 채점: theme relevance / execution quality / originality / narrative·emotion / prompt execution, 각 1~10점(최대 50). 리액션은 투표가 아님
+- 보상: 매일 5명, 1000cr 프로모 코드를 DM으로 받음 → **7일 안에 Manage Account → Promocode에 입력**(입력 시점부터 90일 유효)
+- 공식 팁: 예상 밖의 해석이 눈에 띈다 / 화려함보다 깔끔한 완성도 — 올리기 전 손·얼굴·디테일 점검
+
 ## 심사 기준 (9/16부터 당선작 카드에 점수표가 공개됨) ⭐
 당선작 이미지 하단에 채점표가 박혀 나온다. **5개 항목 × 10점 = 50점 만점.**
 
