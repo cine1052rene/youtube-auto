@@ -1,0 +1,319 @@
+<title>곰곰한 마음 여섯 편</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#F0EEE7;
+  --surface:#FBFAF6;
+  --ink:#2A2E33;
+  --soft:#6E7480;
+  --line:#DCD8CE;
+  --sage:#6F8C6A;
+  --dusk:#3E5675;
+  --coral:#D8574F;
+  --shadow:0 1px 2px rgba(42,46,51,.06), 0 8px 24px rgba(42,46,51,.07);
+  --round:"Gowun Dodum", "Apple SD Gothic Neo", sans-serif;
+  --sans:"Noto Sans KR", system-ui, -apple-system, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15181D;
+    --surface:#1D2128;
+    --ink:#ECE8DF;
+    --soft:#9AA2AE;
+    --line:#2E343E;
+    --sage:#93B58B;
+    --dusk:#94AED0;
+    --coral:#EE8179;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15181D;
+  --surface:#1D2128;
+  --ink:#ECE8DF;
+  --soft:#9AA2AE;
+  --line:#2E343E;
+  --sage:#93B58B;
+  --dusk:#94AED0;
+  --coral:#EE8179;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.75;
+  padding:0 20px;
+  padding-block:44px 80px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+
+/* ── 머리 ── */
+.eyebrow{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.14em;
+  color:var(--sage);
+  text-transform:uppercase;
+  display:flex;align-items:center;gap:9px;
+}
+.eyebrow::before{
+  content:"";width:7px;height:7px;border-radius:50%;
+  background:var(--coral);flex:none;
+}
+h1{
+  font-family:var(--round);
+  font-size:clamp(30px,7vw,46px);
+  line-height:1.24;
+  margin:12px 0 14px;
+}
+.lead{color:var(--soft);max-width:60ch;font-size:15.5px}
+
+.stats{
+  display:flex;flex-wrap:wrap;gap:0;
+  margin-top:26px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.stat{
+  flex:1 1 130px;
+  padding:14px 18px 15px 0;
+}
+.stat + .stat{padding-left:18px;border-left:1px dashed var(--line)}
+.stat dt{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  color:var(--soft);text-transform:uppercase;margin-bottom:3px;
+}
+.stat dd{
+  margin:0;font-family:var(--mono);font-size:21px;font-weight:500;
+  color:var(--dusk);font-variant-numeric:tabular-nums;line-height:1.2;
+}
+.stat dd small{font-family:var(--sans);font-size:13px;color:var(--soft);font-weight:400;margin-left:3px}
+
+/* ── 회차 ── */
+.eps{display:flex;flex-direction:column;gap:0;list-style:none;padding:0;margin:0}
+.ep{
+  display:grid;
+  grid-template-columns:248px 1fr;
+  gap:26px;
+  padding-block:34px;
+  border-top:1px dashed var(--line);
+  align-items:start;
+}
+.eps > .ep:first-child{border-top:none;padding-top:4px}
+
+.screen{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  background:#0d0f13;
+  box-shadow:var(--shadow);
+  aspect-ratio:9/16;
+  max-width:100%;
+}
+.screen video{
+  width:100%;height:100%;display:block;object-fit:cover;background:#0d0f13;
+}
+
+.meta{display:flex;flex-direction:column;gap:13px;min-width:0}
+.epno{
+  font-family:var(--mono);font-size:12px;letter-spacing:.12em;
+  color:var(--sage);display:flex;align-items:baseline;gap:10px;
+}
+.epno span{color:var(--soft);letter-spacing:.04em}
+h2{font-family:var(--round);font-size:clamp(21px,3.4vw,26px);line-height:1.35}
+.hook{color:var(--ink);font-size:15px}
+.hook::before{content:"“";color:var(--soft)}
+.hook::after{content:"”";color:var(--soft)}
+.source{
+  color:var(--soft);font-size:13.5px;
+  padding-left:13px;border-left:2px solid var(--line);
+}
+.ask{
+  font-family:var(--round);
+  font-size:17px;line-height:1.55;
+  color:var(--sage);
+  padding:13px 16px;
+  background:var(--surface);
+  border-radius:11px;
+  border:1px solid var(--line);
+}
+.facts{
+  display:flex;flex-wrap:wrap;gap:6px 14px;
+  font-family:var(--mono);font-size:12px;color:var(--soft);
+  font-variant-numeric:tabular-nums;
+}
+.facts b{color:var(--ink);font-weight:500}
+
+/* ── 제작 노트 ── */
+.notes{
+  border-top:1px dashed var(--line);
+  padding-top:30px;
+  display:flex;flex-direction:column;gap:18px;
+}
+h3{font-family:var(--round);font-size:20px}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;list-style:none;padding:0;margin:0}
+.rules li{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:11px;
+  padding:15px 17px;
+}
+.rules strong{display:block;font-weight:700;font-size:14px;margin-bottom:4px}
+.rules p{color:var(--soft);font-size:13.5px;line-height:1.65}
+.paths{
+  font-family:var(--mono);font-size:12.5px;color:var(--soft);
+  line-height:1.9;word-break:break-all;
+}
+.paths b{color:var(--ink);font-weight:500}
+
+@media (max-width:620px){
+  .ep{grid-template-columns:1fr;gap:18px}
+  .screen{max-width:260px}
+  .stat{flex-basis:calc(50% - 1px);padding-right:12px}
+  .stat:nth-child(odd) + .stat{padding-left:14px}
+  .stat:nth-child(3){border-left:none;padding-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+video:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+</style>
+
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">곰곰한 마음 · 시즌 1</p>
+    <h1>마음에 대해<br>곰곰이 생각하는 여섯 편</h1>
+    <p class="lead">니들펠트로 만든 작은 세계에서, 곰곰이와 병아리 콩이가 마음의 이름을 하나씩 찾아갑니다. 각 편은 질문 하나로 시작해 질문 하나로 끝납니다. 아래는 완성된 여섯 편 전부입니다.</p>
+
+    <dl class="stats">
+      <div class="stat"><dt>episodes</dt><dd>6<small>편</small></dd></div>
+      <div class="stat"><dt>running time</dt><dd>4:00</dd></div>
+      <div class="stat"><dt>cuts</dt><dd>73<small>컷</small></dd></div>
+      <div class="stat"><dt>format</dt><dd>9:16<small>세로</small></dd></div>
+    </dl>
+  </header>
+
+  <ul class="eps">
+
+    <li class="ep">
+      <div class="screen">
+        <video src="v/ep01.mp4" poster="v/ep01.jpg" controls playsinline preload="none"></video>
+      </div>
+      <div class="meta">
+        <p class="epno">EP 01 <span>쉬어도 쉬어도</span></p>
+        <h2>쉬어도 쉬어도 피곤한 이유</h2>
+        <p class="hook">쉬는 날 하루 종일 누워 있었는데, 왜 더 피곤할까요?</p>
+        <p class="source">회복 경험 4요소 — 심리적 분리 · 이완 · 숙달 · 통제 (Sonnentag &amp; Fritz)</p>
+        <p class="ask">여러분은 쉴 때 뭘 하면 제일 개운해지나요?</p>
+        <p class="facts"><span><b>43.5</b>초</span><span><b>13</b>컷</span><span>1080×1920</span></p>
+      </div>
+    </li>
+
+    <li class="ep">
+      <div class="screen">
+        <video src="v/ep02.mp4" poster="v/ep02.jpg" controls playsinline preload="none"></video>
+      </div>
+      <div class="meta">
+        <p class="epno">EP 02 <span>마음의 저울</span></p>
+        <h2>칭찬은 금방 잊고,<br>한마디 지적은 오래 남는 이유</h2>
+        <p class="hook">칭찬 열 번보다, 지적 한 번이 더 오래 남지 않나요?</p>
+        <p class="source">부정성 편향 (negativity bias)</p>
+        <p class="ask">오늘 들은 좋은 말, 하나만 댓글로 나눠줄래요?</p>
+        <p class="facts"><span><b>45.3</b>초</span><span><b>13</b>컷</span><span>1080×1920</span></p>
+      </div>
+    </li>
+
+    <li class="ep">
+      <div class="screen">
+        <video src="v/ep03.mp4" poster="v/ep03.jpg" controls playsinline preload="none"></video>
+      </div>
+      <div class="meta">
+        <p class="epno">EP 03 <span>치즈 한 단지</span></p>
+        <h2>에피쿠로스가 말한 작은 행복</h2>
+        <p class="hook">쾌락주의자라고 하면, 화려하게 즐기는 사람이 떠오르죠?</p>
+        <p class="source">에피쿠로스의 아타락시아 — 디오게네스 라에르티오스가 전한 편지 속 &lsquo;치즈 한 단지&rsquo; 일화</p>
+        <p class="ask">여러분의 치즈 한 단지는 뭔가요?</p>
+        <p class="facts"><span><b>40.1</b>초</span><span><b>11</b>컷</span><span>부엉이 할아버지 등장</span></p>
+      </div>
+    </li>
+
+    <li class="ep">
+      <div class="screen">
+        <video src="v/ep04.mp4" poster="v/ep04.jpg" controls playsinline preload="none"></video>
+      </div>
+      <div class="meta">
+        <p class="epno">EP 04 <span>빛나는 순간과 평범한 하루</span></p>
+        <h2>남과 비교하면 마음이 작아지는 이유</h2>
+        <p class="hook">친구 소식을 보고 나면, 괜히 내가 작아 보일 때 있죠?</p>
+        <p class="source">사회비교 이론 (Festinger, 1954)</p>
+        <p class="ask">어제보다 조금 나아진 것, 하나 있나요?</p>
+        <p class="facts"><span><b>37.3</b>초</span><span><b>12</b>컷</span><span>친구 보리 등장</span></p>
+      </div>
+    </li>
+
+    <li class="ep">
+      <div class="screen">
+        <video src="v/ep05.mp4" poster="v/ep05.jpg" controls playsinline preload="none"></video>
+      </div>
+      <div class="meta">
+        <p class="epno">EP 05 <span>두 개의 바구니</span></p>
+        <h2>걱정을 내려놓고 싶을 때</h2>
+        <p class="hook">걱정이 꼬리에 꼬리를 물어서, 잠이 안 올 때 있죠?</p>
+        <p class="source">스토아 철학 통제의 이분법 (에픽테토스, 엥케이리디온 1장)</p>
+        <p class="ask">지금 내려놓고 싶은 걱정, 하나 있나요?</p>
+        <p class="facts"><span><b>34.5</b>초</span><span><b>12</b>컷</span><span>재생성 0건</span></p>
+      </div>
+    </li>
+
+    <li class="ep">
+      <div class="screen">
+        <video src="v/ep06.mp4" poster="v/ep06.jpg" controls playsinline preload="none"></video>
+      </div>
+      <div class="meta">
+        <p class="epno">EP 06 <span>말하지 않은 기대</span></p>
+        <h2>별일 아닌데 괜히 서운할 때</h2>
+        <p class="hook">별일도 아닌데, 괜히 서운할 때가 있죠?</p>
+        <p class="source">충족되지 않은 기대와 관계 갈등 — 관계심리학</p>
+        <p class="ask">최근에 서운했던 일, 사실은 뭘 기대했었나요?</p>
+        <p class="facts"><span><b>39.1</b>초</span><span><b>12</b>컷</span><span>콩이 시점 전환</span></p>
+      </div>
+    </li>
+
+  </ul>
+
+  <section class="notes">
+    <h3>만들면서 정한 규칙</h3>
+    <ul class="rules">
+      <li>
+        <strong>이빨은 보이지 않는다</strong>
+        <p>입은 벌려도 되지만 이빨이 보이면 곰곰이가 다른 곰처럼 보입니다. 만화풍으로 변하는 것도 금지.</p>
+      </li>
+      <li>
+        <strong>곰곰이가 크기의 기준</strong>
+        <p>보리·부엉이 할아버지는 곰곰이와 똑같은 키, 콩이는 곰곰이 머리 크기(키의 절반)로 고정했습니다.</p>
+      </li>
+      <li>
+        <strong>첫 컷은 반드시 훅</strong>
+        <p>캐릭터나 소품 설명으로 첫 2초를 쓰지 않습니다. 소품은 설명하지 않고 그냥 달고 있으면 됩니다.</p>
+      </li>
+      <li>
+        <strong>내레이션은 받아쓰기로 검증</strong>
+        <p>길이만 재면 엉뚱한 음성을 놓칩니다. 실제로 뭐라고 말하는지 받아쓰기해서 대본과 맞춰봅니다.</p>
+      </li>
+    </ul>
+
+    <p class="paths">
+      원본 &nbsp;<b>ep01/v3/out</b> · <b>ep02/prod/out</b> · <b>ep03/prod/out</b> · <b>ep04/prod/out</b> · <b>ep05/prod/out</b> · <b>ep06/prod/out</b><br>
+      기준 이미지 &nbsp;<b>ref/gomgom_master_s1.png</b> &nbsp;· 대본 &nbsp;<b>series_bible.md</b> &nbsp;· 안 쓴 컷 &nbsp;<b>outtakes/</b>
+    </p>
+  </section>
+
+</div>

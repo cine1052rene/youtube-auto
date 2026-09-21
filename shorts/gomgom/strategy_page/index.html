@@ -1,0 +1,392 @@
+<title>곰곰한 마음 채널 전략</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#F2F0EA;
+  --surface:#FBFAF6;
+  --sunk:#EAE7DE;
+  --ink:#22262C;
+  --soft:#6B7280;
+  --line:#DBD7CD;
+  --sage:#5F7F5E;
+  --dusk:#38536F;
+  --coral:#C0504A;
+  --round:"Gowun Dodum","Apple SD Gothic Neo",sans-serif;
+  --sans:"Noto Sans KR",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#14171B;--surface:#1C2026;--sunk:#23282F;--ink:#E9E6DE;--soft:#98A0AB;
+    --line:#2D333B;--sage:#8DAF8B;--dusk:#8FAACD;--coral:#E2857E;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14171B;--surface:#1C2026;--sunk:#23282F;--ink:#E9E6DE;--soft:#98A0AB;
+  --line:#2D333B;--sage:#8DAF8B;--dusk:#8FAACD;--coral:#E2857E;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.78;padding:0 20px;padding-block:44px 84px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:46px}
+p{margin:0}
+h1,h2,h3,h4{margin:0;font-weight:400;text-wrap:balance}
+
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--sage);text-transform:uppercase}
+h1{font-family:var(--round);font-size:clamp(28px,6.4vw,40px);line-height:1.28;margin:10px 0 14px}
+.lead{color:var(--soft);max-width:62ch}
+.stamp{
+  font-family:var(--mono);font-size:12px;color:var(--soft);
+  margin-top:18px;padding-top:14px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:4px 18px;
+}
+
+/* 결정 타일 */
+.decisions{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px}
+.dec{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 17px 17px}
+.dec dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--soft);text-transform:uppercase;margin-bottom:6px}
+.dec dd{margin:0;font-family:var(--round);font-size:23px;line-height:1.3;color:var(--dusk)}
+.dec dd small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--soft);margin-top:5px;line-height:1.6}
+
+section{display:flex;flex-direction:column;gap:16px}
+h2{
+  font-family:var(--round);font-size:clamp(21px,3.6vw,26px);
+  display:flex;align-items:baseline;gap:12px;
+}
+h2::before{
+  content:attr(data-n);font-family:var(--mono);font-size:12px;font-weight:600;
+  color:var(--sage);letter-spacing:.08em;flex:none;
+}
+h3{font-family:var(--round);font-size:18.5px;margin-top:8px}
+.why{color:var(--ink)}
+.why b{color:var(--dusk);font-weight:700}
+
+ul.bul{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+ul.bul li{padding-left:16px;position:relative;color:var(--ink)}
+ul.bul li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--sage)}
+ul.bul li span{color:var(--soft)}
+
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:13.8px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--soft);background:var(--sunk);font-weight:500;white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--dusk);white-space:nowrap}
+td b{font-weight:700}
+
+.callout{
+  background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--sage);
+  border-radius:0 11px 11px 0;padding:14px 17px;font-size:14.5px;
+}
+.callout.warn{border-left-color:var(--coral)}
+.callout h4{font-family:var(--round);font-size:16.5px;margin-bottom:5px}
+.callout p{color:var(--soft)}
+.callout.warn h4{color:var(--coral)}
+
+/* 체크리스트 */
+.check{display:flex;flex-direction:column;gap:22px}
+.grp h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin-bottom:9px}
+.grp ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.grp li{display:flex;gap:11px;align-items:flex-start;padding:8px 11px;border-radius:9px}
+.grp li:hover{background:var(--surface)}
+.grp input[type=checkbox]{
+  appearance:none;width:17px;height:17px;flex:none;margin-top:5px;
+  border:1.5px solid var(--soft);border-radius:5px;background:transparent;cursor:pointer;
+  transition:background .12s,border-color .12s;
+}
+.grp input[type=checkbox]:checked{background:var(--sage);border-color:var(--sage)}
+.grp input[type=checkbox]:checked::after{
+  content:"";display:block;width:4px;height:9px;margin:1px 0 0 5px;
+  border:solid var(--surface);border-width:0 2px 2px 0;transform:rotate(43deg);
+}
+.grp input[type=checkbox]:focus-visible{outline:2px solid var(--dusk);outline-offset:2px}
+.grp label{cursor:pointer;font-size:14.5px;line-height:1.65}
+.grp label em{font-style:normal;color:var(--soft);font-size:13.5px}
+.grp li:has(input:checked) label{color:var(--soft);text-decoration:line-through;text-decoration-color:var(--line)}
+.progress{font-family:var(--mono);font-size:12px;color:var(--soft);font-variant-numeric:tabular-nums}
+
+.srcs{font-size:13px;color:var(--soft);display:flex;flex-direction:column;gap:7px;border-top:1px dashed var(--line);padding-top:24px}
+.srcs a{color:var(--dusk);text-decoration:none;border-bottom:1px solid var(--line)}
+.srcs a:hover{border-bottom-color:var(--dusk)}
+.srcs p{line-height:1.6}
+
+@media (max-width:560px){
+  .dec dd{font-size:20px}
+  .grp li{padding:8px 4px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Channel Strategy Report</p>
+  <h1>곰곰한 마음,<br>어떻게 올릴 것인가</h1>
+  <p class="lead">완성된 여섯 편을 유튜브에서 어떻게 운영할지에 대한 제안입니다. 업로드 빈도·시각·채널명·설정 네 가지를 먼저 정하고, 각각을 비슷한 컨셉의 채널 사례와 2026년 정책 변화로 뒷받침했습니다.</p>
+  <p class="stamp"><span>2026. 09. 20.</span><span>시즌 1 · 6편 완성 시점</span><span>잔여 크레딧 805</span></p>
+</header>
+
+<dl class="decisions">
+  <div class="dec"><dt>업로드 빈도</dt><dd>주 2편<small>화요일 · 금요일 고정</small></dd></div>
+  <div class="dec"><dt>업로드 시각</dt><dd>저녁 8시<small>평일 KST 19–22시 구간</small></dd></div>
+  <div class="dec"><dt>채널명</dt><dd>곰곰한 마음<small>시리즈명 그대로 사용</small></dd></div>
+  <div class="dec"><dt>핸들</dt><dd>@gomgom_mind<small>조회 시점 미사용 확인</small></dd></div>
+</dl>
+
+<section>
+  <h2 data-n="01">왜 주 2편인가</h2>
+  <p class="why">업계 통념은 <b>1일 1편</b>입니다. 실제로 월 500만 원을 버는 쇼츠 채널의 일정표는 주 7~10편이었습니다. 하지만 그 방식은 <b>편당 제작비가 거의 0</b>인 채널에서만 성립합니다. 우리는 한 편에 12컷을 생성하고 전 컷을 프레임 단위로 점검하며 내레이션까지 받아쓰기로 검증합니다. 편당 45~65크레딧, 잔액 805로는 약 14편이 한계입니다.</p>
+  <p class="why">그리고 2026년에는 편수를 늘리는 것이 오히려 <b>위험</b>해졌습니다.</p>
+
+  <div class="callout warn">
+    <h4>편수를 늘리면 걸리는 정책</h4>
+    <p>유튜브는 2025년 7월 '반복 콘텐츠' 정책을 <b>'인위적 콘텐츠(inauthentic content)'</b>로 개편하면서, 템플릿을 거의 바꾸지 않고 대량 생산한 영상을 수익화에서 제외하기로 했습니다. 집행이 <b>영상 단위가 아니라 채널 단위</b>라, 한 패턴이 걸리면 채널 전체 수익화가 막힙니다. AI를 도구로 쓰는 것 자체는 허용되지만, 사람의 기획과 편집이 얹혀야 합니다.</p>
+  </div>
+
+  <p class="why">유튜브 공식 가이드도 숫자를 제시하지 않습니다. 대신 이렇게 묻습니다 — <b>"장기간 지속할 수 있나요"</b>, <b>"콘텐츠를 특정 요일과 연관짓나요"</b>. 즉 기준은 빈도가 아니라 <b>지속 가능성과 일관성</b>입니다.</p>
+
+  <ul class="bul">
+    <li><b>화요일</b> — 월요일 업로드 러시를 피하고, 주초 콘텐츠 소비가 살아나는 날</li>
+    <li><b>금요일</b> — 한 주를 버틴 저녁. '위로' 주제의 수요가 가장 큰 타이밍</li>
+    <li>하루 2편 몰아올리기는 <span>두 영상이 같은 테스트 슬롯을 나눠 먹어</span> 권장되지 않습니다</li>
+  </ul>
+</section>
+
+<section>
+  <h2 data-n="02">왜 저녁 8시인가</h2>
+  <p class="why">Buffer가 <b>유튜브 영상 180만 개</b>를 분석한 결과, 쇼츠와 롱폼의 최적 시간대는 완전히 갈렸습니다.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>구분</th><th>평일</th><th>주말</th><th>이유</th></tr></thead>
+      <tbody>
+        <tr><td><b>쇼츠</b></td><td class="num">19–22시 KST</td><td class="num">10–14시 KST</td><td>퇴근·하교 후 짧은 스크롤 소비</td></tr>
+        <tr><td>롱폼</td><td class="num">15–17시 KST</td><td class="num">12–14시 KST</td><td>일찍 올려야 저녁 프라임타임까지 노출 확보</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="why">알고리즘은 업로드 후 <b>24~72시간</b>의 반응(완주율·좋아요·댓글)을 보고 확산 여부를 정합니다. 특히 첫 1~2시간의 초기 반응이 기준점이 되기 때문에, <b>사람이 가장 많이 접속해 있는 시간에 올리는 것</b>이 그 자체로 유리합니다.</p>
+
+  <div class="callout">
+    <h4>2~3주 뒤에는 이 숫자를 버리세요</h4>
+    <p>위 수치는 전체 평균입니다. 채널이 돌아가기 시작하면 유튜브 스튜디오 → 시청자층 → <b>'시청자가 유튜브를 이용하는 시간대'</b>에 우리 채널의 실제 데이터가 쌓입니다. 2~3주치가 모이면 그 값으로 갈아타는 것이 맞습니다.</p>
+  </div>
+</section>
+
+<section>
+  <h2 data-n="03">비슷한 컨셉 채널은 어떻게 하고 있나</h2>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>채널</th><th>규모</th><th>무엇이 통했나</th><th>우리에게 주는 시사점</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>Psych2Go</b><br><span style="color:var(--soft)">심리학 애니메이션</span></td>
+          <td class="num">1,300만</td>
+          <td>불안·관계·트라우마를 한 입 크기 애니로. 규모가 큰데도 카테고리 평균을 크게 웃도는 참여율</td>
+          <td>심리 지식 + 캐릭터 애니메이션 조합의 천장이 매우 높다</td>
+        </tr>
+        <tr>
+          <td><b>The School of Life</b><br><span style="color:var(--soft)">철학 애니메이션</span></td>
+          <td class="num">975만</td>
+          <td>철학·심리를 생활 언어로. 핵심 시청자 <b>25–34세</b>, 참여율 4.29%</td>
+          <td>성인 대상 철학 콘텐츠가 대중적으로 통한다. 우리 타깃 연령의 근거</td>
+        </tr>
+        <tr>
+          <td><b>Molang YouTuber</b><br><span style="color:var(--soft)">캐릭터 IP 채널</span></td>
+          <td class="num">31.4만<br>5,400만 조회</td>
+          <td>귀여운 캐릭터가 자기수용·감정 다루기를 이야기. 15개월간 300편, 편당 평균 <b>18만 조회</b></td>
+          <td>가장 가까운 선례. 캐릭터에 '마음 주제'를 얹는 방식이 실제로 작동한다</td>
+        </tr>
+        <tr>
+          <td><b>국내 명언·위로 글귀 쇼츠</b><br><span style="color:var(--soft)">다수 채널</span></td>
+          <td class="num">—</td>
+          <td>배경 이미지 + 자막 템플릿. 진입 장벽이 없어 채널 수가 매우 많음</td>
+          <td><b>피해야 할 자리.</b> 레드오션이자 인위적 콘텐츠 정책의 위험군</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="why">국내 '마음·위로' 숏폼은 대부분 <b>이미지에 자막만 얹는 방식</b>입니다. 우리는 오리지널 캐릭터와 매 편 다른 장면, 그리고 출처가 분명한 이론(에픽테토스·페스팅어·에피쿠로스)을 가지고 있습니다. 이 차이가 곧 차별점이자, 3번 항목의 정책 리스크를 피하는 방패입니다.</p>
+</section>
+
+<section>
+  <h2 data-n="04">채널명과 핸들</h2>
+  <p class="why"><b>곰곰한 마음</b>을 그대로 채널명으로 쓰는 것을 제안합니다.</p>
+  <ul class="bul">
+    <li>'곰곰이'가 <b>캐릭터 이름이자 '곰곰이 생각하다'라는 행위</b> — 채널명 한 번으로 장르가 전달됩니다</li>
+    <li>이미 여섯 편의 자막 톤과 기준서에 이 이름으로 브랜드가 박혀 있습니다</li>
+    <li>확장할 때 <b>'곰곰한 ○○'</b> 형태로 시즌을 파생시킬 수 있습니다</li>
+  </ul>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>핸들 후보</th><th>조회 결과</th><th>메모</th></tr></thead>
+      <tbody>
+        <tr><td class="num">@gomgom_mind</td><td><b style="color:var(--sage)">미사용</b></td><td>1순위. 영문 검색에도 의미가 전달됨</td></tr>
+        <tr><td class="num">@gomgommaeum</td><td><b style="color:var(--sage)">미사용</b></td><td>한글 발음 그대로. 국내 시청자에게 자연스러움</td></tr>
+        <tr><td class="num">@gomgomi</td><td><b style="color:var(--sage)">미사용</b></td><td>캐릭터 IP 중심으로 갈 경우</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="why" style="font-size:13.5px;color:var(--soft)">세 핸들 모두 조회 시점에 페이지가 없었습니다(HTTP 404). 최종 확인은 채널 생성 화면에서 한 번 더 해주세요.</p>
+</section>
+
+<section>
+  <h2 data-n="05">첫 4주 일정</h2>
+  <p class="why">완성분 6편이 있다는 것이 지금의 가장 큰 자산입니다. <b>1편만 올라온 채널은 구독할 이유가 없습니다.</b> 초반에는 볼거리를 빠르게 쌓아 구독 전환을 만들고, 그 사이에 다음 시즌을 제작하는 것이 맞습니다.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>주차</th><th>업로드</th><th>동시에 할 일</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1주차</td><td>화 1화 · 금 2화</td><td>채널 개설과 설정(6번 체크리스트), 재생목록 생성</td></tr>
+        <tr><td class="num">2주차</td><td>화 3화 · 금 4화</td><td>첫 두 편의 완주율·댓글 확인, 시즌 2 대본 확정</td></tr>
+        <tr><td class="num">3주차</td><td>화 5화 · 금 6화</td><td>시즌 2 제작 착수(크레딧 확보 필요)</td></tr>
+        <tr><td class="num">4주차~</td><td>주 2편 유지</td><td>스튜디오 시청 시간대 데이터로 업로드 시각 재조정</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <h4>업로드 직후 30분</h4>
+    <p>초기 반응이 확산을 결정하므로, 올린 직후 30분은 댓글에 답을 답니다. 여섯 편 모두 <b>질문으로 끝나기 때문에</b> 댓글이 달릴 구조가 이미 만들어져 있습니다. 답글은 그 자체로 참여 신호입니다.</p>
+  </div>
+</section>
+
+<section>
+  <h2 data-n="06">채널 설정 체크리스트</h2>
+  <p class="why">순서대로 따라가면 됩니다. <span class="progress" id="prog">0 / 18 완료</span></p>
+
+  <div class="check">
+    <div class="grp">
+      <h4>개설</h4>
+      <ul>
+        <li><input type="checkbox" id="c1"><label for="c1">브랜드 계정으로 생성 <em>— 개인 계정으로 만들면 나중에 공동 관리·양도가 어렵습니다</em></label></li>
+        <li><input type="checkbox" id="c2"><label for="c2">2단계 인증 설정 <em>— 수익화 프로그램 신청의 필수 요건입니다</em></label></li>
+        <li><input type="checkbox" id="c3"><label for="c3">핸들 <b>@gomgom_mind</b> 확보</label></li>
+      </ul>
+    </div>
+
+    <div class="grp">
+      <h4>기본 정보</h4>
+      <ul>
+        <li><input type="checkbox" id="c4"><label for="c4">채널명 <b>곰곰한 마음</b></label></li>
+        <li><input type="checkbox" id="c5"><label for="c5">프로필 사진은 곰곰이 얼굴 클로즈업 <em>— 작은 원 안에서 알아볼 수 있어야 합니다</em></label></li>
+        <li><input type="checkbox" id="c6"><label for="c6">배너 제작 <em>— 중앙 안전영역 1546×423 안에 곰곰이·콩이와 한 줄 소개</em></label></li>
+        <li><input type="checkbox" id="c7"><label for="c7">채널 소개글 <em>— 첫 문장에 '마음·심리학·철학·위로'가 자연스럽게 들어가게</em></label></li>
+        <li><input type="checkbox" id="c8"><label for="c8">설정 → 채널 → 기본정보에서 <b>채널 키워드</b> 입력</label></li>
+      </ul>
+    </div>
+
+    <div class="grp">
+      <h4>콘텐츠</h4>
+      <ul>
+        <li><input type="checkbox" id="c9"><label for="c9">업로드 기본값을 <b>'아동용 아님'</b>으로 <em>— 가장 중요합니다. 아래 리스크 ① 참고</em></label></li>
+        <li><input type="checkbox" id="c10"><label for="c10">언어 한국어, 카테고리는 교육 또는 인물·블로그</label></li>
+        <li><input type="checkbox" id="c11"><label for="c11">재생목록 <b>'시즌 1 · 마음 사전'</b> 생성 후 1~6화 순서 고정</label></li>
+        <li><input type="checkbox" id="c12"><label for="c12">채널 예고편은 1화, 재방문 구독자용은 최신화로 지정</label></li>
+        <li><input type="checkbox" id="c13"><label for="c13">쇼츠 리믹스 허용 <em>— 다른 사람이 인용하면 그만큼 노출이 늘어납니다</em></label></li>
+        <li><input type="checkbox" id="c14"><label for="c14">자막(SRT) 업로드 <em>— 대본이 이미 있으니 만들 수 있습니다. 검색 노출과 자동 번역에 직결</em></label></li>
+        <li><input type="checkbox" id="c15"><label for="c15">제목은 그 편의 훅 질문 그대로 <em>— #Shorts 태그는 붙이지 않아도 9:16이면 자동 인식됩니다</em></label></li>
+      </ul>
+    </div>
+
+    <div class="grp">
+      <h4>운영</h4>
+      <ul>
+        <li><input type="checkbox" id="c16"><label for="c16">댓글 공개 + 스팸 필터 켜기</label></li>
+        <li><input type="checkbox" id="c17"><label for="c17">영상 설명 하단에 제작 방식 한 줄 명시 <em>— 정책 리스크 ②의 대비책</em></label></li>
+        <li><input type="checkbox" id="c18"><label for="c18">월 1회 스튜디오에서 시청자 활동 시간대 확인</label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 data-n="07">리스크 세 가지</h2>
+
+  <div class="callout warn">
+    <h4>① 아동용으로 잘못 분류하기</h4>
+    <p>귀여운 펠트 인형이 나오다 보니 '아동용'으로 표시하기 쉽습니다. 하지만 아동용으로 표시하면 <b>댓글·최종 화면·카드·맞춤 광고가 전부 사라집니다.</b> 댓글이 막히면 우리 영상의 핵심 장치인 '마지막 질문'이 무력해지고, 맞춤 광고가 빠지면 수익도 줄어듭니다. 내레이션이 성인 시청자를 향하고 있으므로 <b>'아동용 아님'</b>이 맞습니다.</p>
+  </div>
+
+  <div class="callout warn">
+    <h4>② 인위적 콘텐츠 정책 (채널 단위 집행)</h4>
+    <p>같은 배경에 자막만 바꾸는 식의 반복은 채널 전체 수익화를 잃게 만듭니다. 대응은 세 가지입니다. 매 편 <b>배경과 연출을 실제로 바꾸고</b>, 설명란에 <b>이론 출처를 밝히고</b>, 제작 방식(직접 기획·전 컷 검수)을 한 줄로 적습니다. 지금까지의 제작 방식은 이 기준을 이미 충족합니다.</p>
+  </div>
+
+  <div class="callout warn">
+    <h4>③ 2027년 2월 1일, 수익화 문턱이 2배가 됩니다</h4>
+    <p>현재 기준은 구독자 1,000명 + <b>90일간 쇼츠 조회수 1,000만</b>(또는 시청 4,000시간)입니다. 2027년 2월 1일부터 신규 신청자는 <b>2,000만 조회 / 8,000시간</b>으로 올라갑니다. 중간 단계로 <b>구독자 500명 + 300만 조회</b>면 팬 펀딩 기능부터 열리니, 그 지점을 1차 목표로 잡는 것이 현실적입니다.</p>
+  </div>
+</section>
+
+<section>
+  <h2 data-n="08">콘텐츠 쪽에서 하나만 고친다면</h2>
+  <p class="why">현재 여섯 편의 길이는 <b>34~45초</b>입니다. 업계에서 통용되는 기준은 30초 이내 영상의 완주율이 가장 높다는 것인데, 완주율은 쇼츠 확산의 1순위 지표입니다.</p>
+  <ul class="bul">
+    <li>이미 만든 6편은 <b>그대로 갑니다</b> — 길이보다 첫 인상이 중요하고, 첫 컷은 이미 훅으로 시작합니다</li>
+    <li>시즌 2부터 <b>32~35초</b>를 목표로 대본을 압축합니다 <span>(내레이션 12줄 → 10줄)</span></li>
+    <li>여섯 편의 완주율을 비교해 <b>가장 높은 편의 길이</b>를 다음 시즌 기준으로 삼습니다</li>
+  </ul>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>시점</th><th>구독자</th><th>편당 평균 조회</th><th>비고</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1개월</td><td class="num">300</td><td class="num">2,000</td><td>완주율 60% 확보가 진짜 목표</td></tr>
+        <tr><td class="num">3개월</td><td class="num">1,000</td><td class="num">5,000</td><td>팬 펀딩 요건(500명+300만) 통과 지점</td></tr>
+        <tr><td class="num">12개월</td><td class="num">—</td><td class="num">쇼츠 누적 1,000만</td><td>2027년 2월 이전 수익화 신청</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="why" style="font-size:13.5px;color:var(--soft)">신규 채널 쇼츠의 통상 편당 조회수 범위를 근거로 보수적으로 잡은 수치입니다. 한 편이라도 알고리즘을 타면 이 숫자는 의미가 없어집니다.</p>
+</section>
+
+<section class="srcs">
+  <p><b style="color:var(--ink)">출처</b></p>
+  <p><a href="https://linkfarm.ai/blog/youtube-best-upload-time-data-2026">유튜브 최적 업로드 시간 2026 — 180만 개 영상 데이터로 본 Shorts와 롱폼 차이</a></p>
+  <p><a href="https://support.google.com/youtube/answer/13616979?hl=ko&co=YOUTUBE._YTVideoType%3Dshorts">YouTube 고객센터 — Shorts 업로드 일정 팁</a></p>
+  <p><a href="https://support.google.com/youtube/answer/9527654?hl=ko">YouTube 고객센터 — 채널 또는 동영상 시청자층 설정(아동용)</a></p>
+  <p><a href="https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/">TechCrunch — YouTube clarifies policies around AI slop</a> · <a href="https://support.google.com/youtube/answer/1311392?hl=en">YouTube channel monetization policies</a></p>
+  <p><a href="https://vidiq.com/blog/post/youtube-partner-program-guide/">vidIQ — YouTube Partner Program 요건과 2027년 2월 상향</a></p>
+  <p><a href="https://socialblade.com/youtube/handle/psych2go">Social Blade — Psych2Go</a> · <a href="https://hypeauditor.com/youtube/UC7IcJI8PUf5Z3zKxnZvTBog/">HypeAuditor — The School of Life</a> · <a href="https://www.animationmagazine.net/2024/09/molang-kindness-club-capsule-toons-coming-to-youtube/">Animation Magazine — Molang YouTuber</a></p>
+  <p><a href="https://snsboost.kr/blog/10">SNS부스터 — 유튜브 쇼츠 알고리즘 2026</a> · <a href="https://www.a-ha.io/questions/43bae9e147e185f39a4055b5570920f0">아하 — 쇼츠 하루 2개 업로드가 유리한가</a></p>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var KEY = "gomgom-channel-setup";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('.grp input[type=checkbox]'));
+  var prog = document.getElementById('prog');
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { saved = {}; }
+
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    prog.textContent = done + " / " + boxes.length + " 완료";
+  }
+  boxes.forEach(function(b){
+    if (saved[b.id]) b.checked = true;
+    b.addEventListener('change', function(){
+      saved[b.id] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+      paint();
+    });
+  });
+  paint();
+})();
+</script>
