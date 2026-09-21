@@ -1,4 +1,10 @@
-node_modules/\n.next/\ndist/\n.env\n.env.local\n*.log\n.DS_Store
+node_modules/
+.next/
+dist/
+.env
+.env.local
+*.log
+.DS_Store
 
 # generated media (AI test outputs, too large for git)
 episodes/**/*.png
@@ -46,3 +52,10 @@ shorts/gomgom/ep06/prod/qc/sheets/
 shorts/gomgom/ep06/audio/
 shorts/gomgom/ep05/prod/qc/
 shorts/gomgom/ep06/prod/qc/
+
+# 손으로 쓴 페이지는 추적 (shorts/**/index.html 규칙의 예외)
+!shorts/gomgom/preview_page/index.html
+!shorts/gomgom/strategy_page/index.html
+
+# 생성 로그
+challenges/**/nohup.log
