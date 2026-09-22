@@ -1,0 +1,739 @@
+<title>곰곰한 마음 운영 기획서</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#F2F0EA;--surface:#FBFAF6;--sunk:#E9E6DD;--ink:#22262C;--soft:#6B7280;--line:#DAD6CC;
+  --sage:#5F7F5E;--sage-bg:#E4EBE1;--dusk:#38536F;--amber:#9A6A12;--amber-bg:#F3E7CC;
+  --coral:#B8473F;--coral-bg:#F5E1DE;--grey-bg:#E6E4DE;
+  --round:"Gowun Dodum","Apple SD Gothic Neo",sans-serif;
+  --sans:"Noto Sans KR",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#14171B;--surface:#1C2026;--sunk:#242A31;--ink:#E9E6DE;--soft:#9AA2AD;--line:#2E343C;
+    --sage:#91B38E;--sage-bg:#23302A;--dusk:#93AED2;--amber:#E2B45E;--amber-bg:#33291A;
+    --coral:#E88A82;--coral-bg:#3A2422;--grey-bg:#2A2F36;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14171B;--surface:#1C2026;--sunk:#242A31;--ink:#E9E6DE;--soft:#9AA2AD;--line:#2E343C;
+  --sage:#91B38E;--sage-bg:#23302A;--dusk:#93AED2;--amber:#E2B45E;--amber-bg:#33291A;
+  --coral:#E88A82;--coral-bg:#3A2422;--grey-bg:#2A2F36;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.78;padding:0 20px;padding-block:44px 90px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:52px}
+p{margin:0}
+h1,h2,h3,h4{margin:0;font-weight:400;text-wrap:balance}
+a{color:var(--dusk)}
+b,strong{font-weight:700}
+
+/* 머리 */
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--sage);text-transform:uppercase}
+h1{font-family:var(--round);font-size:clamp(28px,6.4vw,42px);line-height:1.28;margin:10px 0 14px}
+.lead{color:var(--soft);max-width:64ch}
+.stamp{font-family:var(--mono);font-size:12px;color:var(--soft);margin-top:18px;padding-top:14px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:4px 18px}
+
+/* 플랫폼 요약 */
+.roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.pf{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 15px 15px;display:flex;flex-direction:column;gap:6px}
+.pf .nm{font-family:var(--round);font-size:18px;line-height:1.3}
+.pf .rl{font-size:13px;color:var(--soft);line-height:1.55;flex:1}
+.pill{display:inline-block;align-self:flex-start;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.02em;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.ok{background:var(--sage-bg);color:var(--sage)}
+.part{background:var(--amber-bg);color:var(--amber)}
+.man{background:var(--grey-bg);color:var(--soft)}
+
+/* 목차 */
+nav.toc{display:flex;flex-direction:column;gap:10px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+nav.toc p{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+nav.toc ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 8px}
+nav.toc a{display:inline-block;font-size:13.5px;text-decoration:none;color:var(--ink);padding:3px 11px;border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+nav.toc a:hover,nav.toc a:focus-visible{border-color:var(--dusk);color:var(--dusk);outline:none}
+
+/* 파트 */
+.part-head{display:flex;flex-direction:column;gap:6px;padding-top:6px;border-top:2px solid var(--ink)}
+.part-head .no{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--soft);text-transform:uppercase;margin-top:12px}
+.part-head h2{font-family:var(--round);font-size:clamp(24px,4.6vw,31px);line-height:1.3}
+
+section{display:flex;flex-direction:column;gap:15px;scroll-margin-top:20px}
+h3{font-family:var(--round);font-size:clamp(20px,3.6vw,24px);line-height:1.35}
+h4{font-family:var(--sans);font-weight:700;font-size:15px;margin-top:6px}
+.sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
+.txt{max-width:66ch}
+.soft{color:var(--soft)}
+.small{font-size:13.5px}
+
+ul.bul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+ul.bul li{padding-left:16px;position:relative}
+ul.bul li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--sage)}
+ul.bul.warn li::before{background:var(--coral)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.col{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 17px;display:flex;flex-direction:column;gap:10px}
+.col h4{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.col.good h4{color:var(--sage)}
+.col.care h4{color:var(--coral)}
+.col ul.bul{font-size:14px}
+
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:13.6px}
+th,td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.62}
+thead th{font-family:var(--mono);font-size:10.8px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);background:var(--sunk);font-weight:500;white-space:nowrap}
+tbody tr:last-child td{border-bottom:none}
+td.k{font-weight:700;white-space:nowrap}
+td.mono,.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+td.mono{color:var(--dusk);white-space:nowrap}
+
+.note{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--sage);border-radius:0 11px 11px 0;padding:14px 17px}
+.note h4{margin:0 0 5px;font-family:var(--round);font-weight:400;font-size:17px}
+.note p{color:var(--soft);font-size:14.3px}
+.note.warn{border-left-color:var(--coral)}
+.note.warn h4{color:var(--coral)}
+.note.amb{border-left-color:var(--amber)}
+.note.amb h4{color:var(--amber)}
+
+.crisis{background:var(--coral-bg);border-radius:12px;padding:17px 19px;display:flex;flex-direction:column;gap:10px}
+.crisis h4{margin:0;font-family:var(--round);font-weight:400;font-size:19px;color:var(--coral)}
+.crisis ul.bul li::before{background:var(--coral)}
+.crisis .lines{font-family:var(--mono);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 16px;color:var(--ink)}
+
+/* 문구 예시 */
+.copy{background:var(--surface);border:1px dashed var(--line);border-radius:11px;padding:14px 16px;font-size:14px;line-height:1.75;white-space:pre-wrap;word-break:keep-all;overflow-wrap:anywhere}
+.copy .lbl{display:block;font-family:var(--mono);font-size:10.8px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-bottom:6px}
+
+/* 플랫폼 챕터 */
+.ch{display:flex;flex-direction:column;gap:18px;padding-top:26px;border-top:1px dashed var(--line);scroll-margin-top:20px}
+.ch-top{display:flex;flex-direction:column;gap:8px}
+.ch-top .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:4px}
+.facts div{padding:10px 14px 11px 0}
+.facts div+div{padding-left:14px;border-left:1px dashed var(--line)}
+.facts dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-bottom:2px}
+.facts dd{margin:0;font-size:14.5px;font-weight:500}
+
+.srcs{font-size:12.8px;color:var(--soft);display:flex;flex-direction:column;gap:6px;border-top:1px dashed var(--line);padding-top:24px}
+.srcs a{text-decoration:none;border-bottom:1px solid var(--line)}
+.srcs a:hover{border-bottom-color:var(--dusk)}
+
+@media (max-width:600px){
+  .two{grid-template-columns:1fr}
+  .facts div+div{padding-left:0;border-left:none}
+  .facts div{padding-right:0;border-bottom:1px dashed var(--line)}
+  .facts div:last-child{border-bottom:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Gomgom Mind · Multi-platform Plan</p>
+  <h1>곰곰한 마음,<br>다섯 곳에서 한 목소리로</h1>
+  <p class="lead">1~3화를 확정본으로 두고, 한 편을 유튜브·인스타그램·네이버 클립·X·네이버 블로그에서 어떻게 쓸지, 그리고 댓글은 어디까지 AI에게 맡길 수 있는지 정리한 운영 기획서입니다. 앞부분은 모든 플랫폼에 공통으로 적용되는 전체 계획, 뒷부분은 플랫폼별 기획서입니다.</p>
+  <p class="stamp"><span>2026. 09. 22.</span><span>확정본 1~3화</span><span>런칭 9/25(금) 20:00</span></p>
+</header>
+
+<div class="roster">
+  <div class="pf"><span class="nm">유튜브 쇼츠</span><span class="rl">본진. 수익화 경로이자 모든 링크가 모이는 곳</span><span class="pill ok">댓글 AI 가능</span></div>
+  <div class="pf"><span class="nm">인스타그램</span><span class="rl">친구에게 '보내기'와 저장으로 퍼지는 곳</span><span class="pill ok">댓글 AI 가능</span></div>
+  <div class="pf"><span class="nm">네이버 클립</span><span class="rl">가장 빠른 실제 수익, 블로그와 한 몸</span><span class="pill man">댓글 수동</span></div>
+  <div class="pf"><span class="nm">X</span><span class="rl">짤·타래·NG로 퍼뜨리고 유튜브로 보내는 입구</span><span class="pill part">AI는 초안만</span></div>
+  <div class="pf"><span class="nm">네이버 블로그</span><span class="rl">검색으로 오래 들어오는 자산</span><span class="pill man">댓글 수동</span></div>
+</div>
+
+<nav class="toc" aria-label="목차">
+  <p>전체 계획</p>
+  <ul>
+    <li><a href="#diag">콘텐츠 진단</a></li>
+    <li><a href="#osmu">1편 = 1주</a></li>
+    <li><a href="#week">주간 운영표</a></li>
+    <li><a href="#voice">한 목소리 가이드</a></li>
+    <li><a href="#comments">댓글 관리와 AI</a></li>
+    <li><a href="#ai-label">AI 제작 표기</a></li>
+    <li><a href="#kpi">지표와 점검</a></li>
+  </ul>
+  <p>플랫폼별 기획서</p>
+  <ul>
+    <li><a href="#yt">유튜브 쇼츠</a></li>
+    <li><a href="#ig">인스타그램</a></li>
+    <li><a href="#clip">네이버 클립</a></li>
+    <li><a href="#x">X</a></li>
+    <li><a href="#blog">네이버 블로그</a></li>
+    <li><a href="#road">실행 로드맵</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════ PART 1 ═══════════════ -->
+<div class="part-head">
+  <p class="no">Part 1</p>
+  <h2>전체 계획</h2>
+</div>
+
+<section id="diag">
+  <h3>우리 콘텐츠는 어떤 콘텐츠인가</h3>
+  <p class="txt">플랫폼 전략은 콘텐츠의 성격에서 출발해야 합니다. 곰곰한 마음이 어디서 강하고 어디서 불리한지부터 정리했습니다.</p>
+  <div class="two">
+    <div class="col good">
+      <h4>강점</h4>
+      <ul class="bul">
+        <li><b>오리지널 캐릭터</b> — 니들펠트 곰곰이와 병아리 콩이. 배경 사진에 글귀만 얹는 수많은 '위로 채널'과 한눈에 구분됩니다</li>
+        <li><b>이미 플랫폼 친화적인 구조</b> — 첫 컷 훅 질문 → 근거 있는 설명 → 작은 실천 → 마지막 질문. 마지막 질문은 그대로 댓글을 부르는 장치입니다</li>
+        <li><b>출처가 있는 이야기</b> — 회복 경험 4요소, 부정성 편향, 에피쿠로스. 블로그 글과 X 타래로 넓힐 재료가 이미 있습니다</li>
+        <li><b>사람이 다듬은 흔적</b> — 전 컷 프레임 점검, 내레이션 받아쓰기 검증, NG 아카이브. 'AI 대량생산'과 선을 긋는 증거입니다</li>
+      </ul>
+    </div>
+    <div class="col care">
+      <h4>조심할 점</h4>
+      <ul class="bul warn">
+        <li><b>AI로 만든 영상</b> — 유튜브는 문제없지만, 인스타그램은 2026년 '사람이 만든 콘텐츠 우선' 기조라 역풍이 붑니다</li>
+        <li><b>편당 제작비가 큼</b> — 한 편에 45~65크레딧. 편수로 승부할 수 없으니 한 편을 오래, 여러 모양으로 써야 합니다</li>
+        <li><b>34~45초</b> — 쇼츠·클립은 30초 안쪽이 완주율에 유리하다는 게 통설입니다</li>
+        <li><b>위로·심리 주제</b> — 마음이 힘든 분이 댓글에 속마음을 털어놓을 수 있습니다. 대응 원칙이 먼저 있어야 합니다</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="osmu">
+  <h3>1편 = 1주</h3>
+  <p class="txt">주 2편씩 올리면 확정본 3편은 열흘이면 바닥납니다. 대신 <b>본편은 주 1편(금)</b>, <b>화요일은 파생 쇼츠</b>로 채웁니다. 화·금 리듬은 지키면서 3편으로 3주를 가고, 그 사이 제작 쪽은 4화 이후를 준비합니다. 파생물은 전부 이미 가진 소재로 만들어서 <b>추가 크레딧이 0</b>입니다.</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>이미 가진 소재</th><th>만들어지는 것</th><th>올라가는 곳</th></tr></thead>
+      <tbody>
+        <tr><td class="k">완성본 영상</td><td>본편 쇼츠</td><td>유튜브 · 인스타 릴스 · 네이버 클립 · X</td></tr>
+        <tr><td class="k">시작 그림 PNG<br><span class="soft small">편당 11~13장, 9:16 고화질</span></td><td>카드뉴스, 짤, 배경화면, 블로그 이미지, 커버</td><td>인스타 · X · 클립 게시물 · 블로그</td></tr>
+        <tr><td class="k">대본과 타이밍 데이터</td><td>자막 파일(SRT), 캡션, 타래 원고, 블로그 초안</td><td>전 플랫폼</td></tr>
+        <tr><td class="k">이론 출처</td><td>설명란 근거, 블로그 본문, 타래</td><td>유튜브 · 블로그 · X</td></tr>
+        <tr><td class="k">NG 아카이브</td><td>NG 쇼츠 2편</td><td>전 플랫폼, 특히 X</td></tr>
+        <tr><td class="k">베스트 컷</td><td>15초 티저, 1~3화 모아보기(2분)</td><td>런칭 전 인스타 / 4주차 전 플랫폼</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="txt soft small">3주 동안 본편 3편, 파생 쇼츠 3편, 카드뉴스 3세트, 타래 3편, 블로그 3편, 짤 10장 안팎, 스토리 — 합쳐서 <b>약 35개 게시물</b>이 됩니다.</p>
+</section>
+
+<section id="week">
+  <h3>주간 운영표</h3>
+  <p class="txt">모든 시각은 한국 시간입니다. 금요일 저녁 8시에 한 편을 풀고, 일주일 동안 그 편을 다른 모양으로 이어갑니다.</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>요일</th><th>유튜브</th><th>인스타그램</th><th>네이버 클립</th><th>X</th><th>블로그</th></tr></thead>
+      <tbody>
+        <tr><td class="k">금</td><td><b>본편 20:00</b></td><td><b>릴스 20:00</b></td><td><b>본편 20:00</b></td><td><b>본편 20:00</b><br><span class="soft small">링크는 첫 답글</span></td><td>—</td></tr>
+        <tr><td class="k">토</td><td>—</td><td>카드뉴스 12:00</td><td>카드 게시물</td><td>개념 타래</td><td>—</td></tr>
+        <tr><td class="k">일</td><td>—</td><td>질문 스토리</td><td>—</td><td>짤</td><td><b>글 발행 오전</b></td></tr>
+        <tr><td class="k">월</td><td colspan="5"><span class="soft">주간 점검 30분 — <a href="#kpi">지표와 점검</a> 참고</span></td></tr>
+        <tr><td class="k">화</td><td><b>파생 쇼츠 20:00</b></td><td>파생 릴스</td><td>파생</td><td>파생(NG 우선)</td><td>—</td></tr>
+        <tr><td class="k">수·목</td><td>—</td><td>Trial Reels 훅 테스트</td><td>—</td><td>짤 1~2개</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="voice">
+  <h3>한 목소리 가이드</h3>
+  <p class="txt">다섯 플랫폼이 한 채널처럼 느껴지려면 말투가 같아야 합니다. 기준은 영상 자체에서 가져왔습니다.</p>
+  <ul class="bul">
+    <li><b>채널의 목소리는 영상의 해설자</b> — 따뜻한 존댓말, 짧은 문장. 내레이션 톤 그대로 씁니다</li>
+    <li><b>곰곰이는 말하지 않는다</b> — 영상 속 곰곰이는 한 번도 말하지 않고, 콩이는 표정으로 반응합니다. 댓글과 게시물에서도 캐릭터는 <b>괄호 속 지문</b>으로만 등장합니다. 세계관을 깨지 않으면서 친근함을 더하는 장치입니다</li>
+    <li><b>판단 대신 공감, 그리고 되묻기</b> — 해결책을 주기보다 이야기를 더 꺼내게 합니다</li>
+    <li><b>조언·진단은 하지 않는다</b> — 우리는 상담사가 아닙니다. "그건 우울증 같아요" 같은 말은 절대 쓰지 않습니다</li>
+    <li><b>출처 있는 말만</b> — 이론은 영상에서 다룬 근거 안에서만 이야기합니다</li>
+    <li><b>이모지는 한 개까지</b>, 반말과 과장된 감탄은 쓰지 않습니다</li>
+  </ul>
+  <div class="tw">
+    <table>
+      <thead><tr><th>이런 댓글에는</th><th>이렇게</th></tr></thead>
+      <tbody>
+        <tr><td>"저도 쉬는 날 하루 종일 폰만 봐요 ㅠ"</td><td>저도 그런 날이 많아요. 그런 날 혹시 딱 하나 해본다면, 뭐가 떠오르세요? (곰곰이가 옆자리를 톡톡 두드려요)</td></tr>
+        <tr><td>"부정성 편향 출처가 뭐예요?"</td><td>좋은 질문이에요. 나쁜 신호에 더 크게 반응하는 경향을 심리학에서는 부정성 편향이라고 불러요. 설명란에 참고한 내용을 적어두었어요.</td></tr>
+        <tr><td>"곰곰이 너무 귀여워요"</td><td>고마워요. (콩이가 곰곰이 머리 위에서 날개를 파닥여요)</td></tr>
+        <tr><td>"이런 건 다 뻔한 얘기 아닌가요"</td><td>맞아요, 알고 있는 이야기일 수 있어요. 다만 알면서도 잘 안 되는 날을 위해 만들고 있어요. 어떤 부분이 아쉬웠는지 들려주시면 다음 편에 담아볼게요.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="comments">
+  <h3>댓글 관리 — AI로 어디까지 되나</h3>
+  <p class="txt">플랫폼마다 공식 도구와 규칙이 달라서, AI에게 맡길 수 있는 범위도 다릅니다.</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>플랫폼</th><th>공식 도구</th><th>AI 자동 답글</th><th>우리가 쓸 방식</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="k">유튜브</td>
+          <td>Data API v3 무료. 하루 10,000단위, 답글 1건 50단위 → 하루 최대 약 200건. 스튜디오 자체에도 <b>내 말투를 학습한 AI 답글 제안</b>이 있음</td>
+          <td><span class="pill ok">가능</span></td>
+          <td>AI가 분류·초안 → 사람이 승인 후 게시</td>
+        </tr>
+        <tr>
+          <td class="k">인스타그램</td>
+          <td>Graph API. 비즈니스·크리에이터 계정 + 댓글 관리 권한(앱 심사 또는 대행 서비스). 답글·숨김·삭제·좋아요</td>
+          <td><span class="pill ok">가능</span></td>
+          <td>스팸은 자동 숨김, 답글은 초안 승인</td>
+        </tr>
+        <tr>
+          <td class="k">X</td>
+          <td>API 종량제(답글 1건 0.010달러). 자동 답글은 <b>나를 멘션·인용한 글에서만</b> 허용 — 내 게시물에 달린 일반 답글은 해당 안 됨. AI 답글 봇은 <b>X의 사전 서면 승인</b> 필요. 웹 화면 자동화는 영구 정지 사유</td>
+          <td><span class="pill part">초안만</span></td>
+          <td>AI가 초안 → 사람이 직접 게시</td>
+        </tr>
+        <tr>
+          <td class="k">네이버 클립</td>
+          <td>공개된 댓글 API 없음. 클립 크리에이터 앱에서 관리</td>
+          <td><span class="pill man">불가</span></td>
+          <td>앱에서 확인, 필요하면 AI에 붙여넣어 초안</td>
+        </tr>
+        <tr>
+          <td class="k">네이버 블로그</td>
+          <td>공개된 댓글 API 없음</td>
+          <td><span class="pill man">불가</span></td>
+          <td>주 1회 직접 확인</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note warn">
+    <h4>기존 X 자동화는 이 계정에 쓰지 마세요</h4>
+    <p><span class="mono">C:\project\X_twitter</span>의 답글 도구는 웹 화면을 스크립트로 조작하는 방식입니다. 2026년 X 규정상 이런 비(非)API 자동화는 영구 정지 사유라서, 곰곰한 마음 계정에 쓰면 브랜드 계정 자체를 잃을 수 있습니다.</p>
+  </div>
+
+  <h4>운영 원칙: AI는 분류와 초안, 사람은 판단과 게시</h4>
+  <p class="txt">기술적으로 완전 자동화가 되는 유튜브·인스타그램도 <b>반자동</b>으로 갑니다. 이유는 셋입니다. 위로 채널의 댓글은 사람의 속마음이 많고, 캐릭터 말투가 한 번만 어긋나도 세계관이 깨지며, 플랫폼들이 AI 대량 응답을 점점 더 경계하고 있기 때문입니다.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>AI 분류</th><th>예시</th><th>처리</th></tr></thead>
+      <tbody>
+        <tr><td class="k">① 자기 이야기</td><td>"저도 쉬는 날 폰만 봐요"</td><td>공감 + 되묻기 초안 → 승인. <b>가장 많을 유형이고 가장 정성 들일 유형</b></td></tr>
+        <tr><td class="k">② 질문</td><td>"출처가 뭐예요?"</td><td>근거 포함 초안 → 승인</td></tr>
+        <tr><td class="k">③ 칭찬</td><td>"곰곰이 귀여워요"</td><td>좋아요는 자동, 답글은 몇 개만 골라서</td></tr>
+        <tr><td class="k">④ 반박·비판</td><td>"뻔한 얘기"</td><td><b>사람이 직접</b>. 방어하지 않고 인정할 건 인정</td></tr>
+        <tr><td class="k">⑤ AI 제작 문의</td><td>"이거 AI죠?"</td><td>정해둔 답변(아래)으로 투명하게</td></tr>
+        <tr><td class="k">⑥ 스팸·광고·혐오</td><td>링크, 도배</td><td>자동 숨김(유튜브 스튜디오 필터, 인스타 숨김 단어)</td></tr>
+        <tr><td class="k" style="color:var(--coral)">⑦ 위기 신호</td><td>자해·자살 언급</td><td><b>AI 답글 금지</b>, 즉시 사람에게 → 아래 위기 대응</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="crisis">
+    <h4>위기 대응 — 위로 채널이라면 반드시</h4>
+    <ul class="bul">
+      <li><b>신호</b> — 자살·자해 언급, "사라지고 싶다", 극단적인 절망</li>
+      <li><b>AI 자동 답글은 절대 금지.</b> 알림을 받는 즉시 사람이 봅니다</li>
+      <li><b>짧게, 판단·조언 없이</b> — "여기까지 와서 말해줘서 고마워요. 혼자 견디지 않으셨으면 해요. 지금 많이 힘들다면 109에 전화해 주세요. 24시간 누군가 받아요."</li>
+      <li><b>지우지 않습니다.</b> 다만 방법 같은 위험한 정보가 담겼다면 숨김 처리합니다</li>
+      <li>플랫폼의 <b>신고 → 자해 위험</b> 기능을 쓰면 해당 사용자에게 공식 지원 안내가 갑니다</li>
+      <li><b>상시 안내</b> — 모든 플랫폼 소개글과 설명란 맨 아래에 한 줄을 넣어둡니다</li>
+    </ul>
+    <p class="lines"><span>109 자살예방상담 (24시간)</span><span>1577-0199 정신건강상담</span><span>1388 청소년</span></p>
+  </div>
+
+  <div class="copy"><span class="lbl">⑤ AI 제작 문의 — 정해둔 답변</span>네, 영상은 AI 도구로 만들어요. 대신 이야기와 대본은 직접 쓰고, 모든 장면을 한 컷씩 확인해서 곰곰이가 곰곰이답지 않은 장면은 전부 다시 만들어요. (곰곰이가 뿌듯하게 가방을 매만져요)</div>
+
+  <h4>하루 댓글 루틴</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th>언제</th><th>무엇을</th><th>누가</th><th>시간</th></tr></thead>
+      <tbody>
+        <tr><td class="k">업로드 직후</td><td>첫 댓글에 답하기 — 알고리즘이 가장 민감한 구간</td><td>사람</td><td class="mono">30분</td></tr>
+        <tr><td class="k">매일 저녁</td><td>유튜브·인스타 AI 초안 검토 후 승인</td><td>AI → 사람</td><td class="mono">10분</td></tr>
+        <tr><td class="k">매일 저녁</td><td>클립 앱·X 알림 확인</td><td>사람</td><td class="mono">5분</td></tr>
+        <tr><td class="k">주 1회</td><td>블로그 댓글</td><td>사람</td><td class="mono">5분</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="ai-label">
+  <h3>AI 제작 표기</h3>
+  <p class="txt">숨길수록 불리해지는 흐름입니다. 의무가 없는 곳에서도 먼저 밝히는 쪽을 권합니다.</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>플랫폼</th><th>규정</th><th>우리가 할 것</th></tr></thead>
+      <tbody>
+        <tr><td class="k">유튜브</td><td>사실처럼 보이는 합성 콘텐츠만 공개 의무. <b>애니메이션·명백히 비현실적인 콘텐츠는 의무 없음</b>(공식 블로그)</td><td>라벨은 붙이지 않되, 설명란 맨 아래 제작 방식 한 줄 — 인위적 콘텐츠 정책 대비</td></tr>
+        <tr><td class="k">인스타그램</td><td>2025 연말 모세리 메모: "완벽하게 다듬은 미감은 끝났다". 2026년엔 사람 콘텐츠 우선, 출처·진정성 신호를 더 무겁게</td><td>프로필 소개에 명시 + 메이킹·NG로 '사람의 손'을 보여주는 게시물을 섞기</td></tr>
+        <tr><td class="k">X</td><td>무력 분쟁을 다룬 AI 영상만 공개 의무(2026.3) — 해당 없음</td><td>프로필에 한 줄</td></tr>
+        <tr><td class="k">네이버</td><td>별도 규정 확인 못 함</td><td>소개글에 한 줄, 블로그에 제작기 글로 신뢰 확보</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="kpi">
+  <h3>지표와 매주 점검</h3>
+  <p class="txt">목표 숫자는 보수적인 가설입니다. 첫 달 실제 데이터가 나오면 다시 잡습니다.</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>플랫폼</th><th>봐야 할 지표</th><th>1개월</th><th>3개월</th></tr></thead>
+      <tbody>
+        <tr><td class="k">유튜브</td><td>시청 대 넘김 비율, 평균 시청 비율, 댓글 수</td><td class="mono">구독 300</td><td class="mono">구독 1,000</td></tr>
+        <tr><td class="k">인스타그램</td><td>도달 대비 보내기, 저장, 시청 시간</td><td class="mono">팔로워 200</td><td class="mono">팔로워 1,000</td></tr>
+        <tr><td class="k">네이버 클립</td><td>크리에이터 선발, 홈피드 노출</td><td>신청 완료</td><td>선발</td></tr>
+        <tr><td class="k">X</td><td>재게시·인용, 프로필 클릭, 유튜브 유입</td><td class="mono">팔로워 150</td><td class="mono">팔로워 500</td></tr>
+        <tr><td class="k">블로그</td><td>검색 유입, 체류 시간</td><td>글 3편 검색 노출</td><td>키워드 1개 첫 페이지</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h4>월요일 30분 점검</h4>
+  <ul class="bul">
+    <li>플랫폼별 숫자를 한 줄씩 기록합니다</li>
+    <li>지난주 파생물 중 반응이 가장 좋았던 형식으로 이번 주 화요일 슬롯을 정합니다</li>
+    <li>댓글에서 나온 질문과 고민을 모아 다음 시즌 주제 후보로 넘깁니다 — 시청자가 대본을 대신 써주는 구조입니다</li>
+  </ul>
+</section>
+
+<!-- ═══════════════ PART 2 ═══════════════ -->
+<div class="part-head">
+  <p class="no">Part 2</p>
+  <h2>플랫폼별 기획서</h2>
+</div>
+
+<!-- 유튜브 -->
+<article class="ch" id="yt">
+  <div class="ch-top">
+    <p class="tag">Platform 1</p>
+    <h3>유튜브 쇼츠 — 본진</h3>
+    <p class="txt">수익화로 가는 길이고, 다른 플랫폼의 모든 링크가 결국 모이는 곳입니다.</p>
+    <dl class="facts">
+      <div><dt>빈도</dt><dd>주 2회 (금 본편 · 화 파생)</dd></div>
+      <div><dt>시각</dt><dd>저녁 8시</dd></div>
+      <div><dt>댓글</dt><dd>AI 초안 + 승인</dd></div>
+    </dl>
+  </div>
+
+  <h4>기회</h4>
+  <ul class="bul">
+    <li>쇼츠 180만 편 분석에서 평일 최고 시간대는 <b>저녁 7~10시</b>. 금·화 저녁 8시가 그 한가운데입니다</li>
+    <li>알고리즘은 업로드 후 <b>24~72시간</b> 반응으로 확산을 정합니다. 마지막 질문 덕분에 댓글이 쌓일 구조가 이미 있습니다</li>
+    <li>2027년 2월 1일부터 수익화 문턱이 두 배(쇼츠 90일 1,000만 → 2,000만 조회)가 됩니다. <b>그 전에 구독 1,000 + 1,000만 조회</b>가 목표입니다</li>
+  </ul>
+  <h4>위험</h4>
+  <ul class="bul warn">
+    <li><b>인위적 콘텐츠 정책</b> — 템플릿 대량생산은 수익화에서 빠지고, 집행이 <b>채널 단위</b>입니다. 매 편 장면·연출이 달라야 합니다</li>
+    <li><b>아동용 오분류</b> — 귀여운 인형이라 실수하기 쉬운데, 아동용이면 댓글·최종 화면·맞춤 광고가 모두 꺼집니다. 반드시 '아동용 아님'</li>
+  </ul>
+
+  <h4>올릴 것</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th>슬롯</th><th>내용</th><th>비고</th></tr></thead>
+      <tbody>
+        <tr><td class="k">금 20:00</td><td>본편</td><td>재생목록 '시즌 1 · 마음 사전'에 자동 추가</td></tr>
+        <tr><td class="k">화 20:00</td><td>파생 — NG, 모아보기</td><td>본편과 확실히 다른 내용이어야 인위적 콘텐츠로 안 묶임</td></tr>
+        <tr><td class="k">업로드 직후</td><td>고정 댓글</td><td>마지막 질문을 다시 던지고, 해설자가 먼저 답해서 대화를 엽니다</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="copy"><span class="lbl">1화 제목</span>쉬는 날 하루 종일 누워 있었는데, 왜 더 피곤할까요?</div>
+  <div class="copy"><span class="lbl">1화 설명란</span>쉬는 날 하루 종일 누워 있었는데, 왜 더 피곤할까요?
+
+심리학자들은 진짜 회복에 네 가지가 필요하다고 해요.
+일에서 마음 떼어놓기, 몸의 긴장 풀기, 작은 것에 푹 빠지기, 내가 고른 시간 보내기.
+
+근거: Sonnentag &amp; Fritz의 회복 경험 연구 (심리적 분리 · 이완 · 숙달 · 통제)
+시즌 1 · 마음 사전 전편 보기 → 재생목록
+
+곰곰한 마음은 AI 도구로 만들고, 이야기와 모든 장면은 사람이 직접 쓰고 확인합니다.
+마음이 많이 힘들 땐 109 (24시간)
+
+#곰곰한마음 #심리학 #휴식</div>
+  <div class="copy"><span class="lbl">1화 고정 댓글</span>여러분은 쉴 때 뭘 하면 제일 개운해지나요? 저는 창가에서 따뜻한 차 한 잔이요. (콩이가 옆에서 고개를 갸웃해요)</div>
+
+  <h4>하지 말 것</h4>
+  <ul class="bul warn">
+    <li>하루 2편 몰아 올리기 — 두 영상이 같은 테스트 기회를 나눠 먹습니다</li>
+    <li><b>음성 답글</b> — 2026년 2월 모든 크리에이터에게 열렸지만, 채널의 목소리가 해설자인데 사장님 목소리가 끼면 세계관이 갈립니다. 쓰지 않습니다</li>
+    <li>#Shorts 태그 도배 — 9:16이면 자동 인식됩니다</li>
+  </ul>
+</article>
+
+<!-- 인스타 -->
+<article class="ch" id="ig">
+  <div class="ch-top">
+    <p class="tag">Platform 2</p>
+    <h3>인스타그램 — 보내기와 저장으로 퍼지는 곳</h3>
+    <p class="txt">팔로워가 없는 사람에게 닿는 가장 강한 경로가 '친구에게 보내기'입니다. 곰곰한 마음은 원래 "이거 네 얘기야" 하고 보내기 좋은 콘텐츠입니다.</p>
+    <dl class="facts">
+      <div><dt>릴스</dt><dd>금 20:00 · 화 파생</dd></div>
+      <div><dt>카드뉴스</dt><dd>토 12:00</dd></div>
+      <div><dt>댓글</dt><dd>AI 초안 + 승인</dd></div>
+    </dl>
+  </div>
+
+  <h4>기회</h4>
+  <ul class="bul">
+    <li>모세리가 확인한 핵심 신호는 <b>시청 시간(재시청 포함), 도달 대비 보내기, 도달 대비 좋아요</b>. DM 보내기는 비팔로워 도달에서 좋아요의 <b>3~5배 무게</b>입니다 → 캡션의 행동 유도를 '좋아요'가 아니라 <b>'보내기'</b>로 설계합니다</li>
+    <li><b>Trial Reels</b> — 팔로워가 아닌 사람에게만 먼저 보여주는 테스트. 2026년 2월부터 예약도 됩니다. 수·목에 훅 문장만 바꾼 버전으로 A/B 테스트를 돌립니다</li>
+    <li>릴스는 <b>저녁 7~10시</b> 도달이 좋고, 토요일은 <b>낮 12시·저녁 7시</b>가 좋습니다</li>
+    <li>교차 게시는 안전합니다 — 벌점은 <b>남의 콘텐츠를 재업로드</b>하는 계정 대상입니다(모세리). 다른 앱 워터마크가 없는 원본 파일만 쓰면 됩니다</li>
+  </ul>
+  <h4>위험과 대응</h4>
+  <div class="note amb">
+    <h4>인스타그램은 2026년 AI에 가장 차가운 곳</h4>
+    <p>모세리의 2025년 연말 메모는 "완벽하게 다듬은 미감은 끝났다"였고, 2026년엔 AI 생성물보다 사람이 만든 콘텐츠를, 출처와 진정성 신호를 더 무겁게 봅니다. 대응은 <b>감추지 않고 사람의 손을 보여주는 것</b>입니다. 본편만 올리지 말고 <b>NG · 메이킹(한 컷씩 검수하는 과정) · 만드는 사람의 한 줄</b>을 섞으면, 같은 영상도 '대량생산'이 아니라 '공들인 작업'으로 읽힙니다.</p>
+  </div>
+
+  <h4>계정 설정</h4>
+  <ul class="bul">
+    <li><b>프로페셔널(크리에이터) 계정</b> — 인사이트와 댓글 API의 전제 조건입니다</li>
+    <li>프로필 소개 3줄: 무엇을 / 어떻게 만드는지(AI + 사람) / 109 안내</li>
+    <li>링크는 유튜브 채널 하나</li>
+    <li>하이라이트 3개: '마음 사전'(시즌), '곰곰이 NG', '만드는 과정'</li>
+    <li>릴스 <b>커버를 따로</b> 만듭니다 — 프로필 격자가 3:4라서, 중앙 3:4 안에 곰곰이 얼굴과 질문 한 줄이 들어가야 합니다</li>
+  </ul>
+
+  <h4>카드뉴스 구성 — 1화 예시 (7장)</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th>장</th><th>문장</th><th>이미지</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">1</td><td><b>쉬어도 쉬어도 피곤한 이유</b></td><td>소파의 곰곰이</td></tr>
+        <tr><td class="mono">2</td><td>하루 종일 누워 있었는데, 왜 더 피곤할까?</td><td>폰을 보는 곰곰이</td></tr>
+        <tr><td class="mono">3</td><td>심리학자들은 진짜 회복에 네 가지가 필요하다고 해요</td><td>생각하는 곰곰이</td></tr>
+        <tr><td class="mono">4</td><td>① 일에서 마음 떼어놓기 &nbsp;② 몸의 긴장 풀기</td><td>2컷 분할</td></tr>
+        <tr><td class="mono">5</td><td>③ 작은 것에 푹 빠지기 &nbsp;④ 내가 고른 시간 보내기</td><td>2컷 분할</td></tr>
+        <tr><td class="mono">6</td><td>오늘은 딱 십 분만, 좋아하는 걸 골라서</td><td>창가의 곰곰이와 콩이</td></tr>
+        <tr><td class="mono">7</td><td>여러분은 쉴 때 뭘 하면 제일 개운해지나요?<br><span class="soft small">근거: 회복 경험 연구 (Sonnentag &amp; Fritz)</span></td><td>마무리 컷</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="copy"><span class="lbl">1화 릴스 캡션</span>쉬는 날 하루 종일 누워 있었는데, 왜 더 피곤할까요?
+
+누워서 화면을 넘기는 동안에도 머리는 계속 일하고 있었대요.
+진짜 회복엔 네 가지가 필요하다고 해요 — 마음 떼어놓기, 긴장 풀기, 작은 것에 빠지기, 내가 고른 시간.
+
+오늘 이 말이 필요한 친구에게 보내주세요.
+여러분은 쉴 때 뭘 하면 제일 개운해지나요?
+
+AI 도구로 만들고, 모든 장면은 사람이 직접 확인해요.
+#곰곰한마음 #심리학 #번아웃 #휴식 #니들펠트</div>
+
+  <h4>하지 말 것</h4>
+  <ul class="bul warn">
+    <li>캡션에 유튜브 링크 — 눌리지 않습니다. 프로필 링크로</li>
+    <li>해시태그 수십 개 — 3~5개면 충분합니다</li>
+    <li>본편만 연달아 올리기 — AI 영상만 쌓인 피드는 2026년 인스타에서 가장 불리한 모양입니다</li>
+  </ul>
+</article>
+
+<!-- 클립 -->
+<article class="ch" id="clip">
+  <div class="ch-top">
+    <p class="tag">Platform 3</p>
+    <h3>네이버 클립 — 가장 빠른 실제 수익</h3>
+    <p class="txt">유튜브는 구독 1,000명과 1,000만 조회를 넘어야 돈이 되지만, 클립은 크리에이터로 선발되면 바로 활동비가 나옵니다. 그리고 네이버 블로그와 한 몸처럼 움직입니다.</p>
+    <dl class="facts">
+      <div><dt>빈도</dt><dd>금 본편 · 토 카드 · 화 파생</dd></div>
+      <div><dt>업로드</dt><dd>모바일 앱으로만</dd></div>
+      <div><dt>댓글</dt><dd>앱에서 수동</dd></div>
+    </dl>
+  </div>
+
+  <h4>기회</h4>
+  <ul class="bul">
+    <li><b>크리에이터 상시 모집</b>(2026년 2월 7일~), 조건은 <b>클립 채널 보유</b>뿐, 최대 2만 명, 결과는 6주 안에, 선발 시 <b>월 최대 90만 원</b>(활동비 + 어워즈)</li>
+    <li>2026년부터 <b>텍스트+이미지 게시물도 수익화 대상</b> → 인스타용 카드뉴스를 그대로 클립 게시물로 재사용합니다</li>
+    <li>네이버 블로그는 <b>영상이 들어간 글에 가산점</b>을 주고, 유튜브 영상보다 <b>네이버 자체 영상(클립)</b>이 더 유리합니다 → 블로그 글에 클립 영상을 넣으면 두 곳이 함께 올라갑니다</li>
+  </ul>
+  <h4>제약</h4>
+  <ul class="bul warn">
+    <li><b>모바일 앱으로만 업로드</b>(앱은 3분 이내). PC 파일을 폰으로 옮겨서 올려야 합니다 — 업로드 날 요청하시면 폰으로 보내드립니다</li>
+    <li>가이드상 <b>15~30초</b>가 효과적. 우리 34~45초는 길 수 있어서, 첫 달 완주율을 보고 필요하면 <b>클립 전용 30초 편집본</b>(내레이션 중간 두 줄 덜어내기)을 만듭니다 — 크레딧 0</li>
+    <li>규격은 1080×1920 · 30fps · H.264 · AAC — 우리 완성본과 <b>그대로 호환</b>됩니다</li>
+  </ul>
+
+  <h4>신청 순서</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th>순서</th><th>할 일</th><th>이유</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">1</td><td>유튜브·인스타 채널 먼저 열기</td><td>신청서에 <b>다른 플랫폼 채널명·주소·구독자 수</b>를 적는 칸이 있음</td></tr>
+        <tr><td class="mono">2</td><td>클립 채널 개설, 본편 1~2편 올리기</td><td>빈 채널로 신청하지 않기</td></tr>
+        <tr><td class="mono">3</td><td>클립 크리에이터 센터에서 신청, 카테고리 1개 선택</td><td>카테고리는 한 개만 고를 수 있음 — 심리·교양 계열로</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="copy"><span class="lbl">1화 클립 제목 + 해시태그</span>쉬는 날 누워만 있었는데 더 피곤한 이유
+#곰곰한마음 #심리 #휴식 #위로</div>
+
+  <h4>하지 말 것</h4>
+  <ul class="bul warn">
+    <li>제목에 키워드 나열 — 네이버 검색과 연동되지만, 문장형 제목이 더 자연스럽습니다</li>
+    <li>채널을 비워둔 채 신청</li>
+  </ul>
+</article>
+
+<!-- X -->
+<article class="ch" id="x">
+  <div class="ch-top">
+    <p class="tag">Platform 4</p>
+    <h3>X — 짤과 타래로 퍼뜨리는 입구</h3>
+    <p class="txt">수익원이 아니라 <b>확산과 유튜브 유입</b>을 맡습니다. 한국 X의 감성 짤·타래 문화가 곰곰이 스틸과 대사 한 줄에 잘 맞고, NG는 밈으로 가장 잘 퍼질 곳입니다.</p>
+    <dl class="facts">
+      <div><dt>빈도</dt><dd>주 5~6회</dd></div>
+      <div><dt>형식</dt><dd>본편 · 타래 · 짤 · NG</dd></div>
+      <div><dt>댓글</dt><dd>AI 초안, 게시는 사람</dd></div>
+    </dl>
+  </div>
+
+  <h4>유료 계정으로 쓸 수 있는 것</h4>
+  <ul class="bul">
+    <li><b>25,000자 긴 글</b> — 개념 설명을 타래로 쪼개지 않고 한 편의 글로도 올릴 수 있음</li>
+    <li>최대 약 <b>3시간 영상</b> — 나중에 시즌 모아보기도 X에 직접</li>
+    <li><b>답글 우선 노출</b> — 다른 심리·위로 계정의 글에 다는 답글이 위로 올라감. 사람이 직접, 진심으로 다는 답글은 좋은 유입 경로</li>
+  </ul>
+  <h4>제약</h4>
+  <ul class="bul warn">
+    <li>수익 배분은 최근 3개월 <b>인증 타임라인 노출 500만 + 인증 팔로워 500명</b>, 그리고 <b>Premium 사용자의 반응만</b> 계산 → 초반 목표로 삼지 않습니다</li>
+    <li>외부 링크가 달린 글은 도달이 줄어드는 경향이 있다고 알려져 있습니다 → 본편은 <b>파일로 직접</b> 올리고, 유튜브 링크는 <b>첫 답글</b>에</li>
+    <li>자동 답글과 웹 자동화 규정은 <a href="#comments">댓글 관리</a> 참고</li>
+  </ul>
+
+  <h4>올릴 것</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th>요일</th><th>형식</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td class="k">금 20:00</td><td>본편</td><td>영상 + 마지막 질문, 첫 답글에 유튜브 링크</td></tr>
+        <tr><td class="k">토</td><td>개념 타래</td><td>이론을 6개 글로 풀기 + 스틸</td></tr>
+        <tr><td class="k">일·수·목</td><td>짤</td><td>시작 그림 한 장 + 대사 한 줄</td></tr>
+        <tr><td class="k">화 20:00</td><td>NG</td><td>X에서 가장 먼저 반응을 보는 슬롯</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="copy"><span class="lbl">1화 타래</span>1/ 쉬는 날 하루 종일 누워 있었는데, 왜 더 피곤할까. [스틸: 소파의 곰곰이]
+
+2/ 심리학에서는 진짜 회복에 네 가지가 필요하다고 봐요. (Sonnentag &amp; Fritz, '회복 경험')
+
+3/ ① 일에서 마음 떼어놓기 — 심리적 분리
+② 몸의 긴장 풀기 — 이완
+
+4/ ③ 작은 것에 푹 빠지기 — 숙달
+④ 내가 고른 시간 보내기 — 통제
+
+5/ 누워서 화면을 넘기는 동안, 머리는 계속 일하고 있었던 거예요.
+
+6/ 오늘은 딱 십 분만, 좋아하는 걸 골라서. 여러분은 쉴 때 뭘 하면 개운해지나요? [본편 영상]</div>
+  <div class="copy"><span class="lbl">1화 짤</span>[스틸: 창턱에 앉은 곰곰이와 콩이]
+오늘은 딱 십 분만, 좋아하는 걸 골라서.</div>
+
+  <h4>하지 말 것</h4>
+  <ul class="bul warn">
+    <li>기존 브라우저 자동화 도구 사용 — 영구 정지 위험</li>
+    <li>본문에 링크</li>
+    <li>해시태그 여러 개 — X에선 1~2개가 한계</li>
+  </ul>
+</article>
+
+<!-- 블로그 -->
+<article class="ch" id="blog">
+  <div class="ch-top">
+    <p class="tag">Platform 5</p>
+    <h3>네이버 블로그 — 검색으로 오래 들어오는 자산</h3>
+    <p class="txt">영상은 검색에 잘 걸리지 않지만 글은 걸립니다. "쉬어도 피곤한 이유"를 검색한 사람이 곰곰이를 처음 만나는 곳입니다. 쇼츠는 며칠이면 흘러가도 블로그 글은 몇 달씩 사람을 데려옵니다.</p>
+    <dl class="facts">
+      <div><dt>빈도</dt><dd>주 1편</dd></div>
+      <div><dt>시각</dt><dd>일요일 오전</dd></div>
+      <div><dt>댓글</dt><dd>주 1회 수동</dd></div>
+    </dl>
+  </div>
+
+  <h4>기회</h4>
+  <ul class="bul">
+    <li>네이버 문서 평가(D.I.A)는 <b>영상이 들어간 글에 가산점</b>을 주고, <b>클립 영상</b>이 유튜브 영상보다 유리합니다</li>
+    <li>편마다 주제어가 이미 <b>사람들이 검색하는 개념어</b>입니다</li>
+  </ul>
+  <h4>위험과 대응</h4>
+  <div class="note amb">
+    <h4>AI로 찍어낸 글은 오히려 손해</h4>
+    <p>2026년 네이버는 하이퍼클로바X로 글의 맥락과 진정성을 읽고, 키워드만 반복한 글은 저품질로 처리합니다. 기존 블로그 자동화로 초안과 발행은 하되, <b>사장님이 직접 한 문단</b>(내 경험, 내 생각)을 더하는 반자동 방식을 권합니다. 그 한 문단이 C-Rank(블로그 신뢰도)와 D.I.A(문서 품질) 둘 다에 걸립니다.</p>
+  </div>
+
+  <h4>편별 검색어</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th>편</th><th>중심 검색어</th><th>함께 쓸 말</th></tr></thead>
+      <tbody>
+        <tr><td class="k">1화</td><td>쉬어도 피곤한 이유</td><td>회복 경험, 주말 피로, 쉬는 법</td></tr>
+        <tr><td class="k">2화</td><td>부정성 편향</td><td>칭찬보다 비판이 오래 남는 이유, 부정적인 말</td></tr>
+        <tr><td class="k">3화</td><td>에피쿠로스 쾌락주의</td><td>아타락시아, 작은 행복, 치즈 한 단지</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>글 구조</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th>순서</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">1</td><td>제목 — 검색어가 들어간 질문형. 예: <b>쉬어도 피곤한 이유, 심리학이 말하는 진짜 휴식 4가지</b></td></tr>
+        <tr><td class="mono">2</td><td>도입 — <b>사장님의 경험 한 문단</b> (반자동의 핵심)</td></tr>
+        <tr><td class="mono">3</td><td>개념 설명 — 출처 명시 (Sonnentag &amp; Fritz)</td></tr>
+        <tr><td class="mono">4</td><td><b>클립 영상 삽입</b></td></tr>
+        <tr><td class="mono">5</td><td>스틸 3~5장 + 네 가지 요소 풀이</td></tr>
+        <tr><td class="mono">6</td><td>오늘의 작은 실천 — "딱 십 분만"</td></tr>
+        <tr><td class="mono">7</td><td>마지막 질문 + 유튜브·인스타 안내 + 109 한 줄</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>하지 말 것</h4>
+  <ul class="bul warn">
+    <li>제목·본문에 같은 키워드 반복</li>
+    <li>사람 손이 전혀 안 닿은 통째 AI 글</li>
+    <li>유튜브 영상만 넣기 — 클립 영상을 넣어야 가산점이 큽니다</li>
+  </ul>
+</article>
+
+<!-- 로드맵 -->
+<section id="road">
+  <div class="part-head" style="border-top-width:1px">
+    <p class="no">Part 3</p>
+    <h2>실행 로드맵</h2>
+  </div>
+  <div class="tw">
+    <table>
+      <thead><tr><th>언제</th><th>사장님</th><th>제가 할 것</th></tr></thead>
+      <tbody>
+        <tr><td class="k">화 9/22</td><td>계정 5곳 생성 — 유튜브(브랜드 계정·핸들 @gomgom_mind·2단계 인증), 인스타(크리에이터), 네이버 클립, X 프로필 정리, 블로그 카테고리</td><td>프로필 이미지, 유튜브 배너, 소개글 5종(109 안내 포함)</td></tr>
+        <tr><td class="k">수 9/23</td><td>—</td><td>1~3화 업로드 패키지 — 제목·설명·자막 SRT·커버(9:16 / 3:4)·카드뉴스·타래·짤·블로그 초안·고정 댓글</td></tr>
+        <tr><td class="k">목 9/24</td><td>채널 설정 적용, 유튜브 1화 예약, 인스타 티저</td><td>15초 티저 편집</td></tr>
+        <tr><td class="k">금 9/25 20:00</td><td><b>런칭</b> — 1화 전 플랫폼, 30분 댓글</td><td>—</td></tr>
+        <tr><td class="k">1~3주차</td><td>주간 운영표대로 게시, 저녁 10분 댓글 승인</td><td>유튜브·인스타 댓글 AI 초안 도구(권한 준비 후), NG·모아보기 편집</td></tr>
+        <tr><td class="k">2주차 중</td><td>네이버 클립 크리에이터 신청</td><td>신청서 문구</td></tr>
+        <tr><td class="k">4주차</td><td>월요일 점검 결과로 4화 이후 방향 결정</td><td>3주 성과 정리</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="srcs">
+  <p><b style="color:var(--ink)">출처</b></p>
+  <p><a href="https://developers.google.com/youtube/v3/docs/comments/insert">YouTube Data API — Comments: insert (답글 50단위)</a> · <a href="https://www.getphyllo.com/post/is-the-youtube-api-free-in-2026-quota-limits-costs-when-to-pay">YouTube API 2026 무료·일 10,000단위</a></p>
+  <p><a href="https://support.google.com/youtube/answer/10357396">YouTube 고객센터 — 댓글 답글 제안(AI)</a> · <a href="https://www.digitalmusicnews.com/2026/02/27/youtube-just-expanded-voice-replies-to-all-creators/">YouTube 음성 답글 전 크리에이터 확대</a></p>
+  <p><a href="https://blog.youtube/news-and-events/disclosing-ai-generated-content/">YouTube Blog — 변경·합성 콘텐츠 공개 기준</a></p>
+  <p><a href="https://www.postpeer.dev/blog/how-to-manage-instagram-comments-with-api">Instagram 댓글 API 관리 2026</a> · <a href="https://napoleoncat.com/blog/instagram-comment-moderation/">Instagram Comment Moderation 2026</a></p>
+  <p><a href="https://www.dataslayer.ai/blog/instagram-algorithm-2025-complete-guide-for-marketers">Instagram 랭킹 신호(모세리 확인)</a> · <a href="https://sociallyin.com/blog/instagram-algorithm-update-repost/">Instagram 재업로드 벌점과 교차 게시</a> · <a href="https://linkfarm.ai/blog/instagram-best-posting-time-data-2026">인스타그램 게시 최적 시간 2026</a></p>
+  <p><a href="https://docs.x.com/x-api/getting-started/pricing">X API 종량제 가격</a> · <a href="https://vorplabs.com/agent-tools/x-api">X API 자동 답글 규정(소환 맥락·AI 봇 승인·웹 자동화)</a></p>
+  <p><a href="https://help.x.com/en/using-x/creator-revenue-sharing">X 크리에이터 수익 배분</a> · <a href="https://help.x.com/en/using-x/x-premium">About X Premium</a></p>
+  <p><a href="https://byline.network/2026/03/09_naver_clip/">네이버 클립 크리에이터 수익 지원 확대</a> · <a href="https://m.news.nate.com/view/20260206n29119">클립 크리에이터 최대 2만 명 선발</a> · <a href="https://adsensefarm.kr/naver-clip-monetization-signup-upload/">네이버 클립 시작 가이드</a></p>
+  <p><a href="https://locaposting.com/blog/naver-crank-dia-algorithm">네이버 C-Rank와 D.I.A</a> · <a href="https://brunch.co.kr/@chatsapiens/8">네이버 블로그 최상위 노출 전략</a></p>
+  <p><a href="https://linkfarm.ai/blog/youtube-best-upload-time-data-2026">유튜브 최적 업로드 시간 — 180만 편 분석</a> · <a href="https://vidiq.com/blog/post/youtube-partner-program-guide/">YouTube 파트너 프로그램 2027년 2월 상향</a></p>
+  <p><a href="https://www.mohw.go.kr/board.es?mid=a10503010100&amp;bid=0027&amp;act=view&amp;list_no=1479607">보건복지부 — 자살예방 상담전화 109 통합</a></p>
+</section>
+
+</div>
