@@ -3,6 +3,7 @@
 # 사용: bash challenges/daily_soul/gen_daily.sh 2026-09-16
 # 이미 받은 파일은 건너뛰므로 다시 실행해도 이어서 진행
 set -u
+for d in /c/Users/cine1/AppData/Roaming/npm /c/Users/cine1/AppData/Local/Programs/Python/Python312; do case ":$PATH:" in *":$d:"*) ;; *) PATH="$PATH:$d";; esac; done; export PATH
 DAY="${1:?날짜(YYYY-MM-DD)를 넣어주세요}"
 DIR="$(cd "$(dirname "$0")" && pwd)/$DAY"
 cd "$DIR" || { echo "폴더 없음: $DIR"; exit 1; }
