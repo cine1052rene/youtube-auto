@@ -50,6 +50,12 @@ Higgsfield 디스코드 #daily-soul 채널의 일일 챌린지. 매일 5명 선�
 - Originality에 7~8점이 몰린다 → **여기가 승부처**. 주제문에 예시로 나온 소재(final boss in uniform 등)를 그대로 쓰면 이 점수가 깎인다
 - ramadangonim은 9/14·9/15·9/16 3일 연속 당선했고 9/16엔 최저점(39)으로 들었다 → 꾸준한 참가자가 유리하거나, 하루에 여러 장 올려 확률을 높이는 것으로 보인다
 
+## 📊 최근 당선 경향 (9/24 역산, 9/18~9/22 결과)
+- Theme 9~10은 기본, Quality 기준이 8~10으로 올라감 → '영화 스틸' 조명·구도, 단일 피사체·강한 실루엣
+- Prompt 점수는 4~10 편차 → 결정 요인 아님. Originality 10은 주제를 감정적으로 뒤집은 작품
+- 다작 참가자가 반복 당선 → 서로 다른 콘셉트를 더 많이(5장 이상) 올릴 것
+- 참가 가능 이벤트: Weekly Challenge(#community-events, 120초 영상), 월간 어워드(#monthly-awards)
+
 ## 1. 오늘 주제 읽기 (디스코드 데스크톱 앱 화면 캡처)
 - 클릭·캡처 스크립트: `challenges/daily_soul/tools/dc.ps1` — PowerShell에서 `& C:/project/youtube/challenges/daily_soul/tools/dc.ps1 -x X -y Y [-scroll -720] -out 캡처경로.png -wait 1500` (좌표 없이 -out만 주면 창만 앞으로 가져와 캡처). 캡처 파일은 세션 scratchpad에 저장
 - ⚠️ **키 입력 전 디스코드 창 제목에 "Higgsfield AI"가 들어있는지 확인**한다. 다른 서버가 열려 있으면 Ctrl+K 입력이 그 서버의 메시지 입력창에 타이핑될 수 있다(9/19 사용자 개인 서버에 "hall-of-fame"이 입력됨 — 전송 전 삭제). 제목이 다르면 먼저 좌측 서버 아이콘에서 Higgsfield를 클릭
