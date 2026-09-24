@@ -60,3 +60,6 @@ shorts/gomgom/ep06/prod/qc/
 # 생성 로그
 challenges/**/nohup.log
 challenges/daily_soul/.cap/
+challenges/daily_soul/**/*.png
+challenges/daily_soul/**/*.jpg
+challenges/daily_soul/**/*.webp
