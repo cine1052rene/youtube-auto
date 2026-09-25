@@ -72,9 +72,9 @@ def box(label, text):
             f'<button onclick="cp(this)">복사</button></div><pre>{e(text)}</pre></div>')
 
 parts = []
-parts.append('<h2>업로드 일정 (추천)</h2><table><tr><th>화</th><th>공개</th><th>제목</th></tr>' +
+parts.append('<h2>업로드 일정 (9/25 재조정)</h2><table><tr><th>화</th><th>공개</th><th>제목</th></tr>' +
              ''.join(f'<tr><td>{x["n"]}화</td><td>{e(x["when"])}</td><td>{e(x["title"])}</td></tr>' for x in P['eps']) +
-             '<tr><td>이후</td><td colspan="2">매주 화·금 20:00 — 4~6화(완성본 있음)로 10/9까지 이어가고 그 사이 7화부터 제작</td></tr></table>')
+             '<tr><td>이후</td><td colspan="2">4화 금 10/9 한글날 20:00(준비 목 10/8) → 5화 화 10/13 → 6화 금 10/16. 매주 화·금 20:00, 준비는 공개 전날. 공휴일(10/3 개천절·10/5 대체공휴일)엔 작업 없음</td></tr></table>')
 parts.append('<h2>채널 설정 체크리스트</h2>')
 for sec, items in CHECK:
     parts.append(f'<h3>{e(sec)}</h3><ul class="ck">' +
