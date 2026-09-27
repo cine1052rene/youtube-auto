@@ -65,6 +65,35 @@ IMGS = [
     ('cover_ep01_9x16.jpg', '1화 커버 9:16'),
     ('cover_ep02_9x16.jpg', '2화 커버 9:16'),
     ('cover_ep03_9x16.jpg', '3화 커버 9:16'),
+    ('cover_ep04_9x16.jpg', '4화 커버 9:16'),
+    ('cover_ep05_9x16.jpg', '5화 커버 9:16'),
+    ('cover_ep06_9x16.jpg', '6화 커버 9:16'),
+]
+
+
+VIDEOS = {1: r'C:\project\youtube\shorts\gomgom\ep01\v3\out\ep01_v3.mp4', 2: r'C:\project\youtube\shorts\gomgom\ep02\prod\out\ep02.mp4',
+          3: r'C:\project\youtube\shorts\gomgom\ep03\prod\out\ep03.mp4', 4: r'C:\project\youtube\shorts\gomgom\ep04\prod\out\ep04.mp4',
+          5: r'C:\project\youtube\shorts\gomgom\ep05\prod\out\ep05.mp4', 6: r'C:\project\youtube\shorts\gomgom\ep06\prod\out\ep06.mp4'}
+ORDER = [
+    ('① 계정 만들기 — 1화 준비일(목 10/1) 한 번만, 이 순서로', [
+        '<b>유튜브 브랜드 채널</b> — 가장 먼저. 모든 플랫폼 링크가 모이는 본진이고 핸들 @gomgom_mind를 먼저 확보',
+        '<b>인스타그램</b> — 크리에이터 계정 전환 후 프로필 링크에 유튜브 채널 주소',
+        '<b>X</b> — 프로필 사진·헤더·소개 교체, 링크에 유튜브',
+        '<b>네이버 클립</b> — 네이버 앱에서 채널 개설(업로드는 앱으로만 되니 영상 파일을 폰에 옮겨두기)',
+        '<b>네이버 블로그</b> — 카테고리만 만들어 두기(글은 일요일 오전)',
+    ]),
+    ('② 공개 전날 — 예약까지 끝내기', [
+        '<b>유튜브</b> 업로드 → 제목·설명·태그·커버 → 아동용 아님 → <b>다음 날 20:00 예약</b> (예약해도 영상 주소가 바로 생김 → X 첫 답글용으로 복사해 두기)',
+        '<b>인스타 릴스</b> 업로드 → 캡션·커버 → 고급 설정 → <b>같은 시각 20:00 예약</b>',
+        '영상 파일을 폰으로 옮겨두기(클립·X는 당일 직접 올림)',
+    ]),
+    ('③ 공개 당일 저녁 8시 — 이 순서로 10분 안에', [
+        '20:00 <b>유튜브</b> 공개 확인 → <b>고정 댓글</b> 달고 고정',
+        '20:02 <b>인스타</b> 공개 확인',
+        '20:04 <b>네이버 클립</b> 앱으로 업로드(제목 + 해시태그)',
+        '20:07 <b>X</b> 영상 파일 첨부 게시 → <b>첫 답글에 유튜브 링크</b>',
+        '20:10~20:40 유튜브·인스타 첫 댓글에 답하기(해설자 존댓말, 캐릭터는 괄호 지문만). 위기 댓글엔 직접 짧게 + 109 안내',
+    ]),
 ]
 
 def box(label, text):
@@ -74,7 +103,11 @@ def box(label, text):
 parts = []
 parts.append('<h2>업로드 일정 — 접속 많은 날 기준 (9/25 재조정)</h2><table><tr><th>화</th><th>공개</th><th>제목</th></tr>' +
              ''.join(f'<tr><td>{x["n"]}화</td><td>{e(x["when"])}</td><td>{e(x["title"])}</td></tr>' for x in P['eps']) +
-             '<tr><td>4화</td><td>일 10/11 20:00 — 연휴 마지막 밤 (준비 토 10/10)</td><td>남과 비교하면 마음이 작아지는 이유 — 연휴 끝 남들 여행 사진 보는 날</td></tr><tr><td>이후</td><td colspan="2">5·6화는 1~4화 데이터(스튜디오 시청자 활동 시간)를 보고 결정. 원칙: 연휴 전날 밤·연휴 마지막 밤처럼 사람이 몰리는 저녁에 공개해 첫 72시간을 붙잡는다</td></tr></table>')
+             '<tr><td>원칙</td><td colspan="2">연휴 전날 밤·연휴 마지막 밤처럼 사람이 몰리는 저녁 8시에 공개해 첫 72시간을 붙잡는다. 5·6화는 1~4화 데이터(스튜디오 시청자 활동 시간)를 보고 날짜 확정 — 문구·커버는 이미 준비됨</td></tr></table>')
+parts.append('<h2>업로드 순서</h2>')
+for sec, items in ORDER:
+    parts.append(f'<h3>{e(sec)}</h3><ul class="ck">' +
+                 ''.join(f'<li><label><input type="checkbox"><span>{it}</span></label></li>' for it in items) + '</ul>')
 parts.append('<h2>채널 설정 체크리스트</h2>')
 for sec, items in CHECK:
     parts.append(f'<h3>{e(sec)}</h3><ul class="ck">' +
@@ -84,7 +117,7 @@ parts.append('<h2>이미지</h2><div class="grid">' +
                      for f, c in IMGS if os.path.exists(os.path.join(BASE, 'out', f))) + '</div>')
 parts.append('<h2>소개글</h2>' + ''.join(box(b['k'], b['t']) for b in P['bios']))
 for x in P['eps']:
-    parts.append(f'<h2>{x["n"]}화 — {e(x["when"])}</h2>')
+    parts.append(f'<h2>{x["n"]}화 — {e(x["when"])}</h2><p class="sub">영상 <code>{e(VIDEOS[x["n"]])}</code> · 커버 <code>out/cover_ep0{x["n"]}_9x16.jpg</code></p>')
     for k, lab in [('title', '유튜브 제목'), ('desc', '유튜브 설명란'), ('tags', '유튜브 태그'), ('pin', '고정 댓글'),
                    ('reels', '인스타 릴스 캡션'), ('clip', '네이버 클립 제목'), ('x', 'X 본문(영상 첨부)'), ('xr', 'X 첫 답글')]:
         parts.append(box(lab, x[k]))

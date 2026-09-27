@@ -7,6 +7,9 @@ EPS = [
     ('01', '../ep01/v3/img/02.png', ['쉬어도 쉬어도', '피곤한 이유']),
     ('02', '../ep02/prod/img/08.png', ['칭찬은 잊고', '지적은 남는 이유']),
     ('03', '../ep03/prod/img/10.png', ['에피쿠로스가 말한', '작은 행복']),
+    ('04', '../ep04/prod/img/02.png', ['비교하면', '마음이 작아지는 이유']),
+    ('05', '../ep05/prod/img/02.png', ['걱정을', '내려놓고 싶을 때']),
+    ('06', '../ep06/prod/img/01.png', ['별일 아닌데', '괜히 서운할 때']),
 ]
 W, H = 1080, 1920
 BROWN = (92, 60, 40)
@@ -17,15 +20,18 @@ def fit(im, w, h):
     x, y = (im.width - w) // 2, (im.height - h) // 2
     return im.crop((x, y, x + w, y + h))
 
+BOTTOM = {'04', '05'}  # 위쪽에 콩이가 있어 제목을 아래로
+
 def cover(ep, src, lines):
     im = fit(Image.open(os.path.join(BASE, src)).convert('RGB'), W, H)
     # 인스타 격자(3:4)는 세로 중앙 1440px만 보임 → 글자는 y 240~ 안쪽에 둔다
     f = ImageFont.truetype(FONT, 104)
     fs = ImageFont.truetype(FONT, 44)
     lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
-    lh = 128; top = 300
+    lh = 128
     widths = [d.textbbox((0, 0), t, font=f)[2] for t in lines]
     bw = max(widths) + 110; bh = lh * len(lines) + 150
+    top = 1640 - bh if ep in BOTTOM else 300  # 3:4 격자 노출 영역(240~1680) 안
     bx = (W - bw) // 2
     d.rounded_rectangle((bx, top, bx + bw, top + bh), radius=56, fill=(255, 248, 236, 225))
     tag = f'곰곰한 마음 · {int(ep)}화'
