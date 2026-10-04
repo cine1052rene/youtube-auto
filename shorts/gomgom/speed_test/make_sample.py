@@ -56,6 +56,15 @@ REAL = {  # Pixabay 실제 녹음 (사용자 선택: footsteps1·door2·rain1·t
     "03": [("01", "r_sparkle", .2, .3), ("02", "r_footsteps", .2, .4), ("04", "r_pop", .3, .35), ("05", "r_teacup", .4, .5),
            ("06", "r_pop", .4, .4), ("07", "r_wind", .2, .3), ("08", "r_door", .1, .4)],
 }
+# 콩이 소리만 (Pixabay 실제 병아리·콩콩 녹음). 위치 "v+x" = 그 컷 대사가 끝난 뒤 x초(말과 안 겹치게)
+KONG = {
+    "02": [("01", "k_two", "v+0.0", .40), ("02", "k_fast", "v-0.1", .35), ("03", "k_slow", "v+0.0", .45),
+           ("04", "k_hop2", "v+0.0", .60), ("05", "k_hop3", "v+0.0", .60), ("08", "k_slow", "v+0.0", .45),
+           ("11", "k_hop2", "v+0.0", .60), ("12", "k_fast2", "v-0.1", .35), ("13", "k_slow", "v+0.3", .40)],
+    "03": [("01", "k_two", "v+0.0", .40), ("02", "k_fast", "v-0.1", .35), ("03", "k_hop3", "v+0.0", .60),
+           ("04", "k_slow", "v+0.0", .45), ("05", "k_fast2", "v-0.1", .35), ("06", "k_two", "v+0.0", .40),
+           ("09", "k_hop2", "v+0.0", .60), ("10", "k_slow", "v+0.0", .40), ("11", "k_two", "v+0.3", .40)],
+}
 CUES = {
     "02": [("01", "pop", 0.0, .5), ("03", "whoosh", .2, .35), ("05", "hop", .6, .45), ("08", "drizzle", .1, .35),
            ("11", "chime", .3, .4), ("12", "hop", .5, .45), ("13", "twinkle", .2, .35)],
@@ -114,7 +123,7 @@ def render_hook(lines, path):
     img.save(path)
 
 
-vlist, alist, starts = [], [], {}
+vlist, alist, starts, vend = [], [], {}, {}
 t = 0.0
 for i, s in enumerate(shots):
     sid = s["id"]; a = AUD / f"{sid}.mp3"; clip = PROD / "clips" / f"{sid}.mp4"
@@ -144,7 +153,7 @@ for i, s in enumerate(shots):
     atempo = f"atempo={A.speed:.3f}," if abs(A.speed - 1) > 1e-3 else ""
     run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(a),
          "-af", f"{atempo}adelay={int(lead * 1000)}:all=1,apad=whole_dur={D:.4f}", "-t", f"{D:.4f}", "-ar", "44100", "-ac", "2", str(aseg)])
-    vlist.append(vseg.name); alist.append(aseg.name); starts[sid] = t
+    vlist.append(vseg.name); alist.append(aseg.name); starts[sid] = t; vend[sid] = t + lead + ad
     t += D
 
 (TMP / "v.txt").write_text("".join(f"file '{n}'\n" for n in vlist), encoding="utf-8")
@@ -180,11 +189,12 @@ if BGM:
     fc += f";[{k}:a]aloop=loop=-1:size=2000000000,atrim=0:{total:.3f},{bvol}[b]"
     mix.append("[b]"); k += 1
 if A.sfx:
-    for cid, name, off, vol in {"peep": PEEP, "chick": CHICK, "real": REAL}.get(A.sfxset, CUES)[A.ep]:
+    for cid, name, off, vol in {"peep": PEEP, "chick": CHICK, "real": REAL, "kong": KONG}.get(A.sfxset, CUES)[A.ep]:
         f = next(SFXD.glob(f"{name}.*"), None)
         if not f or cid not in starts:
             continue
-        ms = int((starts[cid] + off) * 1000)
+        at = vend[cid] + float(off[1:]) if isinstance(off, str) else starts[cid] + off
+        ms = int(max(at, 0) * 1000)
         ins += ["-i", str(f)]
         fc += f";[{k}:a]aformat=sample_rates=44100:channel_layouts=stereo,volume={vol * A.sfxgain:.3f},adelay={ms}:all=1[x{k}]"
         mix.append(f"[x{k}]"); k += 1
