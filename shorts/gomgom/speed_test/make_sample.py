@@ -22,12 +22,19 @@ ap.add_argument("--lead", type=float, default=0.05)  # 대사 앞 여백(초)
 ap.add_argument("--tail", type=float, default=0.15)  # 대사 뒤 여백(초)
 ap.add_argument("--hookdur", type=float, default=1.8)  # 첫 제목 카드 길이(초)
 ap.add_argument("--end", type=float, default=0.0)  # 마지막 컷 뒤 여운(초)
+ap.add_argument("--premiere", action="store_true")  # 프리미어용 소재(자막 안 구운 컷·자막 PNG·트랙별 소리)+timeline.json 저장
 ap.add_argument("--loop", action="store_true")  # 쇼츠 반복재생용: 검은 화면 페이드 없음, 음악은 처음 크기로 끝냄
 A = ap.parse_args()
 
 EP = G / f"ep{A.ep}"; PROD = EP / "prod"; AUD = EP / "audio" / "luna"
 OUT = G / "speed_test" / "out"; OUT.mkdir(parents=True, exist_ok=True)
 TMP = OUT / f"tmp_{A.ep}_{A.tag}"; shutil.rmtree(TMP, ignore_errors=True); TMP.mkdir()
+PR = G / "speed_test" / "premiere" / f"ep{A.ep}_{A.tag}"
+if A.premiere:
+    shutil.rmtree(PR, ignore_errors=True)
+    for d in ("video", "sub", "narr", "sfx"):
+        (PR / d).mkdir(parents=True)
+TL = {"fps": 30, "width": 1080, "height": 1920, "cuts": [], "sfx": [], "bgm": None, "hook": None}
 FONT = G / "fonts" / "GowunDodum-Regular.ttf"
 SFXD = G / "sound" / "sfx_n"
 BGM = pathlib.Path(A.bgm) if A.bgm and A.bgm != "none" else (PROD / "bgm.mp3" if A.bgm != "none" else None)
@@ -153,6 +160,11 @@ for i, s in enumerate(shots):
     atempo = f"atempo={A.speed:.3f}," if abs(A.speed - 1) > 1e-3 else ""
     run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(a),
          "-af", f"{atempo}adelay={int(lead * 1000)}:all=1,apad=whole_dur={D:.4f}", "-t", f"{D:.4f}", "-ar", "44100", "-ac", "2", str(aseg)])
+    if A.premiere:  # 자막 없이 같은 길이·같은 배속으로 고화질 컷
+        run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(clip), "-vf", f"{vf},fps={FPS},scale={W}:{H}:flags=lanczos,setsar=1,format=yuv420p",
+             "-frames:v", str(N), "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "16", "-r", str(FPS), str(PR / "video" / f"{sid}.mp4")])
+        shutil.copy(sub, PR / "sub" / f"{sid}.png"); shutil.copy(aseg, PR / "narr" / f"{sid}.wav")
+        TL["cuts"].append({"id": sid, "start": round(t * FPS), "frames": N, "text": s["narrator"]})
     vlist.append(vseg.name); alist.append(aseg.name); starts[sid] = t; vend[sid] = t + lead + ad
     t += D
 
@@ -169,6 +181,8 @@ ins = ["-i", str(TMP / "video.mp4"), "-i", str(TMP / "narr.wav")]
 vin = "[0:v]"
 if A.hook:
     hk = TMP / "hook.png"; render_hook(HOOK[A.ep], hk)
+    if A.premiere:
+        shutil.copy(hk, PR / "hook.png"); TL["hook"] = {"file": "hook.png", "frames": round(HOOK_D * FPS)}
     ins += ["-loop", "1", "-t", f"{HOOK_D:.2f}", "-i", str(hk)]
     fc = (f"[2:v]format=rgba,fade=t=out:st={HOOK_D - 0.4:.2f}:d=0.4:alpha=1[h];"
           f"[0:v][h]overlay=0:0:eof_action=pass[hv];")
@@ -187,6 +201,10 @@ if BGM:
         bvol = (f"volume='if(gt(t,{T0:.3f}),0.12+0.38*min((t-{T0:.3f})/0.5,1),0.12)':eval=frame,afade=t=in:d=0.6,"
                 f"afade=t=out:st={total - (AF if A.end else 1.5):.3f}:d={AF if A.end else 1.5}")
     fc += f";[{k}:a]aloop=loop=-1:size=2000000000,atrim=0:{total:.3f},{bvol}[b]"
+    if A.premiere:  # 음량 변화(여운 상승·루프 복귀)까지 넣은 배경음악 한 덩어리
+        run(["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "-1", "-i", str(BGM), "-af", bvol, "-t", f"{total:.3f}",
+             "-ar", "48000", "-ac", "2", str(PR / "bgm.wav")])
+        TL["bgm"] = "bgm.wav"
     mix.append("[b]"); k += 1
 if A.sfx:
     for cid, name, off, vol in {"peep": PEEP, "chick": CHICK, "real": REAL, "kong": KONG}.get(A.sfxset, CUES)[A.ep]:
@@ -195,6 +213,9 @@ if A.sfx:
             continue
         at = vend[cid] + float(off[1:]) if isinstance(off, str) else starts[cid] + off
         ms = int(max(at, 0) * 1000)
+        if A.premiere:
+            shutil.copy(f, PR / "sfx" / f.name)
+            TL["sfx"].append({"cut": cid, "file": f.name, "start": round(max(at, 0) * FPS), "dur": dur(f), "gain": round(vol * A.sfxgain, 3)})
         ins += ["-i", str(f)]
         fc += f";[{k}:a]aformat=sample_rates=44100:channel_layouts=stereo,volume={vol * A.sfxgain:.3f},adelay={ms}:all=1[x{k}]"
         mix.append(f"[x{k}]"); k += 1
@@ -204,6 +225,9 @@ run(["ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", fc, "-map", 
      "-c:v", "libx264", "-preset", "medium", "-crf", "30", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart",
      "-t", f"{total:.3f}", str(final)])
 shutil.rmtree(TMP)
+if A.premiere:
+    TL.update(name=f"gomgom_ep{A.ep}_{A.tag}", total=round(total * FPS))
+    json.dump(TL, open(PR / "timeline.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 json.dump({"ep": A.ep, "tag": A.tag, "speed": A.speed, "hook": A.hook, "sfx": A.sfx, "bgm": BGM.name if BGM else None,
            "total": round(total, 2)}, open(OUT / f"ep{A.ep}_{A.tag}.json", "w", encoding="utf-8"), ensure_ascii=False)
 print(f"{final.name} {total:.1f}초 {final.stat().st_size // 1024}KB")
