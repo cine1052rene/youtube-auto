@@ -136,14 +136,14 @@ run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", s
 total = t
 T0 = (total - A.end) if A.end else total + 99   # 여운 시작(대사 끝) 시점
 VF = 1.2 if A.end else 0.5   # 영상 페이드아웃 길이
-AF = 2.0 if A.end else 0.5   # 소리 페이드아웃 길이
+AF = 1.3 if A.end else 0.5   # 소리 페이드아웃 길이
 
 ins = ["-i", str(TMP / "video.mp4"), "-i", str(TMP / "narr.wav")]
 fc = f"[0:v]fade=t=in:st=0:d=0.2,fade=t=out:st={total - VF:.3f}:d={VF},scale=540:960[v];[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[n]"
 mix = ["[n]"]; k = 2
 if BGM:
     ins += ["-i", str(BGM)]
-    fc += f";[{k}:a]aloop=loop=-1:size=2000000000,atrim=0:{total:.3f},volume='if(gt(t,{T0:.3f}),0.12+0.18*min((t-{T0:.3f})/0.7,1),0.12)':eval=frame,afade=t=in:d=0.6,afade=t=out:st={total - max(AF, 1.5):.3f}:d={max(AF, 1.5)}[b]"
+    fc += f";[{k}:a]aloop=loop=-1:size=2000000000,atrim=0:{total:.3f},volume='if(gt(t,{T0:.3f}),0.12+0.38*min((t-{T0:.3f})/0.5,1),0.12)':eval=frame,afade=t=in:d=0.6,afade=t=out:st={total - (AF if A.end else 1.5):.3f}:d={AF if A.end else 1.5}[b]"
     mix.append("[b]"); k += 1
 if A.sfx:
     for cid, name, off, vol in (PEEP if A.sfxset == "peep" else CUES)[A.ep]:

@@ -5,13 +5,11 @@ import base64, json, pathlib, subprocess
 H = pathlib.Path(__file__).resolve().parent
 SRC = H / "out_s"
 VER = [
-    ("A_orig", "A", "지금 버전", "1배 · 훅 없음 · 지금 음악"),
-    ("B_115", "B", "1.15배", "훅 · 빈 시간 줄임 · 지금 음악"),
-    ("C_125", "C", "1.25배 ⭐", "훅 · 빈 시간 줄임 · 지금 음악"),
-    ("D_135", "D", "1.35배", "훅 · 빈 시간 줄임 · 지금 음악"),
-    ("E_125_sfx", "E", "1.25배 + 효과음", "C + 작은 효과음 · 지금 음악"),
-    ("F_125_sfx_bgmA", "F", "1.25배 + 효과음 + 음악 A", "새 음악 A: 우쿨렐레·글로켄슈필, 조금 경쾌"),
-    ("G_125_sfx_bgmB", "G", "1.25배 + 효과음 + 음악 B", "새 음악 B: 오르골·피아노, 차분하지만 흐름 있음"),
+    ("A_orig", "A", "지금 버전", "1배 · 훅 없음 · 엔딩 급하게 끝남"),
+    ("C_125", "C", "1.25배 (지난번)", "훅 · 엔딩 급하게 끝남"),
+    ("C2_end", "C2", "1.25배 + 엔딩 여운 ⭐", "마지막 컷 2초 더 + 음악 살짝 커졌다가 천천히 페이드"),
+    ("E_125_sfx", "E", "1.25배 + 예전 효과음", "반짝·폴짝·풍경 등 (지난번)"),
+    ("H_peep_end", "H", "1.25배 + 삐약 + 엔딩 여운 ⭐", "콩이 움직일 때 삐약·삐약삐약·궁금한 삐약 등"),
 ]
 
 
@@ -60,7 +58,7 @@ th{color:var(--soft);font-weight:500;font-size:12px}td b{color:var(--honey)}
 .q{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:14px 16px;font-size:14.5px}
 .q b{font-family:"Gowun Dodum",sans-serif;font-size:18px;font-weight:400;display:block;margin-bottom:4px}
 </style></head><body><div class="wrap">
-<section><p class="eye">곰곰한 마음 · 말 속도 비교</p><h1>두 버전을 나란히 틀어 보세요</h1>
+<section><p class="eye">곰곰한 마음 · 말 속도 비교</p><h1>삐약 효과음 · 엔딩 여운 비교</h1>
 <p class="soft">위에서 화를 고르고, 왼쪽·오른쪽 버전을 고른 뒤 <b>같이 재생</b>을 누르세요. 소리는 한쪽만 나와요 — <b>소리 바꾸기</b>로 왼쪽/오른쪽을 오가며 들어 보세요.</p></section>
 <section class="seg" id="eps"><button data-ep="02" class="on">2화 · 칭찬과 지적</button><button data-ep="03">3화 · 에피쿠로스</button></section>
 <section class="duo">
@@ -69,12 +67,12 @@ th{color:var(--soft);font-weight:500;font-size:12px}td b{color:var(--honey)}
 </section>
 <section class="ctl"><button id="play">▶ 같이 재생</button><button id="swap" class="alt">🔊 소리 바꾸기 (지금: 왼쪽)</button><button id="re" class="alt">⏮ 처음부터</button></section>
 <section><h2>버전 설명</h2><table><tr><th></th><th>내용</th></tr>__ROWS__</table>
-<p class="soft" style="margin-top:8px">공통(B~G): 목소리 높낮이는 그대로 속도만 바꿈 · 컷 사이 빈 시간 줄임 · 첫 목소리 0초 시작 · 0~1.8초 화면 위쪽 큰 제목 카드(훅)</p></section>
-<section class="q"><b>골라 주세요</b>① 말 속도: B / C / D &nbsp; ② 효과음: 넣기 / 빼기 &nbsp; ③ 배경음악: 지금 / A / B<br>예) "C, 효과음 넣고, 음악 A" — 고른 조합으로 2~6화를 다시 조립할게요(크레딧 0).</section>
+<p class="soft" style="margin-top:8px">C 이후 공통: 1.25배(고정) · 컷 사이 빈 시간 줄임 · 첫 목소리 0초 시작 · 0~1.8초 화면 위쪽 큰 제목 카드(훅) · 배경음악은 지금 것</p></section>
+<section class="q"><b>골라 주세요</b>① 엔딩: 여운 넣은 C2가 나은지 &nbsp; ② 삐약 효과음(H): 좋다 / 빼자 / 더 크게·작게 / 더 자주·덜<br>예) "H로 가자" 또는 "삐약은 좋은데 좀 더 작게" — 정하면 2~6화에 똑같이 적용할게요(크레딧 0).</section>
 </div>
 <script>
-const D=__DATA__, K=["A","B","C","D","E","F","G"];
-let ep="02", L="A", R="C", loud="L";
+const D=__DATA__, K=__KEYS__;
+let ep="02", L="C2", R="H", loud="L";
 const $=id=>document.getElementById(id);
 function picks(side){const p=$("p"+side);p.innerHTML="";K.forEach(k=>{const b=document.createElement("button");b.textContent=k;
  if((side=="L"?L:R)==k)b.className="on";b.onclick=()=>{if(side=="L")L=k;else R=k;load(side)};p.appendChild(b)})}
@@ -89,7 +87,7 @@ $("swap").onclick=()=>{loud=loud=="L"?"R":"L";mute()};
 load("L");load("R");mute();
 </script></body></html>"""
 rows = "".join(f'<tr><td><b>{k}</b></td><td>{m["name"]} — {m["desc"]}</td></tr>' for k, m in meta.items())
-html = html.replace("__ROWS__", rows).replace("__DATA__", json.dumps(data, ensure_ascii=False))
+html = html.replace("__ROWS__", rows).replace("__KEYS__", json.dumps([v[1] for v in VER])).replace("__DATA__", json.dumps(data, ensure_ascii=False))
 p = H / "gomgom_speed_compare.html"
 p.write_text(html, encoding="utf-8")
 print(p.name, round(p.stat().st_size / 1048576, 1), "MB")
