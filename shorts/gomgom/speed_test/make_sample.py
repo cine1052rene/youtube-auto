@@ -16,6 +16,8 @@ ap = argparse.ArgumentParser()
 ap.add_argument("ep"); ap.add_argument("speed", type=float); ap.add_argument("tag")
 ap.add_argument("--hook", action="store_true"); ap.add_argument("--sfx", action="store_true")
 ap.add_argument("--bgm", default="")
+ap.add_argument("--sfxset", default="old")  # old | peep
+ap.add_argument("--end", type=float, default=0.0)  # 마지막 컷 뒤 여운(초)
 A = ap.parse_args()
 
 EP = G / f"ep{A.ep}"; PROD = EP / "prod"; AUD = EP / "audio" / "luna"
@@ -30,6 +32,12 @@ LEAD, TAIL, MIN_D, MAX_FAST, MAX_SLOW = 0.05, 0.15, 1.5, 1.5, 1.4
 HOOK_D = 1.8
 HOOK = {"02": ["칭찬은 잊고", "지적은 남는 이유"], "03": ["쾌락주의자가", "원한 건 빵 한 조각?"]}
 # (컷 id, 효과음, 컷 시작 후 몇 초, 볼륨)
+PEEP = {
+    "02": [("01", "peep_q", .9, .30), ("03", "peep1", .5, .28), ("05", "peep2", .8, .30), ("08", "peep1", .6, .30),
+           ("09", "peep2", .4, .28), ("12", "peep_happy", .4, .30), ("13", "peep_sleepy", 1.2, .25)],
+    "03": [("01", "peep_happy", .8, .28), ("02", "peep2", .4, .28), ("03", "peep1", .7, .30), ("05", "peep_happy", .5, .28),
+           ("06", "peep_q", .4, .30), ("08", "peep1", .5, .28), ("09", "peep2", .6, .30), ("11", "peep_sleepy", 1.0, .25)],
+}
 CUES = {
     "02": [("01", "pop", 0.0, .5), ("03", "whoosh", .2, .35), ("05", "hop", .6, .45), ("08", "drizzle", .1, .35),
            ("11", "chime", .3, .4), ("12", "hop", .5, .45), ("13", "twinkle", .2, .35)],
@@ -94,7 +102,7 @@ for i, s in enumerate(shots):
     sid = s["id"]; a = AUD / f"{sid}.mp3"; clip = PROD / "clips" / f"{sid}.mp4"
     lead = 0.0 if i == 0 else LEAD
     ad = dur(a) / A.speed
-    D = max(lead + ad + TAIL, MIN_D); N = int(round(D * FPS)); D = N / FPS
+    D = max(lead + ad + TAIL, MIN_D) + (A.end if i == len(shots) - 1 else 0); N = int(round(D * FPS)); D = N / FPS
     cd = dur(clip)
     if D <= cd:
         sp = min(cd / D, MAX_FAST); seg = D * sp; st = max(cd - seg - 0.05, 0)
@@ -126,16 +134,19 @@ for i, s in enumerate(shots):
 run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(TMP / "v.txt"), "-c", "copy", str(TMP / "video.mp4")])
 run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(TMP / "a.txt"), "-c", "pcm_s16le", str(TMP / "narr.wav")])
 total = t
+T0 = (total - A.end) if A.end else total + 99   # 여운 시작(대사 끝) 시점
+VF = 1.2 if A.end else 0.5   # 영상 페이드아웃 길이
+AF = 2.0 if A.end else 0.5   # 소리 페이드아웃 길이
 
 ins = ["-i", str(TMP / "video.mp4"), "-i", str(TMP / "narr.wav")]
-fc = f"[0:v]fade=t=in:st=0:d=0.2,fade=t=out:st={total - 0.5:.3f}:d=0.5,scale=540:960[v];[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[n]"
+fc = f"[0:v]fade=t=in:st=0:d=0.2,fade=t=out:st={total - VF:.3f}:d={VF},scale=540:960[v];[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[n]"
 mix = ["[n]"]; k = 2
 if BGM:
     ins += ["-i", str(BGM)]
-    fc += f";[{k}:a]aloop=loop=-1:size=2000000000,atrim=0:{total:.3f},volume=0.12,afade=t=in:d=0.6,afade=t=out:st={total - 1.5:.3f}:d=1.5[b]"
+    fc += f";[{k}:a]aloop=loop=-1:size=2000000000,atrim=0:{total:.3f},volume='if(gt(t,{T0:.3f}),0.12+0.18*min((t-{T0:.3f})/0.7,1),0.12)':eval=frame,afade=t=in:d=0.6,afade=t=out:st={total - max(AF, 1.5):.3f}:d={max(AF, 1.5)}[b]"
     mix.append("[b]"); k += 1
 if A.sfx:
-    for cid, name, off, vol in CUES[A.ep]:
+    for cid, name, off, vol in (PEEP if A.sfxset == "peep" else CUES)[A.ep]:
         f = next(SFXD.glob(f"{name}.*"), None)
         if not f or cid not in starts:
             continue
@@ -143,7 +154,7 @@ if A.sfx:
         ins += ["-i", str(f)]
         fc += f";[{k}:a]aformat=sample_rates=44100:channel_layouts=stereo,volume={vol},adelay={ms}:all=1[x{k}]"
         mix.append(f"[x{k}]"); k += 1
-fc += f";{''.join(mix)}amix=inputs={len(mix)}:duration=first:normalize=0,afade=t=out:st={total - 0.5:.3f}:d=0.5[a]"
+fc += f";{''.join(mix)}amix=inputs={len(mix)}:duration=first:normalize=0,afade=t=out:st={total - AF:.3f}:d={AF}[a]"
 final = OUT / f"ep{A.ep}_{A.tag}.mp4"
 run(["ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
      "-c:v", "libx264", "-preset", "medium", "-crf", "30", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart",
