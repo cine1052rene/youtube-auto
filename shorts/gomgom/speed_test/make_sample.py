@@ -17,6 +17,7 @@ ap.add_argument("ep"); ap.add_argument("speed", type=float); ap.add_argument("ta
 ap.add_argument("--hook", action="store_true"); ap.add_argument("--sfx", action="store_true")
 ap.add_argument("--bgm", default="")
 ap.add_argument("--sfxset", default="old")  # old | peep
+ap.add_argument("--sfxgain", type=float, default=1.0)  # 효과음 전체 배율
 ap.add_argument("--end", type=float, default=0.0)  # 마지막 컷 뒤 여운(초)
 A = ap.parse_args()
 
@@ -152,7 +153,7 @@ if A.sfx:
             continue
         ms = int((starts[cid] + off) * 1000)
         ins += ["-i", str(f)]
-        fc += f";[{k}:a]aformat=sample_rates=44100:channel_layouts=stereo,volume={vol},adelay={ms}:all=1[x{k}]"
+        fc += f";[{k}:a]aformat=sample_rates=44100:channel_layouts=stereo,volume={vol * A.sfxgain:.3f},adelay={ms}:all=1[x{k}]"
         mix.append(f"[x{k}]"); k += 1
 fc += f";{''.join(mix)}amix=inputs={len(mix)}:duration=first:normalize=0,afade=t=out:st={total - AF:.3f}:d={AF}[a]"
 final = OUT / f"ep{A.ep}_{A.tag}.mp4"
