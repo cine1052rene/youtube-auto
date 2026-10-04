@@ -4,12 +4,12 @@ import base64, json, pathlib, subprocess
 
 H = pathlib.Path(__file__).resolve().parent
 SRC = H / "out_s"
-PEEPS = H.parent / "sound" / "peeps_demo.m4a"
+PEEPS = H.parent / "sound" / "chick_demo.m4a"
 VER = [
     ("A_orig", "A", "지금 버전", "1배 · 훅 없음 · 엔딩 급하게 끝남"),
-    ("C2_end", "C2", "1.25배 + 엔딩 여운", "효과음 없음 · 마지막 컷 2초 더 + 음악 살짝 커졌다가 천천히 페이드"),
-    ("H_peep_end", "H", "C2 + 삐약 (작게)", "지난번 버전 — 삐약이 거의 안 들림"),
-    ("H2_peep_loud", "H2", "C2 + 삐약 (3배 크게) ⭐", "콩이가 움직일 때 삐약·삐약삐약·궁금한 삐약 등"),
+    ("H2_peep_loud", "H2", "지난번 (1.25배)", "간격 짧음 · 삐약(새소리 같았던 것) · 제목 1.8초"),
+    ("J_115_gap_mid", "J", "1.15배 · 간격 보통 ⭐", "대사 앞 0.10초 + 뒤 0.30초 · 제목 3초 · 병아리 소리 · 엔딩 여운"),
+    ("K_115_gap_wide", "K", "1.15배 · 간격 넉넉", "대사 앞 0.15초 + 뒤 0.45초 · 제목 3초 · 병아리 소리 · 엔딩 여운"),
 ]
 
 
@@ -29,13 +29,13 @@ for ep, title in (("02", "2화 · 칭찬과 지적"), ("03", "3화 · 에피쿠�
         f = SRC / f"ep{ep}_{tag}.mp4"
         if not f.exists():
             continue
-        best = " best" if k == "H2" else ""
+        best = " best" if k == "J" else ""
         cards.append(f'<div class="card{best}"><video controls playsinline preload="metadata" src="{b64(f, "video/mp4")}"></video>'
                      f'<div class="c"><div class="nm"><b>{k}</b> · {name}</div><div class="len">{dur(f)}초</div><div class="soft">{desc}</div></div></div>')
     secs.append(f'<section class="ep" data-ep="{ep}"{"" if ep == "02" else " hidden"}><div class="grid">{"".join(cards)}</div></section>')
 
 html = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>곰곰한 마음 삐약·엔딩 비교</title>
+<title>곰곰한 마음 병아리·간격 비교</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap">
 <style>
 :root{{--bg:#FBF6EE;--card:#FFFDF9;--edge:#EADFCF;--ink:#3A2F25;--soft:#85766A;--honey:#D98E2B}}
@@ -60,14 +60,14 @@ audio{{width:100%}}
 .q{{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:14px 16px;font-size:14.5px}}
 .q b{{font-family:"Gowun Dodum",sans-serif;font-size:18px;font-weight:400;display:block;margin-bottom:4px}}
 </style></head><body><div class="wrap">
-<section><p class="eye">곰곰한 마음 · 삐약·엔딩 비교</p><h1>하나씩 틀어서 비교해 보세요</h1>
+<section><p class="eye">곰곰한 마음 · 병아리·간격 비교</p><h1>하나씩 틀어서 비교해 보세요</h1>
 <p class="soft">영상마다 재생 버튼이 따로 있어요. <b>하나를 틀면 다른 영상은 자동으로 멈춰서</b> 소리가 섞이지 않아요. 소리를 켜고 들어 주세요.</p></section>
-<section class="peep"><h2>먼저 삐약 소리만 들어 보기</h2><p class="soft">영상에 들어간 5가지: 한 번 삐약 → 삐약삐약 → 신나서 짹짹 → 궁금한 삐약 → 졸린 삐약</p>
+<section class="peep"><h2>먼저 병아리 소리만 들어 보기</h2><p class="soft">새로 만든 4가지: 삐약 한 번 → 삐약삐약 → 신나서 삐약삐약삐약 → 병아리 여러 마리(마지막 장면)</p>
 <audio controls preload="metadata" src="{b64(PEEPS, 'audio/mp4')}"></audio></section>
 <nav class="tabs"><button class="on" data-ep="02">2화 · 칭찬과 지적</button><button data-ep="03">3화 · 에피쿠로스</button></nav>
 {"".join(secs)}
-<section class="soft">공통(C2·H·H2): 말 속도 1.25배(고정) · 컷 사이 빈 시간 줄임 · 첫 목소리 0초 시작 · 0~1.8초 화면 위쪽 제목 카드 · 지금 배경음악</section>
-<section class="q"><b>알려 주세요</b>① 엔딩: C2처럼 여운 있는 게 나은지 &nbsp; ② 삐약(H2): 좋다 / 빼자 / 더 크게·더 작게 / 더 자주·덜 자주<br>예) "H2로 가자" 또는 "삐약 좋은데 조금만 작게" — 정하면 2~6화에 똑같이 적용할게요(크레딧 0).</section>
+<section class="soft">J·K 공통: 말 속도 1.15배 · 첫 목소리 0초 시작 · 0~3초 화면 위쪽 제목 카드 · 병아리 소리 · 마지막 컷 2초 여운 · 지금 배경음악</section>
+<section class="q"><b>알려 주세요</b>① 말 사이 간격: J(보통) / K(넉넉) &nbsp; ② 병아리 소리: 좋다 / 빼자 / 더 크게·작게 / 더 자주·덜 자주 &nbsp; ③ 제목 3초: 적당 / 더 길게 / 짧게<br>예) "J로 가자" — 정하면 2~6화에 똑같이 적용할게요(크레딧 0).</section>
 </div>
 <script>
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{{

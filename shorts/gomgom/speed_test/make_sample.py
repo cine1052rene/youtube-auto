@@ -18,6 +18,9 @@ ap.add_argument("--hook", action="store_true"); ap.add_argument("--sfx", action=
 ap.add_argument("--bgm", default="")
 ap.add_argument("--sfxset", default="old")  # old | peep
 ap.add_argument("--sfxgain", type=float, default=1.0)  # 효과음 전체 배율
+ap.add_argument("--lead", type=float, default=0.05)  # 대사 앞 여백(초)
+ap.add_argument("--tail", type=float, default=0.15)  # 대사 뒤 여백(초)
+ap.add_argument("--hookdur", type=float, default=1.8)  # 첫 제목 카드 길이(초)
 ap.add_argument("--end", type=float, default=0.0)  # 마지막 컷 뒤 여운(초)
 A = ap.parse_args()
 
@@ -29,8 +32,8 @@ SFXD = G / "sound" / "sfx_n"
 BGM = pathlib.Path(A.bgm) if A.bgm and A.bgm != "none" else (PROD / "bgm.mp3" if A.bgm != "none" else None)
 
 FPS, W, H = 30, 1080, 1920
-LEAD, TAIL, MIN_D, MAX_FAST, MAX_SLOW = 0.05, 0.15, 1.5, 1.5, 1.4
-HOOK_D = 1.8
+LEAD, TAIL, MIN_D, MAX_FAST, MAX_SLOW = A.lead, A.tail, 1.5, 1.5, 1.4
+HOOK_D = A.hookdur
 HOOK = {"02": ["칭찬은 잊고", "지적은 남는 이유"], "03": ["쾌락주의자가", "원한 건 빵 한 조각?"]}
 # (컷 id, 효과음, 컷 시작 후 몇 초, 볼륨)
 PEEP = {
@@ -38,6 +41,12 @@ PEEP = {
            ("09", "peep2", .4, .28), ("12", "peep_happy", .4, .30), ("13", "peep_sleepy", 1.2, .25)],
     "03": [("01", "peep_happy", .8, .28), ("02", "peep2", .4, .28), ("03", "peep1", .7, .30), ("05", "peep_happy", .5, .28),
            ("06", "peep_q", .4, .30), ("08", "peep1", .5, .28), ("09", "peep2", .6, .30), ("11", "peep_sleepy", 1.0, .25)],
+}
+CHICK = {
+    "02": [("01", "chick2", .9, .6), ("03", "chick1", .5, .6), ("05", "chick_happy", .7, .55), ("08", "chick1", .6, .6),
+           ("09", "chick2", .4, .55), ("12", "chick_happy", .4, .55), ("13", "chick_group", 1.2, .4)],
+    "03": [("01", "chick_happy", .8, .55), ("02", "chick2", .4, .55), ("03", "chick1", .7, .6), ("05", "chick_happy", .5, .55),
+           ("06", "chick1", .4, .6), ("08", "chick2", .5, .55), ("09", "chick1", .6, .6), ("11", "chick_group", 1.0, .4)],
 }
 CUES = {
     "02": [("01", "pop", 0.0, .5), ("03", "whoosh", .2, .35), ("05", "hop", .6, .45), ("08", "drizzle", .1, .35),
@@ -115,7 +124,7 @@ for i, s in enumerate(shots):
     vseg = TMP / f"v{sid}.mp4"
     ins = ["-i", str(clip), "-loop", "1", "-i", str(sub)]
     fc = f"[0:v]{vf},fps={FPS},scale={W}:{H}:flags=lanczos,setsar=1[v];[v][1:v]overlay=0:0[s]"
-    if i == 0 and A.hook:
+    if False:  # 훅은 완성 영상 위에 얹음(아래 최종 단계)
         hk = TMP / "hook.png"; render_hook(HOOK[A.ep], hk)
         ins += ["-loop", "1", "-i", str(hk)]
         fc += f";[2:v]format=rgba,fade=t=out:st={HOOK_D - 0.3:.2f}:d=0.3:alpha=1[h];[s][h]overlay=0:0:enable='lt(t,{HOOK_D})',format=yuv420p[o]"
@@ -140,14 +149,23 @@ VF = 1.2 if A.end else 0.5   # 영상 페이드아웃 길이
 AF = 1.3 if A.end else 0.5   # 소리 페이드아웃 길이
 
 ins = ["-i", str(TMP / "video.mp4"), "-i", str(TMP / "narr.wav")]
-fc = f"[0:v]fade=t=in:st=0:d=0.2,fade=t=out:st={total - VF:.3f}:d={VF},scale=540:960[v];[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[n]"
-mix = ["[n]"]; k = 2
+vin = "[0:v]"
+if A.hook:
+    hk = TMP / "hook.png"; render_hook(HOOK[A.ep], hk)
+    ins += ["-loop", "1", "-t", f"{HOOK_D:.2f}", "-i", str(hk)]
+    fc = (f"[2:v]format=rgba,fade=t=out:st={HOOK_D - 0.4:.2f}:d=0.4:alpha=1[h];"
+          f"[0:v][h]overlay=0:0:eof_action=pass[hv];")
+    vin = "[hv]"
+else:
+    fc = ""
+fc += f"{vin}fade=t=in:st=0:d=0.2,fade=t=out:st={total - VF:.3f}:d={VF},scale=540:960[v];[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[n]"
+mix = ["[n]"]; k = 3 if A.hook else 2
 if BGM:
     ins += ["-i", str(BGM)]
     fc += f";[{k}:a]aloop=loop=-1:size=2000000000,atrim=0:{total:.3f},volume='if(gt(t,{T0:.3f}),0.12+0.38*min((t-{T0:.3f})/0.5,1),0.12)':eval=frame,afade=t=in:d=0.6,afade=t=out:st={total - (AF if A.end else 1.5):.3f}:d={AF if A.end else 1.5}[b]"
     mix.append("[b]"); k += 1
 if A.sfx:
-    for cid, name, off, vol in (PEEP if A.sfxset == "peep" else CUES)[A.ep]:
+    for cid, name, off, vol in {"peep": PEEP, "chick": CHICK}.get(A.sfxset, CUES)[A.ep]:
         f = next(SFXD.glob(f"{name}.*"), None)
         if not f or cid not in starts:
             continue
