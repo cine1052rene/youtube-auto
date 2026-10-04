@@ -1,0 +1,71 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - paragraph [ref=e4]: 곰곰한 마음 · 말 속도 비교
+    - heading "두 버전을 나란히 틀어 보세요" [level=1] [ref=e5]
+    - paragraph [ref=e6]: 위에서 화를 고르고, 왼쪽·오른쪽 버전을 고른 뒤 같이 재생을 누르세요. 소리는 한쪽만 나와요 — 소리 바꾸기로 왼쪽/오른쪽을 오가며 들어 보세요.
+  - generic [ref=e7]:
+    - button "2화 · 칭찬과 지적" [ref=e8] [cursor=pointer]
+    - button "3화 · 에피쿠로스" [active] [ref=e9] [cursor=pointer]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - button "A" [ref=e74] [cursor=pointer]
+        - button "B" [ref=e75] [cursor=pointer]
+        - button "C" [ref=e76] [cursor=pointer]
+        - button "D" [ref=e77] [cursor=pointer]
+        - button "E" [ref=e78] [cursor=pointer]
+        - button "F" [ref=e79] [cursor=pointer]
+        - button "G" [ref=e80] [cursor=pointer]
+      - generic [ref=e21]:
+        - generic [ref=e22]: A · 지금 버전
+        - generic [ref=e23]: 40.1초
+        - generic [ref=e24]: 1배 · 훅 없음 · 지금 음악
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - button "A" [ref=e81] [cursor=pointer]
+        - button "B" [ref=e82] [cursor=pointer]
+        - button "C" [ref=e83] [cursor=pointer]
+        - button "D" [ref=e84] [cursor=pointer]
+        - button "E" [ref=e85] [cursor=pointer]
+        - button "F" [ref=e86] [cursor=pointer]
+        - button "G" [ref=e87] [cursor=pointer]
+      - generic [ref=e35]:
+        - generic [ref=e36]: C · 1.25배 ⭐
+        - generic [ref=e37]: 30.3초
+        - generic [ref=e38]: 훅 · 빈 시간 줄임 · 지금 음악
+  - generic [ref=e39]:
+    - button "▶ 같이 재생" [ref=e40] [cursor=pointer]
+    - 'button "🔊 소리 바꾸기 (지금: 왼쪽)" [ref=e41] [cursor=pointer]'
+    - button "⏮ 처음부터" [ref=e42] [cursor=pointer]
+  - generic [ref=e43]:
+    - heading "버전 설명" [level=2] [ref=e44]
+    - table [ref=e45]:
+      - rowgroup [ref=e46]:
+        - row [ref=e47]:
+          - columnheader [ref=e48]
+          - columnheader "내용" [ref=e49]
+        - row [ref=e50]:
+          - cell "A" [ref=e51]
+          - cell "지금 버전 — 1배 · 훅 없음 · 지금 음악" [ref=e52]
+        - row [ref=e53]:
+          - cell "B" [ref=e54]
+          - cell "1.15배 — 훅 · 빈 시간 줄임 · 지금 음악" [ref=e55]
+        - row [ref=e56]:
+          - cell "C" [ref=e57]
+          - cell "1.25배 ⭐ — 훅 · 빈 시간 줄임 · 지금 음악" [ref=e58]
+        - row [ref=e59]:
+          - cell "D" [ref=e60]
+          - cell "1.35배 — 훅 · 빈 시간 줄임 · 지금 음악" [ref=e61]
+        - row [ref=e62]:
+          - cell "E" [ref=e63]
+          - cell "1.25배 + 효과음 — C + 작은 효과음 · 지금 음악" [ref=e64]
+        - row [ref=e65]:
+          - cell "F" [ref=e66]
+          - 'cell "1.25배 + 효과음 + 음악 A — 새 음악 A: 우쿨렐레·글로켄슈필, 조금 경쾌" [ref=e67]'
+        - row [ref=e68]:
+          - cell "G" [ref=e69]
+          - 'cell "1.25배 + 효과음 + 음악 B — 새 음악 B: 오르골·피아노, 차분하지만 흐름 있음" [ref=e70]'
+    - paragraph [ref=e71]: "공통(B~G): 목소리 높낮이는 그대로 속도만 바꿈 · 컷 사이 빈 시간 줄임 · 첫 목소리 0초 시작 · 0~1.8초 화면 위쪽 큰 제목 카드(훅)"
+  - generic [ref=e72]:
+    - generic [ref=e73]: 골라 주세요
+    - text: "① 말 속도: B / C / D ② 효과음: 넣기 / 빼기 ③ 배경음악: 지금 / A / B예) \"C, 효과음 넣고, 음악 A\" — 고른 조합으로 2~6화를 다시 조립할게요(크레딧 0)."

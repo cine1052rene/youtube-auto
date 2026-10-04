@@ -1,0 +1,261 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e4]:
+    - banner [ref=f3e5]:
+      - generic [ref=f3e6]:
+        - link "Pixabay" [ref=f3e8] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f3e15]:
+          - button "Search Pixabay" [ref=f3e16] [cursor=pointer]:
+            - img "Search" [ref=f3e17]
+          - searchbox "Search Pixabay" [ref=f3e21]
+          - button "Sound Effects" [ref=f3e24] [cursor=pointer]
+        - generic [ref=f3e25]:
+          - button "Explore" [ref=f3e29] [cursor=pointer]
+          - button "Log in" [ref=f3e31] [cursor=pointer]
+          - button "Join" [ref=f3e32] [cursor=pointer]
+          - button "Upload" [ref=f3e34] [cursor=pointer]
+    - generic [ref=f3e35]:
+      - generic [ref=f3e36]:
+        - generic [ref=f3e39]:
+          - generic [ref=f3e44]:
+            - img "SoundEffect" [ref=f3e49]
+            - generic [ref=f3e52]:
+              - generic [ref=f3e53]: Teacup on Saucer 170504_1507
+              - link "megashroom (Freesound)" [ref=f3e54] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=f3e55]:
+            - generic [ref=f3e56]: 0:00
+            - slider [ref=f3e58] [cursor=pointer]
+            - generic [ref=f3e63]: 0:22
+          - button "paused" [ref=f3e66] [cursor=pointer]:
+            - img "Play" [ref=f3e67]
+          - generic [ref=f3e71]:
+            - button "volume" [ref=f3e72] [cursor=pointer]:
+              - img "Volume" [ref=f3e73]
+            - slider "volume" [ref=f3e80]: "1"
+        - generic [ref=f3e81]:
+          - heading "Crockery, Tea, Ceramic sound effect. Free for use." [level=1] [ref=f3e84]
+          - generic [ref=f3e86]:
+            - generic [ref=f3e87]: 1 comment
+            - generic [ref=f3e88]:
+              - img "CommentFilled" [ref=f3e89]
+              - generic [ref=f3e92]: The community are waiting to hear from you!
+              - generic [ref=f3e93]: Log in or Join Pixabay to view comments
+              - generic [ref=f3e94]:
+                - button "Log in" [ref=f3e95] [cursor=pointer]
+                - button "Join Pixabay" [ref=f3e96] [cursor=pointer]
+          - generic [ref=f3e97]:
+            - link "Crockery" [ref=f3e98] [cursor=pointer]:
+              - /url: /sound-effects/search/crockery/
+            - link "Tea" [ref=f3e100] [cursor=pointer]:
+              - /url: /sound-effects/search/tea/
+            - link "Ceramic" [ref=f3e102] [cursor=pointer]:
+              - /url: /sound-effects/search/ceramic/
+            - link "Teacup" [ref=f3e104] [cursor=pointer]:
+              - /url: /sound-effects/search/teacup/
+            - link "China" [ref=f3e106] [cursor=pointer]:
+              - /url: /sound-effects/search/china/
+            - link "Saucer" [ref=f3e108] [cursor=pointer]:
+              - /url: /sound-effects/search/saucer/
+        - generic [ref=f3e112]:
+          - heading "Related free music" [level=2] [ref=f3e113]
+          - generic [ref=f3e115]:
+            - generic [ref=f3e116]:
+              - generic [ref=f3e117]:
+                - button [ref=f3e118] [cursor=pointer]:
+                  - button [ref=f3e121]:
+                    - img "Play" [ref=f3e122]
+                - generic [ref=f3e125]:
+                  - link "Inspiring Hip-Hop" [ref=f3e126] [cursor=pointer]:
+                    - /url: /sound-effects/musical-inspiring-hip-hop-604483/
+                  - link "prettyjohn1" [ref=f3e127] [cursor=pointer]:
+                    - /url: /users/prettyjohn1-54616349/
+              - generic [ref=f3e129]:
+                - button "Download" [ref=f3e130] [cursor=pointer]:
+                  - generic:
+                    - img "Download"
+                - button "Dots" [ref=f3e131] [cursor=pointer]:
+                  - generic:
+                    - img "Dots"
+            - generic [ref=f3e132]:
+              - generic [ref=f3e133]:
+                - button [ref=f3e134] [cursor=pointer]:
+                  - button [ref=f3e137]:
+                    - img "Play" [ref=f3e138]
+                - generic [ref=f3e141]:
+                  - link "Kids - Kids Music" [ref=f3e142] [cursor=pointer]:
+                    - /url: /sound-effects/musical-kids-kids-music-604448/
+                  - link "prettyjohn1" [ref=f3e143] [cursor=pointer]:
+                    - /url: /users/prettyjohn1-54616349/
+              - generic [ref=f3e144]:
+                - text: ","
+                - generic [ref=f3e145]:
+                  - button "Download" [ref=f3e146] [cursor=pointer]:
+                    - generic:
+                      - img "Download"
+                  - button "Dots" [ref=f3e147] [cursor=pointer]:
+                    - generic:
+                      - img "Dots"
+            - generic [ref=f3e148]:
+              - generic [ref=f3e149]:
+                - button [ref=f3e150] [cursor=pointer]:
+                  - button [ref=f3e153]:
+                    - img "Play" [ref=f3e154]
+                - generic [ref=f3e157]:
+                  - link "Vlog Music Promo - Logo Version (Love Language)" [ref=f3e158] [cursor=pointer]:
+                    - /url: /sound-effects/musical-vlog-music-promo-logo-version-love-language-604351/
+                  - link "BombinSound" [ref=f3e159] [cursor=pointer]:
+                    - /url: /users/bombinsound-54782632/
+              - generic [ref=f3e161]:
+                - button "Download" [ref=f3e162] [cursor=pointer]:
+                  - generic:
+                    - img "Download"
+                - button "Dots" [ref=f3e163] [cursor=pointer]:
+                  - generic:
+                    - img "Dots"
+          - button "Load more" [ref=f3e165] [cursor=pointer]
+      - generic [ref=f3e168]:
+        - generic [ref=f3e169]:
+          - generic [ref=f3e170]:
+            - generic [ref=f3e171]:
+              - img "Check" [ref=f3e173]
+              - generic [ref=f3e176]:
+                - text: Free for use under the Pixabay
+                - link "Content License" [ref=f3e177] [cursor=pointer]:
+                  - /url: /service/license-summary/
+            - generic [ref=f3e180]:
+              - button "Free download" [ref=f3e181] [cursor=pointer]
+              - button [ref=f3e182] [cursor=pointer]
+          - separator [ref=f3e183]
+          - generic [ref=f3e184]:
+            - generic [ref=f3e185]:
+              - button "HeartOutline 9" [ref=f3e187] [cursor=pointer]:
+                - generic:
+                  - img "HeartOutline"
+                - generic: "9"
+              - button "Save" [ref=f3e189] [cursor=pointer]
+              - button "CommentOutline" [ref=f3e190] [cursor=pointer]:
+                - generic:
+                  - img "CommentOutline"
+              - button "Share" [ref=f3e191] [cursor=pointer]:
+                - generic:
+                  - img "Share"
+              - button "Flag" [ref=f3e193] [cursor=pointer]:
+                - generic:
+                  - img "Flag"
+            - generic [ref=f3e195]:
+              - generic [ref=f3e196]:
+                - generic [ref=f3e197]: Plays
+                - generic [ref=f3e198]: 5,580
+              - generic [ref=f3e199]:
+                - generic [ref=f3e200]: Downloads
+                - generic [ref=f3e201]: "752"
+              - generic [ref=f3e202]:
+                - generic [ref=f3e203]: Artist
+                - generic [ref=f3e204]: megashroom (Freesound)
+              - button "Show details ChevronDown" [ref=f3e205] [cursor=pointer]:
+                - generic [ref=f3e206]: Show details
+                - img "ChevronDown" [ref=f3e208]
+          - separator [ref=f3e211]
+          - generic [ref=f3e215]:
+            - link [ref=f3e218] [cursor=pointer]:
+              - /url: /users/freesound_community-46691455/
+              - img "freesound_community" [ref=f3e219]
+            - generic [ref=f3e220]:
+              - link "freesound_community" [ref=f3e222] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+              - generic [ref=f3e223]: 19,231 followers
+            - button "Follow" [ref=f3e224] [cursor=pointer]
+        - link [ref=f3e226] [cursor=pointer]:
+          - /url: https://www.canva.com/video-editor/?utm_medium=partner&utm_source=pixabay&utm_campaign=canva_brand
+          - heading "Split and splice your videos" [level=3] [ref=f3e231]
+          - button "Explore video editor" [ref=f3e233]
+    - contentinfo [ref=f3e234]:
+      - generic [ref=f3e235]:
+        - generic [ref=f3e236]:
+          - generic [ref=f3e241]: Over 6.3 million+ high quality stock images, videos and music shared by our talented community.
+          - generic [ref=f3e242]:
+            - link "Instagram" [ref=f3e243] [cursor=pointer]:
+              - /url: https://www.instagram.com/pixabay/
+              - img "Instagram" [ref=f3e244]
+            - link "Facebook" [ref=f3e247] [cursor=pointer]:
+              - /url: https://www.facebook.com/pixabay
+              - img "Facebook" [ref=f3e248]
+            - link "TikTok" [ref=f3e251] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@pixabaymedia
+              - img "TikTokBrand" [ref=f3e252]
+            - link "Twitter" [ref=f3e263] [cursor=pointer]:
+              - /url: https://x.com/pixabay
+              - img "TwitterX" [ref=f3e264]
+            - link "LinkedIn" [ref=f3e270] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/pixabay/
+              - img "Linkedin" [ref=f3e271]
+            - link "YouTube" [ref=f3e274] [cursor=pointer]:
+              - /url: https://www.youtube.com/@pixabaymedia
+              - img "Youtube" [ref=f3e275]
+            - link "Pinterest" [ref=f3e278] [cursor=pointer]:
+              - /url: https://pinterest.com/pixabay/
+              - img "Pinterest" [ref=f3e279]
+        - generic [ref=f3e282]:
+          - generic [ref=f3e283]: Discover
+          - generic [ref=f3e284]:
+            - link "Editor's Choice" [ref=f3e285] [cursor=pointer]:
+              - /url: /editors_choice/
+            - link "Curated Collections" [ref=f3e287] [cursor=pointer]:
+              - /url: /collections/
+            - link "Pixabay Radio" [ref=f3e289] [cursor=pointer]:
+              - /url: /playlists/
+            - link "Popular Images" [ref=f3e291] [cursor=pointer]:
+              - /url: /images/search/
+            - link "Popular Videos" [ref=f3e293] [cursor=pointer]:
+              - /url: /videos/search/
+            - link "Popular Music" [ref=f3e295] [cursor=pointer]:
+              - /url: /music/search/
+            - link "Popular Searches" [ref=f3e297] [cursor=pointer]:
+              - /url: /popular-searches/
+        - generic [ref=f3e299]:
+          - generic [ref=f3e300]: Community
+          - generic [ref=f3e301]:
+            - link "Contests Live" [ref=f3e302] [cursor=pointer]:
+              - /url: /contests/
+              - generic [ref=f3e303]: Contests
+              - generic [ref=f3e304]: Live
+            - link "Creators" [ref=f3e307] [cursor=pointer]:
+              - /url: /users/
+            - link "Ambassadors" [ref=f3e309] [cursor=pointer]:
+              - /url: /service/ambassador/
+            - link "Forum" [ref=f3e311] [cursor=pointer]:
+              - /url: /forum/
+            - link "Blog" [ref=f3e313] [cursor=pointer]:
+              - /url: /blog/
+        - generic [ref=f3e315]:
+          - generic [ref=f3e316]: About
+          - generic [ref=f3e317]:
+            - link "About Us" [ref=f3e318] [cursor=pointer]:
+              - /url: /service/about/
+            - link "FAQ" [ref=f3e320] [cursor=pointer]:
+              - /url: /service/faq/
+            - link "License Summary" [ref=f3e322] [cursor=pointer]:
+              - /url: /service/license-summary/
+            - link "Terms of Service" [ref=f3e324] [cursor=pointer]:
+              - /url: /service/terms/
+            - link "Privacy Policy" [ref=f3e326] [cursor=pointer]:
+              - /url: /service/privacy/
+            - link "Cookies Policy" [ref=f3e328] [cursor=pointer]:
+              - /url: /service/cookies/
+            - link "Digital Services Act" [ref=f3e330] [cursor=pointer]:
+              - /url: /service/digital-services-act/
+            - link "Report Content" [ref=f3e332] [cursor=pointer]:
+              - /url: /content-reports/
+            - link "API" [ref=f3e334] [cursor=pointer]:
+              - /url: /service/about/api/
+  - generic:
+    - dialog "사생활" [ref=f3e337]:
+      - generic [ref=f3e339]:
+        - generic [ref=f3e340]: 우리는 소셜 미디어 기능의 제공과 데이터 분석 및 본 사이트가 올바로 동작하고 개인화된 콘텐츠와 광고를 제공하기 위해 쿠키를 사용하고 있습니다. 회사 사이트에 대한 귀하의 사용 정보를 회사의 소셜 미디어, 광고 및 분석 협력사와 공유합니다.
+        - generic [ref=f3e344]:
+          - button "쿠키 설정, 기본 설정 센터 대화 상자를 엽니다." [ref=f3e345] [cursor=pointer]: 쿠키 설정
+          - button "모두 거부" [ref=f3e346] [cursor=pointer]
+          - button "모든 쿠키 허용" [ref=f3e347] [cursor=pointer]
+      - button "닫기" [ref=f3e349] [cursor=pointer]
+    - text: 쿠키 설정

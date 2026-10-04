@@ -1,0 +1,32 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - paragraph [ref=e4]: 곰곰한 마음 · 삐약·엔딩 비교
+    - heading "하나씩 틀어서 비교해 보세요" [level=1] [ref=e5]
+    - paragraph [ref=e6]: 영상마다 재생 버튼이 따로 있어요. 하나를 틀면 다른 영상은 자동으로 멈춰서 소리가 섞이지 않아요. 소리를 켜고 들어 주세요.
+  - generic [ref=e7]:
+    - heading "먼저 삐약 소리만 들어 보기" [level=2] [ref=e8]
+    - paragraph [ref=e9]: "영상에 들어간 5가지: 한 번 삐약 → 삐약삐약 → 신나서 짹짹 → 궁금한 삐약 → 졸린 삐약"
+  - navigation [ref=e11]:
+    - button "2화 · 칭찬과 지적" [ref=e12] [cursor=pointer]
+    - button "3화 · 에피쿠로스" [ref=e13] [cursor=pointer]
+  - generic [ref=e15]:
+    - generic [ref=e18]:
+      - generic [ref=e19]: A · 지금 버전
+      - generic [ref=e20]: 45.3초
+      - generic [ref=e21]: 1배 · 훅 없음 · 엔딩 급하게 끝남
+    - generic [ref=e24]:
+      - generic [ref=e25]: C2 · 1.25배 + 엔딩 여운
+      - generic [ref=e26]: 36.1초
+      - generic [ref=e27]: 효과음 없음 · 마지막 컷 2초 더 + 음악 살짝 커졌다가 천천히 페이드
+    - generic [ref=e30]:
+      - generic [ref=e31]: H · C2 + 삐약 (작게)
+      - generic [ref=e32]: 36.1초
+      - generic [ref=e33]: 지난번 버전 — 삐약이 거의 안 들림
+    - generic [ref=e36]:
+      - generic [ref=e37]: H2 · C2 + 삐약 (3배 크게) ⭐
+      - generic [ref=e38]: 36.1초
+      - generic [ref=e39]: 콩이가 움직일 때 삐약·삐약삐약·궁금한 삐약 등
+  - generic [ref=e40]: "공통(C2·H·H2): 말 속도 1.25배(고정) · 컷 사이 빈 시간 줄임 · 첫 목소리 0초 시작 · 0~1.8초 화면 위쪽 제목 카드 · 지금 배경음악"
+  - generic [ref=e41]:
+    - generic [ref=e42]: 알려 주세요
+    - text: "① 엔딩: C2처럼 여운 있는 게 나은지 ② 삐약(H2): 좋다 / 빼자 / 더 크게·더 작게 / 더 자주·덜 자주예) \"H2로 가자\" 또는 \"삐약 좋은데 조금만 작게\" — 정하면 2~6화에 똑같이 적용할게요(크레딧 0)."

@@ -1,0 +1,61 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - paragraph [ref=e4]: 곰곰한 마음 · 말 속도 비교
+    - heading "삐약 효과음 · 엔딩 여운 비교" [level=1] [ref=e5]
+    - paragraph [ref=e6]: 위에서 화를 고르고, 왼쪽·오른쪽 버전을 고른 뒤 같이 재생을 누르세요. 소리는 한쪽만 나와요 — 소리 바꾸기로 왼쪽/오른쪽을 오가며 들어 보세요.
+  - generic [ref=e7]:
+    - button "2화 · 칭찬과 지적" [ref=e8] [cursor=pointer]
+    - button "3화 · 에피쿠로스" [ref=e9] [cursor=pointer]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - button "A" [ref=e13] [cursor=pointer]
+        - button "C" [ref=e14] [cursor=pointer]
+        - button "C2" [ref=e15] [cursor=pointer]
+        - button "E" [ref=e16] [cursor=pointer]
+        - button "H" [ref=e17] [cursor=pointer]
+      - generic [ref=e19]:
+        - generic [ref=e20]: C2 · 1.25배 + 엔딩 여운 ⭐
+        - generic [ref=e21]: 36.1초
+        - generic [ref=e22]: 마지막 컷 2초 더 + 음악 살짝 커졌다가 천천히 페이드
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - button "A" [ref=e25] [cursor=pointer]
+        - button "C" [ref=e26] [cursor=pointer]
+        - button "C2" [ref=e27] [cursor=pointer]
+        - button "E" [ref=e28] [cursor=pointer]
+        - button "H" [ref=e29] [cursor=pointer]
+      - generic [ref=e31]:
+        - generic [ref=e32]: H · 1.25배 + 삐약 + 엔딩 여운 ⭐
+        - generic [ref=e33]: 36.1초
+        - generic [ref=e34]: 콩이 움직일 때 삐약·삐약삐약·궁금한 삐약 등
+  - generic [ref=e35]:
+    - button "▶ 같이 재생" [ref=e36] [cursor=pointer]
+    - 'button "🔊 소리 바꾸기 (지금: 왼쪽)" [ref=e37] [cursor=pointer]'
+    - button "⏮ 처음부터" [ref=e38] [cursor=pointer]
+  - generic [ref=e39]:
+    - heading "버전 설명" [level=2] [ref=e40]
+    - table [ref=e41]:
+      - rowgroup [ref=e42]:
+        - row [ref=e43]:
+          - columnheader [ref=e44]
+          - columnheader "내용" [ref=e45]
+        - row [ref=e46]:
+          - cell "A" [ref=e47]
+          - cell "지금 버전 — 1배 · 훅 없음 · 엔딩 급하게 끝남" [ref=e48]
+        - row [ref=e49]:
+          - cell "C" [ref=e50]
+          - cell "1.25배 (지난번) — 훅 · 엔딩 급하게 끝남" [ref=e51]
+        - row [ref=e52]:
+          - cell "C2" [ref=e53]
+          - cell "1.25배 + 엔딩 여운 ⭐ — 마지막 컷 2초 더 + 음악 살짝 커졌다가 천천히 페이드" [ref=e54]
+        - row [ref=e55]:
+          - cell "E" [ref=e56]
+          - cell "1.25배 + 예전 효과음 — 반짝·폴짝·풍경 등 (지난번)" [ref=e57]
+        - row [ref=e58]:
+          - cell "H" [ref=e59]
+          - cell "1.25배 + 삐약 + 엔딩 여운 ⭐ — 콩이 움직일 때 삐약·삐약삐약·궁금한 삐약 등" [ref=e60]
+    - paragraph [ref=e61]: "C 이후 공통: 1.25배(고정) · 컷 사이 빈 시간 줄임 · 첫 목소리 0초 시작 · 0~1.8초 화면 위쪽 큰 제목 카드(훅) · 배경음악은 지금 것"
+  - generic [ref=e62]:
+    - generic [ref=e63]: 골라 주세요
+    - text: "① 엔딩: 여운 넣은 C2가 나은지 ② 삐약 효과음(H): 좋다 / 빼자 / 더 크게·작게 / 더 자주·덜예) \"H로 가자\" 또는 \"삐약은 좋은데 좀 더 작게\" — 정하면 2~6화에 똑같이 적용할게요(크레딧 0)."

@@ -1,0 +1,193 @@
+- generic [ref=e11]:
+  - generic [ref=e13]:
+    - link [ref=e16] [cursor=pointer]:
+      - /url: /
+      - img "Instagram" [ref=e19]
+    - generic [ref=e30]:
+      - link "로그인" [ref=e32] [cursor=pointer]:
+        - /url: /accounts/login/?next=%2Fp%2FDd8N0_MTdqd%2F&source=desktop_nav
+      - link "가입하기" [ref=e34] [cursor=pointer]:
+        - /url: /accounts/emailsignup/
+  - main [ref=e35]:
+    - dialog [ref=e40]:
+      - generic [ref=e41]:
+        - button [ref=e43] [cursor=pointer]:
+          - img "닫기" [ref=e45]
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - link [ref=e52] [cursor=pointer]:
+              - img "gomgom_mind님의 프로필 사진" [ref=e53]
+            - generic [ref=e55]:
+              - generic [ref=e56]: gomgom_mind님의 게시물을 놓치지 마세요
+              - generic [ref=e57]: Instagram에 가입하여 새로운 소식을 모두 확인해보세요.
+              - generic [ref=e60]:
+                - text: 계속하면 Instagram
+                - link "이용 약관" [ref=e61] [cursor=pointer]:
+                  - /url: https://help.instagram.com/581066165581870/?locale=ko_KR
+                - text: 및
+                - link "개인정보처리방침" [ref=e62] [cursor=pointer]:
+                  - /url: https://privacycenter.instagram.com/policy/
+                - text: 에 동의하게 됩니다.
+          - generic [ref=e63]:
+            - link "가입하기" [ref=e66] [cursor=pointer]:
+              - /url: /accounts/emailsignup/
+            - link "로그인" [ref=e69] [cursor=pointer]:
+              - /url: /accounts/login/?source=desktop_dynamic_landing_dialog
+    - generic [ref=e72]:
+      - img "Photo by 곰곰한 마음 on September 30, 2026. 곰, 장난감, 포스터, 텍스트의 이미지일 수 있음." [ref=e81]
+      - generic [ref=e84]:
+        - generic [ref=e86]:
+          - link [ref=e88] [cursor=pointer]:
+            - img "gomgom_mind님의 프로필 사진" [ref=e89]
+          - generic [ref=e92]:
+            - link "gomgom_mind" [ref=e95] [cursor=pointer]:
+              - /url: /gomgom_mind/
+            - generic [ref=e99]:
+              - generic [ref=e100]: •
+              - button "팔로우" [ref=e102] [cursor=pointer]
+          - button [ref=e105] [cursor=pointer]:
+            - img "옵션 더 보기" [ref=e108]
+        - separator [ref=e112]
+        - generic [ref=e114]:
+          - generic [ref=e116]:
+            - link [ref=e118] [cursor=pointer]:
+              - /url: /gomgom_mind/
+              - img "gomgom_mind님의 프로필 사진" [ref=e119]
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - link "gomgom_mind" [ref=e125] [cursor=pointer]:
+                  - /url: /gomgom_mind/
+                - generic [ref=e129]: 수정됨
+                - generic [ref=e130]: •
+                - time [ref=e132]: 56초
+              - generic [ref=e133]:
+                - text: 안녕하세요, 곰곰이와 콩이예요 🧸니들펠트 곰 곰곰이는 곰곰이 생각하는 걸 좋아하고, 병아리 콩이는 늘 곰곰이 머리 위에 앉아 있어요.가끔날기도 해요. 이건 안비밀!둘이서 40초짜리 마음 공부를 들려드릴게요. 쉬어도 피곤한 이유, 오래 남는 한마디 같은 것들을요.첫 이야기는 내일 금요일 저녁 8시.
+                - link "#곰곰한마음" [ref=e134] [cursor=pointer]:
+                  - /url: /explore/tags/%EA%B3%B0%EA%B3%B0%ED%95%9C%EB%A7%88%EC%9D%8C/
+                - link "#니들펠트" [ref=e135] [cursor=pointer]:
+                  - /url: /explore/tags/%EB%8B%88%EB%93%A4%ED%8E%A0%ED%8A%B8/
+                - link "#마음공부" [ref=e136] [cursor=pointer]:
+                  - /url: /explore/tags/%EB%A7%88%EC%9D%8C%EA%B3%B5%EB%B6%80/
+                - link "#심리학" [ref=e137] [cursor=pointer]:
+                  - /url: /explore/tags/%EC%8B%AC%EB%A6%AC%ED%95%99/
+                - link "#힐링" [ref=e138] [cursor=pointer]:
+                  - /url: /explore/tags/%ED%9E%90%EB%A7%81/
+          - button [ref=e140] [cursor=pointer]:
+            - img "댓글 더 읽어들이기" [ref=e142]
+          - generic [ref=e146]:
+            - heading "아직 댓글이 없습니다." [level=2] [ref=e148]
+            - generic [ref=e149]: 댓글을 남겨보세요.
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - button [ref=e156] [cursor=pointer]:
+                - img "좋아요" [ref=e159]
+              - button [ref=e162] [cursor=pointer]:
+                - img "댓글 달기" [ref=e164]
+              - button [ref=e166] [cursor=pointer]:
+                - img "공유하기" [ref=e167]
+            - button [ref=e171] [cursor=pointer]:
+              - img "저장" [ref=e173]
+          - link [ref=e177] [cursor=pointer]:
+            - /url: /gomgom_mind/p/Dd8N0_MTdqd/
+            - time [ref=e179]: 2분 전
+        - generic [ref=e184]:
+          - text: 좋아요 또는 댓글을 남기려면
+          - link "로그인" [ref=e185] [cursor=pointer]:
+            - /url: /accounts/login/?next=%2Fp%2FDd8N0_MTdqd%2F&source=post_comment_input
+          - text: .
+  - contentinfo [ref=e186]:
+    - generic [ref=e187]:
+      - generic [ref=e189]:
+        - link "Meta" [ref=e191] [cursor=pointer]:
+          - /url: https://about.meta.com/
+        - link "소개" [ref=e194] [cursor=pointer]:
+          - /url: https://about.instagram.com/
+        - link "블로그" [ref=e197] [cursor=pointer]:
+          - /url: https://about.instagram.com/blog/
+        - link "채용 정보" [ref=e200] [cursor=pointer]:
+          - /url: https://about.instagram.com/about-us/careers
+        - link "도움말" [ref=e203] [cursor=pointer]:
+          - /url: https://help.instagram.com/
+        - link "API" [ref=e206] [cursor=pointer]:
+          - /url: https://developers.facebook.com/docs/instagram
+        - link "개인정보처리방침" [ref=e209] [cursor=pointer]:
+          - /url: /legal/privacy/
+        - link "약관" [ref=e212] [cursor=pointer]:
+          - /url: /legal/terms/
+        - link "위치" [ref=e215] [cursor=pointer]:
+          - /url: /explore/locations/
+        - link "인기" [ref=e218] [cursor=pointer]:
+          - /url: /popular/
+        - link "Instagram Lite" [ref=e221] [cursor=pointer]:
+          - /url: /web/lite/
+        - link "Meta AI" [ref=e224] [cursor=pointer]:
+          - /url: https://www.meta.ai/?utm_source=foa_web_footer
+        - link "Muse" [ref=e227] [cursor=pointer]:
+          - /url: https://muse.ai/
+        - link "Threads" [ref=e230] [cursor=pointer]:
+          - /url: https://www.threads.com/
+        - link "연락처 업로드 & 비사용자" [ref=e233] [cursor=pointer]:
+          - /url: https://www.facebook.com/help/instagram/261704639352628
+        - link "Meta Verified" [ref=e236] [cursor=pointer]:
+          - /url: /accounts/meta_verified/?entrypoint=web_footer
+      - generic [ref=e238]:
+        - generic [ref=e239] [cursor=pointer]:
+          - generic [ref=e240]:
+            - generic [ref=e241]: 한국어
+            - img "아래쪽 V자형 아이콘" [ref=e244]
+          - combobox "표시 언어 변경" [ref=e246]:
+            - option "Afrikaans"
+            - option "العربية"
+            - option "Čeština"
+            - option "Dansk"
+            - option "Deutsch"
+            - option "Ελληνικά"
+            - option "English"
+            - option "English (UK)"
+            - option "Español (España)"
+            - option "Español"
+            - option "فارسی"
+            - option "Suomi"
+            - option "Français"
+            - option "עברית"
+            - option "Bahasa Indonesia"
+            - option "Italiano"
+            - option "日本語"
+            - option "한국어" [selected]
+            - option "Bahasa Melayu"
+            - option "Norsk"
+            - option "Nederlands"
+            - option "Polski"
+            - option "Português (Brasil)"
+            - option "Português (Portugal)"
+            - option "Русский"
+            - option "Svenska"
+            - option "ภาษาไทย"
+            - option "Filipino"
+            - option "Türkçe"
+            - option "中文(简体)"
+            - option "中文(台灣)"
+            - option "বাংলা"
+            - option "ગુજરાતી"
+            - option "हिन्दी"
+            - option "Hrvatski"
+            - option "Magyar"
+            - option "ಕನ್ನಡ"
+            - option "മലയാളം"
+            - option "मराठी"
+            - option "नेपाली"
+            - option "ਪੰਜਾਬੀ"
+            - option "සිංහල"
+            - option "Slovenčina"
+            - option "தமிழ்"
+            - option "తెలుగు"
+            - option "اردو"
+            - option "Tiếng Việt"
+            - option "中文(香港)"
+            - option "Български"
+            - option "Français (Canada)"
+            - option "Română"
+            - option "Српски"
+            - option "Українська"
+        - generic [ref=e247]: © 2026 Instagram from Meta

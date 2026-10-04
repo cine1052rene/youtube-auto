@@ -1,0 +1,519 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - link "Pixabay" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e15]:
+          - button "Search Pixabay" [ref=e16] [cursor=pointer]:
+            - img "Search" [ref=e17]
+          - searchbox "Search Pixabay" [ref=e21]: teacup
+          - button "Clear" [ref=e23] [cursor=pointer]:
+            - generic:
+              - img "Close"
+          - button "Sound Effects" [ref=e26] [cursor=pointer]
+        - generic [ref=e27]:
+          - button "Explore" [ref=e31] [cursor=pointer]
+          - button "Log in" [ref=e33] [cursor=pointer]
+          - button "Join" [ref=e34] [cursor=pointer]
+          - button "Upload" [ref=e36] [cursor=pointer]
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - button "Sound Effects" [ref=e41] [cursor=pointer]
+        - button "Duration" [ref=e43] [cursor=pointer]
+        - button "Theme" [ref=e45] [cursor=pointer]
+        - button "Content type" [ref=e47] [cursor=pointer]
+      - generic [ref=e48]:
+        - button "Search settings" [ref=e50] [cursor=pointer]:
+          - generic:
+            - img "Settings"
+        - button "Most relevant" [ref=e52] [cursor=pointer]
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - heading "20 royalty-free teacup sound effects" [level=1] [ref=e55]
+        - paragraph [ref=e56]: Download teacup royalty-free sound effects to use in your next project.
+        - generic [ref=e61]:
+          - link "tea" [ref=e63] [cursor=pointer]:
+            - /url: /sound-effects/search/tea/
+          - link "cup" [ref=e66] [cursor=pointer]:
+            - /url: /sound-effects/search/cup/
+          - link "duck" [ref=e69] [cursor=pointer]:
+            - /url: /sound-effects/search/duck/
+          - link "children" [ref=e72] [cursor=pointer]:
+            - /url: /sound-effects/search/children/
+          - link "animal" [ref=e75] [cursor=pointer]:
+            - /url: /sound-effects/search/animal/
+          - link "puppy" [ref=e78] [cursor=pointer]:
+            - /url: /sound-effects/search/puppy/
+          - link "fun" [ref=e81] [cursor=pointer]:
+            - /url: /sound-effects/search/fun/
+          - link "pet" [ref=e84] [cursor=pointer]:
+            - /url: /sound-effects/search/pet/
+          - link "spoon" [ref=e87] [cursor=pointer]:
+            - /url: /sound-effects/search/spoon/
+      - generic [ref=e89]: Royalty-free sound effects
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - button [ref=e95] [cursor=pointer]:
+              - button [ref=e97]:
+                - img "Play" [ref=e98]
+            - generic [ref=e101]:
+              - link "Teacup on Saucer 170504_1507" [ref=e102] [cursor=pointer]:
+                - /url: /sound-effects/film-special-effects-teacup-on-saucer-170504-1507-70890/
+              - link "freesound_community" [ref=e103] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=e104]:
+            - text: ", ,"
+            - generic [ref=e105]:
+              - button "Download" [ref=e106] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e107] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - button [ref=e110] [cursor=pointer]:
+              - button [ref=e113]:
+                - img "Play" [ref=e114]
+            - generic [ref=e117]:
+              - link "Sound Effect - Stirring Teacup" [ref=e118] [cursor=pointer]:
+                - /url: /sound-effects/household-sound-effect-stirring-teacup-203453/
+              - link "ScottishPerson" [ref=e119] [cursor=pointer]:
+                - /url: /users/scottishperson-16626294/
+          - generic [ref=e120]:
+            - text: ", ,"
+            - generic [ref=e121]:
+              - button "Download" [ref=e122] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e123] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - button [ref=e126] [cursor=pointer]:
+              - button [ref=e128]:
+                - img "Play" [ref=e129]
+            - generic [ref=e132]:
+              - link "Spoon in a teacup" [ref=e133] [cursor=pointer]:
+                - /url: /sound-effects/household-spoon-in-a-teacup-29814/
+              - link "freesound_community" [ref=e134] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=e135]:
+            - text: ", ,"
+            - generic [ref=e136]:
+              - button "Download" [ref=e137] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e138] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - button [ref=e141] [cursor=pointer]:
+              - button [ref=e144]:
+                - img "Play" [ref=e145]
+            - generic [ref=e148]:
+              - link "Pull the teacup by hand" [ref=e149] [cursor=pointer]:
+                - /url: /sound-effects/film-special-effects-pull-the-teacup-by-hand-241014/
+              - link "Sahidullah" [ref=e150] [cursor=pointer]:
+                - /url: /users/sahidullah-43686706/
+          - generic [ref=e151]:
+            - text: ", , ,"
+            - generic [ref=e152]:
+              - button "Download" [ref=e153] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e154] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - button [ref=e157] [cursor=pointer]:
+              - button [ref=e159]:
+                - img "Play" [ref=e160]
+            - generic [ref=e163]:
+              - link "Teacup_Rattle_walk" [ref=e164] [cursor=pointer]:
+                - /url: /sound-effects/household-teacup-rattle-walk-29607/
+              - link "freesound_community" [ref=e165] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=e166]:
+            - text: ", ,"
+            - generic [ref=e167]:
+              - button "Download" [ref=e168] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e169] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - button [ref=e172] [cursor=pointer]:
+              - button [ref=e174]:
+                - img "Play" [ref=e175]
+            - generic [ref=e178]:
+              - link "201122_05 A Nice Cup of Tea" [ref=e179] [cursor=pointer]:
+                - /url: /sound-effects/household-201122-05-a-nice-cup-of-tea-26837/
+              - link "freesound_community" [ref=e180] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=e181]:
+            - text: ","
+            - generic [ref=e182]:
+              - button "Download" [ref=e183] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e184] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e185]:
+          - generic [ref=e186]:
+            - button [ref=e187] [cursor=pointer]:
+              - button [ref=e189]:
+                - img "Play" [ref=e190]
+            - generic [ref=e193]:
+              - link "Bouncy Teacup Waltz" [ref=e194] [cursor=pointer]:
+                - /url: /sound-effects/musical-bouncy-teacup-waltz-468372/
+              - link "GoldenSoundLabs" [ref=e195] [cursor=pointer]:
+                - /url: /users/goldensoundlabs-31886162/
+          - generic [ref=e196]:
+            - text: ","
+            - generic [ref=e197]:
+              - button "Download" [ref=e198] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e199] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e200]:
+          - generic [ref=e201]:
+            - button [ref=e202] [cursor=pointer]:
+              - button [ref=e204]:
+                - img "Play" [ref=e205]
+            - generic [ref=e208]:
+              - link "TeaCup Clink - SFX" [ref=e209] [cursor=pointer]:
+                - /url: /sound-effects/film-special-effects-teacup-clink-sfx-156224/
+              - link "UISoundBay" [ref=e210] [cursor=pointer]:
+                - /url: /users/uisoundbay-1465313/
+          - generic [ref=e211]:
+            - text: ", ,"
+            - generic [ref=e212]:
+              - button "Download" [ref=e213] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e214] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - button [ref=e217] [cursor=pointer]:
+              - button [ref=e219]:
+                - img "Play" [ref=e220]
+            - generic [ref=e223]:
+              - link "Cups (Various Sounds)" [ref=e224] [cursor=pointer]:
+                - /url: /sound-effects/household-cups-various-sounds-29591/
+              - link "freesound_community" [ref=e225] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=e226]:
+            - text: ", ,"
+            - generic [ref=e227]:
+              - button "Download" [ref=e228] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e229] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e230]:
+          - generic [ref=e231]:
+            - button [ref=e232] [cursor=pointer]:
+              - button [ref=e234]:
+                - img "Play" [ref=e235]
+            - generic [ref=e238]:
+              - link "Tea Cup Clank" [ref=e239] [cursor=pointer]:
+                - /url: /sound-effects/film-special-effects-tea-cup-clank-80001/
+              - link "freesound_community" [ref=e240] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=e241]:
+            - text: ", ,"
+            - generic [ref=e242]:
+              - button "Download" [ref=e243] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e244] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e245]:
+          - generic [ref=e246]:
+            - button [ref=e247] [cursor=pointer]:
+              - button [ref=e249]:
+                - img "Play" [ref=e250]
+            - generic [ref=e253]:
+              - link "Bouncy Teacup Waltz Soft Solo" [ref=e254] [cursor=pointer]:
+                - /url: /sound-effects/musical-bouncy-teacup-waltz-soft-solo-497547/
+              - link "GoldenSoundLabs" [ref=e255] [cursor=pointer]:
+                - /url: /users/goldensoundlabs-31886162/
+          - generic [ref=e256]:
+            - text: ", ,"
+            - generic [ref=e257]:
+              - button "Download" [ref=e258] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e259] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e260]:
+          - generic [ref=e261]:
+            - button [ref=e262] [cursor=pointer]:
+              - button [ref=e264]:
+                - img "Play" [ref=e265]
+            - generic [ref=e268]:
+              - link "teacup set stir" [ref=e269] [cursor=pointer]:
+                - /url: /sound-effects/household-teacup-set-stir-22655/
+              - link "freesound_community" [ref=e270] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=e271]:
+            - text: ", , ,"
+            - generic [ref=e272]:
+              - button "Download" [ref=e273] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e274] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e275]:
+          - generic [ref=e276]:
+            - button [ref=e277] [cursor=pointer]:
+              - button [ref=e279]:
+                - img "Play" [ref=e280]
+            - generic [ref=e283]:
+              - link "tea_poured_in_cup_vers3_record20151218235204" [ref=e284] [cursor=pointer]:
+                - /url: /sound-effects/film-special-effects-tea-poured-in-cup-vers3-record20151218235204-83186/
+              - link "freesound_community" [ref=e285] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=e286]:
+            - text: ", ,"
+            - generic [ref=e287]:
+              - button "Download" [ref=e288] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e289] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e290]:
+          - generic [ref=e291]:
+            - button [ref=e292] [cursor=pointer]:
+              - button [ref=e294]:
+                - img "Play" [ref=e295]
+            - generic [ref=e298]:
+              - link "spoon in a cup" [ref=e299] [cursor=pointer]:
+                - /url: /sound-effects/household-spoon-in-a-cup-41278/
+              - link "freesound_community" [ref=e300] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=e301]:
+            - text: ", , ,"
+            - generic [ref=e302]:
+              - button "Download" [ref=e303] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e304] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e305]:
+          - generic [ref=e306]:
+            - button [ref=e307] [cursor=pointer]:
+              - button [ref=e309]:
+                - img "Play" [ref=e310]
+            - generic [ref=e313]:
+              - link "Bouncy Teacup Waltz Gentle Opening" [ref=e314] [cursor=pointer]:
+                - /url: /sound-effects/musical-bouncy-teacup-waltz-gentle-opening-497516/
+              - link "GoldenSoundLabs" [ref=e315] [cursor=pointer]:
+                - /url: /users/goldensoundlabs-31886162/
+          - generic [ref=e316]:
+            - text: ", ,"
+            - generic [ref=e317]:
+              - button "Download" [ref=e318] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e319] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e320]:
+          - generic [ref=e321]:
+            - button [ref=e322] [cursor=pointer]:
+              - button [ref=e324]:
+                - img "Play" [ref=e325]
+            - generic [ref=e328]:
+              - link "Dancing on a Teacup Gentle Opening" [ref=e329] [cursor=pointer]:
+                - /url: /sound-effects/musical-dancing-on-a-teacup-gentle-opening-510245/
+              - link "GoldenSoundLabs" [ref=e330] [cursor=pointer]:
+                - /url: /users/goldensoundlabs-31886162/
+          - generic [ref=e332]:
+            - button "Download" [ref=e333] [cursor=pointer]:
+              - generic:
+                - img "Download"
+            - button "Dots" [ref=e334] [cursor=pointer]:
+              - generic:
+                - img "Dots"
+        - generic [ref=e335]:
+          - generic [ref=e336]:
+            - button [ref=e337] [cursor=pointer]:
+              - button [ref=e339]:
+                - img "Play" [ref=e340]
+            - generic [ref=e343]:
+              - link "Pouring Drink Sound Effect by Rea" [ref=e344] [cursor=pointer]:
+                - /url: /sound-effects/household-pouring-drink-sound-effect-by-rea-102018/
+              - link "freesound_community" [ref=e345] [cursor=pointer]:
+                - /url: /users/freesound_community-46691455/
+          - generic [ref=e346]:
+            - text: ", ,"
+            - generic [ref=e347]:
+              - button "Download" [ref=e348] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e349] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+        - generic [ref=e350]:
+          - generic [ref=e351]:
+            - button [ref=e352] [cursor=pointer]:
+              - button [ref=e354]:
+                - img "Play" [ref=e355]
+            - generic [ref=e358]:
+              - link "Dancing on a Teacup Soft Instrumental" [ref=e359] [cursor=pointer]:
+                - /url: /sound-effects/musical-dancing-on-a-teacup-soft-instrumental-510251/
+              - link "GoldenSoundLabs" [ref=e360] [cursor=pointer]:
+                - /url: /users/goldensoundlabs-31886162/
+          - generic [ref=e362]:
+            - button "Download" [ref=e363] [cursor=pointer]:
+              - generic:
+                - img "Download"
+            - button "Dots" [ref=e364] [cursor=pointer]:
+              - generic:
+                - img "Dots"
+        - generic [ref=e365]:
+          - generic [ref=e366]:
+            - button [ref=e367] [cursor=pointer]:
+              - button [ref=e369]:
+                - img "Play" [ref=e370]
+            - generic [ref=e373]:
+              - link "Dancing on a Teacup Peaceful Solo" [ref=e374] [cursor=pointer]:
+                - /url: /sound-effects/musical-dancing-on-a-teacup-peaceful-solo-510249/
+              - link "GoldenSoundLabs" [ref=e375] [cursor=pointer]:
+                - /url: /users/goldensoundlabs-31886162/
+          - generic [ref=e377]:
+            - button "Download" [ref=e378] [cursor=pointer]:
+              - generic:
+                - img "Download"
+            - button "Dots" [ref=e379] [cursor=pointer]:
+              - generic:
+                - img "Dots"
+        - generic [ref=e380]:
+          - generic [ref=e381]:
+            - button [ref=e382] [cursor=pointer]:
+              - button [ref=e384]:
+                - img "Play" [ref=e385]
+            - generic [ref=e388]:
+              - link "Bouncy Teacup Waltz Peaceful Solo" [ref=e389] [cursor=pointer]:
+                - /url: /sound-effects/musical-bouncy-teacup-waltz-peaceful-solo-497528/
+              - link "GoldenSoundLabs" [ref=e390] [cursor=pointer]:
+                - /url: /users/goldensoundlabs-31886162/
+          - generic [ref=e391]:
+            - text: ", ,"
+            - generic [ref=e392]:
+              - button "Download" [ref=e393] [cursor=pointer]:
+                - generic:
+                  - img "Download"
+              - button "Dots" [ref=e394] [cursor=pointer]:
+                - generic:
+                  - img "Dots"
+      - generic [ref=e395]: Page 1 of 1
+    - contentinfo [ref=e397]:
+      - generic [ref=e398]:
+        - generic [ref=e399]:
+          - generic [ref=e404]: Over 6.3 million+ high quality stock images, videos and music shared by our talented community.
+          - generic [ref=e405]:
+            - link "Instagram" [ref=e406] [cursor=pointer]:
+              - /url: https://www.instagram.com/pixabay/
+              - img "Instagram" [ref=e407]
+            - link "Facebook" [ref=e410] [cursor=pointer]:
+              - /url: https://www.facebook.com/pixabay
+              - img "Facebook" [ref=e411]
+            - link "TikTok" [ref=e414] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@pixabaymedia
+              - img "TikTokBrand" [ref=e415]
+            - link "Twitter" [ref=e426] [cursor=pointer]:
+              - /url: https://x.com/pixabay
+              - img "TwitterX" [ref=e427]
+            - link "LinkedIn" [ref=e433] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/pixabay/
+              - img "Linkedin" [ref=e434]
+            - link "YouTube" [ref=e437] [cursor=pointer]:
+              - /url: https://www.youtube.com/@pixabaymedia
+              - img "Youtube" [ref=e438]
+            - link "Pinterest" [ref=e441] [cursor=pointer]:
+              - /url: https://pinterest.com/pixabay/
+              - img "Pinterest" [ref=e442]
+        - generic [ref=e445]:
+          - generic [ref=e446]: Discover
+          - generic [ref=e447]:
+            - link "Editor's Choice" [ref=e448] [cursor=pointer]:
+              - /url: /editors_choice/
+            - link "Curated Collections" [ref=e450] [cursor=pointer]:
+              - /url: /collections/
+            - link "Pixabay Radio" [ref=e452] [cursor=pointer]:
+              - /url: /playlists/
+            - link "Popular Images" [ref=e454] [cursor=pointer]:
+              - /url: /images/search/
+            - link "Popular Videos" [ref=e456] [cursor=pointer]:
+              - /url: /videos/search/
+            - link "Popular Music" [ref=e458] [cursor=pointer]:
+              - /url: /music/search/
+            - link "Popular Searches" [ref=e460] [cursor=pointer]:
+              - /url: /popular-searches/
+        - generic [ref=e462]:
+          - generic [ref=e463]: Community
+          - generic [ref=e464]:
+            - link "Contests Live" [ref=e465] [cursor=pointer]:
+              - /url: /contests/
+              - generic [ref=e466]: Contests
+              - generic [ref=e467]: Live
+            - link "Creators" [ref=e470] [cursor=pointer]:
+              - /url: /users/
+            - link "Ambassadors" [ref=e472] [cursor=pointer]:
+              - /url: /service/ambassador/
+            - link "Forum" [ref=e474] [cursor=pointer]:
+              - /url: /forum/
+            - link "Blog" [ref=e476] [cursor=pointer]:
+              - /url: /blog/
+        - generic [ref=e478]:
+          - generic [ref=e479]: About
+          - generic [ref=e480]:
+            - link "About Us" [ref=e481] [cursor=pointer]:
+              - /url: /service/about/
+            - link "FAQ" [ref=e483] [cursor=pointer]:
+              - /url: /service/faq/
+            - link "License Summary" [ref=e485] [cursor=pointer]:
+              - /url: /service/license-summary/
+            - link "Terms of Service" [ref=e487] [cursor=pointer]:
+              - /url: /service/terms/
+            - link "Privacy Policy" [ref=e489] [cursor=pointer]:
+              - /url: /service/privacy/
+            - link "Cookies Policy" [ref=e491] [cursor=pointer]:
+              - /url: /service/cookies/
+            - link "Digital Services Act" [ref=e493] [cursor=pointer]:
+              - /url: /service/digital-services-act/
+            - link "Report Content" [ref=e495] [cursor=pointer]:
+              - /url: /content-reports/
+            - link "API" [ref=e497] [cursor=pointer]:
+              - /url: /service/about/api/
+  - generic:
+    - dialog "사생활" [ref=e500]:
+      - generic [ref=e502]:
+        - generic [ref=e503]: 우리는 소셜 미디어 기능의 제공과 데이터 분석 및 본 사이트가 올바로 동작하고 개인화된 콘텐츠와 광고를 제공하기 위해 쿠키를 사용하고 있습니다. 회사 사이트에 대한 귀하의 사용 정보를 회사의 소셜 미디어, 광고 및 분석 협력사와 공유합니다.
+        - generic [ref=e507]:
+          - button "쿠키 설정, 기본 설정 센터 대화 상자를 엽니다." [ref=e508] [cursor=pointer]: 쿠키 설정
+          - button "모두 거부" [ref=e509] [cursor=pointer]
+          - button "모든 쿠키 허용" [ref=e510] [cursor=pointer]
+      - button "닫기" [ref=e512] [cursor=pointer]
+    - text: 쿠키 설정

@@ -1,0 +1,32 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - button "이전 페이지" [ref=e3] [cursor=pointer]
+    - heading "gomgommaum" [level=1] [ref=e7]
+    - generic [ref=e8]:
+      - button [ref=e9] [cursor=pointer]:
+        - img "프로필" [ref=e11]
+      - generic [ref=e12]: 클립의 새로운 집이 생겼어요!
+  - main [ref=e16]:
+    - list [ref=e17]:
+      - listitem [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - button [ref=e21] [cursor=pointer]:
+              - img "프로필" [ref=e22]
+            - button "곰곰한마음" [ref=e24] [cursor=pointer]
+            - button "더보기" [ref=e27] [cursor=pointer]
+          - button "소리" [ref=e43] [cursor=pointer]
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: 곰곰이와 콩이가 전하는 40초 마음 공부. 쉬어도 피곤한 이유, 오래 남는 한마디처럼 누구나 겪는 마음을 심리학과 철학으로 따뜻하게 풀어요. 영상은 AI 도구로 만들고 이야기와 장면은 사람이 직접 쓰고 확인합니다.
+            - button "더보기" [ref=e51] [cursor=pointer]
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - button "좋아요" [ref=e55] [cursor=pointer]
+              - button "댓글" [ref=e59] [cursor=pointer]
+              - button "공유" [ref=e63] [cursor=pointer]
+            - button "KEEP" [ref=e67] [cursor=pointer]
+          - generic [ref=e71]:
+            - generic [ref=e72]: 방금 전
+            - generic [ref=e73]: AI 활용
+  - alert [ref=e74]

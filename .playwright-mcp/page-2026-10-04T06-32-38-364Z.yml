@@ -1,0 +1,137 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - paragraph [ref=e4]: 곰곰한 마음 · 6화 점검
+    - heading "별일 아닌데 괜히 서운할 때, 사실 마음이 보내는 신호" [level=1] [ref=e5]
+    - paragraph [ref=e6]: 관계 심리학 — 서운함은 말하지 않은 기대의 신호
+    - generic [ref=e7]:
+      - generic [ref=e8]: 공개 화 10/20 20:00
+      - generic [ref=e9]: 39.0초
+      - generic [ref=e10]: 12컷
+  - generic [ref=e13]:
+    - heading "컷별 장면" [level=2] [ref=e14]
+    - paragraph [ref=e15]: 사진을 누르면 영상이 그 장면으로 이동해요. 고치고 싶은 컷은 번호로 알려 주세요.
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - img "01번 장면" [ref=e18] [cursor=pointer]
+        - generic [ref=e19]:
+          - generic [ref=e20]: "01"
+          - generic [ref=e21]: 별일도 아닌데, 괜히 서운할 때가 있죠?
+          - generic [ref=e22]: 0.0초 ~ 3.9초
+          - generic [ref=e23]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e24]:
+        - img "02번 장면" [ref=e25] [cursor=pointer]
+        - generic [ref=e26]:
+          - generic [ref=e27]: "02"
+          - generic [ref=e28]: 곰곰이는 콩이가
+          - generic [ref=e29]: 3.9초 ~ 5.9초
+          - generic [ref=e30]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e31]:
+        - img "03번 장면" [ref=e32] [cursor=pointer]
+        - generic [ref=e33]:
+          - generic [ref=e34]: "03"
+          - generic [ref=e35]: 인사를 안 하고 날아가서,
+          - generic [ref=e36]: 5.9초 ~ 8.7초
+          - generic [ref=e37]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e38]:
+        - img "04번 장면" [ref=e39] [cursor=pointer]
+        - generic [ref=e40]:
+          - generic [ref=e41]: "04"
+          - generic [ref=e42]: 하루 종일 마음이 쓰였어요.
+          - generic [ref=e43]: 8.7초 ~ 11.3초
+          - generic [ref=e44]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e45]:
+        - img "05번 장면" [ref=e46] [cursor=pointer]
+        - generic [ref=e47]:
+          - generic [ref=e48]: "05"
+          - generic [ref=e49]: 서운함은 사실,
+          - generic [ref=e50]: 11.3초 ~ 13.3초
+          - generic [ref=e51]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e52]:
+        - img "06번 장면" [ref=e53] [cursor=pointer]
+        - generic [ref=e54]:
+          - generic [ref=e55]: "06"
+          - generic [ref=e56]: 말하지 않은 기대가 어긋났다는 신호래요.
+          - generic [ref=e57]: 13.3초 ~ 17.0초
+          - generic [ref=e58]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e59]:
+        - img "07번 장면" [ref=e60] [cursor=pointer]
+        - generic [ref=e61]:
+          - generic [ref=e62]: "07"
+          - generic [ref=e63]: 곰곰이는 인사를 기다리고 있었거든요.
+          - generic [ref=e64]: 17.0초 ~ 20.5초
+          - generic [ref=e65]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e66]:
+        - img "08번 장면" [ref=e67] [cursor=pointer]
+        - generic [ref=e68]:
+          - generic [ref=e69]: "08"
+          - generic [ref=e70]: 그런데 콩이는 그 기다림을 몰랐어요.
+          - generic [ref=e71]: 20.5초 ~ 24.4초
+          - generic [ref=e72]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e73]:
+        - img "09번 장면" [ref=e74] [cursor=pointer]
+        - generic [ref=e75]:
+          - generic [ref=e76]: "09"
+          - generic [ref=e77]: 씨앗을 물어오느라 바빴던 거예요.
+          - generic [ref=e78]: 24.4초 ~ 27.6초
+          - generic [ref=e79]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e80]:
+        - img "10번 장면" [ref=e81] [cursor=pointer]
+        - generic [ref=e82]:
+          - generic [ref=e83]: "10"
+          - generic [ref=e84]: 서운할 땐 상대를 탓하기 전에,
+          - generic [ref=e85]: 27.6초 ~ 30.9초
+          - generic [ref=e86]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e87]:
+        - img "11번 장면" [ref=e88] [cursor=pointer]
+        - generic [ref=e89]:
+          - generic [ref=e90]: "11"
+          - generic [ref=e91]: 내가 뭘 기대했는지 먼저 살펴보세요.
+          - generic [ref=e92]: 30.9초 ~ 34.4초
+          - generic [ref=e93]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 4초
+      - generic [ref=e94]:
+        - img "12번 장면" [ref=e95] [cursor=pointer]
+        - generic [ref=e96]:
+          - generic [ref=e97]: "12"
+          - generic [ref=e98]: 최근에 서운했던 일, 사실은 뭘 기대했었나요?
+          - generic [ref=e99]: 34.4초 ~ 39.0초
+          - generic [ref=e100]: 그림 Seedream 5 Lite영상 Seedance 1.5 · 8초
+  - generic [ref=e101]:
+    - heading "왜 따로 노는 느낌일까 — 분석" [level=2] [ref=e102]
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - generic [ref=e105]: 영상 모델은 5화와 똑같아요
+        - paragraph [ref=e106]: 4·5·6화 모두 그림 Seedream 5 Lite → 영상 Seedance 1.5로 만들었어요. 같은 기준 이미지, 같은 캐릭터 문장, 같은 크기 규칙을 썼어요. 그래서 따로 노는 느낌은 모델 탓이 아니라 장면 연출 차이예요.
+      - generic [ref=e107]:
+        - generic [ref=e108]: 부엉이가 작아진 이유
+        - paragraph [ref=e109]: 부엉이 설명 문장은 5화와 글자 하나까지 같아요. 차이는 장면 문장이에요. 5화는 "곰곰이 옆에 같은 높이로 서서"라고 썼고, 6화 06번은 "옆에서 지켜보는 부엉이"라고만 써서 그림 모델이 부엉이를 뒤쪽·구석에 작게 앉혔어요. 05번도 둘 다 앉은 자세라 부엉이가 둥글게 웅크려 작아 보여요.
+      - generic [ref=e110]:
+        - generic [ref=e111]: 따로 노는 느낌의 원인 (제 판단)
+        - paragraph [ref=e112]: ① 6화는 곰곰이 얼굴 클로즈업이 많아서 다른 화보다 곰곰이가 화면에 꽉 차요. ② 05·06·10·11번이 배경 없는 크림색 벽이라 미니어처 세계 느낌이 약해요. ③ 콩이가 주인공인 화라 콩이가 규칙보다 크게 나온 컷(07·08·10)이 있어요. ④ 5화는 밤·새벽·노을로 빛이 변하는데 6화는 대부분 밝은 낮이라 단조로워요.
+      - generic [ref=e113]:
+        - generic [ref=e114]: 고치는 방법 (작업 전 확인용)
+        - paragraph [ref=e115]: 부엉이 컷(05·06)은 "같은 높이로 서서, 곰곰이와 나란히"로 장면 문장을 고쳐 다시 만들고, 크림 벽 컷(10·11)은 배경을 마을 골목·정원으로 바꾸면 돼요. 한 컷에 약 5크레딧이에요.
+  - generic [ref=e116]:
+    - heading "만들면서 고친 것" [level=2] [ref=e117]
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e120]: 12컷 전부 통과
+        - paragraph [ref=e121]: 콩이 시점으로 관점을 바꾸는 장면과 씨앗 심기 마무리로 구성했어요. 다시 만든 컷이 없어요.
+      - generic [ref=e122]:
+        - generic [ref=e123]: 콩이 비중 확대
+        - paragraph [ref=e124]: 이 화는 콩이가 서운해하는 쪽이라 콩이 표정·동작이 많아요. 콩이가 다른 캐릭터로 변하지 않았는지 특히 봐 주세요.
+  - generic [ref=e125]:
+    - heading "보면서 확인할 것" [level=2] [ref=e126]
+    - generic [ref=e127]:
+      - generic [ref=e128]: □ 곰곰이가 만화 곰으로 변하지 않았는지
+      - generic [ref=e129]: □ 이빨이 보이는 장면이 없는지
+      - generic [ref=e130]: □ 콩이 크기가 곰곰이 머리만 한지
+      - generic [ref=e131]: □ 조연(부엉이·보리)이 곰곰이와 같은 키인지
+      - generic [ref=e132]: □ 자막 글자가 깨지거나 잘리지 않는지
+      - generic [ref=e133]: □ 내레이션이 또렷하고 이상한 소리가 없는지
+      - generic [ref=e134]: □ 제자리 줌만 하는 심심한 컷이 없는지
+      - generic [ref=e135]: □ 첫 2초가 궁금하게 만드는지
+  - generic [ref=e137]:
+    - generic [ref=e138]: 점검 결과를 알려 주세요
+    - text: 괜찮으면 "6화 OK", 고칠 게 있으면 "6화 07번 콩이가 이상해"처럼
+    - generic [ref=e139]: 컷 번호 + 이유
+    - text: 로 보내 주세요. 다시 만들 컷만 골라서 고칠게요.
