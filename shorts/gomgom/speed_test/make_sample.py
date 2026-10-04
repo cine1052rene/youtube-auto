@@ -22,6 +22,7 @@ ap.add_argument("--lead", type=float, default=0.05)  # 대사 앞 여백(초)
 ap.add_argument("--tail", type=float, default=0.15)  # 대사 뒤 여백(초)
 ap.add_argument("--hookdur", type=float, default=1.8)  # 첫 제목 카드 길이(초)
 ap.add_argument("--end", type=float, default=0.0)  # 마지막 컷 뒤 여운(초)
+ap.add_argument("--loop", action="store_true")  # 쇼츠 반복재생용: 검은 화면 페이드 없음, 음악은 처음 크기로 끝냄
 A = ap.parse_args()
 
 EP = G / f"ep{A.ep}"; PROD = EP / "prod"; AUD = EP / "audio" / "luna"
@@ -158,11 +159,18 @@ if A.hook:
     vin = "[hv]"
 else:
     fc = ""
-fc += f"{vin}fade=t=in:st=0:d=0.2,fade=t=out:st={total - VF:.3f}:d={VF},scale=540:960[v];[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[n]"
+vfx = "" if A.loop else f"fade=t=in:st=0:d=0.2,fade=t=out:st={total - VF:.3f}:d={VF},"
+fc += f"{vin}{vfx}scale=540:960[v];[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[n]"
 mix = ["[n]"]; k = 3 if A.hook else 2
 if BGM:
     ins += ["-i", str(BGM)]
-    fc += f";[{k}:a]aloop=loop=-1:size=2000000000,atrim=0:{total:.3f},volume='if(gt(t,{T0:.3f}),0.12+0.38*min((t-{T0:.3f})/0.5,1),0.12)':eval=frame,afade=t=in:d=0.6,afade=t=out:st={total - (AF if A.end else 1.5):.3f}:d={AF if A.end else 1.5}[b]"
+    if A.loop:  # 대사 끝나면 살짝 올라갔다가 마지막 0.6초 동안 처음 크기(0.12)로 돌아옴 → 다시 시작해도 음악 크기가 같음
+        bvol = (f"volume='if(lt(t,{T0:.3f}),0.12,if(lt(t,{total - 0.6:.3f}),0.12+0.2*min((t-{T0:.3f})/0.4,1),0.12+0.2*max(({total:.3f}-t)/0.6,0)))':eval=frame,"
+                f"afade=t=in:d=0.03,afade=t=out:st={total - 0.06:.3f}:d=0.06")
+    else:
+        bvol = (f"volume='if(gt(t,{T0:.3f}),0.12+0.38*min((t-{T0:.3f})/0.5,1),0.12)':eval=frame,afade=t=in:d=0.6,"
+                f"afade=t=out:st={total - (AF if A.end else 1.5):.3f}:d={AF if A.end else 1.5}")
+    fc += f";[{k}:a]aloop=loop=-1:size=2000000000,atrim=0:{total:.3f},{bvol}[b]"
     mix.append("[b]"); k += 1
 if A.sfx:
     for cid, name, off, vol in {"peep": PEEP, "chick": CHICK}.get(A.sfxset, CUES)[A.ep]:
@@ -173,7 +181,7 @@ if A.sfx:
         ins += ["-i", str(f)]
         fc += f";[{k}:a]aformat=sample_rates=44100:channel_layouts=stereo,volume={vol * A.sfxgain:.3f},adelay={ms}:all=1[x{k}]"
         mix.append(f"[x{k}]"); k += 1
-fc += f";{''.join(mix)}amix=inputs={len(mix)}:duration=first:normalize=0,afade=t=out:st={total - AF:.3f}:d={AF}[a]"
+fc += f";{''.join(mix)}amix=inputs={len(mix)}:duration=first:normalize=0,afade=t=out:st={total - (0.06 if A.loop else AF):.3f}:d={0.06 if A.loop else AF}[a]"
 final = OUT / f"ep{A.ep}_{A.tag}.mp4"
 run(["ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
      "-c:v", "libx264", "-preset", "medium", "-crf", "30", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart",
