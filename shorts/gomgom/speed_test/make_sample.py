@@ -49,6 +49,13 @@ CHICK = {
     "03": [("01", "chick_happy", .8, .55), ("02", "chick2", .4, .55), ("03", "chick1", .7, .6), ("05", "chick_happy", .5, .55),
            ("06", "chick1", .4, .6), ("08", "chick2", .5, .55), ("09", "chick1", .6, .6), ("11", "chick_group", 1.0, .4)],
 }
+REAL = {  # Pixabay 실제 녹음 (사용자 선택: footsteps1·door2·rain1·teacup1·wind3·page2·sparkle3·pop1)
+    "02": [("02", "r_pop", .5, .35), ("03", "r_wind", .2, .35), ("04", "r_rain", 0, .22), ("06", "r_wind", .3, .35),
+           ("07", "r_footsteps", .3, .4), ("08", "r_rain", 0, .28), ("11", "r_page", .1, .45), ("11", "r_sparkle", 1.0, .35),
+           ("12", "r_pop", .5, .3)],
+    "03": [("01", "r_sparkle", .2, .3), ("02", "r_footsteps", .2, .4), ("04", "r_pop", .3, .35), ("05", "r_teacup", .4, .5),
+           ("06", "r_pop", .4, .4), ("07", "r_wind", .2, .3), ("08", "r_door", .1, .4)],
+}
 CUES = {
     "02": [("01", "pop", 0.0, .5), ("03", "whoosh", .2, .35), ("05", "hop", .6, .45), ("08", "drizzle", .1, .35),
            ("11", "chime", .3, .4), ("12", "hop", .5, .45), ("13", "twinkle", .2, .35)],
@@ -173,7 +180,7 @@ if BGM:
     fc += f";[{k}:a]aloop=loop=-1:size=2000000000,atrim=0:{total:.3f},{bvol}[b]"
     mix.append("[b]"); k += 1
 if A.sfx:
-    for cid, name, off, vol in {"peep": PEEP, "chick": CHICK}.get(A.sfxset, CUES)[A.ep]:
+    for cid, name, off, vol in {"peep": PEEP, "chick": CHICK, "real": REAL}.get(A.sfxset, CUES)[A.ep]:
         f = next(SFXD.glob(f"{name}.*"), None)
         if not f or cid not in starts:
             continue
