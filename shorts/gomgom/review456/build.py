@@ -34,6 +34,17 @@ NOTES = {
     },
 }
 
+REGEN = {"04": {"03": "그림 다시", "04": "크기 재생성", "05": "크기 재생성", "09": "크기 재생성", "10": "크기 재생성", "13": "원본 유지"}}
+
+ANALYSIS = {
+    "06": [
+        ("영상 모델은 5화와 똑같아요", "4·5·6화 모두 <b>그림 Seedream 5 Lite → 영상 Seedance 1.5</b>로 만들었어요. 같은 기준 이미지, 같은 캐릭터 문장, 같은 크기 규칙을 썼어요. 그래서 따로 노는 느낌은 <b>모델 탓이 아니라 장면 연출 차이</b>예요."),
+        ("부엉이가 작아진 이유", "부엉이 설명 문장은 5화와 글자 하나까지 같아요. 차이는 <b>장면 문장</b>이에요. 5화는 \"곰곰이 옆에 <b>같은 높이로 서서</b>\"라고 썼고, 6화 06번은 \"<b>옆에서 지켜보는</b> 부엉이\"라고만 써서 그림 모델이 부엉이를 뒤쪽·구석에 작게 앉혔어요. 05번도 둘 다 <b>앉은 자세</b>라 부엉이가 둥글게 웅크려 작아 보여요."),
+        ("따로 노는 느낌의 원인 (제 판단)", "① 6화는 곰곰이 <b>얼굴 클로즈업이 많아서</b> 다른 화보다 곰곰이가 화면에 꽉 차요. ② 05·06·10·11번이 <b>배경 없는 크림색 벽</b>이라 미니어처 세계 느낌이 약해요. ③ 콩이가 주인공인 화라 <b>콩이가 규칙보다 크게</b> 나온 컷(07·08·10)이 있어요. ④ 5화는 밤·새벽·노을로 빛이 변하는데 6화는 대부분 <b>밝은 낮</b>이라 단조로워요."),
+        ("고치는 방법 (작업 전 확인용)", "부엉이 컷(05·06)은 \"같은 높이로 서서, 곰곰이와 나란히\"로 장면 문장을 고쳐 다시 만들고, 크림 벽 컷(10·11)은 배경을 마을 골목·정원으로 바꾸면 돼요. 한 컷에 약 5크레딧이에요."),
+    ],
+}
+
 CHECKS = [
     "곰곰이가 만화 곰으로 변하지 않았는지",
     "이빨이 보이는 장면이 없는지",
@@ -75,6 +86,9 @@ video{width:100%;max-width:400px;aspect-ratio:9/16;border-radius:22px;background
 .cut .c{padding:8px 10px 10px;font-size:13px;line-height:1.5}
 .cut .n{font-family:var(--round);color:var(--honey);font-size:16px}
 .cut .t{color:var(--soft);font-size:11.5px;font-variant-numeric:tabular-nums}
+.md{font-size:11.5px;color:var(--soft);margin-top:4px;padding-top:4px;border-top:1px dashed var(--edge);line-height:1.45}
+.md .rg{color:var(--fix);font-weight:700}
+.ana{border:1px solid var(--honey)}
 .notes{display:flex;flex-direction:column;gap:10px}
 .note{background:var(--card);border:1px solid var(--fix);border-radius:16px;padding:13px 16px;font-size:14.5px}
 .note b.h{font-family:var(--round);font-size:17px;font-weight:400;color:var(--fix);display:block;margin-bottom:2px}
@@ -93,16 +107,23 @@ def build(n, idx):
     out = G / f"ep{n}" / "prod" / "out"
     tl = json.load(open(out / "timeline.json", encoding="utf-8"))
     vid = base64.b64encode((out / f"ep{n}_preview.mp4").read_bytes()).decode()
+    lines = {x["id"]: x["model"] for x in json.load(open(G / f"ep{n}" / "lines.json", encoding="utf-8"))["shots"]}
     cards = []
     for s in tl["shots"]:
+        m = lines.get(s["id"], "seedance1_5")
+        sec = m.split(":")[1] if ":" in m else "4"
+        rg = REGEN.get(n, {}).get(s["id"])
+        mdl = f'<div class="md">그림 Seedream 5 Lite<br>영상 Seedance 1.5 · {sec}초' + (f'<br><span class="rg">{rg}</span>' if rg else '') + '</div>'
         mid = s["start"] + s["dur"] * 0.55
         img = frame_b64(out / f"ep{n}.mp4", mid)
         cards.append(
             f'<div class="cut"><img src="data:image/jpeg;base64,{img}" onclick="seek({s["start"]:.2f})" alt="{s["id"]}번 장면">'
             f'<div class="c"><div class="n">{s["id"]}</div><div>{s["text"]}</div>'
-            f'<div class="t">{s["start"]:.1f}초 ~ {s["start"] + s["dur"]:.1f}초</div></div></div>')
+            f'<div class="t">{s["start"]:.1f}초 ~ {s["start"] + s["dur"]:.1f}초</div>{mdl}</div></div>')
     nt = NOTES[n]
     notes = "".join(f'<div class="note"><b class="h">{h}</b><p>{b}</p></div>' for h, b in nt["made"])
+    ana = "".join(f'<div class="note ana"><b class="h">{h}</b><p>{b}</p></div>' for h, b in ANALYSIS.get(n, []))
+    ana_sec = f'<section><h2>왜 따로 노는 느낌일까 — 분석</h2><div class="notes">{ana}</div></section>' if ana else ""
     checks = "".join(f'<div class="chk">{c}</div>' for c in CHECKS)
     when = e["when"].split(" — ")[0]
     html = f'''<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -121,6 +142,7 @@ def build(n, idx):
 <p class="soft" style="margin-bottom:12px">사진을 누르면 영상이 그 장면으로 이동해요. 고치고 싶은 컷은 <b>번호</b>로 알려 주세요.</p>
 <div class="cuts">{"".join(cards)}</div>
 </section>
+{ana_sec}
 <section>
 <h2>만들면서 고친 것</h2>
 <div class="notes">{notes}</div>
