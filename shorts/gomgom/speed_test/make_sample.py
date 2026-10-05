@@ -22,6 +22,7 @@ ap.add_argument("--lead", type=float, default=0.05)  # 대사 앞 여백(초)
 ap.add_argument("--tail", type=float, default=0.15)  # 대사 뒤 여백(초)
 ap.add_argument("--hookdur", type=float, default=1.8)  # 첫 제목 카드 길이(초)
 ap.add_argument("--end", type=float, default=0.0)  # 마지막 컷 뒤 여운(초)
+ap.add_argument("--full", action="store_true")  # 업로드용 1080x1920 고화질(crf18·오디오 192k)
 ap.add_argument("--premiere", action="store_true")  # 프리미어용 소재(자막 안 구운 컷·자막 PNG·트랙별 소리)+timeline.json 저장
 ap.add_argument("--loop", action="store_true")  # 쇼츠 반복재생용: 검은 화면 페이드 없음, 음악은 처음 크기로 끝냄
 A = ap.parse_args()
@@ -190,7 +191,7 @@ if A.hook:
 else:
     fc = ""
 vfx = "" if A.loop else f"fade=t=in:st=0:d=0.2,fade=t=out:st={total - VF:.3f}:d={VF},"
-fc += f"{vin}{vfx}scale=540:960[v];[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[n]"
+fc += f"{vin}{vfx}" + ("format=yuv420p[v];" if A.full else "scale=540:960[v];") + f"[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[n]"
 mix = ["[n]"]; k = 3 if A.hook else 2
 if BGM:
     ins += ["-i", str(BGM)]
@@ -222,7 +223,7 @@ if A.sfx:
 fc += f";{''.join(mix)}amix=inputs={len(mix)}:duration=first:normalize=0,afade=t=out:st={total - (0.06 if A.loop else AF):.3f}:d={0.06 if A.loop else AF}[a]"
 final = OUT / f"ep{A.ep}_{A.tag}.mp4"
 run(["ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
-     "-c:v", "libx264", "-preset", "medium", "-crf", "30", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart",
+     "-c:v", "libx264", "-preset", "slow" if A.full else "medium", "-crf", "18" if A.full else "30", "-c:a", "aac", "-b:a", "192k" if A.full else "96k", "-movflags", "+faststart",
      "-t", f"{total:.3f}", str(final)])
 shutil.rmtree(TMP)
 if A.premiere:
