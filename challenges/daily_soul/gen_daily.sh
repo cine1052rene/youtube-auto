@@ -25,7 +25,8 @@ tr -d '\r' < prompts.txt | while IFS= read -r line; do
     # 폴더에 ref.txt(참조 이미지 경로)·aspect.txt(비율)가 있으면 사용
     REFARG=(); [ -s ref.txt ] && REFARG=(--image-references "$(tr -d '\r\n' < ref.txt)")
     AR=3:2; [ -s aspect.txt ] && AR=$(tr -d '\r\n' < aspect.txt)
-    out=$(higgsfield generate create text2image_soul_v2 --prompt "$line" --aspect_ratio "$AR" --quality 2k "${REFARG[@]}" --json </dev/null 2>&1)
+    MODEL=text2image_soul_v2; [ -s model.txt ] && MODEL=$(tr -d '\r\n' < model.txt)
+    out=$(higgsfield generate create "$MODEL" --prompt "$line" --aspect_ratio "$AR" --quality 2k "${REFARG[@]}" --json </dev/null 2>&1)
     echo "$out" | grep -qiE "rate_limit_reached|concurrent" || break
     log "busy($f) 다른 생성 진행 중 — 60초 대기 후 재시도 $try/15"; sleep 60
   done
