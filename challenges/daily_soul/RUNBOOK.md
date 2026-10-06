@@ -1,5 +1,7 @@
 # Daily Soul Challenge — 매일 아침 실행 순서
 
+> ⭐⭐ **10/6 사용자 — 프롬프트 언어 규칙**: 국적·지역 단어(Korean·Seoul 등) 대신 외형으로 쪼개 쓰기(East Asian man in his 50s, street sweeper uniform…), 끝에 "All visible text must be in English only. No Korean, Chinese, Japanese or any non-Latin characters anywhere." 고정. 영어 외 문자는 무조건 깨짐
+
 > ⭐ **9/28 사용자 지시 — 순서 변경: 미션 확인 → 컨셉 제안 보고(`YYYY-MM-DD/concepts.md`) → 사용자가 컨셉을 고른 뒤에만 생성.** 아침 예약에서 자동 생성하지 않는다.
 
 > ⭐ **10/1 사용자 지시 — 주간 챌린지는 매주 확인만**: 아침 작업 때 디스코드 왼쪽 위 '현재 진행 중' 이벤트 → '이벤트 세부사항'(클릭)으로 제목·마감·조건·상금을 보고에 한 줄 추가. 참여는 사용자가 원할 때만.
