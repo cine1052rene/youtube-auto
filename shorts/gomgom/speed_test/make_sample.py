@@ -27,7 +27,7 @@ ap.add_argument("--premiere", action="store_true")  # 프리미어용 소재(자
 ap.add_argument("--loop", action="store_true")  # 쇼츠 반복재생용: 검은 화면 페이드 없음, 음악은 처음 크기로 끝냄
 A = ap.parse_args()
 
-EP = G / f"ep{A.ep}"; PROD = EP / "prod"; AUD = EP / "audio" / "luna"
+EP = G / f"ep{A.ep}"; PROD = EP / ("v3" if A.ep == "01" else "prod"); AUD = EP / "audio" / "luna"
 OUT = G / "speed_test" / "out"; OUT.mkdir(parents=True, exist_ok=True)
 TMP = OUT / f"tmp_{A.ep}_{A.tag}"; shutil.rmtree(TMP, ignore_errors=True); TMP.mkdir()
 PR = G / "speed_test" / "premiere" / f"ep{A.ep}_{A.tag}"
@@ -43,7 +43,8 @@ BGM = pathlib.Path(A.bgm) if A.bgm and A.bgm != "none" else (PROD / "bgm.mp3" if
 FPS, W, H = 30, 1080, 1920
 LEAD, TAIL, MIN_D, MAX_FAST, MAX_SLOW = A.lead, A.tail, 1.5, 1.5, 1.4
 HOOK_D = A.hookdur
-HOOK = {"02": ["칭찬은 잊고", "지적은 남는 이유"], "03": ["쾌락주의자가", "원한 건 빵 한 조각?"]}
+HOOK = {"01": ["쉬어도 쉬어도", "피곤한 이유"], "02": ["칭찬은 잊고", "지적은 남는 이유"], "03": ["쾌락주의자가", "원한 건 빵 한 조각?"],
+        "04": ["비교하면", "마음이 작아지는 이유"], "05": ["걱정을", "내려놓고 싶을 때"], "06": ["별일 아닌데", "괜히 서운할 때"]}
 # (컷 id, 효과음, 컷 시작 후 몇 초, 볼륨)
 PEEP = {
     "02": [("01", "peep_q", .9, .30), ("03", "peep1", .5, .28), ("05", "peep2", .8, .30), ("08", "peep1", .6, .30),
@@ -123,11 +124,14 @@ def render_sub(text, path):
 
 def render_hook(lines, path):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
-    lh = 150; total = lh * len(lines); y0 = 330 - total // 2
-    maxw = max(hfont.getlength(l) for l in lines)
+    hf = hfont; size = 112
+    while max(hf.getlength(l) for l in lines) > W - 200 and size > 70:  # 긴 줄은 화면 안에 들어오게 글자 축소
+        size -= 4; hf = ImageFont.truetype(str(FONT), size)
+    lh = int(size * 1.34); total = lh * len(lines); y0 = 330 - total // 2
+    maxw = max(hf.getlength(l) for l in lines)
     d.rounded_rectangle([W / 2 - maxw / 2 - 64, y0 - 44, W / 2 + maxw / 2 + 64, y0 + total + 24], radius=60, fill=(255, 248, 236, 228))
     for i, l in enumerate(lines):
-        d.text((W / 2 - hfont.getlength(l) / 2, y0 + i * lh), l, font=hfont, fill=(74, 52, 36, 255))
+        d.text((W / 2 - hf.getlength(l) / 2, y0 + i * lh), l, font=hf, fill=(74, 52, 36, 255))
     img.save(path)
 
 
