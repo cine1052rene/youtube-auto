@@ -4,6 +4,8 @@
 import base64, json, pathlib, subprocess, sys
 from build import G, OUT, PKG, NOTES, REGEN, ANALYSIS, CHECKS, CSS, frame_b64
 
+NEW1006 = {("04", "05"): "10/6 새로 만듦 · 부엉이 살짝 크게", ("06", "05"): "10/6 새로 만듦 · 다락 서재 배경", ("06", "06"): "10/6 새로 만듦 · 바닥 시점·랜턴",
+           ("06", "07"): "10/6 새로 만듦 · 혼자 기다리는 대문(앞 3.3초)", ("06", "11"): "10/6 새로 만듦 · 콩이 머리 위로", ("06", "12"): "10/6 새로 만듦 · 콩이 어깨 위로"}
 SPEED, LEAD, TAIL, MIN_D, END, FPS = 1.15, 0.15, 0.45, 1.5, 1.2, 30
 
 
@@ -34,7 +36,7 @@ def build(n, idx):
     cards = []
     for s in cuts:
         sec = s["model"].split(":")[1] if ":" in s["model"] else "4"
-        rg = REGEN.get(n, {}).get(s["id"])
+        rg = NEW1006.get((n, s["id"])) or REGEN.get(n, {}).get(s["id"])
         mdl = f'<div class="md">그림 Seedream 5 Lite<br>영상 Seedance 1.5 · {sec}초' + (f'<br><span class="rg">{rg}</span>' if rg else '') + '</div>'
         img = frame_b64(master, s["start"] + s["dur"] * 0.55)
         cards.append(
