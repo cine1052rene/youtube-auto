@@ -1,0 +1,5 @@
+{"episode": "파생1 댓글 답장 — 쉴 때 스트레칭", "shots": [
+ {"id": "01", "type": "V", "model": "seedance1_5", "narrator": "쉴 때 스트레칭하면 개운해진다는 댓글을 받았어요."},
+ {"id": "02", "type": "V", "model": "seedance1_5", "narrator": "곰곰이도 해봤더니 몸이 가벼워졌대요. 여러분만의 쉬는 방법은 뭔가요?"}],
+ "voices": {"luna": {"voice_id": "375a3398-e3b4-4f91-845d-42181e352899"}},
+ "note": "1화 댓글(@SollaMusic_lu '쉴 때.. 스트레칭하면 개운해집니다~') 답장. 1화 연결."}

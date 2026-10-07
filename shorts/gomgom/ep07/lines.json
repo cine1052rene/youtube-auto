@@ -1,0 +1,19 @@
+{
+  "episode": "07 계획은 늘 예상보다 오래 걸린다",
+  "shots": [
+    {"id": "01", "type": "V", "model": "seedance1_5", "narrator": "30분이면 끝날 줄 알았는데, 또 해가 졌죠?"},
+    {"id": "02", "type": "V", "model": "seedance1_5", "narrator": "곰곰이는 오늘 오후에 작은 벽돌집을 다 지을 생각이었어요."},
+    {"id": "03", "type": "V", "model": "seedance1_5", "narrator": "그런데 지붕을 올리기도 전에,"},
+    {"id": "04", "type": "V", "model": "seedance1_5", "narrator": "창밖은 벌써 깜깜해졌어요."},
+    {"id": "05", "type": "V", "model": "seedance1_5", "narrator": "이걸 심리학에서는 계획 오류라고 불러요."},
+    {"id": "06", "type": "V", "model": "seedance1_5", "narrator": "계획할 땐 일이 술술 풀리는 장면만 떠올리거든요."},
+    {"id": "07", "type": "V", "model": "seedance1_5", "narrator": "지난번에 실제로 얼마나 걸렸는지는 잊어버리고요."},
+    {"id": "08", "type": "V", "model": "seedance1_5", "narrator": "그래서 곰곰이는 시작하기 전에 하나만 물어보기로 했어요."},
+    {"id": "09", "type": "V", "model": "seedance1_5", "narrator": "지난번엔 얼마나 걸렸지?"},
+    {"id": "10", "type": "V", "model": "seedance1_5", "narrator": "그리고 딱 그만큼, 넉넉하게 시간을 잡았어요."},
+    {"id": "11", "type": "V", "model": "seedance1_5", "narrator": "이번엔 해가 지기 전에 지붕까지 올렸답니다."},
+    {"id": "12", "type": "V", "model": "seedance1_5:8", "narrator": "여러분이 늘 짧게 잡는 일, 하나 있나요?"}
+  ],
+  "voices": {"luna": {"engine": "higgsfield text2speech_v2 elevenlabs", "voice_id": "375a3398-e3b4-4f91-845d-42181e352899", "voice_type": "preset", "script": "narrator"}},
+  "note": "시즌2 1편. 근거: 계획 오류(planning fallacy) — Kahneman & Tversky(1979). 대처: 과거 실제 소요 시간 떠올리기(참조 집단 예측). 배지 S2 노란 별."
+}

@@ -1,0 +1,19 @@
+{
+  "episode": "08 남들은 생각보다 나를 안 본다",
+  "shots": [
+    {"id": "01", "type": "V", "model": "seedance1_5", "narrator": "머리털 하나 뻗친 날, 하루 종일 신경 쓰인 적 있죠?"},
+    {"id": "02", "type": "V", "model": "seedance1_5", "narrator": "곰곰이도 오늘 머리털이 뻗친 채 장터에 나왔어요."},
+    {"id": "03", "type": "V", "model": "seedance1_5", "narrator": "다들 자기만 쳐다보는 것 같았죠."},
+    {"id": "04", "type": "V", "model": "seedance1_5", "narrator": "그런데 정말 그랬을까요?"},
+    {"id": "05", "type": "V", "model": "seedance1_5", "narrator": "심리학자 길로비치는 재미있는 실험을 했어요."},
+    {"id": "06", "type": "V", "model": "seedance1_5", "narrator": "눈에 띄는 티셔츠를 입은 사람은, 절반쯤 알아챘을 거라 예상했지만"},
+    {"id": "07", "type": "V", "model": "seedance1_5", "narrator": "실제로 알아챈 건 네 명 중 한 명 정도였대요."},
+    {"id": "08", "type": "V", "model": "seedance1_5", "narrator": "이걸 스포트라이트 효과라고 해요."},
+    {"id": "09", "type": "V", "model": "seedance1_5", "narrator": "다들 자기 하루를 사느라 바쁘거든요."},
+    {"id": "10", "type": "V", "model": "seedance1_5", "narrator": "콩이가 뻗친 털을 날개로 꾹꾹 눌러 주었어요."},
+    {"id": "11", "type": "V", "model": "seedance1_5", "narrator": "곰곰이는 그제야 고개를 들고 장터 구경을 했답니다."},
+    {"id": "12", "type": "V", "model": "seedance1_5:8", "narrator": "요즘 괜히 신경 쓰였던 것, 남들도 기억할까요?"}
+  ],
+  "voices": {"luna": {"engine": "higgsfield text2speech_v2 elevenlabs", "voice_id": "375a3398-e3b4-4f91-845d-42181e352899", "voice_type": "preset", "script": "narrator"}},
+  "note": "시즌2 2편. 근거: 스포트라이트 효과 — Gilovich, Medvec & Savitsky(2000), 티셔츠 실험(예상 약 50%, 실제 약 23%). 배지 S2 노란 별."
+}

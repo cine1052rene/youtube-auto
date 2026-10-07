@@ -4,8 +4,13 @@ import base64, pathlib, subprocess, json
 
 H = pathlib.Path(__file__).resolve().parent
 G = H.parent
-EPS = [("01", "쉬어도 피곤한 이유", "ep01/v3/out"), ("02", "칭찬과 지적", "ep02/prod/out"), ("03", "에피쿠로스의 작은 행복", "ep03/prod/out"),
+EPS_S1 = [("01", "쉬어도 피곤한 이유", "ep01/v3/out"), ("02", "칭찬과 지적", "ep02/prod/out"), ("03", "에피쿠로스의 작은 행복", "ep03/prod/out"),
        ("04", "비교", "ep04/prod/out"), ("05", "걱정 내려놓기", "ep05/prod/out"), ("06", "서운함", "ep06/prod/out")]
+import sys
+EPS = EPS_S1 if len(sys.argv) < 2 else [("07", "계획은 늘 오래 걸려요 (시즌2-1)", "ep07/prod/out"), ("08", "남들은 나를 안 봐요 (시즌2-2)", "ep08/prod/out"),
+       ("d01", "파생: 댓글 답장 · 스트레칭", "epd01/prod/out"), ("d02", "파생: 콩이의 작은 반짝임", "epd02/prod/out")]
+SUF = "_master_s1" if len(sys.argv) < 2 else "_master"
+PAGE = "gomgom_season1_masters.html" if len(sys.argv) < 2 else "gomgom_ep07_08_derived.html"
 
 
 def dur(p):
@@ -15,14 +20,14 @@ def dur(p):
 
 cards = ""
 for ep, name, d in EPS:
-    f = G / d / f"ep{ep}_master_s1.mp4"
-    s = H / "out_s" / f"ep{ep}_master_s1_prev.mp4"
+    f = G / d / f"ep{ep}{SUF}.mp4"
+    s = H / "out_s" / f"ep{ep}{SUF}_prev.mp4"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(f), "-vf", "scale=360:640", "-c:v", "libx264", "-crf", "30",
                     "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(s)], check=True)
     b = base64.b64encode(s.read_bytes()).decode()
     cards += (f'<div class="card"><video controls loop playsinline preload="metadata" src="data:video/mp4;base64,{b}"></video>'
-              f'<div class="c"><div class="nm">{int(ep)}화 · {name}</div><div class="len">{dur(f):.1f}초</div>'
-              f'<div class="path">C:\\project\\youtube\\shorts\\gomgom\\{d.replace("/", chr(92))}\\ep{ep}_master_s1.mp4</div></div></div>')
+              f'<div class="c"><div class="nm">{name}</div><div class="len">{dur(f):.1f}초</div>'
+              f'<div class="path">C:\\project\\youtube\\shorts\\gomgom\\{d.replace("/", chr(92))}\\ep{ep}{SUF}.mp4</div></div></div>')
 
 html = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>곰곰한 마음 시즌1 마스터 확인</title>
@@ -50,6 +55,6 @@ h1{{font-family:"Gowun Dodum",sans-serif;font-weight:400;font-size:clamp(23px,5v
 </div>
 <script>document.querySelectorAll('video').forEach(m=>m.addEventListener('play',()=>{{document.querySelectorAll('video').forEach(o=>{{if(o!==m)o.pause()}})}}));</script>
 </body></html>"""
-p = H / "gomgom_season1_masters.html"
+p = H / PAGE
 p.write_text(html, encoding="utf-8")
 print(p, round(p.stat().st_size / 1048576, 1), "MB")
