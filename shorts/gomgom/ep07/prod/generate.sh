@@ -5,13 +5,13 @@
 set -u
 cd "$(dirname "$0")"
 STAGE=${1:-img}
-REF=../../ref/gomgom_master_s2.png
+REF=../../ref/gomgom_master_s2b.png
 LOG=fix.log
 GOM="Gomgom, a small round cream-colored needle-felted wool bear with soft fuzzy texture, small round ears with pale pink inner ears, bright round black bead eyes, a small dark brown nose, soft pink blush on the cheeks and a gentle warm smile with no teeth ever visible, wearing a small matte yellow felt star badge on its chest with no glow and no plastic shine and a tiny brown felt satchel bag across its body"
-KONG="Kong, a tiny round yellow needle-felted baby chick with a small orange beak and one small green bean sprout with two round leaves on top of its head, Kong is tiny, its whole round body no bigger than Gomgom's head"
+KONG="Kong, a tiny round yellow needle-felted baby chick with a small orange beak and one small green bean sprout with two round leaves on top of its head, Kong is tiny, exactly as small as in the reference image, its whole round body only about one quarter the width of Gomgom's head, Kong never grows and is never as big as Gomgom's head"
 OWL="Grandpa Owl, a kind old round grey-brown felt owl with a cream chest, fluffy white eyebrows and small round spectacles, wearing a mustard knitted cardigan, Grandpa Owl is slightly taller than Gomgom, about a quarter head taller, never shorter than Gomgom and never twice as big"
 FRIENDS="small felt animal friends such as a rabbit, a squirrel and a hedgehog, each about as tall as Gomgom"
-SIZE="scale rule: Gomgom is the size reference, a palm-sized needle-felted doll about three heads tall, Grandpa Owl is slightly taller than Gomgom, other animal friends are about as tall as Gomgom, Kong is always the smallest character with its round body only as big as Gomgom's head"
+SIZE="scale rule: Gomgom is the size reference, a palm-sized needle-felted doll about three heads tall, Grandpa Owl is slightly taller than Gomgom, other animal friends are about as tall as Gomgom, Kong is always the smallest character, its round body only about one quarter the width of Gomgom's head, like a tiny ornament, even when Kong is close to the camera"
 STYLE="richly detailed handmade miniature world filling the whole background with layered foreground, midground and background full of cute tiny handmade props, never a plain empty wall or empty backdrop, soft warm golden light, gentle depth of field that keeps the detailed background readable, cozy warm pastel palette, handmade felt, knit, wood and ceramic textures, high quality 3D animated film render, cinematic composition, vertical 9:16, warm and cozy mood, no text, no letters"
 VTAIL="the bear mouth may open softly but no teeth are ever visible, every character keeps exactly the same needle-felted wool texture, proportions, colors, accessories and body size from the first frame to the last and never turns into a cartoon or 2D character, nobody grows or shrinks during the shot, Kong stays tiny, smooth cinematic camera motion with a clear change of viewpoint, warm cozy mood, soft warm light, no text"
 
@@ -53,25 +53,25 @@ IMG[05]="medium shot inside Grandpa Owl's cozy treehouse library, Grandpa Owl st
 MOV[05]="Grandpa Owl gently turns the big felt hourglass over and the sand starts to fall, Gomgom watches it closely and blinks, the camera arcs slowly around the two of them from eye level"
 CH[05]="$GOM; $OWL; Kong is not in this scene"; DUR[05]=4
 IMG[06]="dreamy medium shot of Gomgom gazing upward with a soft smile, a soft translucent felt thought bubble above its head showing a tiny picture of the brick house finished with a bright sun, sparkles inside the bubble, the cozy treehouse library softly blurred behind with shelves and lanterns"
-MOV[06]="inside the floating thought bubble the tiny brick house sparkles and the little sun shines, everything stays inside the bubble, nothing ever appears on Gomgom's head, Gomgom smiles dreamily with its eyes half closed, the bubble gently bobs, the camera slowly rises from Gomgom's face up toward the bubble"
+MOV[06]="inside the thought bubble the tiny brick house builds itself in a flash, Gomgom smiles dreamily, then the bubble wobbles softly, the camera rises along the bubble and tilts down to Gomgom"
 CH[06]="$GOM; Kong is not in this scene"; DUR[06]=4
 IMG[07]="top down shot of a wooden desk covered with Gomgom's old felt projects, a lopsided felt birdhouse, a half-knitted tiny scarf, a little boat model, Gomgom's paws flipping a scrapbook of old felt photos with no letters, tiny Kong walking across the scrapbook"
 MOV[07]="Gomgom's paws slowly flip the pages of the old scrapbook, tiny Kong hops from one page to the next, the camera drifts from top down to a low side angle along the desk"
 CH[07]="$GOM; $KONG"; DUR[07]=4
 IMG[08]="medium shot at a cozy breakfast nook, Gomgom sitting with a tiny notebook and a pencil, tapping the pencil on its chin thoughtfully, a cup of cocoa and a plate of tiny cookies, morning light through checkered curtains, tiny Kong perched on Gomgom's shoulder peeking at the notebook, a little cuckoo clock on the wall"
-MOV[08]="Gomgom taps the pencil on its chin and then raises one finger as if it has an idea, tiny Kong flaps its little wings on the shoulder, steam curls from the cocoa, the camera moves from the cuckoo clock across to Gomgom"
+MOV[08]="Gomgom taps the pencil on its chin and then raises one finger as if it has an idea, tiny Kong flaps its little wings on the shoulder, steam curls from the cocoa, the camera slowly pushes in toward Gomgom from slightly lower, Gomgom stays in frame the whole time, there is only one bear in the room"
 CH[08]="$GOM; $KONG"; DUR[08]=4
 IMG[09]="close shot of Gomgom looking at a cork board covered with small felt photos of its old finished projects, each photo pinned next to a tiny felt sun or moon sticker, no letters or numbers anywhere, Gomgom pointing at one photo with a curious face, string lights around the board"
 MOV[09]="Gomgom moves its paw from one felt photo to the next and nods slowly as it remembers, the string lights twinkle, the camera slides along the cork board toward Gomgom's face"
 CH[09]="$GOM; Kong is not in this scene"; DUR[09]=4
 IMG[10]="low angle shot of a big friendly felt wall clock on the workshop wall, tiny Kong sitting on top of the clock and leaning down to push the long minute hand with its little wing, Gomgom below drawing a big generous circle on a felt calendar with no letters, warm morning light"
-MOV[10]="tiny Kong stays sitting on the top rim of the big clock the whole time and nudges the long minute hand forward a little with its small wing, below Gomgom happily draws one big circle on the calendar, the calendar shows only blank squares with no numbers and no letters, the camera slowly slides sideways at the same distance keeping both the clock with Kong and Gomgom in the frame, never moving close to the calendar"
+MOV[10]="tiny Kong pushes the clock's minute hand around in a big circle and wobbles happily, Gomgom below draws a wide circle on the calendar, the camera tilts down from the clock to Gomgom"
 CH[10]="$GOM; $KONG"; DUR[10]=4
 IMG[11]="golden hour three-quarter shot of Gomgom proudly placing the last tiny felt roof tile on the finished miniature brick house on the workbench, the house has a little chimney and tiny windows glowing warmly, tiny Kong standing on the roof ridge, the orange sun still above the hills through the window"
 MOV[11]="Gomgom presses the last roof tile into place and steps back with a happy closed-mouth smile, tiny Kong does a little hop on the roof ridge, the windows of the tiny house light up, the camera pulls back and arcs around the finished house"
 CH[11]="$GOM; $KONG"; DUR[11]=4
 IMG[12]="wide shot from behind of Gomgom sitting on the workshop porch step at sunset beside the finished miniature brick house placed on the step, tiny Kong perched on Gomgom's shoulder, a watering can, a little lantern and flower pots on the porch, a handmade felt village and pink sky beyond, seen from behind so the star badge on Gomgom's chest is hidden and NOT visible, Gomgom's back is plain cream fuzzy wool with only the thin brown satchel strap crossing it"
-MOV[12]="seen from behind, Gomgom sits on the porch as the sunset deepens, tiny Kong snuggles against its ear, the tiny house windows glow and fireflies rise, the camera rises slowly and pulls back to reveal the glowing village, Kong stays tiny on the shoulder"
+MOV[12]="seen from behind the whole time, Gomgom sits still on the porch facing away as the sunset deepens, its head does not turn, tiny Kong snuggles against its ear, the tiny house windows glow and fireflies rise, the camera stays directly behind Gomgom and only rises slowly straight up, it never circles around, no face is visible on the back of the head, Kong stays tiny on the shoulder"
 CH[12]="$GOM; $KONG"; DUR[12]=8
 
 mkdir -p img clips

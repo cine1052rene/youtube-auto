@@ -124,3 +124,5 @@ soft warm golden light, dreamy bokeh with gentle floating sparkles, cozy warm pa
 최근에 서운했던 일, 사실은 뭘 기대했었나요?
 
 > 근거: 충족되지 않은 기대와 관계 갈등에 관한 관계심리학 일반 논의 (특정 이론명 없이 서술)
+
+- (10/9) ⭐ **시즌2 기준 이미지 교체: `ref/gomgom_master_s2b.png`** — 기존 기준 사진에서 콩이가 곰곰이 옆에 서서 키의 절반(머리보다 큼)이라 '머리 크기 이하' 문장과 충돌 → 컷마다 콩이 크기가 들쭉날쭉. 콩이를 오려 머리 폭의 약 1/4로 줄여 **곰곰이 머리 위에 합성**(ref/s2b/). KONG 문장: 'exactly as small as in the reference image, about one quarter the width of Gomgom's head'. 시안 3장(ref/s2b/cand*.png)은 기준 사진 영향으로 콩이가 여전히 커서 탈락

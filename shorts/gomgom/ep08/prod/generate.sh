@@ -5,13 +5,13 @@
 set -u
 cd "$(dirname "$0")"
 STAGE=${1:-img}
-REF=../../ref/gomgom_master_s2.png
+REF=../../ref/gomgom_master_s2b.png
 LOG=fix.log
 GOM="Gomgom, a small round cream-colored needle-felted wool bear with soft fuzzy texture, small round ears with pale pink inner ears, bright round black bead eyes, a small dark brown nose, soft pink blush on the cheeks and a gentle warm smile with no teeth ever visible, wearing a small matte yellow felt star badge on its chest with no glow and no plastic shine and a tiny brown felt satchel bag across its body"
-KONG="Kong, a tiny round yellow needle-felted baby chick with a small orange beak and one small green bean sprout with two round leaves on top of its head, Kong is tiny, its whole round body no bigger than Gomgom's head"
+KONG="Kong, a tiny round yellow needle-felted baby chick with a small orange beak and one small green bean sprout with two round leaves on top of its head, Kong is tiny, exactly as small as in the reference image, its whole round body only about one quarter the width of Gomgom's head, Kong never grows and is never as big as Gomgom's head"
 OWL="Grandpa Owl, a kind old round grey-brown felt owl with a cream chest, fluffy white eyebrows and small round spectacles, wearing a mustard knitted cardigan, Grandpa Owl is slightly taller than Gomgom, about a quarter head taller, never shorter than Gomgom and never twice as big"
 FRIENDS="small felt animal friends such as a rabbit, a squirrel and a hedgehog, each about as tall as Gomgom"
-SIZE="scale rule: Gomgom is the size reference, a palm-sized needle-felted doll about three heads tall, Grandpa Owl is slightly taller than Gomgom, other animal friends are about as tall as Gomgom, Kong is always the smallest character with its round body only as big as Gomgom's head"
+SIZE="scale rule: Gomgom is the size reference, a palm-sized needle-felted doll about three heads tall, Grandpa Owl is slightly taller than Gomgom, other animal friends are about as tall as Gomgom, Kong is always the smallest character, its round body only about one quarter the width of Gomgom's head, like a tiny ornament, even when Kong is close to the camera"
 STYLE="richly detailed handmade miniature world filling the whole background with layered foreground, midground and background full of cute tiny handmade props, never a plain empty wall or empty backdrop, soft warm golden light, gentle depth of field that keeps the detailed background readable, cozy warm pastel palette, handmade felt, knit, wood and ceramic textures, high quality 3D animated film render, cinematic composition, vertical 9:16, warm and cozy mood, no text, no letters"
 VTAIL="the bear mouth may open softly but no teeth are ever visible, every character keeps exactly the same needle-felted wool texture, proportions, colors, accessories and body size from the first frame to the last and never turns into a cartoon or 2D character, nobody grows or shrinks during the shot, Kong stays tiny, smooth cinematic camera motion with a clear change of viewpoint, warm cozy mood, soft warm light, no text"
 
@@ -56,16 +56,16 @@ IMG[06]="wide shot of a cozy felt classroom with little wooden desks, a small fe
 MOV[06]="the small rabbit in the bright T-shirt shuffles shyly into the classroom covering its face, the camera pushes in from the back of the room past the desks"
 CH[06]="$FRIENDS; Gomgom and Kong are not in this scene"; DUR[06]=4
 IMG[07]="medium wide shot of the same felt classroom, the shy rabbit in the bright yellow T-shirt sitting down, three of the four animal friends busy reading picture books, drawing and chatting, only one hedgehog glancing at the T-shirt briefly, warm window light, plants and a globe"
-MOV[07]="most of the animal friends keep reading and drawing without looking up, only the hedgehog glances once at the T-shirt and goes back to its book, the rabbit relaxes and smiles, the camera slides sideways along the desks"
+MOV[07]="most of the animal friends keep reading and drawing without looking up, only the hedgehog glances once at the T-shirt and goes back to its book, the rabbit in the yellow T-shirt relaxes and smiles, the camera slowly pushes in toward the rabbit in the yellow T-shirt which stays in the center of the frame the whole time, no new characters appear"
 CH[07]="$FRIENDS; Gomgom and Kong are not in this scene"; DUR[07]=4
-IMG[08]="front view of a tiny cozy felt puppet theater stage with velvet curtains and little footlights, Gomgom standing alone on the stage under a bright spotlight looking shy, rows of little wooden seats where a few felt animals are turned around chatting to each other"
-MOV[08]="the bright spotlight on Gomgom slowly widens and softens into warm general light, Gomgom looks up and its shoulders relax, the curtains sway, the camera pulls back from the stage to the seats"
+IMG[08]="front view of a tiny cozy felt puppet theater stage with velvet curtains and little footlights, Gomgom standing alone on the stage under a bright spotlight looking shy, rows of little wooden seats where a few small needle-felted animal dolls are turned around chatting to each other, every audience member is a felt animal doll, no humans, no people anywhere"
+MOV[08]="the bright spotlight on Gomgom slowly widens and softens into warm general light, Gomgom looks up and its shoulders relax, the curtains sway, the camera slowly pushes in toward the stage, every audience member stays a small felt animal doll, no humans appear"
 CH[08]="$GOM; Kong is not in this scene"; DUR[08]=4
 IMG[09]="eye level shot along the busy felt market stalls, a rabbit weighing carrots on a little scale, a squirrel counting acorns into jars, a hedgehog tying a bouquet of felt flowers, everyone happily focused on their own work, warm afternoon light, bunting overhead, Gomgom small in the background"
 MOV[09]="the market friends keep busy with their own tasks, carrots tumble onto the scale and acorns drop into jars, the camera tracks along the stalls past each busy friend"
 CH[09]="$GOM; $FRIENDS; Kong is not visible"; DUR[09]=4
 IMG[10]="close shot of Gomgom sitting on a market bench, tiny Kong standing on top of Gomgom's head pressing down the sticking-up tuft with both little wings, Gomgom giggling with its eyes squeezed shut and mouth closed, a basket of apples beside it, flower stall behind"
-MOV[10]="tiny Kong presses the tuft down with its little wings, the tuft springs back up and Kong presses again, Gomgom giggles with closed mouth, the camera arcs slowly around the bench"
+MOV[10]="tiny Kong presses the tuft down with its little wings, the tuft springs back up and Kong presses again, Gomgom giggles with its eyes squeezed shut and its mouth stays closed the whole time, Kong stays tiny on top of the head, the camera arcs slowly around the bench"
 CH[10]="$GOM; $KONG"; DUR[10]=4
 IMG[11]="wide three-quarter shot of Gomgom walking happily through the market with its head held high and the tuft still sticking up, holding a little paper bag of bread, tiny Kong perched on its head, stall keepers busy with their work, bunting, lanterns and flower carts"
 MOV[11]="Gomgom walks cheerfully past the stalls looking around with a happy face, tiny Kong rides on its head, a squirrel waves casually and goes back to work, the camera tracks alongside Gomgom"
