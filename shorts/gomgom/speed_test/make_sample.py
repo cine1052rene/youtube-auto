@@ -22,6 +22,8 @@ ap.add_argument("--lead", type=float, default=0.05)  # 대사 앞 여백(초)
 ap.add_argument("--tail", type=float, default=0.15)  # 대사 뒤 여백(초)
 ap.add_argument("--hookdur", type=float, default=1.8)  # 첫 제목 카드 길이(초)
 ap.add_argument("--end", type=float, default=0.0)  # 마지막 컷 뒤 여운(초)
+ap.add_argument("--suby", type=int, default=1320)  # 자막 중심 높이(10/9: 1540은 쇼츠·릴스 하단 메뉴에 가림, 1200은 얼굴 가림 → 메뉴 바로 위 1320)
+ap.add_argument("--subw", type=int, default=740)  # 자막 한 줄 최대 폭(오른쪽 좋아요·댓글 버튼 피함, 이전 880)
 ap.add_argument("--full", action="store_true")  # 업로드용 1080x1920 고화질(crf18·오디오 192k)
 ap.add_argument("--premiere", action="store_true")  # 프리미어용 소재(자막 안 구운 컷·자막 PNG·트랙별 소리)+timeline.json 저장
 ap.add_argument("--loop", action="store_true")  # 쇼츠 반복재생용: 검은 화면 페이드 없음, 음악은 처음 크기로 끝냄
@@ -116,7 +118,7 @@ def wrap(text, maxw=880):
 
 def render_sub(text, path):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
-    lines = wrap(text); lh = 94; total = lh * len(lines); y0 = 1540 - total // 2
+    lines = wrap(text, A.subw); lh = 94; total = lh * len(lines); y0 = A.suby - total // 2
     maxw = max(font.getlength(l) for l in lines)
     d.rounded_rectangle([W / 2 - maxw / 2 - 46, y0 - 24, W / 2 + maxw / 2 + 46, y0 + total + 16], radius=44, fill=(58, 40, 28, 110))
     for i, l in enumerate(lines):
@@ -229,7 +231,7 @@ if A.sfx:
 fc += f";{''.join(mix)}amix=inputs={len(mix)}:duration=first:normalize=0,afade=t=out:st={total - (0.06 if A.loop else AF):.3f}:d={0.06 if A.loop else AF}[a]"
 final = OUT / f"ep{A.ep}_{A.tag}.mp4"
 run(["ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
-     "-c:v", "libx264", "-preset", "slow" if A.full else "medium", "-crf", "18" if A.full else "30", "-c:a", "aac", "-b:a", "192k" if A.full else "96k", "-movflags", "+faststart",
+     "-c:v", "libx264", "-preset", "slow" if A.full else "medium", "-crf", "18" if A.full else "30", "-c:a", "aac", "-b:a", "192k" if A.full else "96k", "-ar", "48000", "-movflags", "+faststart",
      "-t", f"{total:.3f}", str(final)])
 shutil.rmtree(TMP)
 if A.premiere:
