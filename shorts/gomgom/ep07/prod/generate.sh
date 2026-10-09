@@ -5,13 +5,13 @@
 set -u
 cd "$(dirname "$0")"
 STAGE=${1:-img}
-REF=../../ref/gomgom_master_s2b.png
+REF=../../ref/gomgom_master_s2c.png
 LOG=fix.log
 GOM="Gomgom, a small round cream-colored needle-felted wool bear with soft fuzzy texture, small round ears with pale pink inner ears, bright round black bead eyes, a small dark brown nose, soft pink blush on the cheeks and a gentle warm smile with no teeth ever visible, wearing a small matte yellow felt star badge on its chest with no glow and no plastic shine and a tiny brown felt satchel bag across its body"
-KONG="Kong, a tiny round yellow needle-felted baby chick with a small orange beak and one small green bean sprout with two round leaves on top of its head, Kong is tiny, exactly as small as in the reference image, its whole round body only about one quarter the width of Gomgom's head, Kong never grows and is never as big as Gomgom's head"
+KONG="Kong, a tiny round yellow needle-felted baby chick with a small orange beak and one small green bean sprout with two round leaves on top of its head, Kong is tiny, exactly as small as in the reference image, Kong's whole body is exactly one third the width of Gomgom's head, Kong never grows or shrinks and is never as big as Gomgom's head, Kong keeps its pink blush cheeks, round yellow face and small orange beak"
 OWL="Grandpa Owl, a kind old round grey-brown felt owl with a cream chest, fluffy white eyebrows and small round spectacles, wearing a mustard knitted cardigan, Grandpa Owl is slightly taller than Gomgom, about a quarter head taller, never shorter than Gomgom and never twice as big"
 FRIENDS="small felt animal friends such as a rabbit, a squirrel and a hedgehog, each about as tall as Gomgom"
-SIZE="scale rule: Gomgom is the size reference, a palm-sized needle-felted doll about three heads tall, Grandpa Owl is slightly taller than Gomgom, other animal friends are about as tall as Gomgom, Kong is always the smallest character, its round body only about one quarter the width of Gomgom's head, like a tiny ornament, even when Kong is close to the camera"
+SIZE="scale rule: Gomgom is the size reference, a palm-sized needle-felted doll about three heads tall, Grandpa Owl is slightly taller than Gomgom, other animal friends are about as tall as Gomgom, Kong is always the smallest character, Kong's whole body is exactly one third the width of Gomgom's head in every shot, even when Kong is close to the camera or far away, in wide shots Kong is still clearly visible"
 STYLE="richly detailed handmade miniature world filling the whole background with layered foreground, midground and background full of cute tiny handmade props, never a plain empty wall or empty backdrop, soft warm golden light, gentle depth of field that keeps the detailed background readable, cozy warm pastel palette, handmade felt, knit, wood and ceramic textures, high quality 3D animated film render, cinematic composition, vertical 9:16, warm and cozy mood, no text, no letters"
 VTAIL="the bear mouth may open softly but no teeth are ever visible, every character keeps exactly the same needle-felted wool texture, proportions, colors, accessories and body size from the first frame to the last and never turns into a cartoon or 2D character, nobody grows or shrinks during the shot, Kong stays tiny, smooth cinematic camera motion with a clear change of viewpoint, warm cozy mood, soft warm light, no text"
 
@@ -56,7 +56,7 @@ IMG[06]="dreamy medium shot of Gomgom gazing upward with a soft smile, a soft tr
 MOV[06]="inside the thought bubble the tiny brick house builds itself in a flash, Gomgom smiles dreamily, then the bubble wobbles softly, the camera rises along the bubble and tilts down to Gomgom"
 CH[06]="$GOM; Kong is not in this scene"; DUR[06]=4
 IMG[07]="top down shot of a wooden desk covered with Gomgom's old felt projects, a lopsided felt birdhouse, a half-knitted tiny scarf, a little boat model, Gomgom's paws flipping a scrapbook of old felt photos with no letters, tiny Kong walking across the scrapbook"
-MOV[07]="Gomgom's paws slowly flip the pages of the old scrapbook, tiny Kong hops from one page to the next, the camera drifts from top down to a low side angle along the desk"
+MOV[07]="Gomgom's paws slowly flip the pages of the old scrapbook, tiny Kong hops from one page to the next and stays right beside Gomgom's paws, the camera drifts slightly lower while keeping Gomgom and Kong together in frame, Kong stays tiny"
 CH[07]="$GOM; $KONG"; DUR[07]=4
 IMG[08]="medium shot at a cozy breakfast nook, Gomgom sitting with a tiny notebook and a pencil, tapping the pencil on its chin thoughtfully, a cup of cocoa and a plate of tiny cookies, morning light through checkered curtains, tiny Kong perched on Gomgom's shoulder peeking at the notebook, a little cuckoo clock on the wall"
 MOV[08]="Gomgom taps the pencil on its chin and then raises one finger as if it has an idea, tiny Kong flaps its little wings on the shoulder, steam curls from the cocoa, the camera slowly pushes in toward Gomgom from slightly lower, Gomgom stays in frame the whole time, there is only one bear in the room"
