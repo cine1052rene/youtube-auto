@@ -26,6 +26,8 @@ ap.add_argument("--suby", type=int, default=1320)  # 자막 중심 높이(10/9: 
 ap.add_argument("--subw", type=int, default=740)  # 자막 한 줄 최대 폭(오른쪽 좋아요·댓글 버튼 피함, 이전 880)
 ap.add_argument("--full", action="store_true")  # 업로드용 1080x1920 고화질(crf18·오디오 192k)
 ap.add_argument("--premiere", action="store_true")  # 프리미어용 소재(자막 안 구운 컷·자막 PNG·트랙별 소리)+timeline.json 저장
+ap.add_argument("--skip", default="")  # 뺄 대사·컷 번호(쉼표) 예: 06
+ap.add_argument("--map", default="")  # 화면 바꾸기 예: 06=11,06b=- (06 대사에 11 화면, b컷 없음)
 ap.add_argument("--loop", action="store_true")  # 쇼츠 반복재생용: 검은 화면 페이드 없음, 음악은 처음 크기로 끝냄
 A = ap.parse_args()
 
@@ -85,6 +87,8 @@ CUES = {
            ("06", "hop", .4, .45), ("07", "chime", .4, .35), ("09", "hop", .7, .45), ("11", "twinkle", .2, .35)],
 }
 shots = json.load(open(EP / "lines.json", encoding="utf-8"))["shots"]
+SKIP = [x for x in A.skip.split(",") if x]; shots = [s_ for s_ in shots if s_["id"] not in SKIP]
+MAP = dict(kv.split("=") for kv in A.map.split(",") if kv)
 font = ImageFont.truetype(str(FONT), 66)
 hfont = ImageFont.truetype(str(FONT), 112)
 
@@ -142,11 +146,11 @@ def render_hook(lines, path):
 vlist, alist, starts, vend = [], [], {}, {}
 t = 0.0
 for i, s in enumerate(shots):
-    sid = s["id"]; a = AUD / f"{sid}.mp3"; clip = PROD / "clips" / f"{sid}.mp4"
+    sid = s["id"]; a = AUD / f"{sid}.mp3"; clip = PROD / "clips" / f"{MAP.get(sid, sid)}.mp4"
     lead = 0.0 if i == 0 else LEAD
     ad = dur(a) / A.speed
     D = max(lead + ad + TAIL, MIN_D) + (A.end if i == len(shots) - 1 else 0); N = int(round(D * FPS)); D = N / FPS
-    clipb = PROD / "clips" / f"{sid}b.mp4"
+    clipb = PROD / "clips" / f"{MAP.get(sid + 'b', sid + 'b')}.mp4"
     if clipb.exists():  # 대사가 길어 컷을 둘로 나눔: 앞 절반 = NN.mp4, 뒤 절반 = NNb.mp4 (느리게 늘리지 않으려고)
         Na = N // 2; parts = []
         for j, (cp, nf) in enumerate([(clip, Na), (clipb, N - Na)]):
