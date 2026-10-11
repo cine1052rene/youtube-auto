@@ -74,6 +74,25 @@ IMG[12]="wide shot from behind of Gomgom sitting on the workshop porch step at s
 MOV[12]="seen from behind the whole time, Gomgom sits still on the porch facing away as the sunset deepens, its head does not turn, tiny Kong sits still at the very top center of Gomgom's head between the ears, looking at the sunset, the tiny house windows glow and fireflies rise, the camera stays directly behind Gomgom and only rises slowly straight up, it never circles around, no face is visible on the back of the head, Kong stays tiny at the top center of the head"
 CH[12]="$GOM; $KONG"; DUR[12]=8
 
+# ── 10/12 추가·교체: 느리게 늘리지 않도록 컷 나누기(NNb) + 제자리 줌인 교체(06·10) ──
+IMG[02b]="close low angle on the sunny workbench, Gomgom's fuzzy paws happily pressing tiny felt bricks one by one along a pencil line on a plan sheet, the first neat row of the little brick house growing, tiny Kong standing on both little feet on top of the brick pile beside it, Kong only as tall as three stacked tiny felt bricks, a small wooden hammer, a ruler, sunlight and dust sparkles"
+MOV[02b]="Gomgom presses three felt bricks into the row quickly one after another and gives a proud little nod, tiny Kong bobs happily on the brick pile with its wings folded and its feet staying on the bricks, the camera slides sideways along the growing brick row"
+CH[02b]="$GOM; $KONG"; DUR[02b]=4
+IMG[06]="dreamy sparkly daydream version of the sunny workshop glowing with soft golden light and floating sparkles, tiny felt bricks floating up in the air by magic and stacking themselves neatly onto the walls of the miniature brick house, Gomgom standing beside the workbench clapping its paws in delight with a big happy smile, soft pastel glow, dreamlike haze around the edges"
+MOV[06]="tiny felt bricks fly up one after another and click into place by themselves, the walls of the little house rise quickly, Gomgom claps and bounces happily on its feet, sparkles swirl, the camera circles quickly around the rising house"
+CH[06]="$GOM; Kong is not in this scene"; DUR[06]=4
+IMG[06b]="dreamy sparkly daydream of the finished miniature brick house on the workbench glowing in golden light, little felt roof tiles flying through the air with sparkles toward the roof, a bright felt sun shining through the window, Gomgom spinning happily beside it with its arms open, soft pastel glow, dreamlike haze around the edges"
+MOV[06b]="the last felt roof tiles fly onto the roof and snap into place with a puff of sparkles, the chimney pops up, Gomgom twirls around once happily, the camera swoops up over the roof"
+CH[06b]="$GOM; Kong is not in this scene"; DUR[06b]=4
+IMG[08b]="close over the shoulder shot at the cozy breakfast table, Gomgom's paws quickly flipping the pages of its little notebook backward looking for an old page, pages full of small doodles of tiny houses and birdhouses with no letters and no numbers, a cup of cocoa with steam, tiny Kong standing on both little feet on the table beside the notebook, Kong only half as tall as the cocoa cup, checkered curtains and morning light"
+MOV[08b]="Gomgom flips the notebook pages backward quickly and stops on an old doodle page, tilting its head curiously, tiny Kong leans in to peek with its wings folded and its feet on the table, the camera moves around Gomgom's shoulder toward the notebook, there is only one bear"
+CH[08b]="$GOM; $KONG"; DUR[08b]=4
+IMG[10]="cozy workshop morning, Gomgom standing on a little wooden stool in front of a big friendly felt wall clock with no numbers, turning the long minute hand with both paws, tiny Kong sitting on the flat top of the clock, Kong only as big as the clock's center knob, shelves of tools and potted plants, warm morning light"
+MOV[10]="Gomgom pushes the clock's long minute hand all the way around in a big generous circle with both paws and nods firmly, tiny Kong on top of the clock sways along happily with its wings folded, the camera arcs from the side around to the front of the clock"
+CH[10]="$GOM; $KONG"; DUR[10]=4
+IMG[10b]="close shot on the workbench, Gomgom flipping over a big cute felt hourglass full of golden sand, the sand starting to pour down, the half-built little brick house and neat piles of felt bricks waiting beside it, tiny Kong standing on both little feet beside the hourglass, Kong only half as tall as the hourglass, warm morning light"
+MOV[10b]="Gomgom turns the big hourglass over with both paws and sets it down with a happy pat, golden sand begins to pour, tiny Kong watches the sand with its head tilting and its feet on the table, the camera glides low past the hourglass toward Gomgom's smiling face"
+CH[10b]="$GOM; $KONG"; DUR[10b]=4
 mkdir -p img clips
 KEYS="01 02 03 04 05 06 07 08 09 10 11 12"
 [ $# -ge 2 ] && KEYS="${*:2}"

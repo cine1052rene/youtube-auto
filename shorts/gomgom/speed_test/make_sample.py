@@ -146,8 +146,26 @@ for i, s in enumerate(shots):
     lead = 0.0 if i == 0 else LEAD
     ad = dur(a) / A.speed
     D = max(lead + ad + TAIL, MIN_D) + (A.end if i == len(shots) - 1 else 0); N = int(round(D * FPS)); D = N / FPS
+    clipb = PROD / "clips" / f"{sid}b.mp4"
+    if clipb.exists():  # 대사가 길어 컷을 둘로 나눔: 앞 절반 = NN.mp4, 뒤 절반 = NNb.mp4 (느리게 늘리지 않으려고)
+        Na = N // 2; parts = []
+        for j, (cp, nf) in enumerate([(clip, Na), (clipb, N - Na)]):
+            Dp = nf / FPS; cdp = dur(cp)
+            if Dp <= cdp:
+                spp = min(cdp / Dp, MAX_FAST); sg = Dp * spp; stp = max(cdp - sg - 0.05, 0)
+                vfp = f"trim=start={stp:.3f}:duration={sg:.3f},setpts=(PTS-STARTPTS)/{spp:.4f}"
+            else:
+                vfp = f"setpts=(PTS-STARTPTS)*{min(Dp / cdp, MAX_SLOW):.4f},tpad=stop_mode=clone:stop_duration=6"
+            pp = TMP / f"c{sid}_{j}.mp4"
+            run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(cp), "-vf", f"{vfp},fps={FPS},scale={W}:{H}:flags=lanczos,setsar=1,format=yuv420p",
+                 "-frames:v", str(nf), "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-r", str(FPS), str(pp)])
+            parts.append(pp)
+        (TMP / f"c{sid}.txt").write_text("".join("file '" + q.name + "'\n" for q in parts), encoding="utf-8")
+        clip = TMP / f"c{sid}.mp4"
+        run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(TMP / f"c{sid}.txt"), "-c", "copy", str(clip)])
     cd = dur(clip)
-    if D <= cd:
+    if D <= cd + 0.01:
+        cd = max(cd, D)
         sp = min(cd / D, MAX_FAST); seg = D * sp; st = max(cd - seg - 0.05, 0)
         vf = f"trim=start={st:.3f}:duration={seg:.3f},setpts=(PTS-STARTPTS)/{sp:.4f}"
     else:

@@ -74,6 +74,22 @@ IMG[12]="wide shot from behind of Gomgom sitting on a little hill at sunset over
 MOV[12]="seen from behind, Gomgom sits on the hill as the lanterns of the market light up one by one, tiny Kong snuggles beside the tuft, the breeze makes the tuft wiggle, the camera rises slowly and pulls back to reveal the whole glowing village"
 CH[12]="$GOM; $KONG"; DUR[12]=8
 
+# ── 10/12 추가·교체: 느리게 늘리지 않도록 컷 나누기(NNb) + 제자리 줌인 교체(06·08) ──
+IMG[02b]="close shot of Gomgom's face in the bright market street, a single tuft of fur sticking straight up on top of its head, Gomgom pressing the tuft down with one paw and looking embarrassed with pink cheeks, striped awnings, bunting and flower stalls softly blurred behind"
+MOV[02b]="Gomgom pats the tuft down but it springs straight back up, Gomgom pats it again and glances around shyly, the tuft wobbles in the breeze, the camera arcs around Gomgom's head"
+CH[02b]="$GOM; Kong is not in this scene"; DUR[02b]=4
+IMG[06]="side view of a cozy felt classroom doorway, a small felt rabbit wearing a plain bright yellow T-shirt with no print and no letters standing in the doorway with both feet on the floor, cheeks pink, holding the hem of its shirt and peeking shyly into the room, the rabbit is exactly as tall as the other animal friends, there is only one rabbit, little wooden desks with a squirrel, a hedgehog, a fox and a sheep sitting at them, potted plants, a board with only flower doodles and no letters"
+MOV[06]="the rabbit in the plain yellow T-shirt looks down at its bright shirt, tugs the hem nervously, then covers its face with both paws and peeks out between them, its feet stay on the floor the whole time, the camera moves slowly sideways across the doorway, from the very first frame to the last there is exactly one rabbit in the whole shot, no second rabbit ever appears, the rabbit does not walk, everyone keeps the same size"
+CH[06]="small felt animal classmates: a squirrel, a hedgehog, a fox and a sheep, each about as tall as Gomgom, the only rabbit is the one in the yellow T-shirt; Gomgom and Kong are not in this scene"; DUR[06]=4
+IMG[06b]="view from the doorway into the cozy felt classroom, little wooden desks, a squirrel, a hedgehog, a fox and a sheep at their desks, two of them turned around in their seats looking toward the doorway with wide surprised eyes, the other two busy with their crayons, soft warm light, potted plants, a board with only flower doodles and no letters, no rabbit visible"
+MOV[06b]="the squirrel and the fox turn around in their seats and stare toward the doorway with wide eyes, the hedgehog and the sheep keep drawing, the camera slides along the row of desks, nobody grows or shrinks, no new characters appear"
+CH[06b]="small felt animal classmates: a squirrel, a hedgehog, a fox and a sheep, each about as tall as Gomgom; Gomgom and Kong are not in this scene"; DUR[06b]=4
+IMG[08]="three-quarter side view of a tiny cozy felt puppet theater stage with velvet curtains and little footlights, Gomgom tiptoeing across the stage, a round spotlight beam on the stage floor, rows of little wooden seats where small needle-felted animal dolls chat with each other and eat popcorn, the audience are only rabbits, squirrels, foxes, owls and sheep, there are no bears in the audience at all, Gomgom is the only bear, every audience member is a felt animal doll, no humans, no people anywhere"
+MOV[08]="Gomgom tiptoes quickly across the stage and the spotlight beam slides along after it, Gomgom hides behind the curtain and peeks out, the audience dolls keep chatting and nobody looks at the stage, the camera tracks sideways along the front row toward the stage, no humans appear"
+CH[08]="$GOM; Kong is not in this scene"; DUR[08]=4
+IMG[11b]="medium shot at a colorful flower cart in the market, Gomgom smelling a bunch of flowers with its eyes closed happily and the tuft still sticking up, tiny Kong sitting at the very top center of Gomgom's head beside the tuft, Kong only one third the width of Gomgom's head, a hedgehog stall keeper arranging flowers, bunting and lanterns"
+MOV[11b]="Gomgom sniffs the flowers and opens its eyes with a bright smile, then looks up at the bunting happily, tiny Kong sits still on top of its head looking around, the hedgehog keeps arranging flowers, the camera arcs around the flower cart"
+CH[11b]="$GOM; $KONG"; DUR[11b]=4
 mkdir -p img clips
 KEYS="01 02 03 04 05 06 07 08 09 10 11 12"
 [ $# -ge 2 ] && KEYS="${*:2}"
