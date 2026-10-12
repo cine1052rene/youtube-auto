@@ -1,6 +1,6 @@
 # Daily Soul Challenge — 매일 아침 실행 순서
 
-> ⭐⭐ **10/12 사용자 — 글자 문구 규칙(당분간)**: 프롬프트 끝에 "Any visible text must be real, correctly spelled English dictionary words only." **한 문장만**. 금지문(no gibberish·no Korean/Chinese/Japanese·no subtitles·no watermark 등)은 넣지 않음 — 나라·언어 단어가 오히려 그 얼굴·문자를 끌어옴. 국적·지역 단어 대신 외형 묘사, 인물은 다양한 외모로 지정 (10/6 English-only 문구는 폐기)
+> ⭐⭐ **10/12 사용자 — 글자 문구 규칙(당분간)**: 프롬프트 끝에 "Any visible text must be real words exactly as printed in a dictionary or a published newspaper."(English도 넣지 않음) **한 문장만**. 금지문(no gibberish·no Korean/Chinese/Japanese·no subtitles·no watermark 등)은 넣지 않음 — 나라·언어 단어가 오히려 그 얼굴·문자를 끌어옴. 국적·지역 단어 대신 외형 묘사, 인물은 다양한 외모로 지정 (10/6 English-only 문구는 폐기)
 
 > ⭐ **9/28 사용자 지시 — 순서 변경: 미션 확인 → 컨셉 제안 보고(`YYYY-MM-DD/concepts.md`) → 사용자가 컨셉을 고른 뒤에만 생성.** 아침 예약에서 자동 생성하지 않는다.
 
