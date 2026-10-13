@@ -1,1 +1,6 @@
-{"hosting":{"site":"gomgom-review","public":"public","headers":[{"source":"**","headers":[{"key":"X-Robots-Tag","value":"noindex"}]}]}}
+{"hosting":{"site":"gomgom-review","public":"public","headers":[
+ {"source":"**","headers":[{"key":"X-Robots-Tag","value":"noindex"}]},
+ {"source":"**/*.@(html|htm)","headers":[{"key":"Cache-Control","value":"no-cache, no-store, must-revalidate"}]},
+ {"source":"**/","headers":[{"key":"Cache-Control","value":"no-cache, no-store, must-revalidate"}]},
+ {"source":"**/*.@(mp4|jpg|mp3|png)","headers":[{"key":"Cache-Control","value":"no-cache"}]}
+]}}

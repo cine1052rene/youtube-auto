@@ -2,7 +2,7 @@
 """7·8화 — 지금까지 만든 컷 전부 한 화면 비교 + 통과 지시 표시 + 7화 06 없는 비교본. 출력: review_site/public/all1012/"""
 import json, os, shutil, subprocess, pathlib, datetime, html, hashlib
 G = pathlib.Path(__file__).resolve().parent.parent
-OUT = G / "review_site/public/all1012"; shutil.rmtree(OUT, ignore_errors=True); OUT.mkdir(parents=True)
+OUT = G / "review_site/public/all1012"; shutil.rmtree(OUT, ignore_errors=True); OUT.mkdir(parents=True, exist_ok=True)
 
 PASS = {"07": {"02", "07", "10", "11"}}  # 10/9 21:31 "7화 1,3,8,12 컷만 새로 만들고 나머지는 일단 보자"
 NOTE = {
@@ -33,7 +33,7 @@ def poster(src, dst):
 
 def vid(src, name, cap, cls=""):
     shutil.copy(src, OUT / f"{name}.mp4"); poster(src, OUT / f"{name}.jpg")
-    return f'<div class="c {cls}" onclick="pl(&quot;{name}.mp4&quot;)"><img src="{name}.jpg"><div class="t">{cap}</div></div>'
+    return f'<div class="c {cls}"><video src="{name}.mp4" poster="{name}.jpg" controls playsinline preload="metadata"></video><div class="t">{cap}</div></div>'
 
 body = []
 for ep in ["07", "08"]:
@@ -69,13 +69,13 @@ no06 = "".join([
 CSS = ("body{font-family:system-ui,sans-serif;background:#FBF6EE;color:#3A2F25;margin:0;padding:18px 12px 60px;line-height:1.5}.w{max-width:1100px;margin:0 auto}"
        "h1{font-size:22px;margin:10px 0 4px}h2{font-size:16px;margin:0 0 2px}section{background:#FFFDF9;border:1px solid #EADFCF;border-radius:12px;padding:8px 10px;margin:6px 0}"
        ".soft{color:#85766A;font-size:13px;margin:2px 0}.line{font-size:14px;margin:2px 0}.rule{border-color:#D98E2B}"
-       ".row{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}.c{width:100px;cursor:pointer}.c img{width:100px;height:178px;object-fit:cover;border-radius:8px;display:block;border:3px solid #ddd;margin:0}"
-       ".c.now img{border-color:#4CAF50}.c.bad img{border-color:#E57373}#pv{position:fixed;inset:0;background:#000c;display:none;align-items:center;justify-content:center;z-index:9}#pv video{max-height:88vh;max-width:94vw;border-radius:10px}.t{font-size:11px;color:#85766A;line-height:1.3;margin-top:2px}"
+       ".row{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}.c{width:min(180px,44vw)}.c video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:8px;display:block;border:3px solid #ddd;background:#000}"
+       ".c.now video{border-color:#4CAF50}.c.bad video{border-color:#E57373}#pv{position:fixed;inset:0;background:#000c;display:none;align-items:center;justify-content:center;z-index:9}#pv video{max-height:88vh;max-width:94vw;border-radius:10px}.t{font-size:13px;color:#85766A;line-height:1.3;margin-top:2px}"
        ".v{display:inline-block;padding:1px 8px;border-radius:8px;font-size:12px;font-weight:700}.p{background:#E3F1FF;color:#1F5FA8}b.p{color:#1F5FA8}b.r{color:#C0392B}")
 page = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <title>곰곰한 마음 · 7·8화 만든 컷 전부 비교</title><style>{CSS}</style></head><body><div class="w"><p class="soft"><a href="../index.html">← 목차</a></p>
 <h1>🗂 7·8화 — 지금까지 만든 컷 전부</h1>
-<p class="soft">초록 테두리 = 지금 완성본에 들어간 것 · 같은 컷의 모든 버전을 한 줄에 · 썸네일을 누르면 크게 재생 · 바깥을 누르면 닫힘</p>
+<p class="soft">초록 테두리 = 지금 완성본에 들어간 것 · 같은 컷의 모든 버전을 한 줄에 · 영상마다 바로 재생 · 하나를 틀면 다른 건 멈춰요</p>
 <section class="rule"><h2>통과 지시 찾은 것</h2>
 <p class="line">10/9 21:31 — <b>"7화 1,3,8,12 컷만 새로 만들고 나머지는 일단 보자"</b> → 7화 <b>02·07·10·11은 통과</b></p>
 <p class="line">10/10 00:00 — <b>"너무 작거나 너무 크지만 않으면 어색하지 않은 장면에서는 그냥 넘어갈 수 있는데"</b> → 자세가 어색하지 않은 콩이 컷은 통과</p>
@@ -83,6 +83,6 @@ page = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name
 <section class="rule"><h2>7화 06 없이 — 완성본 비교</h2><p class="soft">A·B는 새로 만든 것 없이 조립만 다시 했어요(크레딧 0).</p><div class="row">{no06}</div></section>
 {''.join(body)}
 </div><div id="pv" onclick="if(event.target===this){{this.style.display='none';this.firstChild.pause()}}"><video controls playsinline></video></div>
-<script>function pl(u){{const p=document.getElementById('pv'),v=p.firstChild;v.src=u;p.style.display='flex';v.play()}}</script></body></html>"""
+<script>document.querySelectorAll('.c video').forEach(v=>v.addEventListener('play',()=>document.querySelectorAll('.c video').forEach(o=>{{if(o!==v)o.pause()}})));</script></body></html>"""
 (OUT / "index.html").write_text(page, encoding="utf-8")
 print(OUT, len(list(OUT.glob("*.mp4"))), "videos")
