@@ -2,6 +2,7 @@
 
 > ⭐⭐ **10/12 사용자 — 글자 문구 규칙(당분간)**: 프롬프트 끝에 "Any visible text must be real words exactly as printed in a dictionary or a published newspaper."(English도 넣지 않음) **한 문장만**. 금지문(no gibberish·no Korean/Chinese/Japanese·no subtitles·no watermark 등)은 넣지 않음 — 나라·언어 단어가 오히려 그 얼굴·문자를 끌어옴. 국적·지역 단어 대신 외형 묘사, 인물은 다양한 외모로 지정 (10/6 English-only 문구는 폐기)
 > ⭐ **10/13 사용자 — 보관 규칙**: 우리 이미지는 힉스필드 Assets에 프롬프트와 함께 남으므로 PC엔 채점용 임시 보관만. 하트 끝난 날 다음 날 아침에 전날 폴더 png/jpg 삭제(prompts.txt·gen.log는 깃에 유지), tmp 캡처도 삭제. 대신 **당선작 자료실 winners/** 에 날짜별 주제·당선 5장 점수·프롬프트·분석·작은 카드 jpg를 매일 아침 hall-of-fame 확인 때 추가(winners/README.md)
+> ⭐⭐ **10/14 사용자 — 배경·퍼스펙티브 필수**: 모든 기획·프롬프트에 배경 재질·공간 깊이·카메라 높이/렌즈를 명시. 고급은 절제(재료 1~2가지·여백·자연광). 채점 기준은 "진짜 잡지에 실을 수 있나"
 
 > ⭐ **9/28 사용자 지시 — 순서 변경: 미션 확인 → 컨셉 제안 보고(`YYYY-MM-DD/concepts.md`) → 사용자가 컨셉을 고른 뒤에만 생성.** 아침 예약에서 자동 생성하지 않는다.
 
