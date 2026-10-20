@@ -72,3 +72,6 @@ shorts/gomgom/sound/_sp/
 .playwright-mcp/
 # Daily Soul 당선작 자료실(작게 줄인 카드 캡처)은 추적
 !challenges/daily_soul/winners/**/*.jpg
+
+# daily_soul 임시 스크랩
+challenges/daily_soul/tmp/
