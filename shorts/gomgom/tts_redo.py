@@ -47,4 +47,5 @@ for arg in [a for a in sys.argv[1:] if not a.startswith("--")]:
         sc = score(c, want); print(f"   후보{i} {sc[1]:.2f}/{sc[2]:.2f} {sc[3]}", flush=True)
         if sc[0] > best[0][0]: best = (sc, c)
         if sc[1] >= 0.97 and sc[2] >= 0.7: break
-    shutil.copy(best[1], f); print(f"   → 선택 {best[1].name}", flush=True)
+    if best[1].resolve() != f.resolve(): shutil.copy(best[1], f)
+    print(f"   → 선택 {best[1].name}", flush=True)
