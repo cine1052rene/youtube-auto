@@ -15,6 +15,7 @@
 | 10/17 | 버섯 세계 | Higgsie(발표), 운영 Vinca | 40대 초 | 44 | 생물 위에 자란 세계(스케일), 따뜻한 조명 |
 | 10/18 | I Dropped My Pizza Pocket | Higgsie(발표), 운영 Vinca | 38 | 40 | 작은 동물·뚜렷한 캐릭터 + 어울리는 음식 |
 | 10/19 | It's Not a Phase, Mom | Higgsie(발표), 운영 Vinca | 40 | 44 | 정체성 정반대 반전(채식 드래곤), 짧은 프롬프트 |
+| 10/20 | Caught Red-Handed | Higgsie(발표 01:16), 운영 Vinca | 39 | 44 | 우화 비틀기·들킨 순간 아이디어(우리 거북이 40 당선) |
 
 ## 관찰
 - Quality는 7~9로 변별력 낮고, **Theme·Emotion 9**가 거의 필수. Originality는 날마다 편차 큼(7~9)
