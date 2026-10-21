@@ -16,6 +16,7 @@
 | 10/18 | I Dropped My Pizza Pocket | Higgsie(발표), 운영 Vinca | 38 | 40 | 작은 동물·뚜렷한 캐릭터 + 어울리는 음식 |
 | 10/19 | It's Not a Phase, Mom | Higgsie(발표), 운영 Vinca | 40 | 44 | 정체성 정반대 반전(채식 드래곤), 짧은 프롬프트 |
 | 10/20 | Caught Red-Handed | Higgsie(발표 01:16), 운영 Vinca | 39 | 44 | 우화 비틀기·들킨 순간 아이디어(우리 거북이 40 당선) |
+| 10/21 | Small Body, Big Dreams | Higgsie(발표), 운영 Vinca | ? | 43 | 압도적 크기 대비(불길 앞 딱정벌레, 거인 발 앞 고슴도치) |
 
 ## 관찰
 - Quality는 7~9로 변별력 낮고, **Theme·Emotion 9**가 거의 필수. Originality는 날마다 편차 큼(7~9)
