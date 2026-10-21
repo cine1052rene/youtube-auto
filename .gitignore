@@ -75,3 +75,8 @@ shorts/gomgom/sound/_sp/
 
 # daily_soul 임시 스크랩
 challenges/daily_soul/tmp/
+
+shorts/gomgom/blendertest/*.tgz
+shorts/gomgom/blendertest/*.json
+shorts/gomgom/blendertest/*.blend*
+shorts/gomgom/blendertest/render/
