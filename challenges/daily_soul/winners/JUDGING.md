@@ -22,3 +22,4 @@
 - Quality는 7~9로 변별력 낮고, **Theme·Emotion 9**가 거의 필수. Originality는 날마다 편차 큼(7~9)
 - 사실적 사진 톤과 3D 애니 톤이 모두 당선 → 스타일 자체는 기준이 아님
 - 같은 사람이 여러 날 당선(MacLovin, ramadangonim 등) → 꾸준한 참가자 우대 가능성 있음(확인 안 됨)
+| 10/22 Five More Minutes | 주제 Higgsie | 발표 Higgsie 10/23 01:14 | 축하·DM 안내 Higgsie 03:44 |
