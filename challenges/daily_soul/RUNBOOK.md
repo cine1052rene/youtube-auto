@@ -1,5 +1,6 @@
 # Daily Soul Challenge — 매일 아침 실행 순서
 > ⚠️⚠️ **10/23 사용자 — 크레딧 절약**: 하루 생성은 1회(최대 10장) 기본. 재생성·추가 생성은 사용자가 먼저 요청할 때만. 내가 "더 만들까요?" 제안하지 않음
+> ⭐⭐ **10/24 사용자 — 반전·주제 적합성**: 하트 전에 "그림만 보고 주제를 맞힐 수 있나"를 따로 점검(프롬프트 일치와 별개). 반전은 ①뻔한 이야기(설정)가 먼저 읽히고 ②그 본질을 엎는 증거가 같은 화면에 보여야 함. 그냥 예상 밖·이상한 상황은 안 읽힘
 
 > ⭐⭐ **10/12 사용자 — 글자 문구 규칙(당분간)**: 프롬프트 끝에 "Any visible text must be real words exactly as printed in a dictionary or a published newspaper."(English도 넣지 않음) **한 문장만**. 금지문(no gibberish·no Korean/Chinese/Japanese·no subtitles·no watermark 등)은 넣지 않음 — 나라·언어 단어가 오히려 그 얼굴·문자를 끌어옴. 국적·지역 단어 대신 외형 묘사, 인물은 다양한 외모로 지정 (10/6 English-only 문구는 폐기)
 > ⭐ **10/13 사용자 — 보관 규칙**: 우리 이미지는 힉스필드 Assets에 프롬프트와 함께 남으므로 PC엔 채점용 임시 보관만. 하트 끝난 날 다음 날 아침에 전날 폴더 png/jpg 삭제(prompts.txt·gen.log는 깃에 유지), tmp 캡처도 삭제. 대신 **당선작 자료실 winners/** 에 날짜별 주제·당선 5장 점수·프롬프트·분석·작은 카드 jpg를 매일 아침 hall-of-fame 확인 때 추가(winners/README.md)
