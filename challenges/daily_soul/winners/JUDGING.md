@@ -24,3 +24,4 @@
 - 같은 사람이 여러 날 당선(MacLovin, ramadangonim 등) → 꾸준한 참가자 우대 가능성 있음(확인 안 됨)
 | 10/22 Five More Minutes | 주제 Higgsie | 발표 Higgsie 10/23 01:14 | 축하·DM 안내 Higgsie 03:44 |
 | 10/23 Main Character Energy | 주제 Higgsie | 발표 Higgsie 10/24 01:41 | |
+| 10/24 Plot Twist | 주제 Higgsie | 발표 Higgsie 10/25 01:19 | 당선 42·42·41·41·41, 역할 반전·코미디 |
