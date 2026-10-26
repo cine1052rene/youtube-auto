@@ -25,3 +25,4 @@
 | 10/22 Five More Minutes | 주제 Higgsie | 발표 Higgsie 10/23 01:14 | 축하·DM 안내 Higgsie 03:44 |
 | 10/23 Main Character Energy | 주제 Higgsie | 발표 Higgsie 10/24 01:41 | |
 | 10/24 Plot Twist | 주제 Higgsie | 발표 Higgsie 10/25 01:19 | 당선 42·42·41·41·41, 역할 반전·코미디 |
+| 10/25 Haunted Ordinary | 주제 Higgsie | 발표 Higgsie 10/26 03:38 | 당선 42·41·40·40·39, 집안 세탁 소품·어두운 톤·사람 1명 |
