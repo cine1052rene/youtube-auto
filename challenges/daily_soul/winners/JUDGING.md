@@ -27,3 +27,4 @@
 | 10/24 Plot Twist | 주제 Higgsie | 발표 Higgsie 10/25 01:19 | 당선 42·42·41·41·41, 역할 반전·코미디 |
 | 10/25 Haunted Ordinary | 주제 Higgsie | 발표 Higgsie 10/26 03:38 | 당선 42·41·40·40·39, 집안 세탁 소품·어두운 톤·사람 1명 |
 | 10/26 Wrong Century | 주제 Higgsie | 발표 Higgsie 10/27 02:14 | 당선 42·42·42·41·39, 시대 착오를 중앙에 크게·일상 장소 vs 시대 인물 |
+| 10/27 Costume Fail | 주제 Higgsie | 발표 Higgsie 10/28 01:24 | 당선 44·42·42·41·40, 동물이 코스튬 착각·장소와 의미 충돌 |
