@@ -33,3 +33,18 @@
 | 08 늑대인간 부두 | ✓ | △ 오리 작음 | △ 으르렁 | 어두움 | 6 | 7 | 6 | 6 | 7 | 32 | 제외 |
 | 10 프랑켄+비눗방울 | ✓ | ✓ | ✗ X자 단추 눈(만화) | 만화풍 | 6 | 6 | 7 | 6 | 7 | 32 | 제외 |
 - 최종 Favourites 3 (20:01 확인): 06 사신 민들레 · 01 뱀파이어 마늘 · 04 마녀 송풍기
+
+## 분석 (사용자: 늑대인간이 인형옷 같음 + 거부된 그림 원인)
+### 실패 2장 = 서버 상태 `ip_detected` (저작권 캐릭터 판정, 크레딧 미차감)
+- 02 "classic pale vampire in a **black and red cape**" → 유니버설 드라큘라(벨라 루고시) 외형
+- 09 "classic **green Frankenstein monster with neck bolts** and a stitched forehead" → 유니버설 프랑켄슈타인 외형(초록 피부+목 볼트+평평한 머리는 유니버설 저작 디자인)
+- 같은 문장의 03·10은 통과 → 글자가 아니라 **결과 그림이 원작과 닮았을 때 차단**. 통과한 03(헐크 같음)·10(만화 X눈)이 이상하게 나온 것도 원작에서 멀어진 결과물만 살아남은 탓
+- 참고: 10/28 04(테이프 넘는 십대 소녀+어둠 속 형체)는 `nsfw` — '십대 소녀+공포 위협' 조합으로 추정
+### 늑대인간이 인형옷처럼 보인 이유 (07)
+- "huge **hairy** classic werewolf in **torn trousers** walks stiffly **on tiptoe**, **arms raised**" → 사람 체형 그대로 서서 바지 입고 팔 벌림 = 털옷 입은 사람. 털(hairy)만 강조하고 늑대 골격(주둥이·꺾인 뒷다리·근육) 묘사 없음
+- 카메라를 오리 높이·전신 원경으로 둬서 얼굴이 작고 실루엣만 남음 → 마스코트처럼 보임. 'comedy' 단어도 분장 쪽으로 끌어당김
+- 08은 "massive werewolf … clawed hands"로 짐승 쪽이 더 나왔지만 으르렁 얼굴
+### 다음에 고칠 점
+- 늑대 해부 구조 명시: long wolf snout with wet black nose and bared fangs, digitigrade bent wolf legs, lean muscular body with patchy coarse fur, no clothing, practical-effects creature quality, **not a costume, not a mascot suit**
+- 얼굴 클로즈업(겁먹은 눈·납작한 귀)을 화면의 주인공으로, 오리는 앞쪽 발치에 크게
+- 고전 괴물은 원작 상징(초록 피부+목 볼트, 검붉은 망토+올백) 대신 **원형만** 묘사: "a towering stitched-together giant", "an ancient pale aristocrat with long fangs"
