@@ -48,3 +48,10 @@
 - 늑대 해부 구조 명시: long wolf snout with wet black nose and bared fangs, digitigrade bent wolf legs, lean muscular body with patchy coarse fur, no clothing, practical-effects creature quality, **not a costume, not a mascot suit**
 - 얼굴 클로즈업(겁먹은 눈·납작한 귀)을 화면의 주인공으로, 오리는 앞쪽 발치에 크게
 - 고전 괴물은 원작 상징(초록 피부+목 볼트, 검붉은 망토+올백) 대신 **원형만** 묘사: "a towering stitched-together giant", "an ancient pale aristocrat with long fangs"
+
+## v2 늑대인간 재생성 (2장 0.24cr, 잔액 2233.92)
+| # | ①고전 괴물 | ②귀여운 대상 | ③겁먹음 | 결함 | 합 | 판정 |
+|---|---|---|---|---|---|---|
+| 01 오리 행렬 로우앵글 | △ 인형옷은 해결, 대신 주둥이가 개미핥기처럼 길고 네발 짐승 → 늑대인간으로 안 읽힘 | ✓ 오리 6마리 크게 | △ 휘둥그레 눈·멈칫한 손 | 주둥이 비정상 | 37 | 하트 보류 |
+| 02 바위 위 오리 클로즈업 | ✓ 늑대인간 얼굴 | ✓ | ✗ 입 벌리고 웃는 듯·눈 가늘게 → 오리를 잡아먹으려는 얼굴 | — | 33 | 제외 |
+- 원인: "long wolf snout"를 강조하자 주둥이 과장(01), "bared fangs"가 공포 대신 위협 표정을 만듦(02). 겁먹음은 이빨 대신 "mouth closed, lower lip trembling, ears flat, tail tucked"로 써야 함
