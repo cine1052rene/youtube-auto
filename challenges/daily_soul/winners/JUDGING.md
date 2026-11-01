@@ -50,3 +50,4 @@
 | 10/30 Last Train After Midnight | 주제 Higgsie | 발표 Higgsie 10/31 01:08 | 당선 45·43·43·43·39, 커트 39로 하락, 1위 Prompt 9(캡션 한 줄) |
 - 10/31 보정: Prompt는 8이 기본이나 **캡션 한 줄이 장면을 정확히 말할 때 9** 가능 → 게시 때 짧은 캡션 같이 올리기 권장(사용자 업로드 시)
 | 10/31 Wrong House | 주제 Higgsie | 발표 Higgsie 11/1 01:30 | 당선 43·42·41·41, 코스튬↔집주인 천적 반전(쥐-고양이, 바퀴-살충제) |
+| 11/1 Monster Influencers | 주제 Higgsie | 발표 Higgsie 11/2 03:03 | 당선 ~44·43·42·40·40, 같은 소재(해골·드래곤)도 Quality 차이로 갈림 |
