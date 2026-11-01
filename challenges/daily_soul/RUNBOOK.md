@@ -1,4 +1,5 @@
 # Daily Soul Challenge — 매일 아침 실행 순서
+> ⚠️⚠️ **11/2 핵심 발견**: 10/10부터 model.txt=soul_cinematic으로 생성해 왔는데 런북 규칙은 Soul 2.0. 11/1 1·2위 모두 **Soul 2.0**(공유 페이지 확인). 앞으로 model.txt=text2image_soul_v2. 프롬프트엔 ①밝은 실제 광원 방향 ②색 4~5개 이름 ③카메라·렌즈·필름스톡·그레인 ④"moment frozen" ⑤정돈된 보조 소품 ⑥톤 한 문장 (winners/2026-11-01_prompts.md)
 > ⚠️ **11/1 창 지정 사고**: win.ps1 -title "Higgsfield"는 디스코드("Higgsfield AI - Discord")에도 걸림 → 앱은 반드시 "AI-native" 또는 "Higgsfield - Assets"로 지정
 > ⭐⭐ **10/30 기준점 재정립(역산)**: Prompt 8 고정(변별력 0), Quality 9~10이 당선 기본, 커트라인 42. 우리 자체 점수는 3~4점 과대 → 하트 기준선 자체 42+. Originality 10 = 그 존재의 본성 논리가 있는 비틀기(중복 소재여도 OK). Emotion 9 = 전신 동작. 상세 winners/JUDGING.md
 > ⚠️ **10/29 ip_detected 원인**: 고전 괴물을 유니버설 원작 외형(초록 피부+목 볼트 프랑켄, 검붉은 망토 드라큘라)으로 쓰면 결과물이 닮을 때 차단. 상징 대신 원형만 묘사. 털 괴물은 해부 구조(주둥이·꺾인 다리) 안 쓰면 인형옷처럼 나옴
