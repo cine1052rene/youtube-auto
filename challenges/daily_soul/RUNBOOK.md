@@ -1,4 +1,5 @@
 # Daily Soul Challenge — 매일 아침 실행 순서
+> ⭐ **11/2 메일은 이 프로젝트 업무 아님** — 메일 확인·관리는 법인관리 프로젝트 담당(아침 루틴에서 메일 체크 제외)
 > ⚠️ **11/2 Soul 2.0 ip_detected**: "superhero in a ... suit"+망토는 7/10 거부 → 평상복 일반인 능력자로 쓰면 통과(모델 text2image_soul_v2)
 > ⚠️⚠️ **11/2 핵심 발견**: 10/10부터 model.txt=soul_cinematic으로 생성해 왔는데 런북 규칙은 Soul 2.0. 11/1 1·2위 모두 **Soul 2.0**(공유 페이지 확인). 앞으로 model.txt=text2image_soul_v2. 프롬프트엔 ①밝은 실제 광원 방향 ②색 4~5개 이름 ③카메라·렌즈·필름스톡·그레인 ④"moment frozen" ⑤정돈된 보조 소품 ⑥톤 한 문장 (winners/2026-11-01_prompts.md)
 > ⚠️ **11/1 창 지정 사고**: win.ps1 -title "Higgsfield"는 디스코드("Higgsfield AI - Discord")에도 걸림 → 앱은 반드시 "AI-native" 또는 "Higgsfield - Assets"로 지정
