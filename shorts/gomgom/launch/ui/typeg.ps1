@@ -8,11 +8,12 @@ function FG(){$s=New-Object Text.StringBuilder 256;[G]::GetWindowText([G]::GetFo
 $keys = Get-Content $file -Raw -Encoding UTF8; $keys=$keys.TrimEnd("`r","`n")
 $i=0
 while($i -lt $keys.Length){
-  $f=FG; if(($f -notlike "*휴대폰*" -and $f -notlike "*S23*")){ "ABORT at $i fg=$f"; exit 1 }
+  $f=FG; if(($f -notlike "*휴대폰*" -and $f -notlike "*S2*")){ "ABORT at $i fg=$f"; exit 1 }
   $c=$keys[$i]
   if($c -eq '{'){ $j=$keys.IndexOf('}',$i+1); if($j -eq $i+1){$j=$keys.IndexOf('}',$i+2)}; $tok=$keys.Substring($i,$j-$i+1); $i=$j+1 }
   else { $tok=[string]$c; $i++ }
   [System.Windows.Forms.SendKeys]::SendWait($tok); Start-Sleep -Milliseconds $ms
 }
 "DONE"
+
 
