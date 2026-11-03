@@ -20,7 +20,7 @@ BEHIND_MOV = (", seen from behind the whole time, its head does not turn, the ca
 UMB = "a brand-new bright yellow umbrella with a curved wooden handle"
 
 EP11 = [
-    ("01", f"close eye level shot of Gomgom standing in a cozy felt entryway holding {UMB}, closed, with both paws and gazing at it with its mouth softly open in delight and no teeth, tiny Kong sitting at the very top center of Gomgom's head between its two round ears, a wooden shoe rack with little boots, coat hooks, a round window with rain outside, a doormat",
+    ("01", f"close eye level shot of Gomgom standing in a cozy felt entryway holding {UMB}, closed, with both paws and gazing at it with its mouth softly open in delight and no teeth, tiny Kong sitting at the very top center of Gomgom's head between its two round ears, a wooden shoe rack with little boots, coat hooks, a round window with rain outside, a plain striped doormat with no letters or words",
      "Gomgom gently turns the closed umbrella in its paws to admire it and tilts its head, tiny Kong on its head tilts its head too, the camera slowly rises from low in front of Gomgom, Kong stays tiny", G, 4),
     ("02", "spectacular view through a big arched window speckled with raindrops, Gomgom inside hugging a closed bright yellow umbrella and pressing its nose to the glass, outside a rainy miniature felt village with glowing lanterns, puddles, cobblestone streets, flower boxes and tiny rooftops, warm light inside, cool blue rain outside",
      "Gomgom presses its nose to the window and bounces happily on its feet while hugging the umbrella, the rain keeps falling outside the window, the camera moves slowly from outside the glass toward Gomgom", GO, 4),
@@ -40,7 +40,7 @@ EP11 = [
      "Gomgom keeps its eyes closed and its gentle closed-mouth smile the whole time, exactly one small mouth that never opens, raindrops drip from the umbrella edge, tiny Kong sways a little, the camera slowly arcs beside Gomgom's face, Kong stays tiny", G, 4),
     ("10", "low angle shot by a puddle on a cobblestone path as the rain stops, sunlight breaking through the clouds lighting up the bright yellow umbrella, Gomgom tilting the umbrella back to look up at the sky, tiny Kong standing on both little feet on a flat round stepping stone beside the puddle, Kong only as tall as a small daisy growing beside the stone and one third the width of Gomgom's head, sparkling raindrops on flowers",
      "sunlight spreads across the path, Gomgom gently twirls the umbrella and smiles with its mouth closed, tiny Kong flutters its small wings a little while staying standing on the stone, Kong never jumps or flies, the camera rises slowly from puddle level, Kong stays tiny", G, 4),
-    ("11", "wide shot from behind of Gomgom standing in an open felt cottage doorway in the evening after the rain, the bright yellow umbrella resting in an umbrella stand beside the door, tiny Kong sitting at the very top center of Gomgom's head, a soft rainbow over the wet village and pink sky beyond, a welcome mat, potted flowers" + BACK,
+    ("11", "wide shot from behind of Gomgom standing in an open felt cottage doorway in the evening after the rain, the bright yellow umbrella resting in an umbrella stand beside the door, tiny Kong sitting at the very top center of Gomgom's head, a soft rainbow over the wet village and pink sky beyond, a plain striped doormat with no letters or words, potted flowers" + BACK,
      "Gomgom stands still gazing at the rainbow" + BEHIND_MOV, G, 8),
 ]
 
