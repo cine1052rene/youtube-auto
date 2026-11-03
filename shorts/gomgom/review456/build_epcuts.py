@@ -12,6 +12,8 @@ sh(["ffmpeg", "-v", "error", "-y", "-i", str(master), "-vf", "scale=540:960", "-
 sh(["ffmpeg", "-v", "error", "-y", "-ss", "5", "-i", str(master), "-frames:v", "1", "-vf", "scale=360:640", str(out / "master.jpg")])
 notes = json.load(open(G / f"ep{ep}/prod/cut_notes.json", encoding="utf-8")) if (G / f"ep{ep}/prod/cut_notes.json").exists() else {}
 cards = ""
+_pf = G / f"launch/ui/ep{ep}_pin.txt"; _tf = G / f"launch/ui/ep{ep}_title.txt"
+PIN = (f'<div style="flex:1;min-width:260px;max-width:520px;background:#fff;border:1px solid #EADFCF;border-radius:10px;padding:10px 12px"><div class="t"><b>유튜브 제목</b></div><div class="l">{html.escape(_tf.read_text(encoding="utf-8").strip()) if _tf.exists() else ""}</div><div class="t" style="margin-top:8px"><b>📌 고정 댓글 (공개 후 등록)</b></div><div class="l" style="white-space:pre-wrap">{html.escape(_pf.read_text(encoding="utf-8").strip())}</div></div>') if _pf.exists() else ""
 PUB = {"09":"금 10/30 20:00","10":"화 11/3 20:00","11":"금 11/6 20:00","12":"화 11/10 20:00"}
 for s in d["shots"]:
     cl = G / f"ep{ep}/prod/clips/{s['id']}.mp4"
@@ -25,7 +27,7 @@ for s in d["shots"]:
 <h1>🎬 {ep}화 — {html.escape(d['episode'][3:])} · 컷별 점검</h1>
 <p class="soft">완성본 {dur:.1f}초 · {len(d['shots'])}컷 · 1.15배 · 제목 카드 3초 · 루프 · 효과음 없음 (공개 제안: {PUB.get(ep,"")})</p>
 <section class="rule"><h2>골라 주실 것</h2><p>고칠 컷이 있으면 <b>화·컷 번호와 이유</b>로 말씀해 주세요. 괜찮으면 "{ep}화 OK"라고만 하셔도 돼요. OK를 주시면 유튜브 예약 업로드를 진행해요.</p></section>
-<section><h2>완성본</h2><div class="row"><div class="c now"><video src="master.mp4" poster="master.jpg" controls playsinline preload="metadata" loop></video><div class="t"><b>{ep}화 완성본</b> · {dur:.1f}초</div></div></div></section>
+<section><h2>완성본</h2><div class="row"><div class="c now"><video src="master.mp4" poster="master.jpg" controls playsinline preload="metadata" loop></video><div class="t"><b>{ep}화 완성본</b> · {dur:.1f}초</div></div>{PIN}</div></section>
 <section><h2>컷별 영상</h2><div class="row">{cards}</div></section>
 <p class="soft">파일: C:\project\youtube\shorts\gomgom\ep{ep}\prod\out\ep{ep}_master.mp4</p></div><script>document.querySelectorAll('video').forEach(v=>v.addEventListener('play',()=>document.querySelectorAll('video').forEach(o=>{{if(o!==v)o.pause()}})));</script></body></html>""", encoding="utf-8")
 print(out, round(dur, 1))
