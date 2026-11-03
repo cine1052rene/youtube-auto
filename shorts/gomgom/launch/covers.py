@@ -15,6 +15,7 @@ EPS = [
     ('09', '../ep09/prod/img/01.png', ['하다 만 일이', '자꾸 떠오를 때']),
     ('10', '../ep10/prod/img/03.png', ['고를 게 많아서', '못 고를 때']),
     ('11', '../ep11/prod/img/01.png', ['갖고 나니 시들한 이유', '쾌락 적응']),
+    ('12', '../ep12/prod/img/08.png', ['힘든 여행도', '끝이 좋으면']),
 ]
 W, H = 1080, 1920
 BROWN = (92, 60, 40)
@@ -25,7 +26,7 @@ def fit(im, w, h):
     x, y = (im.width - w) // 2, (im.height - h) // 2
     return im.crop((x, y, x + w, y + h))
 
-BOTTOM = {'11', '04', '05'}  # 위쪽에 콩이가 있어 제목을 아래로
+BOTTOM = {'11', '12', '04', '05'}  # 위쪽에 콩이가 있어 제목을 아래로
 
 def cover(ep, src, lines):
     im = fit(Image.open(os.path.join(BASE, src)).convert('RGB'), W, H)
