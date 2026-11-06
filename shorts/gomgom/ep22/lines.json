@@ -1,0 +1,120 @@
+{
+ "episode": "22 남을 위해 쓴 돈이 더 기쁜 이유",
+ "title": "선물할 때 더 기쁜 이유, 남을 위해 쓴 돈",
+ "hook": [
+  "내 것보다",
+  "선물이 더 기쁜 이유"
+ ],
+ "concept": "친사회적 소비",
+ "cast": "숲속 가게 주인 다람쥐, 부엉이 할아버지(설명)",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "선물 고를 때가 더 설렐 때 있죠?",
+   "plan_img": "숲속 가게 앞, 곰곰이가 진열장을 두리번",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이 주머니에 동전 몇 개가 생겼어요.",
+   "plan_img": "곰곰이가 가방에서 반짝이는 동전 세 개를 꺼냄",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "꿀 한 병을 살까, 한참 고민했죠.",
+   "plan_img": "꿀단지 진열대 앞에서 군침, 고개 갸웃",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그러다 콩이가 좋아하는 해바라기씨를 샀어요.",
+   "plan_img": "다람쥐 주인이 해바라기씨 봉지를 건넴",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "콩이가 신나서 날개를 파닥였어요.",
+   "plan_img": "콩이가 봉지 위에서 날개 파닥이며 깡충깡충",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그런데 더 신난 건 곰곰이였죠.",
+   "plan_img": "곰곰이가 콩이를 보며 더 활짝 웃고 들썩들썩",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "2008년 한 실험에서 사람들에게 돈을 나눠 줬어요.",
+   "plan_img": "부엉이 할아버지가 봉투 두 개를 들고 설명",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "남을 위해 쓴 사람이 더 행복했대요.",
+   "plan_img": "선물 받은 친구들의 얼굴과 주는 쪽의 웃음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "금액이 크든 작든 상관없었고요.",
+   "plan_img": "작은 동전과 큰 동전이 저울에서 똑같이 반짝",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 남은 동전으로 친구들 사탕도 샀어요.",
+   "plan_img": "곰곰이가 사탕 봉지를 친구들에게 나눠 줌",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "최근에 누군가를 위해 쓴 작은 돈, 기억나요?",
+   "plan_img": "해 질 녘 가게 앞 벤치, 나눠 먹는 친구들(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 엘리자베스 던·라라 아크닌·마이클 노턴(Dunn, Aknin & Norton, 2008, Science). 참가자에게 5달러 또는 20달러를 주고 그날 오후 5시까지 자신 또는 남을 위해 쓰게 했더니, 남을 위해 쓴 사람들이 저녁에 더 행복했다. 금액 크기는 행복에 차이를 만들지 않았다."
+}

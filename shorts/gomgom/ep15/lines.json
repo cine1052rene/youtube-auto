@@ -1,0 +1,120 @@
+{
+ "episode": "15 모르는 걸 모른다고 말하는 용기",
+ "title": "모르는데 아는 척했을 때, 공자가 말한 진짜 앎",
+ "hook": [
+  "아는 척",
+  "안 해도 괜찮아"
+ ],
+ "concept": "지지위지지 부지위부지(知之爲知之 不知爲不知)",
+ "cast": "두루미 선생님(공자) — 흰 깃털, 붉은 정수리, 작은 두루마리",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "모르는데 아는 척한 적, 있죠?",
+   "plan_img": "밤 언덕, 곰곰이가 어색하게 웃으며 땀 한 방울",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "친구들이 별자리 이름을 물었어요.",
+   "plan_img": "돗자리 위 친구들이 하늘을 가리키며 곰곰이를 봄",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 아는 척 고개를 끄덕였죠.",
+   "plan_img": "곰곰이가 턱을 만지며 끄덕끄덕, 눈은 갈팡질팡",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "질문이 이어지자 얼굴이 빨개졌어요.",
+   "plan_img": "곰곰이 클로즈업, 볼이 점점 빨개짐, 콩이가 고개 갸웃",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "두루미 선생님이 다가와 말했어요.",
+   "plan_img": "두루미 선생님이 두루마리를 들고 언덕으로 걸어옴",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "아는 건 안다, 모르는 건 모른다고 하는 것.",
+   "plan_img": "두루미 선생님이 날개 끝으로 곰곰이 어깨를 토닥",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "공자는 그게 진짜 앎이라고 했대요.",
+   "plan_img": "두루마리가 펼쳐지고 별빛이 비침(글자 없음)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 용기 내 말했어요. '잘 모르겠어, 알려줄래?'",
+   "plan_img": "곰곰이가 친구들을 보며 손을 들고 수줍게 말함",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그러자 모두 함께 별을 찾기 시작했죠.",
+   "plan_img": "다 함께 누워 하늘을 가리킴, 콩이가 날아올라 별을 가리킴",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "모른다는 말이 배움의 문을 열었어요.",
+   "plan_img": "별자리가 하나씩 이어지듯 반짝이는 하늘(와이드)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "최근에 아는 척했던 순간, 있었나요?",
+   "plan_img": "언덕 위 모두의 뒷모습과 은하수(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 『논어』 위정편 17장. 공자가 제자 자로에게: '아는 것을 안다고 하고, 모르는 것을 모른다고 하는 것, 이것이 아는 것이다(知之爲知之 不知爲不知 是知也).'"
+}

@@ -1,0 +1,120 @@
+{
+ "episode": "18 오늘 하루의 작은 따뜻함",
+ "title": "오늘 하루 작은 따뜻함, 덴마크의 휘게",
+ "hook": [
+  "오늘의",
+  "작은 따뜻함"
+ ],
+ "concept": "휘게(hygge)",
+ "cast": "시즌 3 조연 총출동 — 거북이 할아버지, 물소 할아버지, 두루미 선생님, 너구리 도예가",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "오늘 하루, 작은 따뜻함 하나 있었나요?",
+   "plan_img": "눈 내리는 저녁, 불 켜진 곰곰이네 오두막(와이드)",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "찬 바람 부는 저녁, 곰곰이네 창에 불이 켜졌어요.",
+   "plan_img": "창문 밖에서 안을 들여다봄, 따뜻한 불빛",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 촛불을 켜고 담요를 폈죠.",
+   "plan_img": "곰곰이가 촛불을 켜고 체크 담요를 펼침",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "하나둘 친구들이 찾아왔어요.",
+   "plan_img": "문이 열리고 눈 묻은 친구들이 들어옴",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "거북이 할아버지, 두루미 선생님도요.",
+   "plan_img": "거북이 할아버지·물소 할아버지·두루미 선생님·너구리 도예가가 인사",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "덴마크 사람들은 이런 순간을 '휘게'라고 불러요.",
+   "plan_img": "벽난로 앞에 모두 둘러앉음(하이 앵글)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "편안하고 따뜻하게 함께 있는 느낌이래요.",
+   "plan_img": "담요 하나를 나눠 덮은 친구들, 촛불 흔들림",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "대단한 일은 없었어요. 코코아를 나눠 마셨죠.",
+   "plan_img": "곰곰이가 금빛 찻잔(17화)에 코코아를 따라 돌림",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "콩이는 담요 위에서 꾸벅꾸벅 졸았고요.",
+   "plan_img": "콩이가 담요 위에서 졸다 고개를 떨굼",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "천천히 가도 괜찮다는 걸, 모두 알고 있었어요.",
+   "plan_img": "창밖 눈 내리는 숲, 종이배·굽은 나무가 눈에 덮임",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "여러분만의 휘게 한 조각은 뭔가요?",
+   "plan_img": "오두막 창 불빛과 눈, 카메라 천천히 멀어짐(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 휘게(hygge): 편안하고 따뜻하게 함께 있는 감각을 뜻하는 덴마크어. 촛불·담요·따뜻한 음료·가까운 사람들과의 시간으로 자주 설명된다. 시즌 3 마무리 편."
+}

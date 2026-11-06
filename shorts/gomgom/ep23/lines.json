@@ -1,0 +1,120 @@
+{
+ "episode": "23 하늘을 보면 마음이 넓어지는 이유",
+ "title": "고민이 클 때 하늘을 보면 좋은 이유, 경외감",
+ "hook": [
+  "고민이 클 때",
+  "하늘을 봐요"
+ ],
+ "concept": "경외감(awe)",
+ "cast": "숲속 친구들",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "고민이 너무 커 보일 때, 있죠?",
+   "plan_img": "방 안, 곰곰이가 걱정 쪽지 더미에 파묻힘",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 걱정 쪽지에 파묻혀 있었어요.",
+   "plan_img": "쪽지가 산처럼 쌓이고 곰곰이 귀만 빼꼼",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "콩이가 곰곰이를 밖으로 끌고 나갔죠.",
+   "plan_img": "콩이가 곰곰이 귀를 물고 문 밖으로 끔",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "언덕 위, 별이 쏟아지는 하늘이었어요.",
+   "plan_img": "언덕 와이드, 은하수와 별똥별, 아주 작은 곰곰이",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "'와…' 곰곰이 입이 저절로 벌어졌죠.",
+   "plan_img": "곰곰이 얼굴 클로즈업, 눈에 별이 비침, 입 살짝 벌림",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "이 마음을 '경외감'이라고 한대요.",
+   "plan_img": "하늘 전체가 천천히 도는 듯한 별빛",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "거대한 것 앞에서 내가 작게 느껴지는 마음이에요.",
+   "plan_img": "거대한 하늘 아래 점처럼 작은 곰곰이·콩이(익스트림 와이드)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "한 실험에선 큰 나무를 1분 올려다본 사람들이",
+   "plan_img": "낮의 거대한 나무 숲, 친구들이 고개 들어 올려다봄",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "떨어진 펜을 더 많이 주워 줬대요.",
+   "plan_img": "친구가 떨어뜨린 연필을 다른 친구들이 주워 줌",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 콩이를 안고 하늘로 둥실 떠올랐어요.",
+   "plan_img": "곰곰이가 콩이를 안고 별 사이로 떠오름",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "최근에 '와…' 하고 올려다본 것, 있나요?",
+   "plan_img": "별하늘 속 떠 있는 둘, 카메라 멀어짐(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 대커 켈트너·조너선 하이트(Keltner & Haidt, 2003)가 정리한 '경외감': 거대한 것 앞에서 느끼는 마음. 폴 피프 연구팀(Piff et al., 2015) 실험에서 키 큰 유칼립투스 나무를 1분 올려다본 사람들은 건물을 본 사람들보다 실험자가 떨어뜨린 펜을 더 많이 주워 줬다."
+}

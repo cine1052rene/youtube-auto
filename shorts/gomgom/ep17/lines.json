@@ -1,0 +1,120 @@
+{
+ "episode": "17 깨진 그릇도 아름답다",
+ "title": "소중한 게 깨졌을 때, 금으로 잇는 킨츠기",
+ "hook": [
+  "깨진 자리가",
+  "더 빛나는 이유"
+ ],
+ "concept": "킨츠기·와비사비",
+ "cast": "너구리 도예가 — 갈색 앞치마, 작은 붓, 금가루 단지",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "아끼던 게 깨지면 속상하죠?",
+   "plan_img": "곰곰이가 금 간 찻잔을 두 손에 들고 시무룩",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이가 제일 좋아하던 찻잔에 금이 갔어요.",
+   "plan_img": "찻잔 클로즈업, 하늘색 찻잔에 금 간 선",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "버려야 하나, 한참 바라봤죠.",
+   "plan_img": "창가 탁자, 곰곰이가 턱 괴고 찻잔을 봄, 콩이도 옆에서 봄",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "너구리 도예가가 금빛 가루를 꺼냈어요.",
+   "plan_img": "도자기 공방, 너구리 도예가가 금가루 단지를 엶",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "깨진 틈을 금으로 잇는 '킨츠기'예요.",
+   "plan_img": "붓으로 금 간 선을 따라 금빛을 칠함(클로즈업)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "옛 일본에서 시작됐다고 전해져요.",
+   "plan_img": "공방 선반 가득 금빛 선이 들어간 그릇들",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "흠을 숨기지 않고 오히려 빛나게 하죠.",
+   "plan_img": "햇빛에 금빛 이음선이 반짝임",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "불완전함 속 아름다움, '와비사비'래요.",
+   "plan_img": "이끼 낀 돌, 이 빠진 그릇, 낙엽 — 고요한 정원",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "이어 붙인 찻잔에 금빛 길이 생겼어요.",
+   "plan_img": "완성된 찻잔을 곰곰이가 받아 듦, 금빛 선이 강줄기처럼",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 그 찻잔이 더 좋아졌대요.",
+   "plan_img": "곰곰이가 찻잔에 코코아를 따라 마심, 콩이가 금빛 선을 따라 걸음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "금이 갔지만 더 소중해진 것, 있나요?",
+   "plan_img": "창가에 놓인 금빛 찻잔과 노을(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 킨츠기(金継ぎ): 깨진 도자기를 옻으로 붙이고 이음매를 금가루로 장식하는 일본의 수리법. 15세기 쇼군 아시카가 요시마사의 찻잔 일화에서 시작됐다고 전해진다(전설 성격 — 대본에서도 '전해져요'로 말함). 와비사비: 불완전하고 덧없는 것에서 아름다움을 보는 미의식."
+}

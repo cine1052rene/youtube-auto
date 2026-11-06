@@ -1,0 +1,120 @@
+{
+ "episode": "13 쓸모없어 보여도 괜찮아",
+ "title": "나만 쓸모없는 것 같을 때, 장자의 굽은 나무",
+ "hook": [
+  "쓸모없어 보여도",
+  "괜찮은 이유"
+ ],
+ "concept": "무용지용(無用之用)",
+ "cast": "거북이 할아버지(장자) — 짙은 녹색 등껍질, 흰 수염, 삿갓",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "나만 쓸모없는 것 같은 날, 있죠?",
+   "plan_img": "작업장 구석, 곰곰이가 빈손으로 고개 숙이고 앉아 있음",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 오늘 아무 일도 못 했어요.",
+   "plan_img": "책상 위 뒤죽박죽 미완성 공작물, 곰곰이 한숨",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "친구들은 다 바쁘게 뭔가 해내는데요.",
+   "plan_img": "창밖 마을, 다람쥐·고슴도치가 바쁘게 나르고 짓는 모습",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그때 숲에서 굽은 나무를 만났어요.",
+   "plan_img": "숲길 끝, 구불구불 굽은 거대한 상수리나무 앞에 선 곰곰이(로우 앵글)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "목수는 쓸모없는 나무라며 지나쳤대요.",
+   "plan_img": "옛이야기 장면: 연장 상자를 멘 목수 비버가 나무를 보고 고개 저으며 지나감",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "옛 철학자 장자의 이야기예요.",
+   "plan_img": "나무 아래 거북이 할아버지(삿갓·흰 수염)가 곰곰이에게 이야기",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그래서 베이지 않고 오래 살았대요.",
+   "plan_img": "사계절이 지나는 나무(꽃·초록·단풍·눈), 나무만 그대로",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "지금은 모두가 쉬어 가는 큰 그늘이 됐죠.",
+   "plan_img": "나무 그늘 아래 동물 친구들이 낮잠·소풍, 나뭇잎 사이 햇살",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "쓸모없어 보여서 지켜진 쓸모, '무용지용'이래요.",
+   "plan_img": "거북이 할아버지가 나무 줄기를 쓰다듬으며 미소",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이도 그늘에 앉아 친구들 쉬는 걸 봤어요.",
+   "plan_img": "곰곰이가 그늘에 앉고 콩이가 무릎 위, 친구들이 곰곰이에게 기댐",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "쓸모없다고 여긴 내 모습, 누군가의 그늘은 아닐까요?",
+   "plan_img": "노을 속 굽은 나무와 곰곰이·콩이 뒷모습(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 『장자』 인간세(人間世). 목수 장석이 사당의 거대한 상수리나무를 '쓸모없는 나무'라며 지나쳤는데, 그날 밤 꿈에 나무가 나타나 '쓸모없기를 바라서 이렇게 오래 살았다'고 말한다. 편 끝: '사람들은 쓸모 있는 것의 쓸모만 알고, 쓸모없는 것의 쓸모는 모른다.'"
+}

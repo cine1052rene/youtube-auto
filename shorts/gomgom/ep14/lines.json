@@ -1,0 +1,120 @@
+{
+ "episode": "14 물처럼 부드럽게",
+ "title": "자꾸 부딪힐 때, 노자가 말한 물처럼",
+ "hook": [
+  "자꾸 부딪힐 때",
+  "물처럼"
+ ],
+ "concept": "상선약수(上善若水)",
+ "cast": "물소 할아버지(노자) — 회색 털, 긴 흰 눈썹, 등에 작은 보따리 (노자가 소를 타고 서쪽으로 떠났다는 후대 전설에서 착안)",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "부딪히는 일만 생기는 날, 있죠?",
+   "plan_img": "곰곰이가 문을 쾅 닫고 나오는 뒷모습, 볼이 빨갛게 화남",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 친구와 말다툼을 하고 나왔어요.",
+   "plan_img": "창 너머 너구리 친구도 팔짱 끼고 등 돌림",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "개울가에 앉아 돌멩이를 던졌죠.",
+   "plan_img": "숲속 개울가, 곰곰이가 작은 돌을 퐁당 던짐, 물결",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그런데 물은 돌을 만나도 다투지 않았어요.",
+   "plan_img": "개울 클로즈업, 큰 돌 앞에서 물이 부드럽게 갈라짐",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "살짝 돌아서, 계속 흘러갔죠.",
+   "plan_img": "위에서 내려다본 개울, 돌을 돌아 반짝이며 흐르는 물",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "노자는 '가장 좋은 것은 물과 같다'고 했어요.",
+   "plan_img": "물소 할아버지가 개울 건너편 바위에 앉아 곰곰이를 봄",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "물은 모두를 이롭게 하면서 다투지 않는대요.",
+   "plan_img": "개울 따라 꽃·풀·물 마시는 새들, 물이 닿는 곳마다 초록",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 종이배를 접어 띄워 봤어요.",
+   "plan_img": "곰곰이가 노란 종이배를 접어 물에 내려놓음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "콩이가 배에 올라 함께 흘러갔죠.",
+   "plan_img": "종이배 뱃머리에서 콩이가 날개를 펴고, 곰곰이가 옆에서 따라 걸음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그 길 끝에서 친구가 기다리고 있었어요.",
+   "plan_img": "개울 하류 다리 위 너구리 친구가 손 흔듦, 곰곰이 미소",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "요즘 부딪히는 돌, 돌아서 갈 수는 없을까요?",
+   "plan_img": "노을 개울, 둘이 나란히 앉아 흘러가는 종이배를 봄(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 『도덕경』 8장 '상선약수(上善若水): 가장 좋은 것은 물과 같다. 물은 만물을 이롭게 하면서도 다투지 않고, 모두가 싫어하는 낮은 곳에 머문다.'"
+}

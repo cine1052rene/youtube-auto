@@ -1,0 +1,120 @@
+{
+ "episode": "20 내가 잘한 게 운 같을 때",
+ "title": "잘해 놓고도 운이라 느낄 때, 가면 현상",
+ "hook": [
+  "잘해 놓고도",
+  "운 같을 때"
+ ],
+ "concept": "가면 현상(impostor phenomenon)",
+ "cast": "부엉이 할아버지(설명), 숲속 친구들(대회 관객)",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "잘해 놓고도 '운이 좋았을 뿐'이라 할 때 있죠?",
+   "plan_img": "무대 뒤, 곰곰이가 상장으로 얼굴을 가림",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이가 숲속 그림 대회에서 상을 받았어요.",
+   "plan_img": "나뭇잎 장식 무대, 친구들 박수, 곰곰이가 상장을 받음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그런데 곰곰이는 상장 뒤로 숨었죠.",
+   "plan_img": "곰곰이가 상장 뒤로 슬금슬금 숨음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "'운이야. 곧 다들 알게 될 거야.'",
+   "plan_img": "곰곰이 머리 위 작은 펠트 가면이 둥실",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "1978년 두 심리학자가 이 마음에 이름을 붙였어요.",
+   "plan_img": "부엉이 할아버지가 오래된 책을 펼침(글자 없음)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "'가면 현상', 잘하는 사람도 자주 느낀대요.",
+   "plan_img": "무대 위 다른 수상자들도 작은 가면을 들고 있음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "콩이가 곰곰이 손을 잡고 어딘가로 데려갔어요.",
+   "plan_img": "콩이가 곰곰이 손가락을 물고 끌고 감",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "밤마다 그림을 그리던 책상이었죠.",
+   "plan_img": "곰곰이네 다락방 책상, 촛불, 물감",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "구겨진 연습 종이가 산처럼 쌓여 있었어요.",
+   "plan_img": "책상 옆 구겨진 종이 더미, 콩이가 그 꼭대기에 섬",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "운이 아니라 매일 밤의 곰곰이가 해낸 거예요.",
+   "plan_img": "곰곰이가 가면을 내려놓고 상장을 벽에 붙이며 미소",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "운이 아니라 내가 해낸 것, 하나 꼽아볼까요?",
+   "plan_img": "벽에 걸린 상장과 창밖 달, 둘의 뒷모습(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 심리학자 폴린 클랜스와 수잰 아임스(Clance & Imes, 1978)가 성취가 높은 여성 150여 명을 상담·관찰하며 이름 붙인 '가면 현상': 성과를 운으로 돌리고 실력이 들통날까 불안해하는 경험. 이후 연구에서 성별과 상관없이 흔하다고 알려졌다."
+}

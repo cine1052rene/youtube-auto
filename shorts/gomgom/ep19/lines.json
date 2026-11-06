@@ -1,0 +1,120 @@
+{
+ "episode": "19 나한테도 친구처럼 말해주기",
+ "title": "나한테만 모질 때, 자기 자비",
+ "hook": [
+  "친구에겐 다정한데",
+  "나한텐 왜?"
+ ],
+ "concept": "자기 자비(self-compassion)",
+ "cast": "조연 없음(곰곰이·콩이 중심)",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "친구에겐 다정한데, 나한텐 모질 때 있죠?",
+   "plan_img": "부엌, 곰곰이가 시커먼 케이크를 들고 망연자실",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이가 케이크를 굽다 태워 버렸어요.",
+   "plan_img": "오븐 문 열자 연기 폴폴, 곰곰이 깜짝",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "'바보같이, 이것도 못 해?' 스스로 꾸짖었죠.",
+   "plan_img": "곰곰이가 제 머리를 콩 쥐어박는 시늉, 볼 빨개짐",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그때 콩이도 쿠키를 태웠어요.",
+   "plan_img": "작은 오븐 앞 콩이가 까만 쿠키 하나를 보고 울상",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 '괜찮아, 다시 하면 돼' 했죠.",
+   "plan_img": "곰곰이가 콩이를 쓰다듬으며 다정하게 웃음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "어? 콩이한텐 이렇게 다정했네요.",
+   "plan_img": "곰곰이가 멈칫, 자기 손을 내려다봄",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "심리학자 크리스틴 네프는 이걸 '자기 자비'라 불렀어요.",
+   "plan_img": "책장 가득한 부엌 한쪽, 따뜻한 햇살",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "친구에게 하듯 나에게도 말해 주는 거예요.",
+   "plan_img": "곰곰이가 자기 가슴의 배지를 토닥토닥",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "실수는 누구나 한다는 걸 기억하면서요.",
+   "plan_img": "창밖 마을, 친구들도 저마다 작은 실수(물 쏟음, 넘어짐)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 거울 속 자신에게 '괜찮아'라고 말했어요.",
+   "plan_img": "거울 앞 곰곰이가 미소, 거울 속 곰곰이도 미소",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "오늘 나에게 해 주고 싶은 한마디는요?",
+   "plan_img": "다시 구운 케이크 앞에 나란히 앉은 둘(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 심리학자 크리스틴 네프(Kristin Neff, 2003)가 정리한 '자기 자비': ① 자신에게 친절하기 ② 실수는 누구나 한다는 보편적 인간성 ③ 감정을 있는 그대로 알아차리기, 세 가지로 이루어진다."
+}

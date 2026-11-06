@@ -1,0 +1,120 @@
+{
+ "episode": "24 감사 세 줄의 힘",
+ "title": "잠들기 전 감사 세 줄, 행복이 오래가는 이유",
+ "hook": [
+  "잠들기 전",
+  "감사 세 줄"
+ ],
+ "concept": "세 가지 좋은 일(Three Good Things)",
+ "cast": "조연 없음. 시즌 4 마무리 편 — 조약돌 속에 지난 화 장면이 스침",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "잠들기 전, 오늘 고마웠던 일 떠올려 본 적 있나요?",
+   "plan_img": "밤 침실, 곰곰이가 이불 속에서 천장을 봄",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 오늘 하루가 별로였다고 생각했어요.",
+   "plan_img": "곰곰이 한숨, 창밖 비",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그때 콩이가 빛나는 조약돌 세 개를 내밀었죠.",
+   "plan_img": "콩이가 베개 위에 빛나는 조약돌 세 개를 굴려 놓음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "하나, 아침 햇살이 따뜻했던 것.",
+   "plan_img": "첫 조약돌 속에 아침 햇살 비친 창가 장면",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "둘, 친구가 꿀빵을 나눠 준 것.",
+   "plan_img": "두 번째 조약돌 속 다람쥐가 꿀빵을 건네는 장면",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "셋, 콩이가 옆에 있어 준 것.",
+   "plan_img": "세 번째 조약돌 속 머리 위 콩이와 곰곰이",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "매일 밤 좋았던 일 세 가지를 적은 사람들은",
+   "plan_img": "곰곰이가 조약돌 세 개를 손바닥에 모음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "반년 뒤까지 더 행복했대요.",
+   "plan_img": "조약돌이 별처럼 침실 천장으로 떠올라 반짝",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "고마움은 찾을수록 더 잘 보이거든요.",
+   "plan_img": "천장의 조약돌 별빛이 점점 늘어남",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "조약돌 속에 그동안의 하루들이 반짝였어요.",
+   "plan_img": "조약돌마다 지난 화 장면이 스침(우산·굽은 나무·금빛 찻잔·별하늘)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "오늘 고마웠던 것 세 가지, 댓글로 남겨 줄래요?",
+   "plan_img": "잠든 곰곰이와 콩이, 머리맡에 빛나는 조약돌 셋(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 마틴 셀리그먼 연구팀(Seligman, Steen, Park & Peterson, 2005): 일주일 동안 매일 밤 '좋았던 일 세 가지와 그 이유'를 적은 사람들은 6개월 뒤까지 행복이 높고 우울이 낮았다. ※ 기획서의 Emmons & McCullough(2003)는 '매주 감사한 일 다섯 가지' 연구라 '세 줄'과 맞지 않아 근거를 2005 연구로 바꿈."
+}

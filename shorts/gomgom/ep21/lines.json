@@ -1,0 +1,120 @@
+{
+ "episode": "21 좋은 친구의 세 가지",
+ "title": "좋은 친구란, 아리스토텔레스의 세 가지 우정",
+ "hook": [
+  "그냥",
+  "너라서 좋은 친구"
+ ],
+ "concept": "아리스토텔레스의 세 가지 우정",
+ "cast": "부엉이 할아버지 — 시즌 1 3화 재등장(곰곰이보다 살짝 큼)",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "내 친구는 어떤 친구일까, 생각해 본 적 있나요?",
+   "plan_img": "다락방, 곰곰이가 친구들 그림을 벽에 붙이며 고민",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 친구들을 떠올려 봤어요.",
+   "plan_img": "벽에 다람쥐·고슴도치·너구리 그림, 실로 연결",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "필요할 때 도와주는 친구, 함께 놀면 즐거운 친구.",
+   "plan_img": "회상: 고슴도치가 짐을 들어줌 / 다람쥐와 술래잡기",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "부엉이 할아버지가 책을 펼쳤어요.",
+   "plan_img": "서재, 부엉이 할아버지가 두꺼운 책을 펼침(글자 없음)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "아리스토텔레스는 우정을 셋으로 나눴대요.",
+   "plan_img": "탁자 위 찻잔 세 개가 나란히",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "쓸모 때문에, 즐거움 때문에, 그리고 서로가 좋아서.",
+   "plan_img": "찻잔 하나씩 불빛이 켜짐",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "앞의 두 우정은 이유가 사라지면 흐려진대요.",
+   "plan_img": "앞의 두 찻잔 김이 천천히 사라짐",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "마지막 우정은 오래 간대요.",
+   "plan_img": "세 번째 찻잔은 계속 따뜻하게 김이 오름",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 머리 위 콩이를 올려다봤어요.",
+   "plan_img": "곰곰이가 눈을 위로 굴려 머리 위 콩이를 봄",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "아무 이유 없이, 그냥 콩이라서 좋았죠.",
+   "plan_img": "곰곰이가 콩이를 손바닥에 올려 마주 보고 웃음, 콩이 날개 파닥",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "그냥 그 사람이라서 좋은 친구, 떠오르나요?",
+   "plan_img": "언덕 위 친구들이 모두 모인 노을(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 아리스토텔레스 『니코마코스 윤리학』 8권. 우정은 유익함 때문에, 즐거움 때문에, 그리고 상대가 좋은 사람이어서(좋음) 맺는 세 가지가 있다. 앞의 둘은 이유가 사라지면 쉽게 끝나고, 좋음에 따른 우정이 가장 완전하고 오래간다."
+}

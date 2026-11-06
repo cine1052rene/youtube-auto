@@ -1,0 +1,120 @@
+{
+ "episode": "16 아픈 건 한 번, 괴로움은 두 번",
+ "title": "넘어진 것보다 자책이 더 아플 때, 두 번째 화살",
+ "hook": [
+  "아픈 건 한 번",
+  "괴로움은 두 번"
+ ],
+ "concept": "두 번째 화살",
+ "cast": "조연 없음(경전 인물은 동물로 그리지 않음). 화살은 말랑한 펠트 화살로 표현",
+ "shots": [
+  {
+   "id": "01",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "아픈 것보다 자책이 더 아플 때, 있죠?",
+   "plan_img": "곰곰이가 무릎을 감싸고 앉아 울상",
+   "plan_mov": "",
+   "plan_note": "훅"
+  },
+  {
+   "id": "02",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이가 돌부리에 걸려 넘어졌어요.",
+   "plan_img": "꽃길에서 곰곰이가 돌부리에 걸려 앞으로 넘어짐, 콩이가 날아오름",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "03",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "무릎이 콕콕 아팠죠.",
+   "plan_img": "무릎 클로즈업, 펠트 무릎에 작은 빨간 자국",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "04",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "그런데 곰곰이는 '난 왜 맨날 이럴까' 했어요.",
+   "plan_img": "곰곰이 머리 위로 먹구름이 작게 생김",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "05",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "옛 경전에는 두 개의 화살 이야기가 있어요.",
+   "plan_img": "말랑한 펠트 화살 두 개가 나란히 떠 있음(동화풍)",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "06",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "첫 번째 화살은 어쩔 수 없는 아픔이에요.",
+   "plan_img": "첫 화살이 무릎 근처 땅에 톡 꽂힘",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "07",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "두 번째 화살은 그 아픔에 내가 쏘는 화살이래요.",
+   "plan_img": "곰곰이가 스스로 두 번째 화살을 들고 있음",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "08",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "괴로움은 대부분 두 번째 화살에서 온대요.",
+   "plan_img": "두 번째 화살 위로 먹구름이 커짐",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "09",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "콩이가 두 번째 화살을 톡 꺾어 줬어요.",
+   "plan_img": "콩이가 부리로 두 번째 화살을 톡 꺾자 먹구름이 걷힘",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "10",
+   "type": "V",
+   "model": "seedance1_5",
+   "narrator": "곰곰이는 무릎에 밴드를 붙이고 웃었죠.",
+   "plan_img": "곰곰이가 하트 밴드를 붙이고 미소, 콩이가 밴드 위에 착지",
+   "plan_mov": "",
+   "plan_note": ""
+  },
+  {
+   "id": "11",
+   "type": "V",
+   "model": "seedance1_5:8",
+   "narrator": "오늘 나에게 쏜 두 번째 화살, 있었나요?",
+   "plan_img": "맑아진 꽃길을 걸어가는 둘의 뒷모습(8초 여운)",
+   "plan_mov": "",
+   "plan_note": "질문 + 8초 여운"
+  }
+ ],
+ "voices": {
+  "luna": {
+   "engine": "higgsfield text2speech_v2 elevenlabs",
+   "voice_id": "375a3398-e3b4-4f91-845d-42181e352899",
+   "voice_type": "preset",
+   "script": "narrator"
+  }
+ },
+ "note": "근거: 초기 불교 경전 『상윳따 니까야』 36.6 「화살 경(Sallatha Sutta)」. 화살을 한 대 맞은 사람이 곧이어 두 번째 화살을 맞는 것처럼, 아픔에 걱정·탓·한탄을 더하면 괴로움을 두 번 겪는다."
+}
