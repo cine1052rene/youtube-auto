@@ -80,3 +80,7 @@ shorts/gomgom/blendertest/*.tgz
 shorts/gomgom/blendertest/*.json
 shorts/gomgom/blendertest/*.blend*
 shorts/gomgom/blendertest/render/
+
+# 파이썬 캐시 (전체)
+__pycache__/
+*.pyc
