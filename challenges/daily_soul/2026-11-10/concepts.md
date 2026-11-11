@@ -38,5 +38,5 @@
 하트 5장(14:17, Favourites 5 확인): C1 토스트 화재(43) · C2 콜라 바다(42) · C3 아이스크림 산(41) · 5 시럽 출근길(41) · 6 크리스마스 과자마을(39)
 
 ## 🏆 결과 (11/11 01:12 발표) — **당선! C1 토스트 화재 45/50 (T10 Q9 O10 E8 P8)**, 오늘 최고점
-다른 당선: allied3 43(석류 바다 해파리) · llenabrooks 42(석류 속 마을) · rub3nnnnn 41(빵 성) · Aven Ryn ?
+다른 당선: allied3 43(석류 바다 해파리) · llenabrooks 42(석류 속 마을) · rub3nnnnn 41(빵 성) · avenryn 44(김밥 기차역)
 상금 수령: Higgsie 스레드 01:15 — Assets → ⋯ → Publish 후 Higgsie에게 DM("done") 해야 지급(자동 메시지 없음)
