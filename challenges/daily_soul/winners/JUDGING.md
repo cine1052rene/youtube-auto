@@ -67,3 +67,9 @@
 | 11/10 Everything Is Made of Food | 발표 Higgsie 11/11 01:12 | **우리 당선 45**(토스트 화재 Soul Cinema 10/9/10/8/8)·44(avenryn 김밥 기차 10/10/9/7/8)·43·42·41 | 사람+사건+'아무도 안 놀람'+본성 논리(빵 집 불=토스트) → O10 |
 | 11/11 Secret Jobs of the Universe | 발표 Higgsie 11/12 01:42 | 44·42·41·41·? | rome 44(10/9/9/8/8 잎 위 이슬방울 크레인 설치 작은 인부) · marluxia 42(10/7/9/8/8 신호등 속 인부들) · aibolat 41(9/8/9/7/8 얼룩말 무늬 칠하는 공장) · fran 41(9/8/9/7/8 오로라 커튼 거는 인부) · ather(완두콩 꼬투리 작은 인부). 우리 낙선(달·무지개 등) → **우주급보다 '일상 속 작은 자연현상'(이슬·신호등·얼룩무늬)+작은 인부** |
 | 11/12 The Sky Became the Ocean | 발표 Higgsie 11/13 01:11 | 41·41·41·40·40 | naughtcalpur 41(9/8/9/7/8 밤거리 위 해파리) · 6ix9ine 41(9/9/8/7/8 만타 타고 빌딩 위) · clxydi 41(9/7/9/8/8 설산 꼭대기에서 거꾸로 산호 잡는 등반가) · ariescreate 40(네온 도시 위 만타 떼) · legendary_piglet 40(카르스트 봉우리 사이 돌고래). 우리 낙선(고래 투어 등). 당선=밤/네온·몰입형 풍경, 생물 크게. 점수 낮은 날 |
+
+## ⭐ 11/13 당선 프롬프트 분석 (11/12 당선 2장, 둘 다 Soul 2.0)
+- 구조: 주인공(의상 재질까지)+동작 → 생물/핵심 소품 디테일 → 세계 → **Camera:**(24mm 아나모픽·35mm deep focus, 저각·전신, 프레임 내 위치·여백) → **Lighting:**(god rays·caustics·rim light, 색 4개, film grain) → **Look:**("real film still from a big-budget movie, 65mm") → **금지 목록**("Photoreal only, one X, no CGI look, no text, no logos, no extra limbs")
+- 톤: 경이·모험·"first contact"(웃음보다 감탄), 주인공 1명 크게, 접점(손이 수면에 닿는 곳) 강조
+- ⚠️ 우리 '광각 금지(50~85mm)' 규칙과 반대 — 당선작은 24·35mm. 장면 규모가 필요한 주제는 광각 허용
+- 사용자 11/13: 어제 마지막 당선작(clxydi)이 사용자가 낸 '바다 하늘 풍경' 아이디어와 가장 비슷 → 아이디어는 맞았고, 우리 실행(거꾸로 배가 UFO처럼, 접점·주인공 없음)이 약했음
