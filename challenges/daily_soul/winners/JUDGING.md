@@ -75,3 +75,8 @@
 - 사용자 11/13: 어제 마지막 당선작(clxydi)이 사용자가 낸 '바다 하늘 풍경' 아이디어와 가장 비슷 → 아이디어는 맞았고, 우리 실행(거꾸로 배가 UFO처럼, 접점·주인공 없음)이 약했음
 | 11/13 The World Shrank Overnight | 발표 Higgsie 11/14 01:08 | 45·43·43·42·42 | epicminecraft 45(10/9/9/8/9 풀숲 깡통 안 아늑한 집) · ronaldlemus 43(10/8/9/8/8 노트북 키보드 위 작은 사람+고양이 발) · forioga 43(10/8/9/8/8 떨어지는 브래지어 아래 작은 남자) · sarfu 42(10/8/8/9/7 세면대에서 노 젓기) · jeffreycamilo 42(9/8/8/8/9 골든리트리버 머리에 탄 작은 남자). 우리 낙선 — **우리 v2 강아지·노트북과 같은 소재가 당선**, 차이는 크기(그들은 진짜 엄지 크기) |
 | 11/14 Shadows Have Their Own Plans | 발표 Higgsie 11/15 01:57 | 45·43·42·42·41 | Romal_visual 45(9/9/9/10/8 휠체어 소녀, 벽 그림자는 발레) · CryptoHodl3r 43(9/9/8/9/8 천사 옷 여자, 그림자는 악마) · MacLovin 42(8/8/9/9/8 일러스트, 그림자가 DEBT 글자) · ather 42(9/8/8/9/8 보행기 할머니, 그림자는 젊은 플라멩코) · shadow.ninja 41(9/7/9/8/8 빛줄기 속 웅크린 사람, 그림자는 손 뻗음). 우리 낙선(해바라기 기도 44 포함) → **그림자=속마음·꿈(감동, E9~10)** 이 이김, 웃긴 그림자(청혼 도망)는 안 뽑힘 |
+
+## 📌 11/15 T100roxy 언급 전체 확인(디스코드 검색 '멘션: cinesilver', 12건)
+- 당선 4회: 9/18 Hold My Beer(43, 사무의자 질주) · 10/1 Wednesday Stream: The Thing That Doesn't Belong(42, 졸업사진 속 펭귄, HF 앰배서더 Singu Capella가 직접 선정) · 10/20 Caught Red-Handed(40, 거북이) · 11/10 Everything Is Made of Food(45, 토스트 화재)
+- 데일리 외: #monthly-awards 11/3 「Daily Soul」 10월 월간상(7개 부문 중 2번째) — 10월 24회 전부 참가한 'Full streak' 명단 14명에 T100roxy 포함(역할·상금 없음, 공개 언급). 수상: Soul of the Month Ramadangonim(1,222작품) · Crowd Favorite Flint777(833반응) · Soulkeeper aashir(평균 30분 내 첫 투고)
+- 기타: 10/4 daily-soul에서 Believe Creatives가 우리 글에 'APT' 답글(원문 삭제돼 못 불러옴)
