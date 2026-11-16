@@ -6,7 +6,7 @@ def jl(n):
     p = os.path.join(ROOT, 'data', n)
     return [json.loads(l) for l in open(p, encoding='utf-8')] if os.path.exists(p) else []
 jobs = []
-for r in jl('winners_share.jsonl'):
+for r in []:
     if r.get('image_url'):
         ext = os.path.splitext(r['image_url'].split('?')[0])[1] or '.png'
         jobs.append((r['image_url'], os.path.join(ROOT, 'data', 'archive', 'winners_orig', r['id'] + ext)))

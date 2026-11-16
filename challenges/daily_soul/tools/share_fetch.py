@@ -27,8 +27,6 @@ def one(link):
             if not os.path.exists(p):
                 data = urllib.request.urlopen(img, timeout=60).read()
                 im = Image.open(io.BytesIO(data)).convert('RGB'); im.thumbnail((1200, 1200)); im.save(p, quality=85)
-                ext = os.path.splitext(img.split("?")[0])[1] or ".png"; op = os.path.join(ROOT, "data", "archive", "winners_orig", sid + ext); os.makedirs(os.path.dirname(op), exist_ok=True)
-                open(op, "wb").write(data)
             thumb = os.path.relpath(p, ROOT).replace('\\', '/')
         except Exception as e:
             thumb = ''

@@ -20,16 +20,25 @@ def in_hof(L):
 def is_band(c): return c[2] > c[0] + 18 and c[2] > 55
 CARD_DIR = os.path.join(ROOT, 'data', 'archive', 'winners_card'); os.makedirs(CARD_DIR, exist_ok=True)
 def save_card(word, tag):
-    from PIL import ImageGrab
-    dsc.front(); dsc.clk(word[0] + 150, word[1] + 160, right=True); time.sleep(0.9)
+    import urllib.request
+    dsc.front(); dsc.clk(word[0] + 150, word[1] + 170); time.sleep(2.0)
+    L1, _ = dsc.ocr(dsc.cap('C:/tmp/_v.png'))
+    if not any('WINNER' in l[4].upper() or 'HIGGSFIELD AI' in l[4].upper() for l in L1 if l[1] < 120):
+        return ''
+    dsc.clk(1824, 56); time.sleep(1.2)
     L2, _ = dsc.ocr(dsc.cap('C:/tmp/_cm.png'))
-    it = [l for l in L2 if '이미지' in l[4] and '복사' in l[4]]
-    if not it:
-        dsc.clk(1500, 500); return ''
-    dsc.clk(it[0][0] + it[0][2] // 2, it[0][1] + it[0][3] // 2); time.sleep(1.2)
-    im = ImageGrab.grabclipboard()
-    if im is None: return ''
-    fp = os.path.join(CARD_DIR, tag + '.png'); im.save(fp); return os.path.relpath(fp, ROOT).replace(os.sep, '/')
+    it = [l for l in L2 if l[0] > 1600 and l[1] < 300 and ('미디어' in l[4] or '링크' in l[4])]
+    u = ''
+    if it:
+        dsc.clk(it[0][0] + it[0][2] // 2, it[0][1] + it[0][3] // 2); time.sleep(0.6); u = dsc.clip()
+    dsc.clk(1876, 56); time.sleep(1.2)
+    if 'cdn.discordapp' not in u: return ''
+    try:
+        d = urllib.request.urlopen(urllib.request.Request(u.split()[0], headers={'User-Agent': 'Mozilla/5.0'}), timeout=60).read()
+        fp = os.path.join(CARD_DIR, tag + '.png'); open(fp, 'wb').write(d)
+        return os.path.relpath(fp, ROOT).replace(os.sep, '/')
+    except Exception as e:
+        print('carderr', e, flush=True); return ''
 def get_link(word):
     dsc.front(); dsc.clk(word[0] + word[2] // 2, word[1] + word[3] // 2)
     band = []
@@ -67,6 +76,15 @@ L0, _ = dsc.ocr(dsc.cap())
 if not in_hof(L0):
     side = [l for l in L0 if l[0] < 300 and 'hall-of-fame' in l[4]]
     if side: dsc.clk(side[0][0] + 40, side[0][1] + side[0][3] // 2); time.sleep(3)
+dsc.clk(1500, 200); time.sleep(0.4)
+for _ in range(6):
+    Lb, _ = dsc.ocr(dsc.cap())
+    bt = [l for l in Lb if '최근으로' in l[4]]
+    if bt: dsc.clk(bt[0][0] + bt[0][2] // 2, bt[0][1] + bt[0][3] // 2); time.sleep(2.5); break
+    dsc.scroll(1100, 500, -20000); time.sleep(1.2)
+for _ in range(5):
+    dsc.scroll(1100, 500, -20000); time.sleep(1.0)
+time.sleep(2)
 offset = 0; prev = None; stuck = 0; done = False; last = 'start'
 while not done:
     L, W = dsc.ocr(dsc.cap())

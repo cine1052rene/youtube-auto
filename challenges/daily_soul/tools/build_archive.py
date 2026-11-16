@@ -57,15 +57,15 @@ for d in days:
     parts.append('<div class="grid">')
     for w in W:
         s = share.get(w['link'], {})
-        img = ('../../' + s['thumb'].split('data/', 1)[-1].replace('archive/', '')) if s.get('thumb') else s.get('image_url', '')
-        img = '../' + s['thumb'].split('archive/', 1)[1] if s.get('thumb') else s.get('image_url', '')
-        parts.append(card(img, '@' + w['user'], f'<span class="tag">{html.escape(s.get("model", ""))}</span>', s.get('prompt', ''), [('공유 페이지(원본)', w['link']), ('원본 이미지', s.get('image_url', ''))], True))
+        img = ('../' + w['card'].split('archive/', 1)[1]) if w.get('card') else (('../' + s['thumb'].split('archive/', 1)[1]) if s.get('thumb') else s.get('image_url', ''))
+        parts.append(card(img, '@' + w['user'], f'<span class="tag">{html.escape(s.get("model", ""))}</span>', s.get('prompt', ''), [('공유 페이지(프롬프트·원본)', w['link']), ('카드 원본(PC)', img if w.get('card') else '')], True))
     parts.append('</div>')
     parts.append(f'<h2>🎨 우리 생성물 ({len(O)})</h2><div class="grid">')
     for o in O:
         img = '../' + o['thumb'].split('archive/', 1)[1] if o.get('thumb') else (o.get('min_result_url') or '')
         meta = f'<span class="tag">{o["set"]}#{o["idx"]}</span><span class="tag">{o["model"]}</span>' + ('<span class="tag">실패</span>' if o.get('failed') else '') + f' job {o["job_id"][:8]}'
-        parts.append(card(img, f'{o["set"]} #{o["idx"]}', meta, o['prompt'], [('원본 이미지', o.get('result_url') or '')]))
+        loc = f"../ours_orig/{d}/{o['set'].replace('/', '_').replace('.', 'root')}_{o['idx']:02d}.png"
+        parts.append(card(img, f'{o["set"]} #{o["idx"]}', meta, o['prompt'], [('원본 링크(온라인)', o.get('result_url') or ''), ('원본 파일(PC)', loc if os.path.exists(os.path.join(A, loc[3:])) else '')]))
     parts.append('</div>')
     if concepts: parts.append(f'<h2>📝 기획·채점·하트 기록 (concepts.md)</h2><pre>{html.escape(concepts)}</pre>')
     open(os.path.join(A, 'days', d + '.html'), 'w', encoding='utf-8').write(f'<!doctype html><meta charset="utf-8"><title>{d}</title><style>{CSS}</style>' + ''.join(parts))
