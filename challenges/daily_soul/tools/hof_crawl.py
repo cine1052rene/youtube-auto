@@ -29,7 +29,7 @@ def save_card(word, tag):
     dsc.clk(it[0][0] + it[0][2] // 2, it[0][1] + it[0][3] // 2); time.sleep(1.2)
     im = ImageGrab.grabclipboard()
     if im is None: return ''
-    fp = os.path.join(CARD_DIR, tag + '.png'); im.save(fp); return os.path.relpath(fp, ROOT).replace('\', '/')
+    fp = os.path.join(CARD_DIR, tag + '.png'); im.save(fp); return os.path.relpath(fp, ROOT).replace(os.sep, '/')
 def get_link(word):
     dsc.front(); dsc.clk(word[0] + word[2] // 2, word[1] + word[3] // 2)
     band = []
@@ -108,7 +108,7 @@ while not done:
                 if w2: link, ok = get_link(w2[0])
             if link and link in seen_links: print('dup', txt, link, flush=True); continue
             if card and link:
-                newp = os.path.join(CARD_DIR, link.rstrip('/').split('/')[-1] + '.png'); os.replace(os.path.join(ROOT, card), newp); card = os.path.relpath(newp, ROOT).replace('\', '/')
+                newp = os.path.join(CARD_DIR, link.rstrip('/').split('/')[-1] + '.png'); os.replace(os.path.join(ROOT, card), newp); card = os.path.relpath(newp, ROOT).replace(os.sep, '/')
             log(type='card', user=txt, link=link, card=card, abs_y=y - offset, band=ok); seen_links.add(link)
             print('CARD', txt, link, flush=True)
             last = 'card'
