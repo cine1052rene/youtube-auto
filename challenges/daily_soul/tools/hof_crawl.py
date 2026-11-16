@@ -6,7 +6,9 @@ import dsc
 from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'data', 'hof_raw.jsonl')
-STOP_DATE = sys.argv[1] if len(sys.argv) > 1 else 'Sep 14'   # 이 날짜 헤더를 지나면 멈춤
+HERE = '--here' in sys.argv
+ARGS = [a for a in sys.argv[1:] if a != '--here']
+STOP_DATE = ARGS[0] if ARGS else 'Sep 14'   # 이 날짜 헤더를 지나면 멈춤
 MON = r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*\d{1,2}'
 seen_links = set(); seen_keys = set()
 if os.path.exists(OUT):
@@ -77,19 +79,22 @@ if not in_hof(L0):
     side = [l for l in L0 if l[0] < 300 and 'hall-of-fame' in l[4]]
     if side: dsc.clk(side[0][0] + 40, side[0][1] + side[0][3] // 2); time.sleep(3)
 dsc.clk(1500, 200); time.sleep(0.4)
-for _ in range(6):
+for _ in range(0 if HERE else 6):
     Lb, _ = dsc.ocr(dsc.cap())
     bt = [l for l in Lb if '최근으로' in l[4]]
     if bt: dsc.clk(bt[0][0] + bt[0][2] // 2, bt[0][1] + bt[0][3] // 2); time.sleep(2.5); break
     dsc.scroll(1100, 500, -20000); time.sleep(1.2)
-for _ in range(5):
+for _ in range(0 if HERE else 5):
     dsc.scroll(1100, 500, -20000); time.sleep(1.0)
 time.sleep(2)
 offset = 0; prev = None; stuck = 0; done = False; last = 'start'
 while not done:
     L, W = dsc.ocr(dsc.cap())
-    if not in_hof(L):
-        dsc.front(); time.sleep(0.8); L, W = dsc.ocr(dsc.cap())
+    for _t in range(3):
+        if in_hof(L): break
+        dsc.front(); time.sleep(0.8); dsc.clk(1500, 200); time.sleep(0.3)
+        if _t > 0: dsc.clk(24, 15); time.sleep(2)
+        L, W = dsc.ocr(dsc.cap())
     if not in_hof(L):
         print('not in hall-of-fame; stop', flush=True); break
     body = [l for l in L if 370 < l[0] < 1300 and 80 < l[1] < 960]
