@@ -25,7 +25,7 @@ def save_card(word, tag):
     import urllib.request
     dsc.front(); dsc.clk(word[0] + 150, word[1] + 170); time.sleep(2.0)
     L1, _ = dsc.ocr(dsc.cap('C:/tmp/_v.png'))
-    if not any('WINNER' in l[4].upper() or 'HIGGSFIELD AI' in l[4].upper() for l in L1 if l[1] < 120):
+    if in_hof(L1):   # 뷰어가 안 열림
         return ''
     dsc.clk(1824, 56); time.sleep(1.2)
     L2, _ = dsc.ocr(dsc.cap('C:/tmp/_cm.png'))
@@ -73,6 +73,8 @@ def get_link(word):
         if in_hof(L): break
     return link, bool(band)
 dsc.front(); time.sleep(0.5)
+L0, _ = dsc.ocr(dsc.cap())
+if not in_hof(L0): dsc.clk(1876, 56); time.sleep(1.2)
 dsc.clk(1500, 200); time.sleep(0.5)
 L0, _ = dsc.ocr(dsc.cap())
 if not in_hof(L0):
