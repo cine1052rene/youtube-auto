@@ -1,5 +1,7 @@
 import os, sys
-LAVA = ("The entire floor is real, glowing, bubbling molten lava, bright orange-red with black cooling crust, heat shimmer and drifting sparks, lighting everything from below; nobody touches the floor. ")
+LAVA = (("The entire floor is real, glowing, bubbling molten lava, bright orange-red with black cooling crust, heat shimmer and drifting sparks, lighting everything from below; nobody touches the floor. "
+        "Rich physical details of the heat everywhere: the bottoms of furniture, shelves and poles are scorched black and smoking where they meet the lava, plastic and rubber parts near the floor are drooping and melting, a dropped item is sinking and bursting into small flames, thin wisps of smoke and steam rise, heat haze bends the background, glowing embers float in the air, "
+        "people have sweat beading on their foreheads and damp collars, flushed red cheeks, hair lifting in the hot updraft, every face and hand lit warm orange from underneath, the molten surface reflecting the room like a dark glowing mirror. Sharp texture on fabric, skin, metal and wood. "))
 LOOK = ("Look: real film still from a big-budget modern action comedy, shot on 65mm film, real people, real locations, photoreal. "
         "Any visible text must be real words exactly as printed in a dictionary or a published newspaper.")
 P = [
