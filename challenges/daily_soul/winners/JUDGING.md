@@ -80,3 +80,4 @@
 - 당선 4회: 9/18 Hold My Beer(43, 사무의자 질주) · 10/1 Wednesday Stream: The Thing That Doesn't Belong(42, 졸업사진 속 펭귄, HF 앰배서더 Singu Capella가 직접 선정) · 10/20 Caught Red-Handed(40, 거북이) · 11/10 Everything Is Made of Food(45, 토스트 화재)
 - 데일리 외: #monthly-awards 11/3 「Daily Soul」 10월 월간상(7개 부문 중 2번째) — 10월 24회 전부 참가한 'Full streak' 명단 14명에 T100roxy 포함(역할·상금 없음, 공개 언급). 수상: Soul of the Month Ramadangonim(1,222작품) · Crowd Favorite Flint777(833반응) · Soulkeeper aashir(평균 30분 내 첫 투고)
 - 기타: 10/4 daily-soul에서 Believe Creatives가 우리 글에 'APT' 답글(원문 삭제돼 못 불러옴)
+| 11/15 Where Lost Things Go | 발표 Higgsie 11/16 02:24 | 47·45·44·43·42 | AlezZ 47(10/9/9/10/9 지붕 위 아이와 하늘 나는 거대한 투명 고래 속 잃어버린 물건) · willeyumz 45(10/9/9/8/9 소파 쿠션 틈 속 작은 사람·동전·리모컨) · Ritchie 44(동굴 빛 속 물건 더미로 만든 사람) · Sergiu 43(실·단추·잡동사니 동화 세계 할머니) · Le 42(세탁기 드럼 속 우주, 양말 떠다님). 우리 낙선(단추 해변·까마귀 44) → 1위는 '잃어버린 것들이 고래 몸속에' 거대·경이 + 작은 인물 대비 |
