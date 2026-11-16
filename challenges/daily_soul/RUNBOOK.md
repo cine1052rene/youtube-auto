@@ -1,4 +1,5 @@
 # Daily Soul Challenge — 매일 아침 실행 순서
+> ⭐⭐ **11/16 사용자 — 데이터 쌓기(운영 규칙)**: ① 매일 결과 확인 때 당선 5장 전부의 공유 링크→프롬프트 원문을 winners/YYYY-MM-DD_prompts.md에 저장(헤드리스 크롬 --dump-dom + C:/tmp/sp.py, 링크는 카드의 "# daily-soul ›" 이동으로 원글에서) ② 생성 후 `python tools/build_dataset.py` 실행 → data/our_prompts.jsonl(프롬프트·모델·작업ID) 갱신·커밋. 채점·하트는 concepts.md. gen.log·png는 git 제외라 작업ID는 데이터셋에만 남음
 > 🔴🔴 **11/13 사용자 — 제작 규칙 폐지**: 운영 규칙(디스코드 입력 금지·크레딧 허락·하트 전 보고·주제 검수·채점·프롬프트 사전 확인 등)은 그대로. **프롬프트·모델·렌즈·길이·금지문 같은 제작 규칙은 일반 규칙으로 쓰지 않는다** — 아래 「상황별 참고」로 옮김, 그 특정 상황이 다시 올 때만 꺼내 쓴다. 한 번의 사례로 일반화해 규칙을 만들지 말 것(예: 11/9 광각 금지 → 11/12 당선작은 24·35mm). **예외로 고정 유지(사용자 11/13)**: ① 모든 프롬프트 끝에 "Any visible text must be real words exactly as printed in a dictionary or a published newspaper." 한 문장 ② 모델은 미션 규정 안(Soul / Soul 2.0 / Soul Cinema)에서만
 > ⭐ **11/2 메일은 이 프로젝트 업무 아님** — 메일 확인·관리는 법인관리 프로젝트 담당(아침 루틴에서 메일 체크 제외)
 > ⭐ **11/9 재역산**: 최근 카드 평균 42.0(T9.0 Q8.4 O8.3 E8.0 P8.4), 컷 40~41, 11/7~8 상위 44~45. "Prompt 8 고정" 폐기 — 그림이 프롬프트대로 나왔는지로 7~9 채점 (winners/JUDGING.md)
