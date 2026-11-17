@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import dsc
 from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, 'data', 'hof_raw.jsonl')
+OUT = os.environ.get('HOF_OUT') or os.path.join(ROOT, 'data', 'hof_raw.jsonl')
 HERE = '--here' in sys.argv
 ARGS = [a for a in sys.argv[1:] if a != '--here']
 STOP_DATE = ARGS[0] if ARGS else 'Sep 14'   # 이 날짜 헤더를 지나면 멈춤
