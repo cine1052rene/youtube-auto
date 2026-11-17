@@ -98,6 +98,25 @@ def card(img, title, meta, prompt, links, win=False):
 ANN = json.load(open(os.path.join(ROOT, 'data', 'announce_links.json'), encoding='utf-8')) if os.path.exists(os.path.join(ROOT, 'data', 'announce_links.json')) else {}
 days = sorted(set(ours) | set(win))
 idx = []
+TOT = {}
+def check(d, W, O, concepts):
+    t = []
+    if not ANN.get(d): t.append(('발표 링크 없음', ''))
+    if len(W) == 0: t.append(('당선작 0', '헤더 못 읽어 다른 날에 섞였을 수 있음'))
+    elif len(W) < 5: t.append((f'당선작 {len(W)}/5', '빠진 카드'))
+    elif len(W) > 6: t.append((f'당선작 {len(W)}', '다른 날 카드가 섞였을 수 있음'))
+    nl = [w['user'] for w in W if not w.get('link')]
+    if nl: t.append((f'링크 없음 {len(nl)}', ', '.join(nl)))
+    npm = [w['user'] for w in W if w.get('link') and not share.get(w['link'], {}).get('prompt')]
+    if npm: t.append((f'프롬프트 없음 {len(npm)}', ', '.join(npm)))
+    cap = [w['user'] for w in W if 'winners_card_scan' in (w.get('card') or '')]
+    if cap: t.append((f'카드 캡처본 {len(cap)}', '원본 카드 다운로드 실패 → 화면 캡처로 대체: ' + ', '.join(cap)))
+    nu = [f"{o['set']}#{o['idx']}" for o in O if not o.get('result_url') and not o.get('failed')]
+    if nu: t.append((f'우리 원본 링크 없음 {len(nu)}', ', '.join(nu)))
+    if O and not concepts: t.append(('concepts.md 없음', ''))
+    for k, _ in t:
+        key = re.sub(r'\s*\d+(/5)?$', '', k); TOT[key] = TOT.get(key, 0) + 1
+    return t
 for d in days:
     cm = os.path.join(ROOT, d, 'concepts.md')
     concepts = open(cm, encoding='utf-8').read() if os.path.exists(cm) else ''
@@ -106,6 +125,9 @@ for d in days:
     W = win.get(d, []); O = ours.get(d, [])
     parts = [f'<p><a href="../index.html">← 목차</a></p><h1>{d} {html.escape(theme)}</h1>']
     if ANN.get(d): parts.append(f'<p><a href="{ANN[d]}" target="_blank">💬 디스코드 발표 보기</a></p>')
+    CK = check(d, W, O, concepts)
+    if CK: parts.append('<div class="c" style="border:2px solid #e66"><b>⚠ 확인 필요</b><ul>' + ''.join(f'<li><b>{html.escape(k)}</b> {html.escape(v)}</li>' for k, v in CK) + '</ul></div>')
+    else: parts.append('<div class="c" style="border:2px solid #5c5">✅ 빠진 것 없음</div>')
     parts.append(f'<h2>🏆 당선작 ({len(W)})</h2>')
     if wlist.get(d): parts.append(f'<div class="m">발표 명단(OCR): {html.escape(wlist[d])}</div>')
     for jline in judging_line(d): parts.append(f'<pre>{html.escape(jline)}</pre>')
@@ -126,9 +148,10 @@ for d in days:
     open(os.path.join(A, 'days', d + '.html'), 'w', encoding='utf-8').write(f'<!doctype html><meta charset="utf-8"><title>{d}</title><style>{CSS}</style>' + ''.join(parts))
     won = '🏆' if any(w['user'].lower().startswith('t100roxy') for w in W) else ''
     dl = f'<a href="{ANN[d]}" target="_blank">{d}</a>' if ANN.get(d) else d
-    idx.append(f'<tr><td>{dl}</td><td><a href="days/{d}.html">기록</a></td><td>{html.escape(theme)} {won}</td><td>{len(W)}</td><td>{len(O)}</td></tr>')
+    idx.append(f'<tr><td>{dl}</td><td><a href="days/{d}.html">기록</a></td><td>{html.escape(theme)} {won}</td><td>{len(W)}</td><td>{len(O)}</td><td style="color:#f88;font-size:12px">{' · '.join(html.escape(k) for k, _ in CK) or '<span style=\"color:#5c5\">✅</span>'}</td></tr>')
 open(os.path.join(A, 'index.html'), 'w', encoding='utf-8').write(
-    f'<!doctype html><meta charset="utf-8"><title>Daily Soul 기록</title><style>{CSS} td,th{{padding:4px 10px;border-bottom:1px solid #333;text-align:left}}</style>'
-    f'<h1>Higgsfield Daily Soul 기록 (T100roxy / cinesilver)</h1><p class="m">생성 {datetime.datetime.now():%Y-%m-%d %H:%M} · 당선작은 공유 페이지에서 원본 확인, 우리 것은 원본 이미지 링크</p>'
-    '<p class="m">날짜 = 디스코드 발표 링크(있는 날만) · 기록 = 그날 당선작·우리 생성물 페이지</p><table><tr><th>날짜</th><th>기록</th><th>주제</th><th>당선작</th><th>우리 생성물</th></tr>' + ''.join(reversed(idx)) + '</table>')
+    f'<!doctype html><meta charset="utf-8"><title>Daily Soul 기록</title><style>{CSS} td,th{{padding:4px 10px;border-bottom:1px solid #333;text-align:left}} th,td:nth-child(1),td:nth-child(2),td:nth-child(4),td:nth-child(5){{white-space:nowrap}}</style>'
+    f'<h1>Higgsfield Daily Soul 기록 (T100roxy / cinesilver) — 개인 작업용</h1><p class="m">생성 {datetime.datetime.now():%Y-%m-%d %H:%M} · 당선작은 공유 페이지에서 원본 확인, 우리 것은 원본 이미지 링크</p>'
+    + '<div class="c" style="border:2px solid #e66;margin:10px 0"><b>⚠ 전체 확인 필요 (날짜 수)</b> ' + ' · '.join(f'{html.escape(k)} {v}일' for k, v in sorted(TOT.items(), key=lambda x: -x[1])) + '</div>' +
+    '<p class="m">날짜 = 디스코드 발표 링크(있는 날만) · 기록 = 그날 당선작·우리 생성물 페이지</p><table><tr><th>날짜</th><th>기록</th><th>주제</th><th>당선작</th><th>우리 생성물</th><th>확인 필요</th></tr>' + ''.join(reversed(idx)) + '</table>')
 print(len(days), 'days;', sum(len(v) for v in win.values()), 'winners;', sum(len(v) for v in ours.values()), 'ours')
