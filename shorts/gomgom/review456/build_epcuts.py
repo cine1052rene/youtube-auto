@@ -14,7 +14,7 @@ notes = json.load(open(G / f"ep{ep}/prod/cut_notes.json", encoding="utf-8")) if 
 cards = ""
 _pf = G / f"launch/ui/ep{ep}_pin.txt"; _tf = G / f"launch/ui/ep{ep}_title.txt"
 PIN = (f'<div style="flex:1;min-width:260px;max-width:520px;background:#fff;border:1px solid #EADFCF;border-radius:10px;padding:10px 12px"><div class="t"><b>유튜브 제목</b></div><div class="l">{html.escape(_tf.read_text(encoding="utf-8").strip()) if _tf.exists() else ""}</div><div class="t" style="margin-top:8px"><b>📌 고정 댓글 (공개 후 등록)</b></div><div class="l" style="white-space:pre-wrap">{html.escape(_pf.read_text(encoding="utf-8").strip())}</div></div>') if _pf.exists() else ""
-PUB = {"09":"금 10/30 20:00","10":"화 11/3 20:00","11":"금 11/6 20:00","12":"화 11/10 20:00"}
+PUB = {"09":"금 10/30 20:00","10":"화 11/3 20:00","11":"금 11/6 20:00","12":"화 11/10 20:00","13":"화 11/17 20:00","14":"금 11/20 20:00"}
 for s in d["shots"]:
     cl = G / f"ep{ep}/prod/clips/{s['id']}.mp4"
     if not cl.exists(): continue

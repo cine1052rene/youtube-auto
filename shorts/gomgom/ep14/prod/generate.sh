@@ -37,8 +37,8 @@ fetch() {
 }
 
 declare -A IMG MOV CH DUR
-IMG[01]="medium shot from behind of Gomgom stomping out of a felt cottage door with its fists balled and cheeks flushed pink, tiny Kong sitting at the very top center of Gomgom's head, a garden path, flower pots, a picket fence, seen from behind so the star badge on Gomgom's chest is hidden and NOT visible, Gomgom's back is plain cream fuzzy wool with only the thin brown satchel strap crossing it"
-MOV[01]="Gomgom stomps a few steps away from the door with its feet on the ground, the door stays as it is, the camera follows from behind, no face is visible on the back of the head, Kong stays tiny"
+IMG[01]="medium shot from the front of Gomgom stomping out of a felt cottage toward the camera, the open wooden door behind it, Gomgom's paws balled into little fists, cheeks flushed pink, a grumpy pouting closed-mouth face with furrowed brows, tiny Kong sitting at the very top center of Gomgom's head, a garden stone path, flower pots, a picket fence"
+MOV[01]="Gomgom stomps forward along the stone path toward the camera with grumpy little steps, its feet on the ground, cheeks puffed, tiny Kong on its head sways, the camera moves slowly backward ahead of Gomgom at its height, Kong stays tiny"
 CH[01]="$GOM; $KONG"; DUR[01]=4
 IMG[02]="medium shot through a cottage window of a felt raccoon friend about as tall as Gomgom inside with its arms crossed and turned away with a pouty face, gingham curtains, a teapot on the table, potted plants on the sill"
 MOV[02]="the raccoon turns its head away with a huff and keeps its arms crossed, the camera moves slowly from outside the window toward the glass"
@@ -50,7 +50,7 @@ IMG[04]="spectacular close shot at water level of a clear stream flowing around 
 MOV[04]="the water flows smoothly around the rock and joins again behind it, sparkles dance on the surface, the camera glides low over the water toward the rock and past it"
 CH[04]="no characters in this scene; Gomgom and Kong are not in this scene"; DUR[04]=4
 IMG[05]="spectacular bird's-eye view looking straight down at a winding sparkling forest stream curving around many smooth rocks, green moss, ferns and wildflowers along both banks, sunlight glittering on the water"
-MOV[05]="the water keeps flowing and sparkling around the rocks, the camera moves slowly downstream following the water from high above"
+MOV[05]="the water keeps flowing and sparkling around the rocks, the camera moves slowly downstream following the water from high above, absolutely no animals and no characters appear at any moment, only water, rocks, moss, ferns and flowers"
 CH[05]="no characters in this scene; Gomgom and Kong are not in this scene"; DUR[05]=4
 IMG[06]="medium shot across a forest stream, Grandpa Buffalo, a kind old felt water buffalo with soft grey wool, long white droopy eyebrows, small curved horns and a tiny cloth bundle tied on its back, Grandpa Buffalo is slightly taller than Gomgom, about a quarter head taller, never shorter than Gomgom and never twice as big sitting peacefully on a flat rock on the far bank, Gomgom on the near bank looking up at it, tiny Kong sitting at the very top center of Gomgom's head, ferns, river stones, dappled sunlight"
 MOV[06]="Grandpa Buffalo gestures gently with one hoof toward the flowing water as it speaks, Gomgom lifts its head and listens, the camera glides slowly over the stream between them, Grandpa Buffalo stays only slightly taller than Gomgom, Kong stays tiny"
@@ -59,7 +59,7 @@ IMG[07]="spectacular wide shot along a forest stream, little felt birds drinking
 MOV[07]="the birds dip their beaks to drink, the flowers sway, butterflies flutter, the camera moves slowly sideways along the stream"
 CH[07]="small felt birds and a small felt deer; Gomgom and Kong are not in this scene"; DUR[07]=4
 IMG[08]="close shot of Gomgom's paws gently placing a small bright yellow folded paper boat onto the surface of the clear stream, Gomgom's soft closed-mouth smile visible above, river stones and moss"
-MOV[08]="Gomgom slowly lets go of the paper boat and it begins to float, the camera stays close to Gomgom's paws at water level"
+MOV[08]="Gomgom slowly lets go of the paper boat and it begins to float, the camera starts close on Gomgom's paws at water level and tilts up and rises to Gomgom's gently smiling face"
 CH[08]="$GOM; Kong is not in this scene"; DUR[08]=4
 IMG[09]="medium shot at water level of a small bright yellow folded paper boat floating down the stream with tiny Kong standing at the front of the boat with its little wings spread, Kong one third the width of Gomgom's head, Gomgom walking along the bank beside it, ferns, rocks, sparkling water"
 MOV[09]="the paper boat floats along and turns gently around a rock, tiny Kong flaps its little wings happily at the bow, Gomgom walks beside it on the bank with its feet on the ground, the camera tracks alongside the boat at water level, Kong stays tiny"
@@ -67,8 +67,8 @@ CH[09]="$GOM; $KONG"; DUR[09]=4
 IMG[10]="low angle shot from under a small wooden footbridge over the stream, a felt raccoon friend about as tall as Gomgom on the bridge leaning down and holding a small bright yellow folded paper boat it just scooped out of the water, smiling at Gomgom, Gomgom on the bank waving shyly, tiny Kong sitting at the very top center of Gomgom's head, flowers, sunlight"
 MOV[10]="the raccoon holds up the paper boat and smiles, Gomgom waves shyly with a closed-mouth smile, the camera looks up from under the bridge and rises slowly"
 CH[10]="$GOM; $KONG; a felt raccoon friend about as tall as Gomgom"; DUR[10]=4
-IMG[11]="wide shot from behind of Gomgom and a felt raccoon friend about as tall as Gomgom sitting side by side on the stream bank at sunset, tiny Kong sitting at the very top center of Gomgom's head, a small bright yellow folded paper boat floating away downstream, the water glowing gold and pink, ferns and reeds silhouetted, seen from behind so the star badge on Gomgom's chest is hidden and NOT visible, Gomgom's back is plain cream fuzzy wool with only the thin brown satchel strap crossing it"
-MOV[11]="they sit still side by side watching the boat drift away, the sunset light glitters on the water, the camera stays directly behind and slowly pulls back, no faces are visible on the backs of their heads, Kong stays tiny"
+IMG[11]="wide shot from directly behind of Gomgom and a felt raccoon friend about as tall as Gomgom sitting side by side on the stream bank at sunset, BOTH seen completely from behind, the raccoon's grey back and its ringed striped tail facing the camera, no faces visible at all, both looking forward toward the sunset, tiny Kong sitting at the very top center of Gomgom's head also seen from behind, the stream flows in front of them away from the camera toward the glowing sunset, a small bright yellow folded paper boat floating small in the distance on the stream ahead of them between them and the sunset, the water glowing gold and pink, ferns and reeds silhouetted, seen from behind so the star badge on Gomgom's chest is hidden and NOT visible, Gomgom's back is plain cream fuzzy wool with only the thin brown satchel strap crossing it"
+MOV[11]="they sit still side by side with their backs to the camera watching the small paper boat drift away into the sunset, the boat floats slowly farther away, the sunset light glitters on the water, the camera stays directly behind and slowly pulls back, no faces are visible on the backs of their heads, Kong stays tiny"
 CH[11]="$GOM; $KONG; a felt raccoon friend about as tall as Gomgom"; DUR[11]=8
 
 mkdir -p img clips
@@ -84,7 +84,7 @@ for k in $KEYS; do
     f="clips/$k.mp4"; [ -s "$f" ] && { log "건너뜀 $f"; continue; }
     [ -s "img/$k.png" ] || { log "그림 없음 $k"; continue; }
     log "영상 $k (${DUR[$k]}초)"
-    id=$(create_job seedance1_5 --prompt "${MOV[$k]}, $SIZE, $VTAIL" --start-image "img/$k.png" --aspect_ratio 9:16 --duration ${DUR[$k]} --generate_audio false --resolution 720p) || true
+    id=$(create_job veo3_1_lite --prompt "${MOV[$k]}, $SIZE, $VTAIL" --start-image "img/$k.png" --aspect_ratio 9:16 --duration ${DUR[$k]} --generate_audio false) || true
     if [ -n "$id" ] && fetch "$id" "$f"; then log "완료 $f"; else log "실패 영상 $k"; fi
   fi
 done
