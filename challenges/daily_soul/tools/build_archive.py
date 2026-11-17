@@ -95,6 +95,7 @@ def card(img, title, meta, prompt, links, win=False):
     im = f'<a href="{html.escape(links[0][1] or img)}" target="_blank"><img loading="lazy" src="{html.escape(img)}"></a>' if img else '<div class="m">(이미지 없음)</div>'
     ln = ' · '.join(f'<a href="{html.escape(u)}" target="_blank">{t}</a>' for t, u in links if u)
     return f'<div class="c{" win" if win else ""}">{im}<div><b>{html.escape(title)}</b></div><div class="m">{meta}</div><div class="m">{ln}</div><div class="p">{html.escape(prompt or "")}</div></div>'
+ANN = json.load(open(os.path.join(ROOT, 'data', 'announce_links.json'), encoding='utf-8')) if os.path.exists(os.path.join(ROOT, 'data', 'announce_links.json')) else {}
 days = sorted(set(ours) | set(win))
 idx = []
 for d in days:
@@ -104,6 +105,7 @@ for d in days:
     theme = (m0.group(1) if m0 else '') or themes.get(d, '')
     W = win.get(d, []); O = ours.get(d, [])
     parts = [f'<p><a href="../index.html">← 목차</a></p><h1>{d} {html.escape(theme)}</h1>']
+    if ANN.get(d): parts.append(f'<p><a href="{ANN[d]}" target="_blank">💬 디스코드 발표 보기</a></p>')
     parts.append(f'<h2>🏆 당선작 ({len(W)})</h2>')
     if wlist.get(d): parts.append(f'<div class="m">발표 명단(OCR): {html.escape(wlist[d])}</div>')
     for jline in judging_line(d): parts.append(f'<pre>{html.escape(jline)}</pre>')
@@ -123,9 +125,10 @@ for d in days:
     if concepts: parts.append(f'<h2>📝 기획·채점·하트 기록 (concepts.md)</h2><pre>{html.escape(concepts)}</pre>')
     open(os.path.join(A, 'days', d + '.html'), 'w', encoding='utf-8').write(f'<!doctype html><meta charset="utf-8"><title>{d}</title><style>{CSS}</style>' + ''.join(parts))
     won = '🏆' if any(w['user'].lower().startswith('t100roxy') for w in W) else ''
-    idx.append(f'<tr><td><a href="days/{d}.html">{d}</a></td><td>{html.escape(theme)} {won}</td><td>{len(W)}</td><td>{len(O)}</td></tr>')
+    dl = f'<a href="{ANN[d]}" target="_blank">{d}</a>' if ANN.get(d) else d
+    idx.append(f'<tr><td>{dl}</td><td><a href="days/{d}.html">기록</a></td><td>{html.escape(theme)} {won}</td><td>{len(W)}</td><td>{len(O)}</td></tr>')
 open(os.path.join(A, 'index.html'), 'w', encoding='utf-8').write(
     f'<!doctype html><meta charset="utf-8"><title>Daily Soul 기록</title><style>{CSS} td,th{{padding:4px 10px;border-bottom:1px solid #333;text-align:left}}</style>'
     f'<h1>Higgsfield Daily Soul 기록 (T100roxy / cinesilver)</h1><p class="m">생성 {datetime.datetime.now():%Y-%m-%d %H:%M} · 당선작은 공유 페이지에서 원본 확인, 우리 것은 원본 이미지 링크</p>'
-    '<table><tr><th>날짜</th><th>주제</th><th>당선작</th><th>우리 생성물</th></tr>' + ''.join(reversed(idx)) + '</table>')
+    '<p class="m">날짜 = 디스코드 발표 링크(있는 날만) · 기록 = 그날 당선작·우리 생성물 페이지</p><table><tr><th>날짜</th><th>기록</th><th>주제</th><th>당선작</th><th>우리 생성물</th></tr>' + ''.join(reversed(idx)) + '</table>')
 print(len(days), 'days;', sum(len(v) for v in win.values()), 'winners;', sum(len(v) for v in ours.values()), 'ours')
