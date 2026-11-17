@@ -43,6 +43,37 @@ else:
                 seen = {x['link'] for x in win.get(d, [])}
                 win.setdefault(d, []).extend(b for b in buf if b['link'] not in seen)
             buf = []
+# 스캔에서 헤더를 못 읽어 며칠치가 한 날에 몰린 경우: 첫 크롤(hof_raw)의 날짜로 빈 날짜에 되돌려 놓기
+if SCAN:
+    rawd, rb = {}, []
+    for r in jl('hof_raw.jsonl'):
+        if r['type'] == 'card':
+            if r.get('link'): rb.append(r['link'])
+        else:
+            dd = hdr_date(r['text'])
+            if dd:
+                for l in rb: rawd.setdefault(l, dd)
+            rb = []
+    empty = lambda dd: not win.get(dd)
+    moved = 0
+    for d in list(win):
+        keep = []
+        for c in win[d]:
+            rd = rawd.get(c.get('link'))
+            if rd and rd != d and empty(rd) and abs((datetime.date.fromisoformat(rd) - datetime.date.fromisoformat(d)).days) <= 6:
+                win.setdefault(rd, []).append(c); themes.setdefault(rd, ''); moved += 1
+            else: keep.append(c)
+        win[d] = keep
+    # 같은 빈 날짜에 여러 장 들어갈 수 있게 한 번 더(첫 장이 들어간 뒤 empty가 False가 되므로)
+    for d in list(win):
+        keep = []
+        for c in win[d]:
+            rd = rawd.get(c.get('link'))
+            if rd and rd != d and rd in win and len(win[rd]) < 5 and abs((datetime.date.fromisoformat(rd) - datetime.date.fromisoformat(d)).days) <= 6 and len(win[d]) > 6:
+                win[rd].append(c); moved += 1
+            else: keep.append(c)
+        win[d] = keep
+    print('moved by raw date', moved)
 for d in win: win[d] = list(reversed(win[d]))   # 화면 위→아래(발표 순서)
 # 당선 점수 줄(JUDGING.md)
 judg = open(os.path.join(ROOT, 'winners', 'JUDGING.md'), encoding='utf-8').read() if os.path.exists(os.path.join(ROOT, 'winners', 'JUDGING.md')) else ''
