@@ -1,4 +1,6 @@
 # Daily Soul Challenge — 매일 아침 실행 순서
+> 🔴🔴 **11/23 디스코드 자동화 전면 금지 (계정 cinesilver가 11/23 18:47 "스팸/플랫폼 악용(사용자 계정 자동화·셀프봇)"으로 비활성화됨)**: 디스코드 앱·웹을 스크립트로 조작(키 입력·클릭·스크롤·캡처 자동화·검색 자동화)하는 것 전면 금지. 디스코드 확인(오늘 주제·공지·당선 결과·채널 게시물)은 **사용자가 직접 하고 결과만 받는다**. 관련 스크립트는 tools/_disabled_discord/ 로 격리(실행 금지·되살리기 금지). 힉스필드 앱 조작(hh.py·hfwin.ps1)은 디스코드와 무관하므로 유지.
+
 > ⭐⭐ **11/16 사용자 — 데이터 쌓기(운영 규칙)**: ① 매일 결과 확인 때 당선 5장 전부의 공유 링크→프롬프트 원문을 winners/YYYY-MM-DD_prompts.md에 저장(헤드리스 크롬 --dump-dom + C:/tmp/sp.py, 링크는 카드의 "# daily-soul ›" 이동으로 원글에서) ② 생성 후 `python tools/build_dataset.py` 실행 → data/our_prompts.jsonl(프롬프트·모델·작업ID) 갱신·커밋. 채점·하트는 concepts.md. gen.log·png는 git 제외라 작업ID는 데이터셋에만 남음
 > 🔴🔴 **11/13 사용자 — 제작 규칙 폐지**: 운영 규칙(디스코드 입력 금지·크레딧 허락·하트 전 보고·주제 검수·채점·프롬프트 사전 확인 등)은 그대로. **프롬프트·모델·렌즈·길이·금지문 같은 제작 규칙은 일반 규칙으로 쓰지 않는다** — 아래 「상황별 참고」로 옮김, 그 특정 상황이 다시 올 때만 꺼내 쓴다. 한 번의 사례로 일반화해 규칙을 만들지 말 것(예: 11/9 광각 금지 → 11/12 당선작은 24·35mm). **예외로 고정 유지(사용자 11/13)**: ① 모든 프롬프트 끝에 "Any visible text must be real words exactly as printed in a dictionary or a published newspaper." 한 문장 ② 모델은 미션 규정 안(Soul / Soul 2.0 / Soul Cinema)에서만
 > ⭐ **11/2 메일은 이 프로젝트 업무 아님** — 메일 확인·관리는 법인관리 프로젝트 담당(아침 루틴에서 메일 체크 제외)
@@ -109,7 +111,7 @@ Higgsfield 디스코드 #daily-soul 채널의 일일 챌린지. 매일 5명 선�
 - 다작 참가자가 반복 당선 → 서로 다른 콘셉트를 더 많이(5장 이상) 올릴 것
 - 참가 가능 이벤트: Weekly Challenge(#community-events, 120초 영상), 월간 어워드(#monthly-awards)
 
-## 1. 오늘 주제 읽기 (디스코드 데스크톱 앱 화면 캡처)
+## 1. 오늘 주제 읽기 — 🔴 11/23부터 사용자가 디스코드에서 직접 확인해 주제 원문을 전달(아래 자동 조작 절차는 폐기·실행 금지)
 - 클릭·캡처 스크립트: `challenges/daily_soul/tools/dc.ps1` — PowerShell에서 `& C:/project/youtube/challenges/daily_soul/tools/dc.ps1 -x X -y Y [-scroll -720] -out 캡처경로.png -wait 1500` (좌표 없이 -out만 주면 창만 앞으로 가져와 캡처). 캡처 파일은 세션 scratchpad에 저장
 - ⚠️ **키 입력 전 디스코드 창 제목에 "Higgsfield AI"가 들어있는지 확인**한다. 다른 서버가 열려 있으면 Ctrl+K 입력이 그 서버의 메시지 입력창에 타이핑될 수 있다(9/19 사용자 개인 서버에 "hall-of-fame"이 입력됨 — 전송 전 삭제). 제목이 다르면 먼저 좌측 서버 아이콘에서 Higgsfield를 클릭
 - 키 입력은 SendKeys 대신 user32 keybd_event 사용(Ctrl+K=0x11+0x4B, Ctrl+V=0x11+0x56, Enter=0x0D, Esc=0x1B)

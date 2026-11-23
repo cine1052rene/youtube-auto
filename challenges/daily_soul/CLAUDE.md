@@ -1,3 +1,5 @@
+> 🔴🔴 **11/23 디스코드 자동화 전면 금지 (계정 cinesilver가 11/23 18:47 "스팸/플랫폼 악용(사용자 계정 자동화·셀프봇)"으로 비활성화됨)**: 디스코드 앱·웹을 스크립트로 조작(키 입력·클릭·스크롤·캡처 자동화·검색 자동화)하는 것 전면 금지. 디스코드 확인(오늘 주제·공지·당선 결과·채널 게시물)은 **사용자가 직접 하고 결과만 받는다**. 관련 스크립트는 tools/_disabled_discord/ 로 격리(실행 금지·되살리기 금지). 힉스필드 앱 조작(hh.py·hfwin.ps1)은 디스코드와 무관하므로 유지.
+
 <!-- START_TTAPP_RULES:1.0.3 -->
 <!-- ⚠️ DO NOT EDIT THIS BLOCK - AUTOMATICALLY MANAGED BY TTAPP -->
 # CLAUDE.md (ttapp rules)
