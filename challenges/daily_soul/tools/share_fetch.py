@@ -33,7 +33,7 @@ def one(link):
     return {'link': link, 'id': sid, 'model': model, 'prompt': prompt, 'image_url': img, 'thumb': thumb, 'html_len': len(s)}
 if __name__ == '__main__':
     links = []
-    for f in ['hof_raw.jsonl', 'hof_scan.jsonl']:
+    for f in ['hof_raw.jsonl', 'hof_scan.jsonl', 'hof_manual.jsonl']:
         fp = os.path.join(ROOT, 'data', f)
         if os.path.exists(fp):
             for l in open(fp, encoding='utf-8'):

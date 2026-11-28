@@ -75,6 +75,18 @@ if SCAN:
         win[d] = keep
     print('moved by raw date', moved)
 for d in win: win[d] = list(reversed(win[d]))   # 화면 위→아래(발표 순서)
+# 수동 수집(수동수집/YYYY-MM-DD → data/hof_manual.jsonl) 병합: 같은 링크는 캡처본만 교체, 새 링크는 추가
+for r in jl('hof_manual.jsonl'):
+    d = r['date']
+    if r['type'] == 'theme':
+        if r.get('text'): themes[d] = r['text']
+        continue
+    cur = win.setdefault(d, [])
+    same = [c for c in cur if r.get('link') and c.get('link') == r['link']]
+    if same:
+        if r.get('card') and (not same[0].get('card') or 'winners_card_scan' in same[0].get('card', '')): same[0]['card'] = r['card']
+    elif not any(c.get('manual') and c.get('card') == r.get('card') and r.get('card') for c in cur):
+        cur.append(r)
 # 당선 점수 줄(JUDGING.md)
 judg = open(os.path.join(ROOT, 'winners', 'JUDGING.md'), encoding='utf-8').read() if os.path.exists(os.path.join(ROOT, 'winners', 'JUDGING.md')) else ''
 def judging_line(d):
