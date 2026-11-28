@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# 시즌2 에피소드 생성(그림→영상). 사용: bash generate.sh img|vid [키...]
+# 에피소드 생성(그림→영상). 사용: bash generate.sh img|vid [키...]
+# 11/29 규칙 초기화: 공통 문장의 금지 문구 전부 삭제. 남긴 것 = 캐릭터 생김새 + 14화 그림 톤(빈 배경 없이 채우기·밝게). 새 규칙은 만들면서 사용자와 정함
 # (구) 10/6: 4화 05(부엉이 작음·빈 배경) / 6화 05·06·11(빈 배경) 07·11·12(콩이 큼) — 전부 새로 생성
 # 사용: bash fix.sh img [키...]  (그림)   |  bash fix.sh vid [키...]  (영상, 그림 있는 컷만)
 set -u
@@ -7,13 +8,13 @@ cd "$(dirname "$0")"
 STAGE=${1:-img}
 REF=../../ref/gomgom_master_s2c.png
 LOG=fix.log
-GOM="Gomgom, a small round cream-colored needle-felted wool bear with soft fuzzy texture, small round ears with pale pink inner ears, bright round black bead eyes, a small dark brown nose, soft pink blush on the cheeks and a gentle warm smile with no teeth ever visible, wearing a small matte yellow felt star badge on its chest with no glow and no plastic shine and a tiny brown felt satchel bag across its body"
-KONG="Kong, a tiny round yellow needle-felted baby chick with a small orange beak and one small green bean sprout with two round leaves on top of its head, Kong is tiny, exactly as small as in the reference image, Kong's whole body is exactly one third the width of Gomgom's head, Kong never grows or shrinks and is never as big as Gomgom's head, Kong keeps its pink blush cheeks, round yellow face and small orange beak"
+GOM="Gomgom, a small round cream-colored needle-felted wool bear with soft fuzzy texture, small round ears with pale pink inner ears, bright round black bead eyes, a small dark brown nose, soft pink blush on the cheeks and a gentle warm smile, wearing a small matte yellow felt star badge on its chest and a tiny brown felt satchel bag across its body"
+KONG="Kong, a tiny round yellow needle-felted baby chick with pink blush cheeks, a small orange beak and one small green bean sprout with two round leaves on top of its head"
 OWL="Grandpa Owl, a kind old round grey-brown felt owl with a cream chest, fluffy white eyebrows and small round spectacles, wearing a mustard knitted cardigan, Grandpa Owl is slightly taller than Gomgom, about a quarter head taller, never shorter than Gomgom and never twice as big"
 FRIENDS="small felt animal friends such as a rabbit, a squirrel and a hedgehog, each about as tall as Gomgom"
-SIZE="scale rule: Gomgom is the size reference, a palm-sized needle-felted doll about three heads tall, Grandpa Owl is slightly taller than Gomgom, other animal friends are about as tall as Gomgom, Kong is always the smallest character, Kong's whole body is exactly one third the width of Gomgom's head in every shot, even when Kong is close to the camera or far away, in wide shots Kong is still clearly visible"
-STYLE="richly detailed handmade miniature world filling the whole background with layered foreground, midground and background full of cute tiny handmade props, never a plain empty wall, white haze or empty backdrop, detailed scenery receding deep into the distance, soft warm golden daylight, bright cheerful exposure, gentle depth of field that keeps the detailed background readable, cozy warm pastel palette with natural soft leafy greens and clear natural water, handmade felt, knit, wood and ceramic textures with visible fuzzy wool fibers, high quality 3D animated film render, cinematic composition, vertical 9:16, warm and cozy mood, no dark shadows, no gloomy colors, no text, no letters"
-VTAIL="the bear mouth may open softly but no teeth are ever visible, every character keeps exactly the same needle-felted wool texture, proportions, colors, accessories and body size from the first frame to the last and never turns into a cartoon or 2D character, nobody grows or shrinks during the shot, Kong stays tiny, smooth gentle camera motion with a clear change of viewpoint, bright airy pastel light, light cheerful colors, no dark shadows, no text"
+SIZE="Gomgom is a palm-sized needle-felted doll about three heads tall"
+STYLE="richly detailed handmade miniature world filling the whole background with layered foreground, midground and background full of cute tiny handmade props, never a plain empty wall, white haze or empty backdrop, detailed scenery receding deep into the distance, soft warm golden daylight, bright cheerful exposure, gentle depth of field that keeps the detailed background readable, cozy warm pastel palette with natural soft leafy greens and clear natural water, handmade felt, knit, wood and ceramic textures with visible fuzzy wool fibers, high quality 3D animated film render, cinematic composition, vertical 9:16, warm and cozy mood"
+VTAIL="smooth gentle camera motion with a clear change of viewpoint, bright airy pastel light, light cheerful colors"
 
 log() { echo "[$(date +%H:%M:%S)] $*" | tee -a "$LOG"; }
 create_job() {

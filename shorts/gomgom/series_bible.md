@@ -2,66 +2,30 @@
 
 > 곰곰이가 마음에 대해 곰곰이 생각하는, 따뜻한 심리·철학 숏폼
 
-## 포맷
-- 세로 9:16, 한 편 40초
-- 한 편 = 움직이는 영상 5컷(4초씩, 20초) + 천천히 확대되는 그림 8장(2.5초씩, 20초)
-- 영상 컷은 **먼저 그림을 뽑고 그 그림을 움직이는 방식**(Veo 3.1 Lite, 시작 이미지 지정). 그림체가 흔들리지 않게 하기 위함
-- 소리는 Veo에서 끄고, 내레이션(TTS)과 배경음악은 편집에서 입힘
-- 화면 안에 글자를 그리지 않음. 자막은 편집에서 얹음
+> ⚠️ **11/29 규칙 초기화.** 시즌1·2 때 쌓인 금지·규칙은 전부 지웠다(옛 내용: `series_bible_old1129.md`).
+> 남긴 것은 아래 "13·14화에서 정한 기준"뿐. 새 규칙은 만들면서 사용자와 함께 정하고, 정해지면 여기에 날짜와 함께 적는다.
+> 에이전트가 사고를 보고 혼자 금지를 만들지 않는다 — 필요하면 먼저 묻는다.
 
-## 모델과 단가
-| 용도 | 모델 | 단가 |
-|---|---|---|
-| 그림 | seedream_v5_lite | 장당 1크레딧 |
-| 영상 | veo3_1_lite, 4초, 소리 끔 | 4크레딧 |
+## 지금 제작 방식 (규칙이 아니라 현재 설정)
+- 세로 9:16, 한 편 약 45초, 11컷 안팎
+- 그림: seedream_v5_lite(1cr), 기준 그림 `ref/gomgom_master_s2c.png`
+- 영상: 씨댄스 2.0(4초 18cr·6초 27cr) 기본, 컷에 따라 씨댄스 2.5(4초 28cr)
+- 내레이션: Luna(ElevenLabs, 힉스필드 text2speech_v2)
+- 조립: `speed_test/make_sample.py` (현재 옵션 1.15배·제목 카드 3초·루프 — 바꿔도 됨)
+- 공통 프롬프트: 최신 화 `epNN/prod/generate.sh`의 GOM·KONG·SIZE·STYLE·VTAIL (생김새 설명과 그림 톤만 있음)
 
-한 편 예상: 그림 13장 + 영상 20초 = 33크레딧, 다시 뽑기 30% 포함 약 43크레딧
+## 캐릭터 생김새 (설정)
+- **곰곰이**: 크림색 니들펠트 곰, 분홍 볼, 갈색 펠트 가방, 가슴에 시즌 배지(지금 노란 별)
+- **콩이**: 노란 아기 병아리, 머리에 콩나물 새싹 두 잎
 
-## 구성 규칙 (4화 피드백 반영)
-- **첫 컷은 반드시 훅**(시청자가 자기 얘기라고 느끼는 질문·상황)으로 시작한다. 캐릭터 소개, 소품 설명, 설정 설명으로 첫 2초를 쓰지 않는다
-- 소품·설정은 **설명하지 않는다**. 그냥 달고 있으면 된다 (4화에서 "곰곰이에게 오늘, 작은 선물이 생겼어요"로 가방·배지를 소개하려 했다가 주제와 연결이 안 돼 통째로 삭제)
-- 모든 컷은 그 편의 주제에 복무해야 한다. 주제와 무관한 컷은 아무리 예뻐도 뺀다
+## 13·14화에서 정한 기준 (유지)
+- (11/18) 제작 모델이 바뀔 것 같으면 멈추고 먼저 보고
+- (11/22) 기준은 이미 있는 그림에서 잡는다 — 새 기준 그림을 따로 만들지 않는다
+- (11/23) 톤 보정: 영상 클립에 ffmpeg lutrgb 감마 r0.80·g0.87·b0.93 적용 후 조립
+- (11/28) 그림 톤: 따뜻한 금빛·아늑한 파스텔, 밝게. 배경은 먼 풍경까지 채우고 빈 벽·흰 안개로 비우지 않는다. 민트 초록·옅은 파스텔 물 표현은 쓰지 않는다
 
-## 캐릭터
-
-**곰곰이** — 주인공. 말수 적고 다정한 크림색 펠트 곰. **작은 갈색 펠트 가방**을 늘 메고, 가슴에 **시즌 배지**를 단다(시즌1 코랄 하트 / 시즌2 노란 별 / 시즌3 단풍잎 / 시즌4 데이지). 여름·나들이 편에서는 **세이지 리본 보터햇**을 쓴다.
-**콩이** — 곰곰이 어깨에 자주 앉는 노란 아기 병아리. 머리에 **콩나물 새싹 두 잎**. 곰곰이 대신 표정으로 반응함
-
-> 기준 이미지: `ref/gomgom_master_s1.png`(시즌1 기본) · `ref/gomgom_master_s1_hat.png`(보터햇). 1~3화는 소품 없이 완성돼 있으며, 4화 첫 장면에서 콩이가 가방과 하트 배지를 선물하는 것으로 이어붙인다.
-
-### 매 프롬프트에 그대로 붙이는 캐릭터 문장 (수정 금지)
-```
-Gomgom, a small round cream-colored needle-felted wool bear with soft fuzzy texture, small round ears with pale pink inner ears, bright round black bead eyes, a small dark brown nose, soft pink blush on the cheeks and a gentle warm smile with no teeth ever visible, wearing a small coral pink felt heart badge on its chest and a tiny brown felt satchel bag across its body; Kong, a tiny round yellow needle-felted baby chick with a small orange beak and one small green bean sprout with two round leaves on top of its head
-```
-- 테스트 이미지에서 곰 눈이 반쯤 감겨 졸리거나 새침해 보였음 → `bright round eyes`, `gentle warm smile`로 고정
-- 콩이가 안 나오는 컷은 `Kong` 부분만 뺌
-- 시즌이 바뀌면 배지 부분만 교체: 시즌2 `a small soft yellow felt star badge`, 시즌3 `a small honey-yellow felt maple-leaf badge`, 시즌4 `a small white and yellow daisy felt badge`
-- 여름·나들이 컷은 뒤에 `wearing a small straw boater hat with a flat top and flat brim and a sage green ribbon, both round ears fully visible` 추가
-- **이빨이 보이면 안 됨**(입은 벌려도 됨), 만화풍으로 바뀌면 안 됨
-
-### 매 프롬프트에 그대로 붙이는 크기 문장 (수정 금지)
-```
-scale rule: Gomgom is the size reference, a palm-sized needle-felted doll about three heads tall; Grandpa Owl is slightly taller than Gomgom, about a quarter head taller, never shorter than Gomgom and never twice as big; every other animal friend such as Bori the rabbit stands about as tall as Gomgom; Kong is always the smallest character, its whole round body no bigger than Gomgom's head, and Kong never changes size from shot to shot
-```
-- 근거: 기준 이미지 `ref/gomgom_master_s1.png`에서 **콩이 몸통 = 곰곰이 머리 크기 ≒ 곰곰이 키의 절반**
-- 4화에서 부엉이가 곰곰이의 2배(04)였다가 더 작아지고(05), 보리가 1.5배(09·10), 콩이가 2/3(13)로 나와 전부 재생성함
-- 조연이 새로 나오면 그 캐릭터도 **"exactly as tall as Gomgom"** 문구를 반드시 붙일 것
-- (10/6 사용자 확정) **부엉이 할아버지는 곰곰이보다 살짝 크게**(어른 느낌). 콩이는 곰곰이 머리보다 크면 안 됨 — 둘이 나란히 앉히면 콩이가 커지기 쉬우니 **어깨·무릎·머리 위에 올리는 구도**가 안전
-- (10/6) **배경이 빈 크림 벽이면 안 됨** — 매 컷 미니어처 배경 + 귀여운 소품(책장·찻주전자·랜턴·꽃 넝쿨·우편함·깃발 등) 명시, 앵글도 다양하게
-
-### 매 프롬프트 끝에 붙이는 그림체 문장 (수정 금지)
-```
-soft warm golden light, dreamy bokeh with gentle floating sparkles, cozy warm pastel palette, handmade felt and knit textures, high quality 3D render, vertical composition, no text, no letters
-```
-
-### 금지어 (글자·레이아웃이 생김)
-`film still`, `poster`, `storybook`, `editorial`, `book`, `sign`, `screen showing`
-
-## 톤
-- 반말 대신 부드러운 존댓말. 가르치지 않고 곁에서 말하듯이
-- 어둡거나 무거운 장면 금지. 힘든 감정도 포근한 공간 안에서 보여줌
-- 모든 편은 **질문으로 시작해서, 오늘 해볼 수 있는 작은 것 하나로 끝남**
-- 마지막 한 줄은 댓글을 부르는 질문
+## 새로 정한 규칙
+- (아직 없음)
 
 ## 6편 대본 (40초, 약 230자 기준)
 
