@@ -8,7 +8,7 @@ out = G / f"review_site/public/ep{ep}cuts"; out.mkdir(parents=True, exist_ok=Tru
 master = G / f"ep{ep}/prod/out/ep{ep}_master.mp4"
 sh = lambda c: subprocess.run(c, capture_output=True, text=True)
 dur = float(sh(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(master)]).stdout)
-sh(["ffmpeg", "-v", "error", "-y", "-i", str(master), "-vf", "scale=540:960", "-c:v", "libx264", "-crf", "25", "-preset", "fast", "-c:a", "aac", "-b:a", "128k", str(out / "master.mp4")])
+sh(["ffmpeg", "-v", "error", "-y", "-i", str(master), "-vf", "scale=540:960", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "25", "-preset", "fast", "-movflags", "+faststart", "-c:a", "aac", "-b:a", "128k", str(out / "master.mp4")])
 sh(["ffmpeg", "-v", "error", "-y", "-ss", "5", "-i", str(master), "-frames:v", "1", "-vf", "scale=360:640", str(out / "master.jpg")])
 notes = json.load(open(G / f"ep{ep}/prod/cut_notes.json", encoding="utf-8")) if (G / f"ep{ep}/prod/cut_notes.json").exists() else {}
 cards = ""
@@ -19,7 +19,7 @@ for s in d["shots"]:
     cl = G / f"ep{ep}/prod/clips/{s['id']}.mp4"
     if not cl.exists(): continue
     mp = out / f"{s['id']}.mp4"
-    sh(["ffmpeg", "-v", "error", "-y", "-i", str(cl), "-vf", "scale=360:640", "-c:v", "libx264", "-crf", "27", "-preset", "fast", "-an", str(mp)])
+    sh(["ffmpeg", "-v", "error", "-y", "-i", str(cl), "-vf", "scale=360:640", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "27", "-preset", "fast", "-movflags", "+faststart", "-an", str(mp)])
     sh(["ffmpeg", "-v", "error", "-y", "-ss", "1", "-i", str(cl), "-frames:v", "1", "-vf", "scale=360:640", str(out / f"{s['id']}.jpg")])
     n = notes.get(s["id"], "")
     cards += f'<div class="c{" bad" if n.startswith("!") else ""}"><video src="{s["id"]}.mp4" poster="{s["id"]}.jpg" controls playsinline preload="metadata" loop></video><div class="t"><b>{s["id"]}</b> · {html.escape(s["narrator"])}</div>' + (f'<div class="l">{html.escape(n.lstrip("!"))}</div>' if n else "") + "</div>"
