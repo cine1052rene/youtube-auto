@@ -4,3 +4,4 @@
 elephant in the room / raining cats and dogs / couch potato / break the ice / butterflies in stomach / bull in a china shop / spill the beans / 손이 크다 / 발이 넓다 / 그림의 떡
 - 추천: 1 코끼리 · 2 고양이 비 · 4 얼음 깨기 · 5 나비 · 10 그림의 떡. 예비 11·14·7·20
 - 제외: 3(TV 가짜 글자) · 8·9(잡지 펼침면+글자) · 13(어두움) · 6·16(황소가 조심스럽지 않음)
+- 하트(14:20, Favourites 5): 1 코끼리 · 2 고양이 비 · 4 얼음 깨기 · 5 나비 · 10 그림의 떡 (중간에 6 황소 잘못 눌림→해제)
